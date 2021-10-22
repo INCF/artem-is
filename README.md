@@ -1,9 +1,3 @@
----
-tags: ARTEMIS
----
-
-# ARTEMIS readme
-
 <!-- comment: landing page for ARTEMIS app -->
 
 <center>
