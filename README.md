@@ -6,6 +6,8 @@
 
 </center>
 
+##maintenance info - currently being updated!
+
 ## Agreed Reporting Template for EEG Methodology - International Standard: template for event-related potentials (ERP)
 
 The goal of the ARTEM-IS is to use insights derived from systematic reviews to create human-friendly, machine-readable templates for documenting the methodological details of an EEG study or pipeline. The template for reporting ERP methodology before you is a pilot project of ARTEM-IS, based on which other subfields of EEG may follow.
