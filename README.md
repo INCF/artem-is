@@ -6,7 +6,7 @@
 
 </center>
 
-## maintenance info - currently being updated!
+## maintenance warning - currently being updated!
 
 ## Agreed Reporting Template for EEG Methodology - International Standard: template for event-related potentials (ERP)
 
