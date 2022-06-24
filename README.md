@@ -6,19 +6,20 @@
 
 </center>
 
-## maintenance warning - currently being updated!
-
 ## Agreed Reporting Template for EEG Methodology - International Standard: template for event-related potentials (ERP)
 
-The goal of the ARTEM-IS is to use insights derived from systematic reviews to create human-friendly, machine-readable templates for documenting the methodological details of an EEG study or pipeline. The template for reporting ERP methodology before you is a pilot project of ARTEM-IS, based on which other subfields of EEG may follow.
+The goal of the ARTEM-IS is to use insights derived from systematic reviews to create both human-friendly and machine-readable templates for documenting the methodological details of an EEG study or pipeline. The template for reporting ERP methodology before you is a pilot project of ARTEM-IS, based on which other subfields of EEG may follow.
 
 ## How to use it
 
-You can navigate each section on the left and then answer the questions corresponding to your study. This is meant to ensure that you have not forgotten any of the essential information during data collection or later in the methods and results parts of your article.
-
-At the end, you can click on `Export` (bottom left) to get a zip file containing a set of machine readable files that summarize the information about your acquisition protocol.
-
-For now you could then use those files as a supplement for your publication, but we are also working on creating more human-friendly outputs.
+1. The demo version of the web-app is (currently and temporarily) available **[HERE](http://psihologija.ff.uns.ac.rs/erp/)**.
+2. On the initial page, you can create your account and log in, as well as view a visualization of the basic structure of the information provided in the template.
+3. Once logged in, by clicking `Submit` in the top right corner, you can create a new, blank template.
+4. You can navigate a template by using the menu on top and answer the questions corresponding to the study you are reporting on. This is meant to ensure that you have not forgotten any of the essential information during data collection or later in the methods and results parts of your article.
+5. Click `Save` in the top right corner to save any changes.
+6. You can view your own saved templates using `My templates` option. For each template, you have the options to make them publically (in)visible to others, download a human-readable PDF output and download a machine-readable JSON output. All templates are set to private in the beginning.
+7. You can view and download publically available templates by other members using `Browse` menu.
+8. You can upload a previously downloaded (in JSON format) templates to your account using `Upload` menu.
 
 ## Why this project?
 
@@ -28,11 +29,10 @@ New reporting tools are needed to overcome the limitations of written methodolog
 
 ### Want to know more ?
 
-Read more about the rationale for this project and the design principles we go by in our **[preprint](https://osf.io/myn7t/)**, and if you agree support us by signing the **[ARTEM-IS statement](https://osf.io/mf97q/)**.
+Read more about the rationale for this project and the design principles we go by in our **[paper](https://www.sciencedirect.com/science/article/pii/S1053811921009939?via%3Dihub)**, and if you agree support us by signing the **[ARTEM-IS statement](https://osf.io/mf97q/)**.
 
-1. Check our **[project on OSF](https://osf.io/pvrn6/)**.
+1. Have a look at our **[project on OSF](https://osf.io/pvrn6/)**.
 2. **Talks and slides** are available [HERE](https://osf.io/ncav8/).
-3. See ARTEM-IS template contents in one place [HERE](https://osf.io/w4nt6/) (**note:** the creation of the template is currently in progress, so there may be discrepancies between the latest published version of the template and the web-app).
 
 ## Get in touch
 
