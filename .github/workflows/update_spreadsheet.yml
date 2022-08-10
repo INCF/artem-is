@@ -1,0 +1,45 @@
+name: Update spreadsheet
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+  # to trigger update manually from the Action tab in github
+  workflow_dispatch:
+    inputs:
+      log:
+        description: "convert spreadsheet"
+        required: false
+
+jobs:
+  update_spreadsheet:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v3
+      with:
+        python-version: 3.9
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip setuptools
+        make install
+
+    - name: Convert table
+      run: make convert
+
+    # if there have been changes,
+    # a PR is created using the checkout branch for this workflow
+    # https://github.com/peter-evans/create-pull-request
+    - name: Create Pull-Request
+      uses: peter-evans/create-pull-request@v3
+      with:
+        commit-message: Update spreadsheet
+        delete-branch: true
