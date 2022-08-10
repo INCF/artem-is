@@ -9,15 +9,15 @@ from rich import print
 def load_data(this_schema):
 
     if not Path(this_schema).is_file():
-
         schema_info = get_schema_info(this_schema)
         input_file = get_input_file(schema_info)
 
     else:
-
         input_file = this_schema
 
-    print("[bold green]" + "Loading:" + input_file + "[/bold green]" + "\n")
+    input_file = Path(input_file).resolve()
+
+    print(f"[bold green]Loading: {str(input_file)}[/bold green]\n")
 
     return pd.read_csv(input_file, sep="\t")
 
@@ -32,12 +32,9 @@ def get_input_dir(dir: Path = get_root_dir()) -> Path:
 
 
 def get_input_file(schema_info: dict):
-
     input_dir = get_input_dir()
     basename = schema_info["basename"].tolist()[0]
-
-    schema_dir = schema_info["dir"].tolist()[0]
-    return os.path.join(input_dir, schema_dir, basename + ".tsv")
+    return os.path.join(input_dir, basename + ".tsv")
 
 
 def get_metatable():
@@ -202,10 +199,13 @@ def set_item_name(this_item: dict):
 
     if "item" not in this_item.keys():
         item_name = convert_to_str(this_item["item_pref_label"])
+
     elif isinstance(convert_to_str(this_item["item"]), float):
         item_name = convert_to_str(this_item["item_pref_label"])
+
     elif convert_to_str(this_item["item"]) == "":
         item_name = convert_to_str(this_item["item_pref_label"])
+
     else:
         item_name = convert_to_str(this_item["item"])
 

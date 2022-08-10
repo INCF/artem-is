@@ -1,0 +1,915 @@
+ARTEM-IS (Agreed Reporting Template for EEG Methodology - International Standard) template for ERP
+item	field	question	options	instructions
+1 - STUDY_ID
+1.1 - STUDY ID
+1.1.1	artemis type	At the time of document creation, what is the current ARTEM-IS template for?	"- Documenting a planned pipeline
+- Documenting a pipeline that has been applied to study data "
+1.2 - STUDY TITLE
+1.2.1	study title	Current title of the study/pipeline
+1.2.2	study title final	Is the current title the same as it appears in related publications?	"- no
+- yes
+- final decision not made yet"
+1.2.3	study working title exists	Has the current study or pipeline been known by a different name or a working title previously? 	"- yes
+- no"
+1.2.4	study working title	Working title
+1.3 - AUTHORS
+1.3.1	study authors	Authors of the study in the following format: family-name, other names. Each author separated by a semicolon and a space.
+1.4 - PUBLICATIONS
+1.4.1	study reference exists	Has the study resulted in any published articles, conference presentations or research reports at this stage? 	"- yes
+- no"
+1.4.2	study reference DOIs exists	Do any of these publications have a DOI?	"- yes
+- no"
+1.4.3	study reference	DOIs of related publications, separated by a semicolon and a space.
+1.4.4	study reference noDOI exists	Are there any web-accessible publications that do not have a DOI?	"- yes
+- no"
+1.4.5	study reference noDOI	Provide links to non-DOI publications, separated by a semicolon and a space.
+1.5 - DATASETS
+1.5.1	study dataset exists	Has this study resulted in any datasets archived in a persistent, version controlled repository, administered independently from the authorship team?	"- yes
+- no"	For example, a Github repository
+1.5.2	study dataset types	What types of data are available?	"- raw EEG data
+- individual epochs
+- averaged ERPs for individual participants
+- grand average ERPs for all conditions, amplitude measures
+- component amplitudes/latencies and other measures for statistical analysis
+- other"
+1.5.3	study dataset types other	Types of data not included in list
+1.5.4	study dataset DOI exists	Do any of these datasets have a DOI?	"- yes
+- no"
+1.5.5	study dataset DOI	Dataset DOIs separated by a semicolon and a space.
+1.5.6	study datasets noDOI exists	Are there any datasets that do not have a DOI?	"- yes
+- no"
+1.5.7	study datasets noDOI	Provide links to non-DOI datasets, separated by a semicolon and a space.
+1.6 - SUPPLEMENTAL MATERIALS
+1.6.1	supplementary materials exists	Has this study resulted in any supplementary materials other than data and publications?	"- yes
+- no"	For example, visualization plots, tables, lists of stimuly, etc.
+1.6.2	supplementary materials	Which supplementary materials are available publically?	"- list of stimulus descriptions (e.g. list of objects shown in images)
+- stimuli
+- codes or files with the experimental task
+- other"
+1.6.3	specify supplementary	Which other supplementary materials are available?
+1.6.4	supplementary link	Provide the link to the location of supplementary materials on the web.
+1.7 - LICENSES
+1.7.1	licenses exists	Are any elements in the study currently covered by a license allowing for reuse?	"- code
+- data
+- other elements"	For example, code used to run the study, data arising from the study
+1.7.2	code license	License type for code. 	"- Public Domain
+- Open Data Commons Public Domain Dedication and License
+- Creative Commons Zero 1.0 Universal
+- Multiple
+- Other"	More info on licence types: https://bids-specification.readthedocs.io/en/stable/99-appendices/02-licenses.html
+1.7.3	code license multi	Licence types for each code element, with name of element followed by license type, separated by semicolon and a space
+1.7.4	code license other	License type for code (other than listed)
+1.7.5	data license	License type for data.	"- Public Domain
+- Open Data Commons Public Domain Dedication and License
+- Creative Commons Zero 1.0 Universal
+- Multiple
+- Other"	More info on licence types: https://bids-specification.readthedocs.io/en/stable/99-appendices/02-licenses.html
+1.7.6	data license multi	Licence types for each data element, with name of element followed by license type, separated by semicolon and a space
+1.7.7	data license other	License type for data (other than listed)
+1.7.8	other licenses	Name of each licensed study element followed by license type, with listed elements separated by semicolon and a space.		For example, derivatives, figures, slides, etc.
+1.8 - KEYWORDS
+1.8.1	study keywords	List keywords, separated by semicolons followed by space.
+1.9 - FUNDING
+1.9.1	study funding exists	At the time of writing, does the project have financial support from a funding agency? 	"- yes
+- no"
+1.9.2	study funding	If this project is being funded, please list grant numbers and funding agencies, separated by a semicolon and a space.
+1.10 - ETHICAL APPROVAL
+1.10.1	study ethics exists	At the time of writing has the study been approved by an ethics committee?	"- yes
+- no"
+1.10.2	study ethics	If the study has been aproved by an ethics comittee, list the approval ID and institution which granted it. If there are multiple approvals, separate them by semicolons followed by space.
+1.11 - ACKNOWLEDGEMENTS
+1.11.1	acknowledgements exists	Do you have any acknowledgments to add in addition to authors or funding?	"- yes
+- no"
+1.11.2	acknowledgements	Acknowledgements
+1.12 - HOW TO CITE
+1.12.1	citation instructions exists	Do you have any instructions on how you want this study to be cited or otherwise acknowledged?	"- yes
+- no"
+1.12.2	citation instructions	Citation instructions
+3 - HARDWARE
+3.1 - PREAMP PERIPHERALS
+3.1.1	electrode placement type	How were the EEG electrodes placed?	"- cap or net
+- single electrodes"
+3.1.2	electrode placement type cap	What kind of cap or net did you use?	- preset:eeg_cap_types
+3.1.3	cap other	Please specify your cap or net manufacturer
+3.1.4	cap model	Please indicate the cap or net model.
+3.1.5	electrode manufacturer	Manufacturer of the electrodes
+3.1.6	electrode model	Model of electrodes
+3.1.7	electrode preamplifiers	Did electrodes have pre-amplifiers?	"- no - passive electrodes
+- yes - active electrodes"
+3.1.8	electrode material	What material were electrodes made of?	"- Ag/Ag-Cl
+- tin
+- other"
+3.1.9	electrode material other	Specify the material that the electrodes were made of.
+3.1.10	conductive medium	Type of conductive medium used other than listed.	"- conductive gel
+- saline solution
+- adhesive paste
+- none (dry electrodes)
+- other"
+3.1.11	conductive medium other	Conductive medium type other than listed.
+3.2 - SIGNAL AMPLIFIERS
+3.2.1	amplifier make	Make (brand) of the amplifier	- preset:meeg_amplifier_brands
+3.2.2	amplifier make other	Specify which make (brand) of the amplifiers did you use.
+3.2.3	amplifier model	Model of amplifier
+3.3 - TRIGGERS
+3.3.1	trigger signal source	Source of triggers	"- photo diode
+- auditory trigger/voice key
+- combination stim tracker
+- presentation software trigger
+- other"
+3.3.2	trigger signal source other	Source of triggers other than listed.
+3.3.3	trigger signal input when	Describe your trigger signal input. Were your triggers delivered during acquisition (e.g., triggers from photo diode simultaneously recorded while presenting trials) or added after recording (e.g. after analysis of an audio recording of spoken responses)?	"- Online, during acquisition
+- Added after recording "
+3.3.4	trigger signal input where	Were your triggers delivered to the amplifier or acquisition computer?	"- Amplifier
+- Acquisition computer"
+3.3.5	trigger signal input how	Were your triggers delivered via an analogue or digital signal format?	"- Analogue (e.g., via a parallel port, serial port, or TCP/IP)
+- Digital (including serial port over a USB port (arduino, LabJack U3, or similar))"
+3.4 - OTHER PERIPHERAL DEVICES
+3.4.1	other peripheral devices	Do you have other devices (eg. signal boxes, converters, other peripheral devices) to report?	"- yes
+- no"
+3.4.2	other peripheral devices details	Describe which additional devices you used, and specify their manufacturers and models.
+4 - ACQUISITION
+4.1 - ACQUISITION SOFTWARE
+4.1.1	acquisition software	What software did you use for the acquisition?	- preset:meeg_acquisition_softwares
+4.1.2	acquisition software details	"Specify software version if applicable, and software name and version if ""other"" was selected."
+4.2 - DATA QUALITY
+4.2.1	acquisition quality measure exists	Did you document impedances, or an alternative data aquisition quality measure? 	"- yes
+- no"
+4.2.2	acquisition quality measure	What is the appropriate acquisition data quality measure for your recording equipment?	"- impedance upper threshold
+- impedance range
+- a data quality measure alternative to impedances"
+4.2.3	impedance threshold	What was the upper threshold of impedance that you registered in your study?
+4.2.4	impedance lower end	What was the lowest impedance you registered in this study?
+4.2.5	impedance higher end	What was the highest impedance you registered in this study?
+4.2.6	impedance alternative	Report data quality measures provided by your recording system alternative to impedances.
+4.3 - ELECTRODE POSITIONING
+4.3.1	electrode location naming convention	What type of placement/naming convention have you used for the electrode locations?	"- five percent electrode system (extension of the International 10-20 system by Oostenveld & Praamstra (2001))
+- commercial geodesic net
+- other named system
+- custom locations"
+4.3.2	electrode location naming convention other	Specify the electrode placement/naming convention used		Either the name of a standardized placement system (for example, 10-20) or a list of standardized electrode names (for example, [Cz, Pz])
+4.3.3	electrode location naming convention custom	Describe the custom placement of your electrodes relative to anatomical markers or electrode naming/placement systems		"E.g. ""One electrode, half way between Cz and CP1, was used."""
+4.3.4	number active channels	Number of scalp electrodes excluding reference channels, ground channel, VEOG and HEOG.
+4.3.5	online reference exists	Did you use an online reference (as opposed to alternative solutions such as Driven Right Leg (DRL))?	"- yes
+- no"
+4.3.6	online reference type	Where did you place reference electrode(s)?	- preset:eeg_reference_electrodes
+4.3.7	alternatives to reference	What alternative to an online reference (e.g. DRL) did you use? Please describe it.
+4.3.8	online reference type other	Online reference location other than listed
+4.3.9	location ground	Where did you place ground electrode during the recording?
+4.3.10	eog channels	How many EOG channels did you use to record eye movement-dependent voltage?	"- two HEOG channels only
+- two VEOG channels only
+- two HEOG and two VEOG channels
+- no EOG channels
+- other"
+4.3.11	other eog channels	Specify the position of EOG channels you used for the recording		For example, where were they placed? How were they positioned in ajdunct to the rest of the electrodes?
+4.4 - ONLINE FILTERS
+4.4.1	online filters	Which of the following online filters have you used?	"- high pass
+- low pass
+- pass band
+- stop band
+- notch
+- none"
+4.4.2	online filters high pass cut off	Specify the high-pass filter cut-off used during recording.
+4.4.3	online filters high pass cutoff unit	Type of high-pass filter cut-off	"- half-amplitude
+- half-power"
+4.4.4	online filters high pass roll off	Specify the high-pass filter roll off used during recording
+4.4.5	online filters low pass cutoff unit	Type of low-pass filter cut-off	"- half-amplitude
+- half-power"
+4.4.6	online filters low pass cut off	Specify the low-pass filter cut-off used during recording.
+4.4.7	online filters low pass roll off	Specify the low-pass filter roll off used during recording
+4.4.8	online notch filter type	What online notch filter have you applied after the recording?	"- 50 Hz
+- 60 Hz
+- other"
+4.4.9	online notch filter type details	Describe the stopband frequency of the online notch filter you applied
+4.5 - SAMPLING
+4.5.1	recording samping frequency	What was your acquisition sampling rate?
+5 - PREPROCESSING
+5.1 - PRE-PROCESSING GENERAL
+5.1.1	same software	Did you use the same software for all pre-processing steps?	"- yes
+- no"	Preprocessing steps are fitlering, downsampling, re-referencing, artifact removal, epoching and baseline correction, and other up to the point of data collection
+5.1.2	preprocessing software	Which software did you use?	- preset:meeg_analysis_softwares
+5.1.3	preprocessing software details	"Specify software version if applicable, script language if ""custom script"" was selected, and software name and version if ""other"" was selected."
+5.2 - PRE-PROCESSING AUTOMATED PIPELINES
+5.2.1	preprocessing pipeline	Did you use an automated pre-processing pipeline which executes more than artifact removal decisions?	"- yes
+- no"	For example, this automated pipeline may also include filtering, baseline correction, or re-referencing.
+5.2.2	preprocessing pipeline which	Which automated pre-processing pipeline did you use?	"- PREP (Bigdely-Shamlo et al., 2015)
+- HAPPE (Gabard-Durnam et al., 2018)
+- HAPPE+ER (Monachino et al., 2021)
+- EPOS (Rodrigues et al., 2021)
+- other"
+5.2.3	preprocessing pipeline other	Automated pre-processing pipeline you used other than listed
+5.2.4	preprocessing pipeline reference	Reference for the automated pre-processing pipeline you applied.
+5.2.5	preprocessing pipeline version	Version of the automated pre-processing pipeline, if applicable
+5.2.6	preprocessing pipeline parameters	Describe parameters and settings you used to run this automated pipeline, if applicable.
+5.3 - OFFLINE FILTERS
+5.3.1	which filters	Did you apply any of the following offline (digital) filters?	"- high pass
+- low pass
+- notch
+- none"	This does not include filtering within automated pipelines, if you had applied any.
+5.3.2	filtering software	Which software do you use for implementing offline filters on EEG data?	- preset:meeg_analysis_softwares
+5.3.3	filter software details	"Specify software version if applicable, script language if ""custom script"" was selected, and software name and version if ""other"" was selected."
+5.3.4	offline highpass filter type	What kind of high-pass filter did you use?	- preset:filter
+5.3.5	offline highpass filter order	What was the length/order of the high-pass filter?
+5.3.6	offline highpass filter unit	Type of high-pass filter cut-off	"- half-power
+- half-amplitude"
+5.3.7	offline highpass filter cutoff	Specify the offline high-pass filter cut-off.
+5.3.8	offline highpass filter rolloff	Specify the offline high-pass filter roll off.
+5.3.9	offline highpass filter attenuation	What is the attenuation achieved in the stopband after high-pass filtering?
+5.3.10	offline highpass filter direction	What was the direction of the high-pass filter?	"- forwards
+- backwards
+- forwards and backwards"
+5.3.11	offline lowpass filter type	What kind of low-pass filter did you use?	- preset:filter
+5.3.12	offline lowpass filter order	What was the length/order of the low-pass filter?
+5.3.13	offline lowpass filter unit	Type of high-pass filter cut-off	"- half-power
+- half-amplitude"
+5.3.14	offline lowpass filter cutoff	Specify the offline low-pass filter cut-off.
+5.3.15	offline lowpass filter rolloff	Specify the offline low-pass filter roll off.
+5.3.16	offline lowpass filter attenuation	What is the attenuation achieved in the stopband after low-pass filtering?
+5.3.17	offline lowpass filter direction	What was the direction of the low-pass filter?	"- forwards
+- backwards
+- forwards and backwards"
+5.3.18	offline notch filter type	What notch filter have you applied after the recording?	"- 50 Hz
+- 60 Hz
+- other"
+5.3.19	offline notch filter type details	Describe the stopband frequency of the notch filter you applied
+5.4 - DOWNSAMPLING
+5.4.1	downsample data	Did you downsample your data?	"- yes
+- no"
+5.4.2	downsample software	What software did you use for downsampling?	- preset:meeg_analysis_softwares
+5.4.3	downsample software details	"Specify software version if applicable, script language if ""custom script"" was selected and software name and version if ""other"" was selected."
+5.4.4	new sampling frequency	If yes, what was your new sampling frequency?
+5.5 - RE-REFERENCING
+5.5.1	offline reference	Did you re-reference offline?	"- yes
+- no"	This does not include re-referencing within automated pipelines, if you had applied any.
+5.5.2	rereference software	Which analysis software do you use for re-referencing on EEG data?	- preset:meeg_analysis_softwares
+5.5.3	rereference software details	"Specify software version if applicable, script language if ""custom script"" was selected, and software name and version if ""other"" was selected."
+5.5.4	new reference	What was the new reference?
+5.6 - ARTIFACTS
+5.6.1	artifact steps number	How many artifact elimination steps did you have?		This section refers to artifact removal (correction, rejection) methods other than elimating participants from the sample, which should be described in the Experimental design and sample section. This section should not include artifact removal within automated pipelines already described above.
+5.6.2	artifact 1	What action did you take regarding artifacts in step 1?	"- reject bad trial or bad data segment
+- correct by subtraction (blinks, EKG etc.)
+- reject channels
+- interpolate channels
+- multi-step automated approach (e.g., FASTER)"
+5.6.3	artifact 1 software	What software did you use for artifact removal in step 1?	- preset:meeg_analysis_softwares
+5.6.4	artifact 1 software details	"Specify software version if applicable, script language if ""custom script"" was selected and software name and version if ""other"" was selected."
+5.6.5	artifact 1 reject what	Did you reject trials or segments of continuous data in step 1?	"- trials
+- data segments"
+5.6.6	artifact 1 reject method	How did you define your artifacts in step 1?	"- visual inspection
+- pre-set numerical criterion/function
+- other"
+5.6.7	artifact 1 reject visual	Which artifacts did you remove using visual inspection in step 1?	"- blinks
+- saccades
+- other occular
+- cardiac
+- motion and other EMG noise
+- alpha waves
+- line noise
+- other"
+5.6.8	artifact 1 reject visual other	Which other artifacts did you remove visually?
+5.6.9	artifact 1 reject numerical	Describe your numerical criterion/function and provide numerical threshold(s) in step 1.
+5.6.10	artifact 1 reject other	Describe your method of artifact rejection other than visual inspection or numerical criterion/function. Make sure that there is enough detail for a replication attempt.
+5.6.11	artifact 1 correct method	Which general method of artifact correction did you use in step 1?	"- regression-based approach (e.g., Gratton et al., 1983, Elbert et al., 1985)
+- spatial-filter-based approach (e.g., Dale, 1994)
+- ICA-based approaches
+- wavelet-based
+- wavelet-enhanced ICA (e.g., Khushaba et al, 2013)
+- multiple-source-analysis-based approaches (e.g., MSEC by Berg & Scherg, 1994)
+- other"
+5.6.12	artifact 1 correct reference	Reference to the artifact correction algorithm used in step 1
+5.6.13	artifact 1 correct details	Describe artifact correction parameters in detail sufficient for replication.		For example, provide numerical parameters, options selected, or describe decision-making process as closely as possible if manual, visual-inspection based decisions were involved.
+5.6.14	artifact 1 remove electrode where	From which data did you eliminate bad channels in step 1?	"- from individual trials
+- from segments of continuous data
+- from the entire recording"
+5.6.15	artifact 1 remove electrode list	List of channels eliminated in step 1, separated by a semicolon and a space.
+5.6.16	artifact 1 remove electrode method	What was the criterion for eliminating bad channels in step 1?	"- visual inspection
+- pre-set numerical criterion/function
+- other"
+5.6.17	artifact 1 remove electrode visual	Why did you remove bad electrodes in step 1?	"- excessive line noise
+- excessive muscle activity
+- bad contact and other large fluctations in voltage
+- dead electrode
+- excessive EMG noise
+- cardiac activity
+- other"
+5.6.18	artifact 1 remove electrode visual other	Which other reasons did you have for eliminating bad electrodes visually in step 1?
+5.6.19	artifact 1 remove electrode numerical	Describe your numerical criterion/function for eliminating electrodes and provide numerical threshold(s) in step 1.
+5.6.20	artifact 1 remove electrode other	Describe your method of electrode rejection other than visual inspection or numerical criterion/function. Make sure that there is enough detail for a replication attempt.
+5.6.21	artifact 1 interpolate which	How did you select channels for interpolation in step 1?		Describe the numerical threshold or function used to define which channels should be interpolated.
+5.6.22	artifact 1 interpolate how	Describe interpolation function and the settings you used in step 1.		Provide appropriate details and settings, as well as a reference, if appropriate.
+5.6.23	artifact 1 automated reference	Reference to the automated artifact removal algorithm used in step 1
+5.6.24	artifact 1 automated parameters	Describe automated artifact removal parameters in detail sufficient for replication.		For example, provide numerical parameters, options selected, or describe decision-making process as closely as possible if manual, visual-inspection based decisions were involved.
+5.6.25	artifact 2	What action did you take regarding artifacts in step 2?	"- reject bad trial or bad data segment
+- correct by subtraction (blinks, EKG etc.)
+- reject channels
+- interpolate channels
+- multi-step automated approach (e.g., FASTER)"
+5.6.26	artifact 2 software	What software did you use for artifact removal in step 2?	- preset:meeg_analysis_softwares
+5.6.27	artifact 2 software details	"Specify software version if applicable, script language if ""custom script"" was selected and software name and version if ""other"" was selected."
+5.6.28	artifact 2 reject what	Did you reject trials or segments of continuous data in step 2?	"- trials
+- data segments"
+5.6.29	artifact 2 reject method	How did you define your artifacts in step 2?	"- visual inspection
+- pre-set numerical criterion/function
+- other"
+5.6.30	artifact 2 reject visual	Which artifacts did you remove using visual inspection in step 2?	"- blinks
+- saccades
+- other occular
+- cardiac
+- motion and other EMG noise
+- alpha waves
+- line noise
+- other"
+5.6.31	artifact 2 reject visual other	Which other artifacts did you remove visually?
+5.6.32	artifact 2 reject numerical	Describe your numerical criterion/function and provide numerical threshold(s) in step 2.
+5.6.33	artifact 2 reject other	Describe your method of artifact rejection other than visual inspection or numerical criterion/function. Make sure that there is enough detail for a replication attempt.
+5.6.34	artifact 2 correct method	Which general method of artifact correction did you use in step 2?	"- regression-based approach (e.g., Gratton et al., 1983, Elbert et al., 1985)
+- spatial-filter-based approach (e.g., Dale, 1994)
+- ICA-based approaches
+- wavelet-based
+- wavelet-enhanced ICA (e.g., Khushaba et al, 2013)
+- multiple-source-analysis-based approaches (e.g., MSEC by Berg & Scherg, 1994)
+- other"
+5.6.35	artifact 2 correct reference	Reference to the artifact correction algorithm used in step 2
+5.6.36	artifact 2 correct details	Describe artifact correction parameters in detail sufficient for replication.		For example, provide numerical parameters, options selected, or describe decision-making process as closely as possible if manual, visual-inspection based decisions were involved.
+5.6.37	artifact 2 remove electrode where	From which data did you eliminate bad channels in step 2?	"- from individual trials
+- from segments of continuous data
+- from the entire recording"
+5.6.38	artifact 2 remove electrode list	List of channels eliminated in step 2, separated by a semicolon and a space.
+5.6.39	artifact 2 remove electrode method	What was the criterion for eliminating bad channels in step 2?	"- visual inspection
+- pre-set numerical criterion/function
+- other"
+5.6.40	artifact 2 remove electrode visual	Why did you remove bad electrodes in step 2?	"- excessive line noise
+- excessive muscle activity
+- bad contact and other large fluctations in voltage
+- dead electrode
+- excessive EMG noise
+- cardiac activity
+- other"
+5.6.41	artifact 2 remove electrode visual other	Which other reasons did you have for eliminating bad electrodes visually in step 2?
+5.6.42	artifact 2 remove electrode numerical	Describe your numerical criterion/function for eliminating electrodes and provide numerical threshold(s) in step 2.
+5.6.43	artifact 2 remove electrode other	Describe your method of electrode rejection other than visual inspection or numerical criterion/function. Make sure that there is enough detail for a replication attempt.
+5.6.44	artifact 2 interpolate which	How did you select channels for interpolation in step 2?		Describe the numerical threshold or function used to define which channels should be interpolated.
+5.6.45	artifact 2 interpolate how	Describe interpolation function and the settings you used in step 2.		Provide appropriate details and settings, as well as a reference, if appropriate.
+5.6.46	artifact 2 automated reference	Reference to the automated artifact removal algorithm used in step 2
+5.6.47	artifact 2 automated parameters	Describe automated artifact removal parameters in detail sufficient for replication.		For example, provide numerical parameters, options selected, or describe decision-making process as closely as possible if manual, visual-inspection based decisions were involved.
+5.6.48	artifact 3	What action did you take regarding artifacts in step 3?	"- reject bad trial or bad data segment
+- correct by subtraction (blinks, EKG etc.)
+- reject channels
+- interpolate channels
+- multi-step automated approach (e.g., FASTER)"
+5.6.49	artifact 3 software	What software did you use for artifact removal in step 3?	- preset:meeg_analysis_softwares
+5.6.50	artifact 3 software details	"Specify software version if applicable, script language if ""custom script"" was selected and software name and version if ""other"" was selected."
+5.6.51	artifact 3 reject what	Did you reject trials or segments of continuous data in step 3?	"- trials
+- data segments"
+5.6.52	artifact 3 reject method	How did you define your artifacts in step 3?	"- visual inspection
+- pre-set numerical criterion/function
+- other"
+5.6.53	artifact 3 reject visual	Which artifacts did you remove using visual inspection in step 3?	"- blinks
+- saccades
+- other occular
+- cardiac
+- motion and other EMG noise
+- alpha waves
+- line noise
+- other"
+5.6.54	artifact 3 reject visual other	Which other artifacts did you remove visually?
+5.6.55	artifact 3 reject numerical	Describe your numerical criterion/function and provide numerical threshold(s) in step 3.
+5.6.56	artifact 3 reject other	Describe your method of artifact rejection other than visual inspection or numerical criterion/function. Make sure that there is enough detail for a replication attempt.
+5.6.57	artifact 3 correct method	Which general method of artifact correction did you use in step 3?	"- regression-based approach (e.g., Gratton et al., 1983, Elbert et al., 1985)
+- spatial-filter-based approach (e.g., Dale, 1994)
+- ICA-based approaches
+- wavelet-based
+- wavelet-enhanced ICA (e.g., Khushaba et al, 2013)
+- multiple-source-analysis-based approaches (e.g., MSEC by Berg & Scherg, 1994)
+- other"
+5.6.58	artifact 3 correct reference	Reference to the artifact correction algorithm used in step 3
+5.6.59	artifact 3 correct details	Describe artifact correction parameters in detail sufficient for replication.		For example, provide numerical parameters, options selected, or describe decision-making process as closely as possible if manual, visual-inspection based decisions were involved.
+5.6.60	artifact 3 remove electrode where	From which data did you eliminate bad channels in step 3?	"- from individual trials
+- from segments of continuous data
+- from the entire recording"
+5.6.61	artifact 3 remove electrode list	List of channels eliminated in step 3, separated by a semicolon and a space.
+5.6.62	artifact 3 remove electrode method	What was the criterion for eliminating bad channels in step 3?	"- visual inspection
+- pre-set numerical criterion/function
+- other"
+5.6.63	artifact 3 remove electrode visual	Why did you remove bad electrodes in step 3?	"- excessive line noise
+- excessive muscle activity
+- bad contact and other large fluctations in voltage
+- dead electrode
+- excessive EMG noise
+- cardiac activity
+- other"
+5.6.64	artifact 3 remove electrode visual other	Which other reasons did you have for eliminating bad electrodes visually in step 3?
+5.6.65	artifact 3 remove electrode numerical	Describe your numerical criterion/function for eliminating electrodes and provide numerical threshold(s) in step 3.
+5.6.66	artifact 3 remove electrode other	Describe your method of electrode rejection other than visual inspection or numerical criterion/function. Make sure that there is enough detail for a replication attempt.
+5.6.67	artifact 3 interpolate which	How did you select channels for interpolation in step 3?		Describe the numerical threshold or function used to define which channels should be interpolated.
+5.6.68	artifact 3 interpolate how	Describe interpolation function and the settings you used in step 3.		Provide appropriate details and settings, as well as a reference, if appropriate.
+5.6.69	artifact 3 automated reference	Reference to the automated artifact removal algorithm used in step 3
+5.6.70	artifact 3 automated parameters	Describe automated artifact removal parameters in detail sufficient for replication.		For example, provide numerical parameters, options selected, or describe decision-making process as closely as possible if manual, visual-inspection based decisions were involved.
+5.6.71	artifact 4	What action did you take regarding artifacts in step 4?	"- reject bad trial or bad data segment
+- correct by subtraction (blinks, EKG etc.)
+- reject channels
+- interpolate channels
+- multi-step automated approach (e.g., FASTER)"
+5.6.72	artifact 4 software	What software did you use for artifact removal in step 4?	- preset:meeg_analysis_softwares
+5.6.73	artifact 4 software details	"Specify software version if applicable, script language if ""custom script"" was selected and software name and version if ""other"" was selected."
+5.6.74	artifact 4 reject what	Did you reject trials or segments of continuous data in step 4?	"- trials
+- data segments"
+5.6.75	artifact 4 reject method	How did you define your artifacts in step 4?	"- visual inspection
+- pre-set numerical criterion/function
+- other"
+5.6.76	artifact 4 reject visual	Which artifacts did you remove using visual inspection in step 4?	"- blinks
+- saccades
+- other occular
+- cardiac
+- motion and other EMG noise
+- alpha waves
+- line noise
+- other"
+5.6.77	artifact 4 reject visual other	Which other artifacts did you remove visually?
+5.6.78	artifact 4 reject numerical	Describe your numerical criterion/function and provide numerical threshold(s) in step 4.
+5.6.79	artifact 4 reject other	Describe your method of artifact rejection other than visual inspection or numerical criterion/function. Make sure that there is enough detail for a replication attempt.
+5.6.80	artifact 4 correct method	Which general method of artifact correction did you use in step 4?	"- regression-based approach (e.g., Gratton et al., 1983, Elbert et al., 1985)
+- spatial-filter-based approach (e.g., Dale, 1994)
+- ICA-based approaches
+- wavelet-based
+- wavelet-enhanced ICA (e.g., Khushaba et al, 2013)
+- multiple-source-analysis-based approaches (e.g., MSEC by Berg & Scherg, 1994)
+- other"
+5.6.81	artifact 4 correct reference	Reference to the artifact correction algorithm used in step 4
+5.6.82	artifact 4 correct details	Describe artifact correction parameters in detail sufficient for replication.		For example, provide numerical parameters, options selected, or describe decision-making process as closely as possible if manual, visual-inspection based decisions were involved.
+5.6.83	artifact 4 remove electrode where	From which data did you eliminate bad channels in step 4?	"- from individual trials
+- from segments of continuous data
+- from the entire recording"
+5.6.84	artifact 4 remove electrode list	List of channels eliminated in step 4, separated by a semicolon and a space.
+5.6.85	artifact 4 remove electrode method	What was the criterion for eliminating bad channels in step 4?	"- visual inspection
+- pre-set numerical criterion/function
+- other"
+5.6.86	artifact 4 remove electrode visual	Why did you remove bad electrodes in step 4?	"- excessive line noise
+- excessive muscle activity
+- bad contact and other large fluctations in voltage
+- dead electrode
+- excessive EMG noise
+- cardiac activity
+- other"
+5.6.87	artifact 4 remove electrode visual other	Which other reasons did you have for eliminating bad electrodes visually in step 4?
+5.6.88	artifact 4 remove electrode numerical	Describe your numerical criterion/function for eliminating electrodes and provide numerical threshold(s) in step 4.
+5.6.89	artifact 4 remove electrode other	Describe your method of electrode rejection other than visual inspection or numerical criterion/function. Make sure that there is enough detail for a replication attempt.
+5.6.90	artifact 4 interpolate which	How did you select channels for interpolation in step 4?		Describe the numerical threshold or function used to define which channels should be interpolated.
+5.6.91	artifact 4 interpolate how	Describe interpolation function and the settings you used in step 4.		Provide appropriate details and settings, as well as a reference, if appropriate.
+5.6.92	artifact 4 automated reference	Reference to the automated artifact removal algorithm used in step 4
+5.6.93	artifact 4 automated parameters	Describe automated artifact removal parameters in detail sufficient for replication.		For example, provide numerical parameters, options selected, or describe decision-making process as closely as possible if manual, visual-inspection based decisions were involved.
+5.6.94	artifact 5	What action did you take regarding artifacts in step 5?	"- reject bad trial or bad data segment
+- correct by subtraction (blinks, EKG etc.)
+- reject channels
+- interpolate channels
+- multi-step automated approach (e.g., FASTER)"
+5.6.95	artifact 5 software	What software did you use for artifact removal in step 5?	- preset:meeg_analysis_softwares
+5.6.96	artifact 5 software details	"Specify software version if applicable, script language if ""custom script"" was selected and software name and version if ""other"" was selected."
+5.6.97	artifact 5 reject what	Did you reject trials or segments of continuous data in step 5?	"- trials
+- data segments"
+5.6.98	artifact 5 reject method	How did you define your artifacts in step 5?	"- visual inspection
+- pre-set numerical criterion/function
+- other"
+5.6.99	artifact 5 reject visual	Which artifacts did you remove using visual inspection in step 5?	"- blinks
+- saccades
+- other occular
+- cardiac
+- motion and other EMG noise
+- alpha waves
+- line noise
+- other"
+5.6.100	artifact 5 reject visual other	Which other artifacts did you remove visually?
+5.6.101	artifact 5 reject numerical	Describe your numerical criterion/function and provide numerical threshold(s) in step 5.
+5.6.102	artifact 5 reject other	Describe your method of artifact rejection other than visual inspection or numerical criterion/function. Make sure that there is enough detail for a replication attempt.
+5.6.103	artifact 5 correct method	Which general method of artifact correction did you use in step 5?	"- regression-based approach (e.g., Gratton et al., 1983, Elbert et al., 1985)
+- spatial-filter-based approach (e.g., Dale, 1994)
+- ICA-based approaches
+- wavelet-based
+- wavelet-enhanced ICA (e.g., Khushaba et al, 2013)
+- multiple-source-analysis-based approaches (e.g., MSEC by Berg & Scherg, 1994)
+- other"
+5.6.104	artifact 5 correct reference	Reference to the artifact correction algorithm used in step 5
+5.6.105	artifact 5 correct details	Describe artifact correction parameters in detail sufficient for replication.		For example, provide numerical parameters, options selected, or describe decision-making process as closely as possible if manual, visual-inspection based decisions were involved.
+5.6.106	artifact 5 remove electrode where	From which data did you eliminate bad channels in step 5?	"- from individual trials
+- from segments of continuous data
+- from the entire recording"
+5.6.107	artifact 5 remove electrode list	List of channels eliminated in step 5, separated by a semicolon and a space.
+5.6.108	artifact 5 remove electrode method	What was the criterion for eliminating bad channels in step 5?	"- visual inspection
+- pre-set numerical criterion/function
+- other"
+5.6.109	artifact 5 remove electrode visual	Why did you remove bad electrodes in step 5?	"- excessive line noise
+- excessive muscle activity
+- bad contact and other large fluctations in voltage
+- dead electrode
+- excessive EMG noise
+- cardiac activity
+- other"
+5.6.110	artifact 5 remove electrode visual other	Which other reasons did you have for eliminating bad electrodes visually in step 5?
+5.6.111	artifact 5 remove electrode numerical	Describe your numerical criterion/function for eliminating electrodes and provide numerical threshold(s) in step 5.
+5.6.112	artifact 5 remove electrode other	Describe your method of electrode rejection other than visual inspection or numerical criterion/function. Make sure that there is enough detail for a replication attempt.
+5.6.113	artifact 5 interpolate which	How did you select channels for interpolation in step 5?		Describe the numerical threshold or function used to define which channels should be interpolated.
+5.6.114	artifact 5 interpolate how	Describe interpolation function and the settings you used in step 5.		Provide appropriate details and settings, as well as a reference, if appropriate.
+5.6.115	artifact 5 automated reference	Reference to the automated artifact removal algorithm used in step 5
+5.6.116	artifact 5 automated parameters	Describe automated artifact removal parameters in detail sufficient for replication.		For example, provide numerical parameters, options selected, or describe decision-making process as closely as possible if manual, visual-inspection based decisions were involved.
+5.6.117	artifact 6	What action did you take regarding artifacts in step 6?	"- reject bad trial or bad data segment
+- correct by subtraction (blinks, EKG etc.)
+- reject channels
+- interpolate channels
+- multi-step automated approach (e.g., FASTER)"
+5.6.118	artifact 6 software	What software did you use for artifact removal in step 6?	- preset:meeg_analysis_softwares
+5.6.119	artifact 6 software details	"Specify software version if applicable, script language if ""custom script"" was selected and software name and version if ""other"" was selected."
+5.6.120	artifact 6 reject what	Did you reject trials or segments of continuous data in step 6?	"- trials
+- data segments"
+5.6.121	artifact 6 reject method	How did you define your artifacts in step 6?	"- visual inspection
+- pre-set numerical criterion/function
+- other"
+5.6.122	artifact 6 reject visual	Which artifacts did you remove using visual inspection in step 6?	"- blinks
+- saccades
+- other occular
+- cardiac
+- motion and other EMG noise
+- alpha waves
+- line noise
+- other"
+5.6.123	artifact 6 reject visual other	Which other artifacts did you remove visually?
+5.6.124	artifact 6 reject numerical	Describe your numerical criterion/function and provide numerical threshold(s) in step 6.
+5.6.125	artifact 6 reject other	Describe your method of artifact rejection other than visual inspection or numerical criterion/function. Make sure that there is enough detail for a replication attempt.
+5.6.126	artifact 6 correct method	Which general method of artifact correction did you use in step 6?	"- regression-based approach (e.g., Gratton et al., 1983, Elbert et al., 1985)
+- spatial-filter-based approach (e.g., Dale, 1994)
+- ICA-based approaches
+- wavelet-based
+- wavelet-enhanced ICA (e.g., Khushaba et al, 2013)
+- multiple-source-analysis-based approaches (e.g., MSEC by Berg & Scherg, 1994)
+- other"
+5.6.127	artifact 6 correct reference	Reference to the artifact correction algorithm used in step 6
+5.6.128	artifact 6 correct details	Describe artifact correction parameters in detail sufficient for replication.		For example, provide numerical parameters, options selected, or describe decision-making process as closely as possible if manual, visual-inspection based decisions were involved.
+5.6.129	artifact 6 remove electrode where	From which data did you eliminate bad channels in step 6?	"- from individual trials
+- from segments of continuous data
+- from the entire recording"
+5.6.130	artifact 6 remove electrode list	List of channels eliminated in step 6, separated by a semicolon and a space.
+5.6.131	artifact 6 remove electrode method	What was the criterion for eliminating bad channels in step 6?	"- visual inspection
+- pre-set numerical criterion/function
+- other"
+5.6.132	artifact 6 remove electrode visual	Why did you remove bad electrodes in step 6?	"- excessive line noise
+- excessive muscle activity
+- bad contact and other large fluctations in voltage
+- dead electrode
+- excessive EMG noise
+- cardiac activity
+- other"
+5.6.133	artifact 6 remove electrode visual other	Which other reasons did you have for eliminating bad electrodes visually in step 6?
+5.6.134	artifact 6 remove electrode numerical	Describe your numerical criterion/function for eliminating electrodes and provide numerical threshold(s) in step 6.
+5.6.135	artifact 6 remove electrode other	Describe your method of electrode rejection other than visual inspection or numerical criterion/function. Make sure that there is enough detail for a replication attempt.
+5.6.136	artifact 6 interpolate which	How did you select channels for interpolation in step 6?		Describe the numerical threshold or function used to define which channels should be interpolated.
+5.6.137	artifact 6 interpolate how	Describe interpolation function and the settings you used in step 6.		Provide appropriate details and settings, as well as a reference, if appropriate.
+5.6.138	artifact 6 automated reference	Reference to the automated artifact removal algorithm used in step 6
+5.6.139	artifact 6 automated parameters	Describe automated artifact removal parameters in detail sufficient for replication.		For example, provide numerical parameters, options selected, or describe decision-making process as closely as possible if manual, visual-inspection based decisions were involved.
+5.6.140	artifact 7	What action did you take regarding artifacts in step 7?	"- reject bad trial or bad data segment
+- correct by subtraction (blinks, EKG etc.)
+- reject channels
+- interpolate channels
+- multi-step automated approach (e.g., FASTER)"
+5.6.141	artifact 7 software	What software did you use for artifact removal in step 7?	- preset:meeg_analysis_softwares
+5.6.142	artifact 7 software details	"Specify software version if applicable, script language if ""custom script"" was selected and software name and version if ""other"" was selected."
+5.6.143	artifact 7 reject what	Did you reject trials or segments of continuous data in step 7?	"- trials
+- data segments"
+5.6.144	artifact 7 reject method	How did you define your artifacts in step 7?	"- visual inspection
+- pre-set numerical criterion/function
+- other"
+5.6.145	artifact 7 reject visual	Which artifacts did you remove using visual inspection in step 7?	"- blinks
+- saccades
+- other occular
+- cardiac
+- motion and other EMG noise
+- alpha waves
+- line noise
+- other"
+5.6.146	artifact 7 reject visual other	Which other artifacts did you remove visually?
+5.6.147	artifact 7 reject numerical	Describe your numerical criterion/function and provide numerical threshold(s) in step 7.
+5.6.148	artifact 7 reject other	Describe your method of artifact rejection other than visual inspection or numerical criterion/function. Make sure that there is enough detail for a replication attempt.
+5.6.149	artifact 7 correct method	Which general method of artifact correction did you use in step 7?	"- regression-based approach (e.g., Gratton et al., 1983, Elbert et al., 1985)
+- spatial-filter-based approach (e.g., Dale, 1994)
+- ICA-based approaches
+- wavelet-based
+- wavelet-enhanced ICA (e.g., Khushaba et al, 2013)
+- multiple-source-analysis-based approaches (e.g., MSEC by Berg & Scherg, 1994)
+- other"
+5.6.150	artifact 7 correct reference	Reference to the artifact correction algorithm used in step 7
+5.6.151	artifact 7 correct details	Describe artifact correction parameters in detail sufficient for replication.		For example, provide numerical parameters, options selected, or describe decision-making process as closely as possible if manual, visual-inspection based decisions were involved.
+5.6.152	artifact 7 remove electrode where	From which data did you eliminate bad channels in step 7?	"- from individual trials
+- from segments of continuous data
+- from the entire recording"
+5.6.153	artifact 7 remove electrode list	List of channels eliminated in step 7, separated by a semicolon and a space.
+5.6.154	artifact 7 remove electrode method	What was the criterion for eliminating bad channels in step 7?	"- visual inspection
+- pre-set numerical criterion/function
+- other"
+5.6.155	artifact 7 remove electrode visual	Why did you remove bad electrodes in step 7?	"- excessive line noise
+- excessive muscle activity
+- bad contact and other large fluctations in voltage
+- dead electrode
+- excessive EMG noise
+- cardiac activity
+- other"
+5.6.156	artifact 7 remove electrode visual other	Which other reasons did you have for eliminating bad electrodes visually in step 7?
+5.6.157	artifact 7 remove electrode numerical	Describe your numerical criterion/function for eliminating electrodes and provide numerical threshold(s) in step 7.
+5.6.158	artifact 7 remove electrode other	Describe your method of electrode rejection other than visual inspection or numerical criterion/function. Make sure that there is enough detail for a replication attempt.
+5.6.159	artifact 7 interpolate which	How did you select channels for interpolation in step 7?		Describe the numerical threshold or function used to define which channels should be interpolated.
+5.6.160	artifact 7 interpolate how	Describe interpolation function and the settings you used in step 7.		Provide appropriate details and settings, as well as a reference, if appropriate.
+5.6.161	artifact 7 automated reference	Reference to the automated artifact removal algorithm used in step 7
+5.6.162	artifact 7 automated parameters	Describe automated artifact removal parameters in detail sufficient for replication.		For example, provide numerical parameters, options selected, or describe decision-making process as closely as possible if manual, visual-inspection based decisions were involved.
+5.6.163	artifact removal more than 7	We are sorry, but this is an early version of the web-app, and it currently includes up to 7 steps of artifact removal decisions due to technical limitations. Describe your remaining decisions in this field as detailed as you can.
+5.7 - EPOCHING
+5.7.1	epoch any	Did you epoch data outside of the automated pre-processing pipelines described earlier?	"- yes
+- no"
+5.7.2	epoch software	Which analysis software did you use for epoching EEG data?	- preset:meeg_analysis_softwares
+5.7.3	epoch software details	"Specify software version if applicable, script language if ""custom script"" was selected, and software name and version if ""other"" was selected."
+5.7.4	epoch beginning	What was the epoch beginning relative to a trigger point? For timings after the trigger, use positive numbers. For timings before the trigger, use negative numbers.
+5.7.5	epoch trigger event	What was the event type relative to which epochs were defined?	"- stimulus onset
+- response
+- feedback onset
+- other"
+5.7.6	epoch trigger event other	If other, what is the event?
+5.7.7	epoch end	What was the epoch end relative to a trigger point? For timings after the trigger, use positive numbers. For timings before the trigger, use negative numbers.
+5.8 - BASELINE CORRECTION
+5.8.1	baseline any	Did you apply baseline correction?	"- yes
+- no"	This does not include baseline correction within automated pipelines, if you had applied any.
+5.8.2	baseline software	Which analysis software did you use for baseline correction?	- preset:meeg_analysis_softwares
+5.8.3	baseline software details	"Specify software version if applicable, script language if ""custom script"" was selected, and software name and version if ""other"" was selected."
+5.8.4	baseline beginning	What was the baseline period beginning relative to a trigger point? For timings after the trigger, use positive numbers. For timings before the trigger, use negative numbers.
+5.8.5	baseline end	What was the baseline period end relative to a trigger point? For timings after the trigger, use positive numbers. For timings before the trigger, use negative numbers.
+5.8.6	baseline method	Which baseline calculation method was used?	"- subtract mean of the baseline period per condition
+- other"
+5.8.7	baseline other method details	Specify your baseline calculation method other than subtraction of the mean of the baseline.
+5.9 - ORDER OF OPERATIONS
+5.9.1	preprocessing order	Describe order of all pre-processing steps described here in a way that allows replication.
+2 - DESIGN_SAMPLE
+2.1 - SAMPLE SIZE
+2.1.1	sample size total	How many subjects participated in the study?
+2.1.2	sample size valid	How many participants, in total, were included in the analysis, after exclusion participants with bad data?
+2.1.3	subject exclusion rationale	Specify reasons for excluding participants.
+2.1.4	number of groups	How many experimental/comparison (between-subjects) groups did the study feature?
+2.1.5	order of group	Specify group names separated by semicolon and a space (e.g., test group; control group)
+2.1.6	participants per group	How many participants did each group have after exclusion?		Input numeric values in the same order in which groups were listed in the previous section. Values should be separated by semicolon and a space.
+2.2 - PRESENTED TRIALS
+2.2.1	total nb of within subject conditions	How many within-subject conditions did the study have?
+2.2.2	within subject condition names	Specify condition names separated by semicolon and a space (e.g., match; mismatch).
+2.2.3	trial presentation strategy	What determined the number of trials each subject was presented with?	"- fixed N of trials delivered
+- adaptive N of trials (e.g., presenting trials with behavioural errors again until correct response)
+- Other"
+2.2.4	total nb of trials	How many trials in total was each subject presented with (including repetition of the same stimuli or trials)?
+2.2.5	total nb of trials condition	How many trials did each condition feature (including repetition of the same stimuli or trials)?		Values should be separated by semicolon and a space and given in the same order as the conditions were listed earlier. If there are multiple groups of participants, list trial counts for all conditions for one group, and then for the next one - following the ordering of groups as you specified them earlier.
+2.2.6	trial presentation strategy other	Explain how it was determined how many trials a participant was presented with.
+2.2.7	avg total nb trials adaptive other	How many trials on average was a participant presented with, in total (including repetition of the same stimuli or trials)?
+2.2.8	min total nb trials adaptive other	What was the minimum number of trials a participant was presented with, in total  (including repetition of the same stimuli or trials)?
+2.2.9	max total nb trials adaptive other	What was the maximum number of trials a participant was presented with, in total  (including repetition of the same stimuli or trials)?
+2.2.10	avg nb trials adaptive other condition	How many trials on average was a participant presented with, per condition  (including repetition of the same stimuli or trials)? 		Values should be separated by semicolon and a space and given in the same order as the conditions were listed earlier. If there are multiple groups of participants, list trial counts for all conditions for one group, and then for the next one - following the ordering of groups as you specified them earlier.
+2.2.11	min nb trials adaptive other condition	What was the minimum number of trials a participant was presented with, per condition (including repetition of the same stimuli or trials)?		Values should be separated by semicolon and a space and given in the same order as the conditions were listed earlier. If there are multiple groups of participants, list trial counts for all conditions for one group, and then for the next one - following the ordering of groups as you specified them earlier.
+2.2.12	max nb trials adaptive other condition	What was the maximum number of trials a participant was presented with, per condition  (including repetition of the same stimuli or trials)? 		Values should be separated by semicolon and a space and given in the same order as the conditions were listed earlier. If there are multiple groups of participants, list trial counts for all conditions for one group, and then for the next one - following the ordering of groups as you specified them earlier.
+2.3 - ANALYZED TRIALS
+2.3.1	avg nb of trials condition	In your final analysis, how many trials, on average, did you include for each condition per subject?		Insert numbers for each condition, separated by a semicolon and a space, in the same order as the conditions were listed earlier. If there are multiple groups of participants, list trial counts for all conditions for one group, and then for the next one - following the ordering of groups as you specified them earlier
+2.3.2	min nb of trials per condition	Specify the minimum number of trials analyzed per condition for any subject.		Values should be separated by semicolon and a space and given in the same order as the conditions were listed earlier. If there are multiple groups of participants, list trial counts for all conditions for one group, and then for the next one - following the ordering of groups as you specified them earlier.
+2.3.3	max nb of trials per condition	Specify the maximum number of trials analyzed per condition for any subject. 		Values should be separated by semicolon and a space and given in the same order as the conditions were listed earlier. If there are multiple groups of participants, list trial counts for all conditions for one group, and then for the next one - following the ordering of groups as you specified them earlier.
+2.4 - PRESENTING SOFTWARE
+2.4.1	presenting software	Which presenting software did you use to show your experimental task?	- preset:stimulus_presentation_softwares
+2.4.2	presenting software details	"Specify software version if applicable, and software name and version if ""other"" was selected."
+6 - MEASUREMENT
+6.1 - MEASUREMENT
+6.1.1	measure intro	Did you measure amplitude and/or latency for the purposes of later statistical analysis?	"- yes
+- no"	Select no if you did not measure latency or amplitude for the purposes of statistical analysis in the next step. For example, you may have conducted a mass univariate analysis and you did not subject locations and time windows obtained by mass univariate approach to another statistical analysis, or you may have conducted a source analysis.
+6.1.2	measure type	Select the types of measurements you conducted.	"- amplitude
+- latency"
+6.2 - AMPLITUDE MEASUREMENT - SOFTWARE
+6.2.1	amp measure software	Amplitude measurement software	- preset:meeg_analysis_softwares
+6.2.2	amp measure software details	"Specify software version if applicable, and software name and version if ""other"" was selected."
+6.3 - AMPLITUDE MEASUREMENT - WAVEFORMS
+6.3.1	amp measured from	The amplitude is measured from	- preset:waveform
+6.3.2	waveform difference waves	Which conditions were subtracted from which? Specify how difference waves were constructed.
+6.3.3	waveform further details	How did you calculate your waveforms for analysis? Describe in detail sufficient to allow replication.
+6.4 - AMPLITUDE MEASUREMENT - MEASURE
+6.4.1	amp measure procedure	Select procedure which was used for amplitude measurement in this time window.	- preset:amplitude_measurement
+6.4.2	amp measure peak positivity	Was the peak negative or positive?	"- negative
+- positive"
+6.4.3	amp measure peak method	What method did you use for peak calculation?	"- simple peak
+- local peak"
+6.4.4	window area measure type	Which window area measure did you use?	"- rectified
+- signed
+- integral"
+6.4.5	amp measure details	Describe the procedure for amplitude measurement calculation in detail sufficient for its replication.
+6.5 - AMPLITUDE MEASUREMENT - TIME WINDOW
+6.5.1	amp time window selection	How was the amplitude measurement window selected?	"- a priori
+- data-driven selection/identification of the time window from the entire epoch
+- time window was selected/identified using data-driven methods from a broader window which was selected a priori
+- selection/identification of time window in two data driven steps (e.g. time window around a peak of a visually identified broader window)
+- other"	e.g. for a priori - mean of a window decided in advance; e.g. visual inspection of an a priori decided range or window around a peak found in an a priori decided range; e.g., for data driven - mass uni analysis of the entire epoch, visual inspecion of the entire epoch or a vaguely defined (i.e. flexible) general time range. When you are making this decision, you may want to check out papers by Kriegskorte et al. (2009, https://doi.org/10.1038/nn.2303) or Gaspelin and Luck (2018, https://doi.org/10.1111/psyp.12639) on biases in time window and channel selection.
+6.5.2	amp window selection a priori	Select the a priori procedure which was used for amplitude measurement in this time window.	"- The same as in previous literature
+- based on previous literature, but not exact replication
+- theory driven novel window selection
+- other"
+6.5.3	amp literature reference	Literature references, separated by semicolon and space
+6.5.4	amp literature similar	Provide reasons for deviation or explan how the cited time windows were combined
+6.5.5	amp theory	Theory behind a-priori window selection (including e.g., thresholds or references if relevant)
+6.5.6	amp selection other reasons	Describe your a-priori window selection process other than those listed
+6.5.7	amp measure start a priori	Provide the start of the a priori selected time window for amplitude measurement.
+6.5.8	amp measure end a priori	Provide the end of the a priori selected time window for amplitude measurement.
+6.5.9	amp window selection data driven broad	Select the procedure which was used to identify start and end of the initial time window.	"- visual inspection of waveforms (separate or collapsed conditions)
+- visual inspection of global field potentials
+- significant effects on consecutive time points/short windows
+- time window around a peak
+- other"	vis. inspection across all conditions also known as flattened average approach, for more details see Gaspelin and Luck or  https://doi.org/10.1371/journal.pcbi.1008286
+6.5.10	amp window selection data driven broad visual	Which waveforms/conditions did you inspect visually to select the initial time window for this effect?	"- all conditions separately
+- all conditions collapsed into one average waveform
+- other"
+6.5.11	amp selection data driven broad visual details	Describe which conditions or combinations of conditions you used for visual inspection.
+6.5.12	amp window length sig tests broad	How broad were the windows that were consecutively tested?
+6.5.13	amp window overlap sig tests broad	Did the consecutive time windows overlap?	"- yes
+- no"
+6.5.14	amp window overlap length sig tests broad	By how many milliseconds did they overlap?
+6.5.15	amp window no sig tests broad	How many consecutive significant tests were required to identify an effect?
+6.5.16	amp window peakwindow length broad	How wide was the window around peak?
+6.5.17	amp window peakwindow length rationale broad	Rationale for selecting this window length
+6.5.18	amp window other broad	Describe your method of selection of the initial time window used to measure amplitude other than listed.
+6.5.19	amp window start data driven broad	Start of the window which was used to provide broader borders for the final time window selection.
+6.5.20	amp window end data driven broad	End of the window which was used to provide broader borders for the final time window selection.
+6.5.21	amp window selection data driven final	Select the procedure which was used to identify start and end of the final time window.	"- visual inspection of waveforms (separate or collapsed conditions)
+- visual inspection of global field potentials
+- significant effects on consecutive time points/short windows
+- time window around a peak
+- other"	vis. inspection across all conditions also known as flattened average approach, for more details see Gaspelin and Luck or  https://doi.org/10.1371/journal.pcbi.1008286
+6.5.22	amp window selection data driven final visual	Which waveforms/conditions did you inspect visually to select the final time window for this effect?	"- all conditions separately
+- all conditions collapsed into one average waveform
+- other"
+6.5.23	amp selection data driven final visual details	Describe which conditions or combinations of conditions you used for visual inspection.
+6.5.24	amp window length sig tests final	How broad were the windows that were consecutively tested?
+6.5.25	amp window overlap sig tests final	Did the consecutive time windows overlap?	"- yes
+- no"
+6.5.26	amp window overlap length sig tests final	By how many milliseconds did they overlap?
+6.5.27	amp window no sig tests final	How many consecutive significant tests were required to identify an effect?
+6.5.28	amp window peakwindow length final	How wide was the window around peak?
+6.5.29	amp window peakwindow lengthrationale final	Rationale for selecting this window length
+6.5.30	amp window other final	Describe your method of selection of the final time window used to measure amplitude other than listed.
+6.5.31	amp window start data driven final	Start of the window which was eventually used for amplitude measurement or where the effect was found.
+6.5.32	amp window end data driven final	End of the window which was eventually used for amplitude measurement or where the effect was found.
+6.6 - LATENCY MEASUREMENT - SOFTWARE
+6.6.1	lat measure software	Latency measurement software	- preset:meeg_analysis_softwares
+6.6.2	lat measure software details	"Specify software version if applicable, and software name and version if ""other"" was selected."
+6.7 - LATENCY MEASUREMENT - WAVEFORMS
+6.7.1	lat measured from	Latency was measured from:	- preset:waveform
+6.7.2	lat difference waves	Which conditions were subtracted from which? Specify how difference waves were constructed.
+6.7.3	lat waveform further details	How did you calculate your waveforms for analysis? Describe in detail sufficient to allow replication.
+6.8 - LATENCY MEASUREMENT - MEASURE
+6.8.1	lat type	Describe the latency type.	"- midpoint
+- onset
+- other"
+6.8.2	peak lat measure	How did you calculate the midpoint of this latency?	"- simple peak
+- local peak
+- 50% area
+- other"
+6.8.3	peak lat measure other	How did you calculate midpoint latency other than listed?
+6.8.4	onset lat measure	How did you calculate the onset of this latency?	- preset:latency_measurement	Select procedure which was used for latency measurement in this time window and describe all details neccessary for replicating this procedure in Further clarification.
+6.8.5	onset lat sig tests length	How broad were the windows that were consecutively tested?
+6.8.6	onset lat sig tests overlap	Did the consecutive time windows overlap?	"- yes
+- no"
+6.8.7	onset lat sig tests overlap length	By how many milliseconds did they overlap?
+6.8.8	onset lat sig tests no	How many consecutive significant tests were required to identify an effect?
+6.8.9	onset lat peak fraction	What fraction of peak amplitude was used to determine onset latency?
+6.8.10	onset lat area fraction	What fraction of window area was used to determine onset latency?
+6.8.11	onset lat describe	Describe your onset latency calculation procedure step by step.
+6.8.12	other lat describe	Describe your other latency calculation procedure step by step.
+6.9 - LATENCY MEASUREMENT - TIME WINDOW
+6.9.1	lat selection approach	Approach to selection of the window within which latency was located	"- a priori
+- data-driven
+- latency idenfied based on entire epoch
+- other"	A priori: the window is selected in advance Data-driven: the measurement window is selected based on data obtained in the current study. Entire epoch: latency is identified based on the entire epoch instead of a narrower window (e.g., peak of the entire waveform). When you are making this decision, you may want to check out papers by Kriegskorte et al. (2009, https://doi.org/10.1038/nn.2303) or Gaspelin and Luck (2018, https://doi.org/10.1111/psyp.12639) on biases in time window and channel selection.
+6.9.2	lat selection approach a priori	Select the procedure which was used for latency measurement in this time window.	"-  The same as in previous literature
+- based on previous literature, but not exact replication
+- theory driven novel window selection
+- other"
+6.9.3	lat literature exact	Literature references, separated by semicolon and space
+6.9.4	lat literature similar	Provide reasons for deviation or explan how the cited time windows were combined
+6.9.5	lat theory	Theory behind a-priori window selection (including implementation of regions, thresholds etc, and references if relevant)
+6.9.6	lat selection other reasons	Describe your a-priori window selection process other than those listed
+6.9.7	lat selection approach data driven	Select the procedure which was used to identify start and end of the latency measurement time window.	"- visual inspection of grand averages in separate conditions across participants
+- visual inspection of grand average collapsed across all conditions and participants
+- other"
+6.9.8	lat selection approach data driven visual	Which waveforms/conditions did you inspect visually to select the time window for latency measurement?	"- all conditions separately
+- all conditions collapsed into one average waveform
+- other"
+6.9.9	lat selection approach data driven visual details	Describe which conditions or combinations of conditions you used for visual inspection.
+6.9.10	lat selection approach data driven other	Describe your method of selection of the latency measurement time window other than listed.
+6.9.11	lat further clarification	Describe how you selected the latency measurement time window.
+6.9.12	lat measure window start	Provide the start of the window which was used to measure latency. Measurement window: START
+6.9.13	lat measure window end	Provide the end of the window which was used to measure latency. Measurement window: END
+7 - CHANNELS
+7.1 - SELECTION OF CHANNELS FOR ANALYSIS
+7.1.1	channels all vs subset	Did you make a selection of channels for the purposes of statistical analysis?	"- all channels were submitted to statistical analysis
+- a subset of channels was submitted to statistical analysis"	"For example, if you conducted an analysis such as cluster-based permutation tests on the entire scalp, you should pick ""all channels were submitted to analysis"", and not describe permutation tests in this section. If you completed cluster-based permutation tests on a subset of electrodes, you should select the other option, and then describe how this subset of electrodes was selected in the follow-up questions."
+7.1.2	chan selection	What was the rationale for selecting this exact subset of electrodes?	"- a priori
+- data-driven selection from the entire scalp
+- data-driven selection of channels from an a priori selected region
+- selection/identification of channels in two data driven steps (e.g. location of maximal effect within a visually identified broader region)
+- other"	When you are making this decision, you may want to check out papers by Kriegskorte et al. (2009, https://doi.org/10.1038/nn.2303) or Gaspelin and Luck (2018, https://doi.org/10.1111/psyp.12639) on biases in time window and channel selection.
+7.1.3	chan selection a priori	Select the a priori procedure which was used for channel selection.	"- The same as in previous literature
+- based on previous literature, but not exact replication
+- theory driven novel channel selection
+- other"
+7.1.4	chan literature reference	Literature references, separated by semicolon and space
+7.1.5	chan literature similar	Provide reasons for deviation or explan how the cited channel choices were combined
+7.1.6	chan theory	Theory behind a-priori novel channel selection (including, e.g., thresholds or references if relevant)
+7.1.7	chan selection other	Describe your a-priori channel selection process other than those listed
+7.1.8	chan a priori number	Number of a priori selected channels
+7.1.9	chan a priori list	List of a priori selected channels, separated by a semicolon and a space
+7.1.10	chan selection data driven broad	Select the procedure which was used to identify the initial set of channels which was used to make the final selection of channels in the next step.	"- visual inspection of waveforms (separate or collapsed conditions)
+- visual inspection of global field potentials
+- visual inspection of voltage maps (separate or collapsed conditions)
+- significant effects on multiple neighbouring electrodes
+- N channels arround the largest effect
+- other"
+7.1.11	chan selection data driven broad visual	Which experimental conditions did you inspect visually to select channel region?	"- all conditions separately
+- all conditions collapsed into one average waveform
+- other"
+7.1.12	chan selection data driven broad visual details	Describe which conditions or combinations of conditions did you use for visual inspection of the channel region for this effect?
+7.1.13	chan selection data driven broad neighbours	What was the criterion for the size of the cluster of neighbouring electrodes that needed to be significant to be selected for statistical analysis?
+7.1.14	chan selection data driven broad neighbours maxregion	How did you select the channels around the peak effect for analysis?
+7.1.15	chan selection data driven broad neighbours other	Describe your method of selection of the initial set of electrodes used for analysis other than listed.
+7.1.16	chan selection data driven broad number	Number of channels selected in this step
+7.1.17	chan selection data driven broad list	List of channels selected in this step, separated by a semicolon and a space
+7.1.18	chan selection data driven final	Select the procedure which was used to identify the set of electrodes which was submitted to statistical analysis.	"- visual inspection of waveforms (separate or collapsed conditions)
+- visual inspection of global field potentials
+- visual inspection of voltage maps (separate or collapsed conditions)
+- significant effects on multiple neighbouring electrodes
+- N channels arround the largest effect
+- other"
+7.1.19	chan selection data driven final visual	Which  experimental conditions did you inspect visually to select the final list of channels for this effect?	"- all conditions separately
+- all conditions collapsed into one average waveform
+- other"
+7.1.20	chan selection data driven final visual details	Describe which conditions or combinations of conditions did you use for visual inspection of the channel region for this effect?
+7.1.21	chan selection data driven final neighbours	What was the criterion for the size of the cluster of neighbouring electrodes that needed to be significant to be selected for statistical analysis?
+7.1.22	chan selection data driven final neighbours maxregion	How did you select the channels around the peak effect for analysis?
+7.1.23	chan selection data driven final neighbours other	Describe your method of selection of the set of electrodes used for analysis other than listed.
+7.1.24	chan selection data driven final number	Number of channels selected in this step
+7.1.25	chan selection data driven final list	List of channels selected in this step, separated by a semicolon and a space
+8 - VISUALISATION
+8.1 - PLOT TYPE
+8.1.1	visualisation type	What kind of plot did you create	"- line plot (waveforms)
+- topoplot
+- other"
+8.2 - LINE PLOT
+8.2.1	visualisation only procedures line	Extra preprocessing: Did you apply any procedures for visualisation purposes only (not used for analysis, e.g., smoothing filter, different baseline)?	"- yes
+- no"
+8.2.2	specify visualisation proc line	Extra preprocessing: specify details of the procedures you had applied for the purposes of waveforms visualisation.
+8.2.3	waveform type	What do the data represent?	"- single waves
+- difference waves
+- both single and difference waves
+- other"
+8.2.4	waveform type single conditions	Which single conditions are shown?
+8.2.5	waveform type difference conditions	Which difference waves are shown?
+8.2.6	waveform type other conditions	Which conditions or their combinations do waveforms represent and how the conditions were combined to make waveforms?
+8.2.7	waveform channel averaging	Did you average channels for presentation or show individual channels?	"- yes
+- no"
+8.2.8	waveform which channels	Did you visualise all channels or a selection?	"- all channels
+- selected channels"
+8.2.9	waveform selected channels list	List of channels selected for this visualisation		Provide a semicolon-separated list of all channels (in alphabetical order). Averaging of channels will be described later, if this option was selected.
+8.2.10	waveform selected channels rationale	What was the rationale for showing these channels?
+8.2.11	waveform channel averaging details	Describe which channels were averaged together.
+8.2.12	waveform beginning	What is the beginning of the time window selected for this visualisation (relative to trigger)?
+8.2.13	waveform end	What is the end of the time window selected for this visualisation (relative to trigger)?
+8.2.14	whole epoch	What was the rationale for selecting this time window?	"- the same as epoch defined previously
+- other"
+8.2.15	waveform selected time rationale	Rationale for selecting this time window
+8.2.16	waveform additional	Do you have any additional relevant information about this plot?		For example, you may have shown confidence intervals or other kinds of additional information on this plot.
+8.3 - TOPOPLOT
+8.3.1	visualisation only procedures topo	Extra preprocessing: Did you apply any procedures for visualisation purposes only (not used for analysis, e.g., smoothing filter, different baseline)?	"- yes
+- no"
+8.3.2	specify visualisation proc topo	Extra preprocessing: specify details of the procedures you had applied for the purposes of waveforms visualisation.
+8.3.3	conditions topoplot	What do the data represent?	"- single conditions
+- difference waves
+- both single and difference wave conditions
+- other"
+8.3.4	conditions topoplot single conditions	Which conditions are shown?
+8.3.5	conditions topoplot difference conditions	Which difference waves are shown?
+8.3.6	conditions topoplot other conditions	Which conditions or their combinations do waveforms represent and how the conditions were combined to make waveforms?
+8.3.7	topoplot type	What kind of unit does the plotted data have?	"- voltage maps
+- voltage maps normalized data
+-  statistical maps based on t-score
+- statistical maps based on p-value
+-  current source density maps
+- topographic maps of PCA factors
+-  voltage maps on percent scale
+- 3D voltage maps
+- other"
+8.3.8	topoplot which channels	Did you visualise all channels or a selection?	"- all channels
+- selected channels"
+8.3.9	topolot selected channels list	Which channels were selected for this visualisation?		Provide a semicolon-separated list of all channels (in alphabetical order).
+8.3.10	topoplot selected channels rationale	What was the rationale for showing these channels?
+8.3.11	topoplot window beginning	What is the beginning of the time window selected for this visualisation (relative to trigger)?		You will be asked about subdivision of this time window into smaller windows later.
+8.3.12	topoplot window end	What is the end of the time window selected for this visualisation (relative to trigger)?
+8.3.13	topoplot selected time rationale	Rationale for selecting this time window
+8.3.14	topoplot subdivision	Did you subdivide the window to create multiple topoplots?	"- yes
+- no"
+8.3.15	topoplot subdivision list	List of subdivided time windows in chronological order.		Use colon to separate time window beginning and end, and semicolon and a space to separate subwindows, e.g., 300:400; 400:500
+8.4 - OTHER PLOT
+8.4.1	plot other	Which other type(s) of plot did you show?
+9 - VISUALISATION
+9.1 - ADDITIONAL COMMENTS
+9.1.1	additional comment	Do you have any additional information or comments to add?	"- yes
+- no"
+9.1.2	comment contents	You can add additional comments here.

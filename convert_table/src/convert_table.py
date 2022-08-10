@@ -1,23 +1,28 @@
 import csv
+from tkinter.ttk import Separator
 
 from rich import print
 from utils import get_item_info
 from utils import get_metatable
+from utils import get_root_dir
 from utils import load_data
 from utils import print_item_to_table
 
 
 def main():
 
-    sep = ", "
+    sep = "\t"
 
     pattern = "artemis-"
 
     header = ["item", "field", "question", "options", "instructions"]
 
-    with open("names.csv", "w", newline="") as csvfile:
+    output_file = get_root_dir().joinpath("outputs", "artemis.tsv")
+    output_file.parent.mkdir(parents=True, exist_ok=True)
 
-        writer = csv.DictWriter(csvfile, fieldnames=header)
+    with open(output_file, "w", newline="") as tsv_file:
+
+        writer = csv.DictWriter(tsv_file, fieldnames=header, delimiter="\t")
 
         writer.writerow(
             {
