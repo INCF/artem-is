@@ -1,4 +1,3 @@
-import os
 import re
 from pathlib import Path
 
@@ -34,7 +33,7 @@ def get_input_dir(dir: Path = get_root_dir()) -> Path:
 def get_input_file(schema_info: dict):
     input_dir = get_input_dir()
     basename = schema_info["basename"].tolist()[0]
-    return os.path.join(input_dir, basename + ".tsv")
+    return input_dir.joinpath(basename + ".tsv")
 
 
 def get_metatable():
