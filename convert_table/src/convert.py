@@ -1,5 +1,5 @@
+"""Converts the different artemis table into a single TSV file"""
 import csv
-from tkinter.ttk import Separator
 
 from rich import print
 from utils import get_item_info
@@ -37,18 +37,20 @@ def main():
         tables_name = list(tables_to_convert["basename"])
         tables_to_convert = list(tables_to_convert["schema"])
 
+        # Loops through each table and adds its content to the main table
         for j, this_table in enumerate(tables_to_convert):
 
             df = load_data(this_table)
 
+            # get the different tables in the right order
             activities = list(df.activity_order.unique())
 
             for i, activity_idx in enumerate(activities):
 
-                id = f"{str(activity_idx)} - {tables_name[j].upper()}"
+                this_id = f"{str(activity_idx)} - {tables_name[j].upper()}"
 
-                print(f"[bold red]{id}[/bold red]")
-                writer.writerow({"item": id})
+                print(f"[bold red]{this_id}[/bold red]")
+                writer.writerow({"item": this_id})
 
                 this_activity = df["activity_order"] == activities[i]
 
@@ -70,17 +72,17 @@ def main():
                         sub_section_id += 1
                         item_id = 0
                         sub_section = item_info["sub_section"]
-                        id = (
+                        this_id = (
                             str(activity_idx)
                             + "."
                             + str(sub_section_id)
                             + " - "
                             + sub_section.upper()
                         )
-                        writer.writerow({"item": id})
+                        writer.writerow({"item": this_id})
 
                     item_id += 1
-                    id = (
+                    this_id = (
                         str(activity_idx)
                         + "."
                         + str(sub_section_id)
@@ -88,7 +90,9 @@ def main():
                         + str(item_id)
                     )
 
-                    dict_to_print = print_item_to_table(id, this_item, item_info, sep)
+                    dict_to_print = print_item_to_table(
+                        this_id, this_item, item_info, sep
+                    )
 
                     writer.writerow(dict_to_print)
 
