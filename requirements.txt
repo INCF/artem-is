@@ -1,0 +1,6 @@
+gdown
+pandas
+rich
+
+black
+pre-commit
