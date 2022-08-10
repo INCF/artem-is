@@ -5,7 +5,7 @@ INPUT_DIR = $(inputs/tsv)
 
 ARTEMIS_TSV =   $(wildcard inputs/tsv/*.tsv)
 
-all: install download convert
+all: install convert
 
 install:
 	pip install -r requirements.txt
@@ -13,7 +13,7 @@ install:
 download:
 	python convert_table/src/download.py
 
-convert:
+convert: download
 	python convert_table/src/convert.py
 
 
