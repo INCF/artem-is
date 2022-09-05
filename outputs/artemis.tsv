@@ -199,7 +199,7 @@ item	field	question	options	instructions
 5.2.3	preprocessing pipeline other	Automated pre-processing pipeline you used other than listed		
 5.2.4	preprocessing pipeline reference	Reference for the automated pre-processing pipeline you applied.		
 5.2.5	preprocessing pipeline version	Version of the automated pre-processing pipeline, if applicable		
-5.2.6	preprocessing pipeline parameters	Describe parameters and settings you used to run this automated pipeline, if applicable.		
+5.2.6	preprocessing pipeline parameters	Describe parameters and settings you used to run this automated pipeline, if applicable, and any potential adjustments to the pipeline you may have made manually.		
 5.3 - OFFLINE FILTERS				
 5.3.1	which filters	Did you apply any of the following offline (digital) filters?	"- high pass
 - low pass
