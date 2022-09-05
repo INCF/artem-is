@@ -148,7 +148,7 @@ item	field	question	options	instructions
 - custom locations"	
 4.3.2	electrode location naming convention other	Specify the electrode placement/naming convention used		Either the name of a standardized placement system (for example, 10-20) or a list of standardized electrode names (for example, [Cz, Pz])
 4.3.3	electrode location naming convention custom	Describe the custom placement of your electrodes relative to anatomical markers or electrode naming/placement systems		"E.g. ""One electrode, half way between Cz and CP1, was used."""
-4.3.4	number active channels	Number of scalp electrodes excluding reference channels, ground channel, VEOG and HEOG.		
+4.3.4	number active channels	Number of scalp electrodes including reference channels, but excluding ground channel, VEOG and HEOG.		
 4.3.5	online reference exists	Did you use an online reference (as opposed to alternative solutions such as Driven Right Leg (DRL))?	"- yes
 - no"	
 4.3.6	online reference type	Where did you place reference electrode(s)?	- preset:eeg_reference_electrodes	
