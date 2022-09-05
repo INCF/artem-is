@@ -42,4 +42,6 @@ jobs:
 
       - name: Test with pyshacl
         run: |
-          reproschema -l DEBUG validate schemas
+          reproschema -l DEBUG validate schemas/protocols
+          reproschema -l DEBUG validate schemas/activities
+          reproschema -l DEBUG validate schemas/artemis_schema.jsonld
