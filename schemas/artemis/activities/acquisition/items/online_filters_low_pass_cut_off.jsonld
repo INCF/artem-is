@@ -1,0 +1,28 @@
+{
+    "@context": "https://raw.githubusercontent.com/ReproNim/reproschema/1.0.0-rc4/contexts/generic",
+    "@type": "reproschema:Field",
+    "@id": "online_filters_low_pass_cut_off.jsonld",
+    "prefLabel": {
+        "en": "online filters low pass cut off"
+    },
+    "description": "online filters low pass cut off",
+    "schemaVersion": "1.0.0-rc4",
+    "version": "0.0.1",
+    "ui": {
+        "inputType": "float"
+    },
+    "question": {
+        "en": "4.26 - Specify the low-pass filter cut-off used during recording."
+    },
+    "responseOptions": {
+        "valueType": "xsd:float",
+        "unitOptions": [
+            {
+                "prefLabel": {
+                    "en": "Hz"
+                },
+                "value": "Hz"
+            }
+        ]
+    }
+}
