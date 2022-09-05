@@ -90,9 +90,9 @@ item	field	question	options	instructions
 3.1.1	electrode placement type	How were the EEG electrodes placed?	"- cap or net
 - single electrodes"	
 3.1.2	electrode placement type cap	What kind of cap or net did you use?	- preset:eeg_cap_types	
-3.1.3	cap other	Please specify your cap or net manufacturer		
-3.1.4	cap model	Please indicate the cap or net model.		
-3.1.5	electrode manufacturer	Manufacturer of the electrodes		
+3.1.3	cap other	Cap or net make (brand)		
+3.1.4	cap model	Cap or net model		
+3.1.5	electrode manufacturer	Make (brand) of the electrodes		
 3.1.6	electrode model	Model of electrodes		
 3.1.7	electrode preamplifiers	Did electrodes have pre-amplifiers?	"- no - passive electrodes
 - yes - active electrodes"	
@@ -107,9 +107,9 @@ item	field	question	options	instructions
 - other"	
 3.1.11	conductive medium other	Conductive medium type other than listed.		
 3.2 - SIGNAL AMPLIFIERS				
-3.2.1	amplifier make	Make (brand) of the amplifier	- preset:meeg_amplifier_brands	
+3.2.1	amplifier make	Make (brand) of the amplifier	- preset:eeg_amplifier_brands	
 3.2.2	amplifier make other	Specify which make (brand) of the amplifiers did you use.		
-3.2.3	amplifier model	Model of amplifier		
+3.2.3	amplifier model	Model of amplifiers		
 3.3 - TRIGGERS				
 3.3.1	trigger signal source	Source of triggers	"- photo diode
 - auditory trigger/voice key
@@ -125,7 +125,7 @@ item	field	question	options	instructions
 - Digital (including serial port over a USB port (arduino, LabJack U3, or similar))"	
 3.4 - OTHER PERIPHERAL DEVICES				
 3.4.1	other peripheral devices	Do you have other devices (eg. signal boxes, converters, other peripheral devices) to report?	"- yes
-- no"	
+- no"	You can list here any special equipment that you find necessary to report, such as (1) special monitors, keyboards, etc. worth mentioning; (2) additional EEG recording equipment such as AD converters or electrode position measurement devices; (3) other recording equipment used in parallel, such as eye tracking, fMRI, electrodermal or heart rate monitors.
 3.4.2	other peripheral devices details	Describe which additional devices you used, and specify their manufacturers and models.		
 4 - ACQUISITION				
 4.1 - ACQUISITION SOFTWARE				
