@@ -12,7 +12,7 @@
         "inputType": "radio"
     },
     "question": {
-        "en": "5.212 - Which baseline calculation method was used?"
+        "en": "5.222 - Which baseline calculation method was used?"
     },
     "responseOptions": {
         "valueType": "xsd:integer",

@@ -12,7 +12,7 @@
         "inputType": "radio"
     },
     "question": {
-        "en": "8.25 - Did you visualise all channels or a selection?"
+        "en": "8.26 - Did you visualise all channels or a selection?"
     },
     "responseOptions": {
         "valueType": "xsd:integer",

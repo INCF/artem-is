@@ -9,7 +9,7 @@
     "schemaVersion": "1.0.0-rc4",
     "version": "0.0.1",
     "preamble": {
-        "en": "<p><a href='https://docs.google.com/spreadsheets/d/1dlUt8_bHsM5mERFJkVLTVWanSlms6Ba8Wos38Dhmhfo/edit?ts=60c9d280#gid=75463838' target='_blank' > Source </a> | <a href='https://github.com/Remi-Gau/artemis_checklist' target='_blank' > Github repository </a> | <a href='https://osf.io/pvrn6/' target='_blank' > Reference </a><br><br>In this section, you will describe channels selected for statistical analysis and the decision-making process behind it. This is a section about selection of the region that will be subjected to statistical analysis, and not the analysis itself.</p>"
+        "en": "<p><a href='https://docs.google.com/spreadsheets/d/1dlUt8_bHsM5mERFJkVLTVWanSlms6Ba8Wos38Dhmhfo/edit?ts=60c9d280#gid=75463838' target='_blank' > Source </a> | <a href='https://github.com/Remi-Gau/artemis_checklist' target='_blank' > Github repository </a> | <a href='https://osf.io/pvrn6/' target='_blank' > Reference </a><br><br>In this section, you will describe channels selected for statistical analysis and the decision-making process behind it. This is a section about selection of the channels that will be subjected to statistical analysis and their grouping into regions of interest for the purposes of statistical analysis, but not the analysis itself.  NOTE: If you notice a bug, or have a suggestion, we'd be grateful if you posted an issue on GitHub: https://github.com/INCF/artem-is/</p>"
     },
     "ui": {
         "shuffle": false,
@@ -17,10 +17,10 @@
             "items/channels_all_vs_subset.jsonld",
             "items/chan_selection.jsonld",
             "items/chan_selection_a_priori.jsonld",
-            "items/chan_literature_reference.jsonld",
-            "items/chan_literature_similar.jsonld",
-            "items/chan_theory.jsonld",
-            "items/chan_selection_other.jsonld",
+            "items/chan_selection_a_priori_literature_reference.jsonld",
+            "items/chan_selection_a_priori_literature_similar.jsonld",
+            "items/chan_selection_a_priori_theory.jsonld",
+            "items/chan_selection_a_priori_other.jsonld",
             "items/chan_a_priori_number.jsonld",
             "items/chan_a_priori_list.jsonld",
             "items/chan_selection_data_driven_broad.jsonld",
@@ -38,7 +38,12 @@
             "items/chan_selection_data_driven_final_neighbours_maxregion.jsonld",
             "items/chan_selection_data_driven_final_neighbours_other.jsonld",
             "items/chan_selection_data_driven_final_number.jsonld",
-            "items/chan_selection_data_driven_final_list.jsonld"
+            "items/chan_selection_data_driven_final_list.jsonld",
+            "items/chan_selection_other.jsonld",
+            "items/chan_aggregating_used.jsonld",
+            "items/chan_aggregating_which_regions.jsonld",
+            "items/chan_aggregating_averaging.jsonld",
+            "items/chan_aggretating_other_methods.jsonld"
         ],
         "addProperties": [
             {
@@ -69,8 +74,8 @@
                 ]
             },
             {
-                "variableName": "chan_literature_reference",
-                "isAbout": "items/chan_literature_reference.jsonld",
+                "variableName": "chan_selection_a_priori_literature_reference",
+                "isAbout": "items/chan_selection_a_priori_literature_reference.jsonld",
                 "isVis": "[0, 1].includes(chan_selection_a_priori)",
                 "requiredValue": false,
                 "allow": [
@@ -78,8 +83,8 @@
                 ]
             },
             {
-                "variableName": "chan_literature_similar",
-                "isAbout": "items/chan_literature_similar.jsonld",
+                "variableName": "chan_selection_a_priori_literature_similar",
+                "isAbout": "items/chan_selection_a_priori_literature_similar.jsonld",
                 "isVis": "chan_selection_a_priori == 1",
                 "requiredValue": false,
                 "allow": [
@@ -87,8 +92,8 @@
                 ]
             },
             {
-                "variableName": "chan_theory",
-                "isAbout": "items/chan_theory.jsonld",
+                "variableName": "chan_selection_a_priori_theory",
+                "isAbout": "items/chan_selection_a_priori_theory.jsonld",
                 "isVis": "chan_selection_a_priori == 2",
                 "requiredValue": false,
                 "allow": [
@@ -96,8 +101,8 @@
                 ]
             },
             {
-                "variableName": "chan_selection_other",
-                "isAbout": "items/chan_selection_other.jsonld",
+                "variableName": "chan_selection_a_priori_other",
+                "isAbout": "items/chan_selection_a_priori_other.jsonld",
                 "isVis": "chan_selection_a_priori == 3",
                 "requiredValue": false,
                 "allow": [
@@ -261,6 +266,51 @@
                 "variableName": "chan_selection_data_driven_final_list",
                 "isAbout": "items/chan_selection_data_driven_final_list.jsonld",
                 "isVis": "[1, 2, 3].includes(chan_selection)",
+                "requiredValue": false,
+                "allow": [
+                    "reproschema:Skipped"
+                ]
+            },
+            {
+                "variableName": "chan_selection_other",
+                "isAbout": "items/chan_selection_other.jsonld",
+                "isVis": "[4].includes(chan_selection)",
+                "requiredValue": false,
+                "allow": [
+                    "reproschema:Skipped"
+                ]
+            },
+            {
+                "variableName": "chan_aggregating_used",
+                "isAbout": "items/chan_aggregating_used.jsonld",
+                "isVis": true,
+                "requiredValue": false,
+                "allow": [
+                    "reproschema:Skipped"
+                ]
+            },
+            {
+                "variableName": "chan_aggregating_which_regions",
+                "isAbout": "items/chan_aggregating_which_regions.jsonld",
+                "isVis": "chan_aggregating_boolean = 1",
+                "requiredValue": false,
+                "allow": [
+                    "reproschema:Skipped"
+                ]
+            },
+            {
+                "variableName": "chan_aggregating_averaging",
+                "isAbout": "items/chan_aggregating_averaging.jsonld",
+                "isVis": "chan_aggregating_boolean = 1",
+                "requiredValue": false,
+                "allow": [
+                    "reproschema:Skipped"
+                ]
+            },
+            {
+                "variableName": "chan_aggretating_other_methods",
+                "isAbout": "items/chan_aggretating_other_methods.jsonld",
+                "isVis": "chan_aggregating_boolean = 1",
                 "requiredValue": false,
                 "allow": [
                     "reproschema:Skipped"

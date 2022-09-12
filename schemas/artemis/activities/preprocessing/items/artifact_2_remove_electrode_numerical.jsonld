@@ -12,7 +12,7 @@
         "inputType": "text"
     },
     "question": {
-        "en": "5.78 - Describe your numerical criterion/function for eliminating electrodes and provide numerical threshold(s) in step 2."
+        "en": "5.83 - Describe your numerical criterion/function for eliminating electrodes and provide numerical threshold(s) in step 2."
     },
     "responseOptions": {
         "valueType": "xsd:string",

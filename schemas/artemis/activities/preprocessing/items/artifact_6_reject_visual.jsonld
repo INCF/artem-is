@@ -12,7 +12,7 @@
         "inputType": "select"
     },
     "question": {
-        "en": "5.158 - Which artifacts did you remove using visual inspection in step 6?"
+        "en": "5.166 - Which artifacts did you remove using visual inspection in step 6?"
     },
     "responseOptions": {
         "valueType": "xsd:integer",

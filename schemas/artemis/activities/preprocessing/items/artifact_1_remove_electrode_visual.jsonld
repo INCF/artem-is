@@ -12,7 +12,7 @@
         "inputType": "select"
     },
     "question": {
-        "en": "5.53 - Why did you remove bad electrodes in step 1?"
+        "en": "5.57 - Why did you remove bad electrodes in step 1?"
     },
     "responseOptions": {
         "valueType": "xsd:integer",

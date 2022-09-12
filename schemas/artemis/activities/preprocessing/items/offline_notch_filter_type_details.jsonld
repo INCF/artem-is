@@ -12,7 +12,7 @@
         "inputType": "text"
     },
     "question": {
-        "en": "5.28 - Describe the stopband frequency of the notch filter you applied"
+        "en": "5.29 - Describe the stopband frequency of the notch filter you applied"
     },
     "responseOptions": {
         "valueType": "xsd:string",

@@ -12,7 +12,7 @@
         "inputType": "text"
     },
     "question": {
-        "en": "5.92 - Describe your method of artifact rejection other than visual inspection or numerical criterion/function. Make sure that there is enough detail for a replication attempt."
+        "en": "5.97 - Describe your method of artifact rejection other than visual inspection or numerical criterion/function. Make sure that there is enough detail for a replication attempt."
     },
     "responseOptions": {
         "valueType": "xsd:string",

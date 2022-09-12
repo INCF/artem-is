@@ -12,7 +12,7 @@
         "inputType": "radio"
     },
     "question": {
-        "en": "5.50 - From which data did you eliminate bad channels in step 1?"
+        "en": "5.52 - From which data did you eliminate bad channels in step 1?"
     },
     "responseOptions": {
         "valueType": "xsd:integer",
@@ -33,7 +33,7 @@
             },
             {
                 "name": {
-                    "en": "from the entire recording"
+                    "en": "from the entire recording of a participant"
                 },
                 "value": 2
             }

@@ -9,7 +9,7 @@
     "schemaVersion": "1.0.0-rc4",
     "version": "0.0.1",
     "preamble": {
-        "en": "<p><a href='https://docs.google.com/spreadsheets/d/1dlUt8_bHsM5mERFJkVLTVWanSlms6Ba8Wos38Dhmhfo/edit?ts=60c9d280#gid=1498151197' target='_blank' > Source </a> | <a href='https://github.com/Remi-Gau/artemis_checklist' target='_blank' > Github repository </a> | <a href='https://osf.io/pvrn6/' target='_blank' > Reference </a><br><br>This section contains information on the study, such as title, links to publications and datasets, etc.</p>"
+        "en": "<p><a href='https://docs.google.com/spreadsheets/d/1dlUt8_bHsM5mERFJkVLTVWanSlms6Ba8Wos38Dhmhfo/edit?ts=60c9d280#gid=1498151197' target='_blank' > Source </a> | <a href='https://github.com/Remi-Gau/artemis_checklist' target='_blank' > Github repository </a> | <a href='https://osf.io/pvrn6/' target='_blank' > Reference </a><br><br>This section contains information on the study, such as title, links to publications and datasets, etc. NOTE: If you notice a bug, or have a suggestion, we'd be grateful if you posted an issue on GitHub: https://github.com/INCF/artem-is/</p>"
     },
     "ui": {
         "shuffle": false,
@@ -37,6 +37,7 @@
             "items/specify_supplementary.jsonld",
             "items/supplementary_link.jsonld",
             "items/licenses_exists.jsonld",
+            "items/licenses_which.jsonld",
             "items/code_license.jsonld",
             "items/code_license_multi.jsonld",
             "items/code_license_other.jsonld",
@@ -44,6 +45,7 @@
             "items/data_license_multi.jsonld",
             "items/data_license_other.jsonld",
             "items/other_licenses.jsonld",
+            "items/study_abstract.jsonld",
             "items/study_keywords.jsonld",
             "items/study_funding_exists.jsonld",
             "items/study_funding.jsonld",
@@ -263,9 +265,18 @@
                 ]
             },
             {
+                "variableName": "licenses_which",
+                "isAbout": "items/licenses_which.jsonld",
+                "isVis": "licenses_exists == 1",
+                "requiredValue": false,
+                "allow": [
+                    "reproschema:Skipped"
+                ]
+            },
+            {
                 "variableName": "code_license",
                 "isAbout": "items/code_license.jsonld",
-                "isVis": "licenses_exists.includes(0)",
+                "isVis": "licenses_which.includes(0)",
                 "requiredValue": false,
                 "allow": [
                     "reproschema:Skipped"
@@ -292,7 +303,7 @@
             {
                 "variableName": "data_license",
                 "isAbout": "items/data_license.jsonld",
-                "isVis": "licenses_exists.includes(1)",
+                "isVis": "licenses_which.includes(1)",
                 "requiredValue": false,
                 "allow": [
                     "reproschema:Skipped"
@@ -319,7 +330,16 @@
             {
                 "variableName": "other_licenses",
                 "isAbout": "items/other_licenses.jsonld",
-                "isVis": "licenses_exists.includes(2)",
+                "isVis": "licenses_which.includes(2)",
+                "requiredValue": false,
+                "allow": [
+                    "reproschema:Skipped"
+                ]
+            },
+            {
+                "variableName": "study_abstract",
+                "isAbout": "items/study_abstract.jsonld",
+                "isVis": true,
                 "requiredValue": false,
                 "allow": [
                     "reproschema:Skipped"

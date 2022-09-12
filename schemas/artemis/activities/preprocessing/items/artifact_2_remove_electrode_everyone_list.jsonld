@@ -1,18 +1,18 @@
 {
     "@context": "https://raw.githubusercontent.com/ReproNim/reproschema/1.0.0-rc4/contexts/generic",
     "@type": "reproschema:Field",
-    "@id": "artifact_1_remove_electrode_list.jsonld",
+    "@id": "artifact_2_remove_electrode_everyone_list.jsonld",
     "prefLabel": {
-        "en": "artifact 1 remove electrode list"
+        "en": "artifact 2 remove electrode everyone list"
     },
-    "description": "artifact 1 remove electrode list",
+    "description": "artifact 2 remove electrode everyone list",
     "schemaVersion": "1.0.0-rc4",
     "version": "0.0.1",
     "ui": {
         "inputType": "text"
     },
     "question": {
-        "en": "5.51 - List of channels eliminated in step 1, separated by a semicolon and a space."
+        "en": "5.78 - List of channels eliminated in step 2 for all participants, separated by a semicolon and a space."
     },
     "responseOptions": {
         "valueType": "xsd:string",

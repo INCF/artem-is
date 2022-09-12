@@ -12,7 +12,7 @@
         "inputType": "radio"
     },
     "question": {
-        "en": "5.188 - From which data did you eliminate bad channels in step 7?"
+        "en": "5.197 - From which data did you eliminate bad channels in step 7?"
     },
     "responseOptions": {
         "valueType": "xsd:integer",

@@ -1,0 +1,21 @@
+{
+    "@context": "https://raw.githubusercontent.com/ReproNim/reproschema/1.0.0-rc4/contexts/generic",
+    "@type": "reproschema:Field",
+    "@id": "waveform_channels_averaged_and_individual.jsonld",
+    "prefLabel": {
+        "en": "waveform channels averaged and individual"
+    },
+    "description": "waveform channels averaged and individual",
+    "schemaVersion": "1.0.0-rc4",
+    "version": "0.0.1",
+    "ui": {
+        "inputType": "textarea"
+    },
+    "question": {
+        "en": "8.13 - Describe which channels were averaged together, and which were shown individually."
+    },
+    "responseOptions": {
+        "valueType": "xsd:string",
+        "maxLength": 300
+    }
+}

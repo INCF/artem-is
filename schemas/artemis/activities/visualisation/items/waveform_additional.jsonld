@@ -12,7 +12,7 @@
         "inputType": "textarea"
     },
     "question": {
-        "en": "8.17 - Do you have any additional relevant information about this plot?<div style='font-size: 70%; text-align:left;'><details> <summary> details </summary> <br>For example, you may have shown confidence intervals or other kinds of additional information on this plot.</details></div>"
+        "en": "8.18 - Do you have any additional relevant information about this plot?<div style='font-size: 70%; text-align:left;'><details> <summary> details </summary> <br>For example, you may have shown confidence intervals or other kinds of additional information on this plot.</details></div>"
     },
     "responseOptions": {
         "valueType": "xsd:string",

@@ -14,5 +14,30 @@
     "question": {
         "en": "8.8 - Did you average channels for presentation or show individual channels?"
     },
-    "responseOptions": "https://raw.githubusercontent.com/ohbm/cobidas_schema/master/response_options/boolean.jsonld"
+    "responseOptions": {
+        "valueType": "xsd:integer",
+        "minValue": 0,
+        "maxValue": 2,
+        "choices": [
+            {
+                "name": {
+                    "en": "individual channels shown"
+                },
+                "value": 0
+            },
+            {
+                "name": {
+                    "en": "aggregated channels shown"
+                },
+                "value": 1
+            },
+            {
+                "name": {
+                    "en": "both individual and aggregated channels shown"
+                },
+                "value": 2
+            }
+        ],
+        "multipleChoice": false
+    }
 }

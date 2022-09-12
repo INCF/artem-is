@@ -12,7 +12,7 @@
         "inputType": "text"
     },
     "question": {
-        "en": "5.117 - Reference to the artifact correction algorithm used in step 4"
+        "en": "5.123 - Reference to the artifact correction algorithm used in step 4"
     },
     "responseOptions": {
         "valueType": "xsd:string",

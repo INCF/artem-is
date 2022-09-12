@@ -12,7 +12,7 @@
         "inputType": "textarea"
     },
     "question": {
-        "en": "8.22 - Which difference waves are shown?"
+        "en": "8.23 - Which difference waves are shown?"
     },
     "responseOptions": {
         "valueType": "xsd:string",

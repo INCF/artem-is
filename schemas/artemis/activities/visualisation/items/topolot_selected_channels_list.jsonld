@@ -12,7 +12,7 @@
         "inputType": "text"
     },
     "question": {
-        "en": "8.26 - Which channels were selected for this visualisation?<div style='font-size: 70%; text-align:left;'><details> <summary> details </summary> <br>Provide a semicolon-separated list of all channels (in alphabetical order).</details></div>"
+        "en": "8.27 - Which channels were selected for this visualisation?<div style='font-size: 70%; text-align:left;'><details> <summary> details </summary> <br>Provide a semicolon-separated list of all channels (in alphabetical order).</details></div>"
     },
     "responseOptions": {
         "valueType": "xsd:string",

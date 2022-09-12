@@ -12,7 +12,7 @@
         "inputType": "text"
     },
     "question": {
-        "en": "5.82 - Reference to the automated artifact removal algorithm used in step 2"
+        "en": "5.87 - Reference to the automated artifact removal algorithm used in step 2"
     },
     "responseOptions": {
         "valueType": "xsd:string",

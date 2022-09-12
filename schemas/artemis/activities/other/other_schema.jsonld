@@ -14,10 +14,20 @@
     "ui": {
         "shuffle": false,
         "order": [
+            "items/plot_other.jsonld",
             "items/additional_comment.jsonld",
             "items/comment_contents.jsonld"
         ],
         "addProperties": [
+            {
+                "variableName": "plot_other",
+                "isAbout": "items/plot_other.jsonld",
+                "isVis": "visualisation_type.includes(2)",
+                "requiredValue": false,
+                "allow": [
+                    "reproschema:Skipped"
+                ]
+            },
             {
                 "variableName": "additional_comment",
                 "isAbout": "items/additional_comment.jsonld",

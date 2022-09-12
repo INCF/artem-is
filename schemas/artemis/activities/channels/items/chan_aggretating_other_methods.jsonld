@@ -1,0 +1,21 @@
+{
+    "@context": "https://raw.githubusercontent.com/ReproNim/reproschema/1.0.0-rc4/contexts/generic",
+    "@type": "reproschema:Field",
+    "@id": "chan_aggretating_other_methods.jsonld",
+    "prefLabel": {
+        "en": "chan aggretating other methods"
+    },
+    "description": "chan aggretating other methods",
+    "schemaVersion": "1.0.0-rc4",
+    "version": "0.0.1",
+    "ui": {
+        "inputType": "textarea"
+    },
+    "question": {
+        "en": "7.30 - Describe how the channels were aggregated into regions, if they were not averaged.<div style='font-size: 70%; text-align:left;'><details> <summary> details </summary> <br>For example, if weighted averaging was used, specify this and describe how the channels were weighted.</details></div>"
+    },
+    "responseOptions": {
+        "valueType": "xsd:string",
+        "maxLength": 300
+    }
+}

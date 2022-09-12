@@ -12,7 +12,7 @@
         "inputType": "radio"
     },
     "question": {
-        "en": "5.107 - What action did you take regarding artifacts in step 4?"
+        "en": "5.113 - What action did you take regarding artifacts in step 4?"
     },
     "responseOptions": {
         "valueType": "xsd:integer",

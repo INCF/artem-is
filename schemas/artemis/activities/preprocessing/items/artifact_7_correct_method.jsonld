@@ -12,7 +12,7 @@
         "inputType": "select"
     },
     "question": {
-        "en": "5.185 - Which general method of artifact correction did you use in step 7?"
+        "en": "5.194 - Which general method of artifact correction did you use in step 7?"
     },
     "responseOptions": {
         "valueType": "xsd:integer",

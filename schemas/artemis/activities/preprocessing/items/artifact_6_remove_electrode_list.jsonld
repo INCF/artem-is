@@ -12,7 +12,7 @@
         "inputType": "text"
     },
     "question": {
-        "en": "5.166 - List of channels eliminated in step 6, separated by a semicolon and a space."
+        "en": "5.175 - List of channels eliminated in step 6, separated by a semicolon and a space."
     },
     "responseOptions": {
         "valueType": "xsd:string",

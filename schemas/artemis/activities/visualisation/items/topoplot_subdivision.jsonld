@@ -12,7 +12,7 @@
         "inputType": "radio"
     },
     "question": {
-        "en": "8.31 - Did you subdivide the window to create multiple topoplots?"
+        "en": "8.32 - Did you subdivide the window to create multiple topoplots?"
     },
     "responseOptions": "https://raw.githubusercontent.com/ohbm/cobidas_schema/master/response_options/boolean.jsonld"
 }

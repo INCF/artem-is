@@ -12,7 +12,7 @@
         "inputType": "textarea"
     },
     "question": {
-        "en": "5.213 - Specify your baseline calculation method other than subtraction of the mean of the baseline."
+        "en": "5.223 - Describe your baseline calculation method other than subtraction of the mean of the baseline."
     },
     "responseOptions": {
         "valueType": "xsd:string",

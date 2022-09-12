@@ -12,7 +12,7 @@
         "inputType": "text"
     },
     "question": {
-        "en": "5.159 - Which other artifacts did you remove visually?"
+        "en": "5.167 - Which other artifacts did you remove visually?"
     },
     "responseOptions": {
         "valueType": "xsd:string",

@@ -12,7 +12,7 @@
         "inputType": "text"
     },
     "question": {
-        "en": "5.100 - Which other reasons did you have for eliminating bad electrodes visually in step 3?"
+        "en": "5.106 - Which other reasons did you have for eliminating bad electrodes visually in step 3?"
     },
     "responseOptions": {
         "valueType": "xsd:string",

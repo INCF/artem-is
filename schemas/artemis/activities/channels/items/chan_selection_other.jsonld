@@ -12,7 +12,7 @@
         "inputType": "textarea"
     },
     "question": {
-        "en": "7.7 - Describe your a-priori channel selection process other than those listed"
+        "en": "7.26 - Describe the criterion/criteria for selecting this exact subset of electrodes other than the options offered above."
     },
     "responseOptions": {
         "valueType": "xsd:string",

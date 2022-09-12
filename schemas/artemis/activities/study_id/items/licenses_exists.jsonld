@@ -14,30 +14,5 @@
     "question": {
         "en": "1.23 - Are any elements in the study currently covered by a license allowing for reuse?<div style='font-size: 70%; text-align:left;'><details> <summary> details </summary> <br>For example, code used to run the study, data arising from the study</details></div>"
     },
-    "responseOptions": {
-        "valueType": "xsd:integer",
-        "minValue": 0,
-        "maxValue": 2,
-        "choices": [
-            {
-                "name": {
-                    "en": "code"
-                },
-                "value": 0
-            },
-            {
-                "name": {
-                    "en": "data"
-                },
-                "value": 1
-            },
-            {
-                "name": {
-                    "en": "other elements"
-                },
-                "value": 2
-            }
-        ],
-        "multipleChoice": true
-    }
+    "responseOptions": "https://raw.githubusercontent.com/ohbm/cobidas_schema/master/response_options/boolean.jsonld"
 }

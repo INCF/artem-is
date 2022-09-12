@@ -12,7 +12,7 @@
         "inputType": "radio"
     },
     "question": {
-        "en": "5.98 - What was the criterion for eliminating bad channels in step 3?"
+        "en": "5.104 - What was the criterion for eliminating bad channels in step 3?"
     },
     "responseOptions": {
         "valueType": "xsd:integer",

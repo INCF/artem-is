@@ -12,7 +12,7 @@
         "inputType": "text"
     },
     "question": {
-        "en": "3.3 - Please specify your cap or net manufacturer"
+        "en": "3.3 - Cap or net make (brand) other than listed above"
     },
     "responseOptions": {
         "valueType": "xsd:string",

@@ -12,7 +12,7 @@
         "inputType": "text"
     },
     "question": {
-        "en": "3.13 - Specify which make (brand) of the amplifiers did you use."
+        "en": "3.13 - Make (brand) of the amplifiers other than listed above"
     },
     "responseOptions": {
         "valueType": "xsd:string",

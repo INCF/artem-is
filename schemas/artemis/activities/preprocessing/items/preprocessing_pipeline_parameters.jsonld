@@ -12,7 +12,7 @@
         "inputType": "textarea"
     },
     "question": {
-        "en": "5.9 - Describe parameters and settings you used to run this automated pipeline, if applicable."
+        "en": "5.9 - Describe parameters and settings you used to run this automated pipeline, if applicable, and any potential adjustments to the pipeline you may have made manually."
     },
     "responseOptions": {
         "valueType": "xsd:string",

@@ -12,7 +12,7 @@
         "inputType": "radio"
     },
     "question": {
-        "en": "5.87 - Did you reject trials or segments of continuous data in step 3?"
+        "en": "5.92 - Did you reject trials or segments of continuous data in step 3?"
     },
     "responseOptions": {
         "valueType": "xsd:integer",

@@ -12,7 +12,7 @@
         "inputType": "textarea"
     },
     "question": {
-        "en": "8.23 - Which conditions or their combinations do waveforms represent and how the conditions were combined to make waveforms?"
+        "en": "8.24 - Which conditions or their combinations do waveforms represent and how the conditions were combined to make waveforms?"
     },
     "responseOptions": {
         "valueType": "xsd:string",

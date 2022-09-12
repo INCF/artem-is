@@ -9,7 +9,7 @@
     "schemaVersion": "1.0.0-rc4",
     "version": "0.0.1",
     "preamble": {
-        "en": "<p><a href='https://docs.google.com/spreadsheets/d/1dlUt8_bHsM5mERFJkVLTVWanSlms6Ba8Wos38Dhmhfo/edit?ts=60c9d280#gid=1276614777' target='_blank' > Source </a> | <a href='https://github.com/Remi-Gau/artemis_checklist' target='_blank' > Github repository </a> | <a href='https://osf.io/pvrn6/' target='_blank' > Reference </a><br><br>In this section, we will ask you about preprocessing decisions, such as analysis software, off-line filtering, re-referencing, artefact removal, epoching and baseline.</p>"
+        "en": "<p><a href='https://docs.google.com/spreadsheets/d/1dlUt8_bHsM5mERFJkVLTVWanSlms6Ba8Wos38Dhmhfo/edit?ts=60c9d280#gid=1276614777' target='_blank' > Source </a> | <a href='https://github.com/Remi-Gau/artemis_checklist' target='_blank' > Github repository </a> | <a href='https://osf.io/pvrn6/' target='_blank' > Reference </a><br><br>In this section, we will ask you about preprocessing decisions, such as analysis software, off-line filtering, re-referencing, artefact removal, epoching and baseline.  NOTE: If you notice a bug, or have a suggestion, we'd be grateful if you posted an issue on GitHub: https://github.com/INCF/artem-is/</p>"
     },
     "ui": {
         "shuffle": false,
@@ -23,6 +23,7 @@
             "items/preprocessing_pipeline_reference.jsonld",
             "items/preprocessing_pipeline_version.jsonld",
             "items/preprocessing_pipeline_parameters.jsonld",
+            "items/offline_filters.jsonld",
             "items/which_filters.jsonld",
             "items/filtering_software.jsonld",
             "items/filter_software_details.jsonld",
@@ -50,6 +51,7 @@
             "items/rereference_software.jsonld",
             "items/rereference_software_details.jsonld",
             "items/new_reference.jsonld",
+            "items/new_reference_other.jsonld",
             "items/artifact_steps_number.jsonld",
             "items/artifact_1.jsonld",
             "items/artifact_1_software.jsonld",
@@ -64,7 +66,8 @@
             "items/artifact_1_correct_reference.jsonld",
             "items/artifact_1_correct_details.jsonld",
             "items/artifact_1_remove_electrode_where.jsonld",
-            "items/artifact_1_remove_electrode_list.jsonld",
+            "items/artifact_1_remove_electrode_everyone_list.jsonld",
+            "items/artifact_1_remove_electrode_percent.jsonld",
             "items/artifact_1_remove_electrode_method.jsonld",
             "items/artifact_1_remove_electrode_visual.jsonld",
             "items/artifact_1_remove_electrode_visual_other.jsonld",
@@ -87,7 +90,8 @@
             "items/artifact_2_correct_reference.jsonld",
             "items/artifact_2_correct_details.jsonld",
             "items/artifact_2_remove_electrode_where.jsonld",
-            "items/artifact_2_remove_electrode_list.jsonld",
+            "items/artifact_2_remove_electrode_everyone_list.jsonld",
+            "items/artifact_2_remove_electrode_percent.jsonld",
             "items/artifact_2_remove_electrode_method.jsonld",
             "items/artifact_2_remove_electrode_visual.jsonld",
             "items/artifact_2_remove_electrode_visual_other.jsonld",
@@ -110,7 +114,8 @@
             "items/artifact_3_correct_reference.jsonld",
             "items/artifact_3_correct_details.jsonld",
             "items/artifact_3_remove_electrode_where.jsonld",
-            "items/artifact_3_remove_electrode_list.jsonld",
+            "items/artifact_3_remove_electrode_everyone_list.jsonld",
+            "items/artifact_3_remove_electrode_percent.jsonld",
             "items/artifact_3_remove_electrode_method.jsonld",
             "items/artifact_3_remove_electrode_visual.jsonld",
             "items/artifact_3_remove_electrode_visual_other.jsonld",
@@ -133,7 +138,8 @@
             "items/artifact_4_correct_reference.jsonld",
             "items/artifact_4_correct_details.jsonld",
             "items/artifact_4_remove_electrode_where.jsonld",
-            "items/artifact_4_remove_electrode_list.jsonld",
+            "items/artifact_4_remove_electrode_everyone_list.jsonld",
+            "items/artifact_4_remove_electrode_percent.jsonld",
             "items/artifact_4_remove_electrode_method.jsonld",
             "items/artifact_4_remove_electrode_visual.jsonld",
             "items/artifact_4_remove_electrode_visual_other.jsonld",
@@ -312,9 +318,18 @@
                 ]
             },
             {
+                "variableName": "offline_filters",
+                "isAbout": "items/offline_filters.jsonld",
+                "isVis": true,
+                "requiredValue": false,
+                "allow": [
+                    "reproschema:Skipped"
+                ]
+            },
+            {
                 "variableName": "which_filters",
                 "isAbout": "items/which_filters.jsonld",
-                "isVis": true,
+                "isVis": "offline_filters == 1",
                 "requiredValue": false,
                 "allow": [
                     "reproschema:Skipped"
@@ -555,6 +570,15 @@
                 ]
             },
             {
+                "variableName": "new_reference_other",
+                "isAbout": "items/new_reference_other.jsonld",
+                "isVis": "new_reference == 5",
+                "requiredValue": false,
+                "allow": [
+                    "reproschema:Skipped"
+                ]
+            },
+            {
                 "variableName": "artifact_steps_number",
                 "isAbout": "items/artifact_steps_number.jsonld",
                 "isVis": true,
@@ -681,9 +705,18 @@
                 ]
             },
             {
-                "variableName": "artifact_1_remove_electrode_list",
-                "isAbout": "items/artifact_1_remove_electrode_list.jsonld",
-                "isVis": "artifact_steps_number >= 1 && artifact_1 == 2",
+                "variableName": "artifact_1_remove_electrode_everyone_list",
+                "isAbout": "items/artifact_1_remove_electrode_everyone_list.jsonld",
+                "isVis": "artifact_steps_number >= 1 && artifact_1 == 2 && artifact_1_remove_electrode_where ==2",
+                "requiredValue": false,
+                "allow": [
+                    "reproschema:Skipped"
+                ]
+            },
+            {
+                "variableName": "artifact_1_remove_electrode_percent",
+                "isAbout": "items/artifact_1_remove_electrode_percent.jsonld",
+                "isVis": "artifact_steps_number >= 1 && artifact_1 == 2 && artifact_1_remove_electrode_where ==2",
                 "requiredValue": false,
                 "allow": [
                     "reproschema:Skipped"
@@ -888,9 +921,18 @@
                 ]
             },
             {
-                "variableName": "artifact_2_remove_electrode_list",
-                "isAbout": "items/artifact_2_remove_electrode_list.jsonld",
-                "isVis": "artifact_steps_number >= 2 && artifact_2 == 2",
+                "variableName": "artifact_2_remove_electrode_everyone_list",
+                "isAbout": "items/artifact_2_remove_electrode_everyone_list.jsonld",
+                "isVis": "artifact_steps_number >= 1 && artifact_2 == 2 && artifact_2_remove_electrode_where ==2",
+                "requiredValue": false,
+                "allow": [
+                    "reproschema:Skipped"
+                ]
+            },
+            {
+                "variableName": "artifact_2_remove_electrode_percent",
+                "isAbout": "items/artifact_2_remove_electrode_percent.jsonld",
+                "isVis": "artifact_steps_number >= 1 && artifact_2 == 2 && artifact_2_remove_electrode_where ==2",
                 "requiredValue": false,
                 "allow": [
                     "reproschema:Skipped"
@@ -1095,9 +1137,18 @@
                 ]
             },
             {
-                "variableName": "artifact_3_remove_electrode_list",
-                "isAbout": "items/artifact_3_remove_electrode_list.jsonld",
-                "isVis": "artifact_steps_number >= 3 && artifact_3 == 2",
+                "variableName": "artifact_3_remove_electrode_everyone_list",
+                "isAbout": "items/artifact_3_remove_electrode_everyone_list.jsonld",
+                "isVis": "artifact_steps_number >= 1 && artifact_3 == 2 && artifact_3_remove_electrode_where ==2",
+                "requiredValue": false,
+                "allow": [
+                    "reproschema:Skipped"
+                ]
+            },
+            {
+                "variableName": "artifact_3_remove_electrode_percent",
+                "isAbout": "items/artifact_3_remove_electrode_percent.jsonld",
+                "isVis": "artifact_steps_number >= 1 && artifact_3 == 2 && artifact_3_remove_electrode_where ==2",
                 "requiredValue": false,
                 "allow": [
                     "reproschema:Skipped"
@@ -1302,9 +1353,18 @@
                 ]
             },
             {
-                "variableName": "artifact_4_remove_electrode_list",
-                "isAbout": "items/artifact_4_remove_electrode_list.jsonld",
-                "isVis": "artifact_steps_number >= 4 && artifact_4 == 2",
+                "variableName": "artifact_4_remove_electrode_everyone_list",
+                "isAbout": "items/artifact_4_remove_electrode_everyone_list.jsonld",
+                "isVis": "artifact_steps_number >= 1 && artifact_4 == 2 && artifact_4_remove_electrode_where ==2",
+                "requiredValue": false,
+                "allow": [
+                    "reproschema:Skipped"
+                ]
+            },
+            {
+                "variableName": "artifact_4_remove_electrode_percent",
+                "isAbout": "items/artifact_4_remove_electrode_percent.jsonld",
+                "isVis": "artifact_steps_number >= 1 && artifact_4 == 2 && artifact_4_remove_electrode_where ==2",
                 "requiredValue": false,
                 "allow": [
                     "reproschema:Skipped"
