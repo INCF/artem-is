@@ -14,7 +14,7 @@ The goal of the ARTEM-IS is to use insights derived from systematic reviews to c
 
 1. The web-app is available **[HERE](https://artemis.incf.org/)**.
 2. On the initial page, you can create your account and log in, as well as view a visualization of the basic structure of the information provided in the template.
-3. Once logged in, by clicking `Submit` in the top right corner, you can create a new, blank template.
+3. Once logged in, by clicking `Create` in the top right corner, you can create a new, blank template.
 4. You can navigate a template by using the menu on top and answer the questions corresponding to the study you are reporting on. This is meant to ensure that you have not forgotten any of the essential information during data collection or later in the methods and results parts of your article.
 5. Click `Save` in the top right corner to save any changes.
 6. You can view your own saved templates using `My templates` option. For each template, you have the options to make them publically (in)visible to others, download a human-readable PDF output and download a machine-readable JSON output. All templates are set to private in the beginning.
