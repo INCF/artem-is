@@ -12,7 +12,7 @@ The goal of the ARTEM-IS is to use insights derived from systematic reviews to c
 
 ## How to use it
 
-1. The demo version of the web-app is (currently and temporarily) available **[HERE](http://psihologija.ff.uns.ac.rs/erp/)**.
+1. The web-app is available **[HERE](https://artemis.incf.org/)**.
 2. On the initial page, you can create your account and log in, as well as view a visualization of the basic structure of the information provided in the template.
 3. Once logged in, by clicking `Submit` in the top right corner, you can create a new, blank template.
 4. You can navigate a template by using the menu on top and answer the questions corresponding to the study you are reporting on. This is meant to ensure that you have not forgotten any of the essential information during data collection or later in the methods and results parts of your article.
@@ -20,6 +20,8 @@ The goal of the ARTEM-IS is to use insights derived from systematic reviews to c
 6. You can view your own saved templates using `My templates` option. For each template, you have the options to make them publically (in)visible to others, download a human-readable PDF output and download a machine-readable JSON output. All templates are set to private in the beginning.
 7. You can view and download publically available templates by other members using `Browse` menu.
 8. You can upload a previously downloaded (in JSON format) templates to your account using `Upload` menu.
+
+You can find output examples on the [OSF page of this project](https://osf.io/ahp3t/).
 
 ## Why this project?
 
