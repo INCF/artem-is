@@ -16,7 +16,7 @@ Datasets		Types of data not included in list		text		study_dataset_types_other	st
 Datasets		Do any of these datasets have a DOI?		radio	preset:boolean	study_dataset_DOI_exists	study_dataset_exists == 1	15	1	1	study_id	1					
 Datasets		Dataset DOIs separated by a semicolon and a space.		textarea		study_dataset_DOI	study_dataset_DOI_exists == 1	16	1	1	study_id	1		dataset_description.json	DatasetDOI		
 Datasets		Are there any datasets that do not have a DOI?		radio	preset:boolean	study_datasets_noDOI_exists	study_dataset_exists == 1	17	1	1	study_id	1					
-Datasets		Provide links to non-DOI datasets, separated by a semicolon and a space.		textarea		study_datasets_noDOI	study_datasets_noDOI_exists == 1	18	1	1	study_id	1					
+Datasets		Are there any datasets that do not have a DOI?		textarea		study_datasets_noDOI	study_datasets_noDOI_exists == 1	18	1	1	study_id	1					
 Supplemental materials		Has this study resulted in any supplementary materials other than data and publications?	For example, visualization plots, tables, lists of stimuly, etc.	radio	preset:boolean	supplementary_materials_exists	1	19	1	1	study_id	1					
 Supplemental materials		Which supplementary materials are available publically?		radio_multiple	list of stimulus descriptions (e.g. list of objects shown in images) | stimuli | codes or files with the experimental task | other	supplementary_materials	supplementary_materials_exists == 1	20	1	1	study_id	1					
 Supplemental materials		Which other supplementary materials are available?		text		specify_supplementary	supplementary_materials_exists == 1 && supplementary_materials.includes(3)	21	1	1	study_id	1					
@@ -32,11 +32,11 @@ Licenses		License type for data (other than listed)		text		data_license_other	da
 Licenses		Name of each licensed study element followed by license type, with listed elements separated by semicolon and a space.	For example, derivatives, figures, slides, etc.	text		other_licenses	licenses_which.includes(2)	31	1	1	study_id	1					
 Study description		Study abstract		textarea		study_abstract	1	32	1	1	study_id	1					
 Study description		Keywords, separated by semicolons followed by space		text		study_keywords	1	33	1	1	study_id	1					
-Funding		At the time of writing, does the project have financial support from a funding agency? 		radio	preset:boolean	study_funding_exists	1	34	1	1	study_id	1					
-Funding		If this project is being funded, please list grant numbers and funding agencies, separated by a semicolon and a space.		textarea		study_funding	study_funding_exists == 1	35	1	1	study_id	1		dataset_description.json	Funding		
+Funding		Does the project have (or did it have) financial support from a funding agency? 		radio	preset:boolean	study_funding_exists	1	34	1	1	study_id	1					
+Funding		If this project is (was) being funded, please list grant numbers and funding agencies, separated by a semicolon and a space.		textarea		study_funding	study_funding_exists == 1	35	1	1	study_id	1		dataset_description.json	Funding		
 Ethical Approval		At the time of writing has the study been approved by an ethics committee?		radio	preset:boolean	study_ethics_exists	1	36	1	1	study_id	1					
 Ethical Approval		If the study has been aproved by an ethics comittee, list the approval ID and institution which granted it. If there are multiple approvals, separate them by semicolons followed by space.		text		study_ethics	study_ethics_exists == 1	37	1	1	study_id	1		dataset_description.json	EthicsApprovals		
 Acknowledgements		Do you have any acknowledgments to add in addition to authors or funding?		radio	preset:boolean	acknowledgements_exists	1	38	1	1	study_id	1					
 Acknowledgements		Acknowledgements		textarea		acknowledgements	acknowledgements_exists == 1	39	1	1	study_id	1		dataset_description.json	Acknowledgements		
-How to cite		Do you have any instructions on how you want this study to be cited or otherwise acknowledged?		radio	preset:boolean	citation_instructions_exists	1	40	1	1	study_id	1					
+How to cite		Do you have any instructions on how you (or the authors) want this study to be cited or otherwise acknowledged?		radio	preset:boolean	citation_instructions_exists	1	40	1	1	study_id	1					
 How to cite		Citation instructions		textarea		citation_instructions	citation_instructions_exists == 1	41	1	1	study_id	1		dataset_description.json	HowToAcknowledge		
