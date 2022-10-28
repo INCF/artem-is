@@ -56,4 +56,4 @@ A centralized list of the people who contributed to this project can be found [h
 
 The template is licensed CC-BY-4.0
 
-(c) 2020 ARTEMIS Contributors
+(c) 2020 INCF Working Group on ARTEMIS
