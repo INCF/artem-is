@@ -6,12 +6,12 @@ item	field	question	options	instructions
 - Documenting a pipeline that has been applied to study data "	
 1.2 - STUDY TITLE				
 1.2.1	study title	Current title of the study/pipeline		
-1.2.2	study title final	Is the current title the same as it appears in related publications?	"- no
+1.2.2	study title final	Is the current title the same as it appears or as it will appear in related publications?	"- no
 - yes
 - final decision not made yet"	
-1.2.3	study working title exists	Has the current study or pipeline been known by a different name or a working title previously? 	"- yes
+1.2.3	study working title exists	Has the current study or pipeline been known by a different (published or working) title?	"- yes
 - no"	
-1.2.4	study working title	Working title		
+1.2.4	study working title	Alternative title(s) of this study		
 1.3 - AUTHORS				
 1.3.1	study authors	Authors of the study in the following format: family-name, other names. Each author separated by a semicolon and a space.		
 1.4 - PUBLICATIONS				
@@ -25,7 +25,7 @@ item	field	question	options	instructions
 1.4.5	study reference noDOI	Provide links to non-DOI publications, separated by a semicolon and a space.		
 1.5 - DATASETS				
 1.5.1	study dataset exists	Has this study resulted in any datasets archived in a persistent, version controlled repository, administered independently from the authorship team?	"- yes
-- no"	For example, a Github repository
+- no"	For example, an OSF repository
 1.5.2	study dataset types	What types of data are available?	"- raw EEG data
 - individual epochs
 - averaged ERPs for individual participants
@@ -38,13 +38,13 @@ item	field	question	options	instructions
 1.5.5	study dataset DOI	Dataset DOIs separated by a semicolon and a space.		
 1.5.6	study datasets noDOI exists	Are there any datasets that do not have a DOI?	"- yes
 - no"	
-1.5.7	study datasets noDOI	Are there any datasets that do not have a DOI?		
+1.5.7	study datasets noDOI	Provide reference for the datasets that do not have DOI.		
 1.6 - SUPPLEMENTAL MATERIALS				
 1.6.1	supplementary materials exists	Has this study resulted in any supplementary materials other than data and publications?	"- yes
-- no"	For example, visualization plots, tables, lists of stimuly, etc.
+- no"	For example, code, visualization plots, tables, lists of stimuly, etc.
 1.6.2	supplementary materials	Which supplementary materials are available publically?	"- list of stimulus descriptions (e.g. list of objects shown in images)
-- stimuli
-- codes or files with the experimental task
+- stimuli files
+- experimental task files/code
 - other"	
 1.6.3	specify supplementary	Which other supplementary materials are available?		
 1.6.4	supplementary link	Provide the link to the location of supplementary materials on the web.		
@@ -53,7 +53,7 @@ item	field	question	options	instructions
 - no"	For example, code used to run the study, data arising from the study
 1.7.2	licenses which	Which elements are covered by a license?	"- code
 - data
-- other elements"	
+- other"	
 1.7.3	code license	License type for code. 	"- Public Domain
 - Open Data Commons Public Domain Dedication and License
 - Creative Commons Zero 1.0 Universal
@@ -99,8 +99,8 @@ item	field	question	options	instructions
 3.1.6	electrode model	Model of electrodes		
 3.1.7	electrode preamplifiers	Did electrodes have pre-amplifiers?	"- no (passive electrodes)
 - yes (active electrodes)"	
-3.1.8	electrode material	What material were electrodes made of?	"- Ag/Ag-Cl
-- tin
+3.1.8	electrode material	What material were electrodes made of?	"- tin
+- Ag/Ag-Cl 
 - other"	
 3.1.9	electrode material other	Specify the material that the electrodes were made of.		
 3.1.10	conductive medium	Type of conductive medium used other than listed.	"- conductive gel
@@ -114,22 +114,24 @@ item	field	question	options	instructions
 - no"	
 3.2.2	electrode location naming convention	What type of placement convention is appropriate for describing electrode placement scheme in this study?	"- International 10-20 system and its extensions (e.g., 10-10, 5 percent)
 - an equidistant electrode placement scheme
-- other placement systems
+- other
 - custom locations"	
 3.2.3	ten-twenty version	Which extension of the 10-20 system will you use to describe electrode positions?	"- 5% convention
 - 10-10 convention
 - 10-20 convention"	We recommend selecting the 5% convention (Oostenveld & Praamstra, 2001) as it is the latest version.
 3.2.4	number EEG electrodes	Number of EEG electrodes that were used for acquisition (including, if they are on scalp, ground and reference electrodes, as well as earlobes; excluding EOG and other non-EEG electrodes).		This should not include empty slots on the cap where electrodes were not placed, if there were such slots.
-3.2.5	link electrode scheme	The appropriate methods description should also include a list or a scheme of all electrode locations. This is currently not available in ARTEM-IS due to technical limitations, so please provide a link where the sceheme/list can be found.		This can be a public preregistration document, OSF file, preprint, or a publication.
-3.2.6	non-EEG electrodes	Which other electrodes were used for recording?	"- VEOG above left eye
+3.2.5	link electrode scheme	The appropriate methods description should also include a list or a scheme of all electrode locations. A convenient way to do this is currently not available in ARTEM-IS due to technical limitations, so please provide either a list of all electrodes, or a link where the sceheme/list can be found.		The link can be to a public preregistration document, OSF file, preprint, or a publication. Ideally, the link should not be to an address that you expect to change in the future.
+3.2.6	non-EEG electrodes exists	Were there any electrodes other than scalp electrodes and mastoids/earlobes?	"- yes
+- no"	For example: nose electrode or EOG
+3.2.7	non-EEG electrodes	Which other electrodes were used for recording?	"- VEOG above left eye
 - VEOG below left eye
 - VEOG above right eye
 - VEOG below right eye
 - left HEOG
 - right HEOG
 - an electrode used to make balanced noncephalic reference
-- other electrodes"	
-3.2.7	non-EEG electrodes other	Which electrodes were used in addition to the ones described above?		
+- other"	
+3.2.8	non-EEG electrodes other	Which electrodes were used in addition to the ones described above?		
 3.3 - SIGNAL AMPLIFIERS				
 3.3.1	amplifier make	Make (brand) of the amplifier	- preset:eeg_amplifier_brands	
 3.3.2	amplifier make other	Make (brand) of the amplifiers other than listed above		
@@ -141,11 +143,13 @@ item	field	question	options	instructions
 - presentation software trigger
 - other"	
 3.4.2	trigger signal source other	Source of triggers other than listed.		
-3.4.3	trigger signal input when	Describe trigger signal input. Were triggers delivered during acquisition (e.g., triggers from photo diode simultaneously recorded while presenting trials) or added after recording (e.g. after analysis of an audio recording of spoken responses)?	"- Online, during acquisition
+3.4.3	trigger additional	Do you wish to describe triggers in more detail?	"- yes
+- no"	This information is not required by the guidelines for good EEG reporting practice by Keil et al. (2014), but it might interest a reader.
+3.4.4	trigger signal input when	Describe trigger signal input. Were triggers delivered during acquisition (e.g., triggers from photo diode simultaneously recorded while presenting trials) or added after recording (e.g. after analysis of an audio recording of spoken responses)?	"- Online, during acquisition
 - Added after recording "	
-3.4.4	trigger signal input where	Were triggers delivered to the amplifier or acquisition computer?	"- Amplifier
+3.4.5	trigger signal input where	Were triggers delivered to the amplifier or acquisition computer?	"- Amplifier
 - Acquisition computer"	
-3.4.5	trigger signal input how	Were triggers delivered via an analogue or digital signal format?	"- Analogue (e.g., via a parallel port, serial port, or TCP/IP)
+3.4.6	trigger signal input how	Were triggers delivered via an analogue or digital signal format?	"- Analogue (e.g., via a parallel port, serial port, or TCP/IP)
 - Digital (including serial port over a USB port (arduino, LabJack U3, or similar))"	
 3.5 - OTHER PERIPHERAL DEVICES				
 3.5.1	other peripheral devices	Do you have other devices (eg. signal boxes, converters, other peripheral devices) to report?	"- yes
@@ -191,7 +195,7 @@ item	field	question	options	instructions
 4.4.1	online filters	Which of the following online filters were used?	"- high pass
 - low pass
 - notch
-- none"	
+- none"	"Select ""none"" to mark this question as answered if you did not use any online filters. Please note that this case is highly unlikely given that acquisition systems normally have at least an anti-aliasing low-pass filter."
 4.4.2	online filters high pass cut off	High-pass filter cut-off used during recording		
 4.4.3	online filters high pass cutoff unit	Type of online high-pass filter cut-off	"- half-amplitude
 - half-power"	
@@ -263,7 +267,7 @@ item	field	question	options	instructions
 - filter direction
 - filter delay
 - other
-- none of the above"	These properties are not required by recommendations for good practice by Keil et al. (2014), but they may help other researchers reproduce your filters if you know them.
+- none of the above"	"These properties are not required by recommendations for good practice by Keil et al. (2014), but they may help other researchers reproduce your filters if you know them. Select ""none of the above"" to mark this question as answered if you do not wish to add anything."
 5.3.13	offline highpass filter attenuation	Attenuation achieved in the stopband after offline high-pass filtering		
 5.3.14	offline highpass filter transition	Offline high-pass filter transition bandwidth		
 5.3.15	offline highpass filter ripple	Offline high-pass filter passband ripple		
@@ -293,7 +297,7 @@ item	field	question	options	instructions
 - filter direction
 - filter delay
 - other
-- none of the above"	These properties are not required by recommendations for good practice by Keil et al. (2014), but they may help other researchers reproduce your filters if you know them.
+- none of the above"	"These properties are not required by recommendations for good practice by Keil et al. (2014), but they may help other researchers reproduce your filters if you know them. Select ""none of the above"" to mark this question as answered if you do not wish to add anything."
 5.3.27	offline lowpass filter attenuation	Attenuation achieved in the stopband after offline low-pass filtering		
 5.3.28	offline lowpass filter transition	Offline low-pass filter transition bandwidth		
 5.3.29	offline lowpass filter ripple	Offline low-pass filter passband ripple		
@@ -438,32 +442,41 @@ item	field	question	options	instructions
 5.9.1	preprocessing order	Describe order of all pre-processing steps described here in a way that allows replication.		
 2 - DESIGN_SAMPLE				
 2.1 - SAMPLE SIZE				
-2.1.1	sample size total	How many subjects participated in the study?		
+2.1.1	sample size total	How many participants took part in the study?		
 2.1.2	sample size valid	How many participants, in total, were included in the analysis, after exclusion of participants?		
 2.1.3	subject exclusion rationale	Specify reasons for excluding participants.		
-2.2 - GROUPS AND WITHIN-SUBJECT CONDITIONS				
-2.2.1	number of groups	How many experimental/comparison (between-subjects) groups did the study feature? 		If participants were not divided into separate groups, please enter 1 to indicate 1 condition
-2.2.2	order of group	Specify group names separated by semicolon and a space (e.g., test group; control group)		
-2.2.3	participants per group	How many participants did each group have after exclusion?		Input numeric values in the same order in which groups were listed in the previous section. Values should be separated by semicolon and a space.
-2.2.4	total nb of within subject conditions	How many within-subject conditions did the study have?		If your within subjects data is not divided into separate conditions, please enter 1 to indicate 1 condition
-2.2.5	within subject condition names	Specify condition names separated by semicolon and a space (e.g., match; mismatch).		
+2.2 - VARIABLES				
+2.2.1	full factorial	Is the design of this study full factorial?	"- yes
+- no"	
+2.2.2	number factors between	How many between-subject factors does this study/pipeline have?		If you do not have any, please put zero in this field.
+2.2.3	factors between list	List between-subject factors with factor levels in the brackets, separated by semicolon		For example: smoking (yes, no); handedness (left, right)
+2.2.4	number of groups	How many experimental/comparison groups did the study feature in total? 		If participants were not divided into separate groups, please enter 1 to indicate 1 condition. If the design is not full factorial, this number might differ from the total number of between-subject factor level combinations
+2.2.5	order of group	List of all groups used in the study separated by semicolon and a space in the same order in which you want to describe groups in later questions concerning individual groups		Example: smokers left-handed; smokers right-handed; non-smokers left-handed; non-smokers right-handed
+2.2.6	participants per group	How many participants did each group have after exclusion?		Input numeric values in the same order in which groups were listed in the previous question. Values should be separated by semicolon and a space.
+2.2.7	number factors within	How many within-subject factors does this study/pipeline have?		If you do not have any, please put zero in this field.
+2.2.8	factors within list	List within-subject factors with factor levels in the brackets, separated by semicolon		For example: semantic match (match, mismatch); arousal (high, low)
+2.2.9	total nb of within subject conditions	How many within-subject conditions did the study have in total?		If your within-subjects data is not divided into separate conditions, please enter 1 to indicate 1 condition. If the design is not full factorial, this number might differ from the total number of between-subject factor level combinations.
+2.2.10	within subject condition names	List of all within-subject conditions used in the study in the same order in which you want to describe them in later questions concerning individual within-subject conditions.		Values should be separated by a semicolon and a space. For example: low arousal match; low arousal mismatch; high arousal match; high arousal mismatch
+2.2.11	continuous variables	Did you analyse relationship between ERPs and a non-ERP continuous variable (e.g., correlation of an ERP measure with IQ)	"- yes
+- no"	
+2.2.12	continuous variables list	Continuous variables analysed together with ERPs		
 2.3 - PRESENTED TRIALS				
-2.3.1	trial presentation strategy	What determined the number of trials each subject was presented with?	"- fixed N of trials delivered
+2.3.1	trial presentation strategy	What determined the number of trials each participant was presented with?	"- fixed N of trials delivered
 - adaptive N of trials (e.g., presenting trials with behavioural errors again until correct response)
 - Other"	
-2.3.2	total nb of trials	How many trials in total was each subject presented with (including repetition of the same stimuli or trials)?		
-2.3.3	total nb of trials condition	How many trials did each condition feature (including repetition of the same stimuli or trials)?		Values should be separated by semicolon and a space and given in the same order as the conditions were listed earlier. If there are multiple groups of participants, list trial counts for all conditions for one group, and then for the next one - following the ordering of groups as you specified them earlier.
+2.3.2	total nb of trials	How many trials in total was each participant presented with (including repetition of the same stimuli or trials)?		
+2.3.3	total nb of trials condition	How many trials did each condition feature (including repetition of the same stimuli or trials)?		Values should be separated by semicolon and a space and given in the same order as the conditions were listed earlier. If there are multiple groups of participants, list trial counts for all within-subject conditions for one group, and then for the next one - following the ordering of groups and within-subkect conditions as you specified them earlier.
 2.3.4	trial presentation strategy other	Explain how it was determined how many trials a participant was presented with.		
 2.3.5	avg total nb trials adaptive other	How many trials on average was a participant presented with, in total (including repetition of the same stimuli or trials)?		
 2.3.6	min total nb trials adaptive other	What was the minimum number of trials a participant was presented with, in total  (including repetition of the same stimuli or trials)?		
 2.3.7	max total nb trials adaptive other	What was the maximum number of trials a participant was presented with, in total  (including repetition of the same stimuli or trials)?		
-2.3.8	avg nb trials adaptive other condition	How many trials on average was a participant presented with, per condition  (including repetition of the same stimuli or trials)? 		Values should be separated by semicolon and a space and given in the same order as the conditions were listed earlier. If there are multiple groups of participants, list trial counts for all conditions for one group, and then for the next one - following the ordering of groups as you specified them earlier.
-2.3.9	min nb trials adaptive other condition	What was the minimum number of trials a participant was presented with, per condition (including repetition of the same stimuli or trials)?		Values should be separated by semicolon and a space and given in the same order as the conditions were listed earlier. If there are multiple groups of participants, list trial counts for all conditions for one group, and then for the next one - following the ordering of groups as you specified them earlier.
-2.3.10	max nb trials adaptive other condition	What was the maximum number of trials a participant was presented with, per condition  (including repetition of the same stimuli or trials)? 		Values should be separated by semicolon and a space and given in the same order as the conditions were listed earlier. If there are multiple groups of participants, list trial counts for all conditions for one group, and then for the next one - following the ordering of groups as you specified them earlier.
+2.3.8	avg nb trials adaptive other condition	How many trials on average was a participant presented with, per condition  (including repetition of the same stimuli or trials)? 		Values should be separated by semicolon and a space and given in the same order as the conditions were listed earlier. If there are multiple groups of participants, list trial counts for all within-subject conditions for one group, and then for the next one - following the ordering of groups and within-subkect conditions as you specified them earlier.
+2.3.9	min nb trials adaptive other condition	What was the minimum number of trials a participant was presented with, per condition (including repetition of the same stimuli or trials)?		Values should be separated by semicolon and a space and given in the same order as the conditions were listed earlier. If there are multiple groups of participants, list trial counts for all within-subject conditions for one group, and then for the next one - following the ordering of groups and within-subkect conditions as you specified them earlier.
+2.3.10	max nb trials adaptive other condition	What was the maximum number of trials a participant was presented with, per condition  (including repetition of the same stimuli or trials)? 		Values should be separated by semicolon and a space and given in the same order as the conditions were listed earlier. If there are multiple groups of participants, list trial counts for all within-subject conditions for one group, and then for the next one - following the ordering of groups and within-subkect conditions as you specified them earlier.
 2.4 - ANALYZED TRIALS				
-2.4.1	avg nb of trials condition	After eliminating trials on all bases (e.g., artifacts, behavioural errors), how many trials, on average, did you include for each condition per subject?		Insert numbers for each condition, separated by a semicolon and a space, in the same order as the conditions were listed earlier. If there are multiple groups of participants, list trial counts for all conditions for one group, and then for the next one - following the ordering of groups as you specified them earlier
-2.4.2	min nb of trials per condition	Specify the minimum number of trials analyzed per condition for any subject.		Values should be separated by semicolon and a space and given in the same order as the conditions were listed earlier. If there are multiple groups of participants, list trial counts for all conditions for one group, and then for the next one - following the ordering of groups as you specified them earlier.
-2.4.3	max nb of trials per condition	Specify the maximum number of trials analyzed per condition for any subject. 		Values should be separated by semicolon and a space and given in the same order as the conditions were listed earlier. If there are multiple groups of participants, list trial counts for all conditions for one group, and then for the next one - following the ordering of groups as you specified them earlier.
+2.4.1	avg nb of trials condition	After eliminating trials on all bases (e.g., artifacts, behavioural errors), how many trials, on average, did you include for each condition per participant?		Insert numbers for each condition, separated by a semicolon and a space, in the same order as the conditions were listed earlier. If there are multiple groups of participants, list trial counts for all within-subject conditions for one group, and then for the next one - following the ordering of groups and within-subkect conditions as you specified them earlier.
+2.4.2	min nb of trials per condition	Specify the minimum number of trials analyzed per condition for any participant.		Values should be separated by semicolon and a space and given in the same order as the conditions were listed earlier.  If there are multiple groups of participants, list trial counts for all within-subject conditions for one group, and then for the next one - following the ordering of groups and within-subkect conditions as you specified them earlier.
+2.4.3	max nb of trials per condition	Specify the maximum number of trials analyzed per condition for any participant. 		Values should be separated by semicolon and a space and given in the same order as the conditions were listed earlier.  If there are multiple groups of participants, list trial counts for all within-subject conditions for one group, and then for the next one - following the ordering of groups and within-subject conditions as you specified them earlier.
 2.5 - PRESENTING SOFTWARE				
 2.5.1	presenting software	Which presenting software did you use to show your experimental task?	- preset:stimulus_presentation_softwares	
 2.5.2	presenting software details	"Specify software version if applicable, programming language if ""custom script"" was selected, and software name and version if ""other"" was selected."		
@@ -485,12 +498,16 @@ item	field	question	options	instructions
 6.4.2	amp measure peak positivity	Was the peak negative or positive?	"- negative
 - positive"	
 6.4.3	amp measure peak method	What method was used for peak calculation?	"- simple peak
-- local peak"	
-6.4.4	window area measure type	Which window area measure was used?	"- rectified
+- local peak
+- other"	
+6.4.4	amp measure peak other	Describe the procedure for peak calculation that was used.		
+6.4.5	window area measure type	Which window area measure was used?	"- rectified
 - signed
-- integral"	
-6.4.5	amp measure factor details	Describe the procedure for amplitude measurement calculation using factor scores.		Description should be detailed enough for a reader to replicate the procedure.
-6.4.6	amp measure other details	"Describe the procedure(s) for amplitude measurement calculation for which you selected ""other"" (in detail sufficient for its replication)."		"This is meant to describe procedure other than what has been offered in the Question ""Select procedure(s) used for amplitude measurement in this time window""."
+- integral
+- other"	
+6.4.6	window area measure other	Describe the procedure for the area measure calculation that was used.		
+6.4.7	amp measure factor details	Describe the procedure for amplitude measurement calculation using factor scores.		Description should be detailed enough for a reader to replicate the procedure.
+6.4.8	amp measure other details	"Describe the procedure(s) for amplitude measurement calculation for which you selected ""other"" (in detail sufficient for its replication)."		"This is meant to describe procedure other than what has been offered in the Question ""Select procedure(s) used for amplitude measurement in this time window""."
 6.5 - AMPLITUDE MEASUREMENT - TIME WINDOW				
 6.5.1	amp time window selection	How was the amplitude measurement window selected?	"- a priori
 - data-driven selection/identification of the time window from the entire epoch 
@@ -502,7 +519,7 @@ item	field	question	options	instructions
 - theory driven novel window selection
 - other"	
 6.5.3	amp literature reference	Literature references, separated by semicolon and space		
-6.5.4	amp literature similar	Provide reasons for deviation or explan how the cited time windows were combined		
+6.5.4	amp literature similar	Provide reasons for deviation or explain how the cited time windows were combined		
 6.5.5	amp theory	Theory behind a-priori time window selection (including e.g., thresholds or references if relevant)		
 6.5.6	amp selection other reasons	Describe a-priori time window selection process other than those listed		
 6.5.7	amp measure start a priori	Start of the a priori selected time window for amplitude measurement		
@@ -583,7 +600,7 @@ item	field	question	options	instructions
 - theory driven novel window selection
 - other"	
 6.9.3	lat literature exact	Literature references, separated by semicolon and space		
-6.9.4	lat literature similar	Provide reasons for deviation or explan how the cited time windows were combined		
+6.9.4	lat literature similar	Provide reasons for deviation or explain how the cited time windows were combined		
 6.9.5	lat theory	Theory behind a-priori window selection (including implementation of regions, thresholds etc, and references if relevant)		
 6.9.6	lat selection other reasons	Describe a-priori window selection process other than those listed		
 6.9.7	lat selection approach data driven	Select the procedure which was used to identify start and end of the latency measurement time window.	"- visual inspection of grand averages in separate conditions across participants
@@ -717,8 +734,3 @@ item	field	question	options	instructions
 8.3.15	topoplot subdivision list	List of subdivided time windows in chronological order. Use colon to separate time window beginning and end, and semicolon and a space to separate subwindows, e.g., 300:400; 400:500		
 8.4 - OTHER PLOT				
 8.4.1	plot other	Which other type(s) of plot were shown?		
-9 - VISUALISATION				
-9.1 - ADDITIONAL COMMENTS				
-9.1.1	additional comment	Do you have any additional information or comments to add?	"- yes
-- no"	
-9.1.2	comment contents	You can add additional comments here.		
