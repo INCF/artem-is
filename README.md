@@ -8,7 +8,7 @@
 
 ## Agreed Reporting Template for EEG Methodology - International Standard: template for event-related potentials (ERP)
 
-The goal of the ARTEM-IS is to use insights derived from systematic reviews to create both human-friendly and machine-readable templates for documenting the methodological details of an EEG study or pipeline. The template for reporting ERP methodology before you is a pilot project of ARTEM-IS, based on which other subfields of EEG may follow.
+The goal of the ARTEM-IS is to use insights derived from systematic reviews and guidelines for good checklist design to create dynamic and user-friendly web applications which support EEG researchers in creating detailed human- and machine-readable methods summaries. Currently, ARTEM-IS has launched the first of its tools, ARTEM-IS for ERP, which supports describing a simple ERP experiment, including most of its core methodological aspects (study description, experimental design, hardware, data acquisition, pre-processing, measurement, visualisation, additional comments – artemis.incf.org). ARTEM-IS tools for more complex ERP experiments as well as for other subfields of EEG may follow.
 
 ## How to use it
 
@@ -25,9 +25,9 @@ You can find output examples on the [OSF page of this project](https://osf.io/ah
 
 ## Why this project?
 
-As the number of EEG papers increases, so too does the number of guidelines for how to report what has been done.  However, current guidelines and checklists appear to  have limited adoption, as systematic reviews have shown  that the journal article format is prone to errors, ambiguities and omissions of methodological details (Clayson et al., 2019; Šoškić et al., 2021, see also Carp, 2012). This is a problem for transparency in the scientific record, along with reproducibility and metascience.
+It is well known that choices made during recording, preprocessing and analysis of EEG data can affect study outcomes, making it critical to describe EEG methods and the decision-making process thoroughly and transparently. Transparent methods records would allow not only better reproducibility and replicability of EEG research or a better appraisal of the quality of existing studies, but also provide a better basis for novel research, for example by providing meta-scientists with relevant information on published studies. Researchers new to the field of EEG may especially benefit from transparent and thorough reports of EEG studies, as some of them are not beneficiaries of the decades of knowledge contained in unpublished materials like ‘lab handbooks’ which may be passed down in labs with longer traditions.
 
-New reporting tools are needed to overcome the limitations of written methodology descriptions. To be truly useful, these tools need to allow documenting detailed methodology information in supplementary material (and thus also support more precise written descriptions in journal articles), and they should be both intuitive to complete and foolproof-by-design. In order to achieve this, reporting tools should be developed through community consultation to ensure that they have the most utility for EEG stakeholders.
+Despite this, systematic reviews of reporting practices in the field have shown that journal articles do not meet this goal and that guidelines for writing them better have not resulted in a sufficient improvement to reporting transparency. ARTEM-IS is designed to help with this issue as ARTEM-IS reports contain a level of reporting precision higher than what is typically found in journal articles, which can be used as supplements to a publication, as a memory aid when writing a paper, or as records that allow easier metadata extraction in comparison to verbal descriptions in papers.
 
 ### Want to know more ?
 
