@@ -1,0 +1,70 @@
+# See https://www.mkdocs.org/ for more info on the config
+---
+site_name: ARTEM-IS
+repo_url: https://github.com/INCF/artem-is
+
+nav:
+- ARTEM-IS: index.md
+- Details:
+  - Scope: details/scope.md
+- lexicon: lexicon.md
+- links: links.md
+- Contributors: CONTRIBUTING.md
+- Release notes: CHANGELOG.md
+
+theme:
+  name: material
+  favicon: images/favicon/favicon-32x32.png
+  logo: images/logos/logo.png
+  features:
+  - navigation.top
+  - content.action.edit
+  icon:
+    repo: fontawesome/brands/github
+    edit: material/pencil
+  palette:
+    # Palette toggle for automatic mode
+  - media: (prefers-color-scheme)
+    toggle:
+      icon: material/brightness-auto
+      name: Switch to light mode
+    # Palette toggle for light mode
+  - media: '(prefers-color-scheme: light)'
+    scheme: default
+    toggle:
+      icon: material/brightness-7
+      name: Switch to dark mode
+    # Palette toggle for dark mode
+  - media: '(prefers-color-scheme: dark)'
+    scheme: slate
+    toggle:
+      icon: material/brightness-4
+      name: Switch to system preference
+
+copyright: Copyright &copy; INCF Working Group on ARTEMIS - <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
+
+edit_uri: edit/main/src/
+
+extra:
+  generator: false
+  social:
+  # X / Twitter
+  # - icon: fontawesome/brands/twitter
+  #   link: https://twitter.com/????
+  - icon: fontawesome/brands/github
+    link: https://github.com/INCF/artem-is.git
+  #  Google group ?
+  # - icon: fontawesome/brands/google
+  #   link: https://groups.google.com/g/????
+
+markdown_extensions:
+- toc:
+    anchorlink: true
+- pymdownx.superfences
+
+plugins:
+- search
+
+docs_dir: src
+
+use_directory_urls: false
