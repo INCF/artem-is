@@ -1,5 +1,3 @@
-<!-- comment: landing page for ARTEMIS app -->
-
 <center>
 
 ![](https://raw.githubusercontent.com/ohbm/eCOBIDAS/master/images/ARTEMIS_logo.jpg)
@@ -35,19 +33,3 @@ Read more about the rationale for this project and the design principles we go b
 
 1. Have a look at our **[project on OSF](https://osf.io/pvrn6/)**.
 2. **Talks and slides** are available [HERE](https://osf.io/ncav8/).
-
-## Get in touch
-
-Want to know more? Have any questions? Something is missing? Send us an [email](mailto:artemis.eeg.2020@gmail.com).
-
-For occasional updates on the project, join our [mailing list](mailto:artemis_wg@incf.org).
-
-## Want to help?
-
-If you want to join this project, please check out our [INCF Working Group](https://www.incf.org/sig/incf-working-group-artem) and apply for joining it by filling in this [form](https://forms.gle/QHFakdGUQ69QrCYc9).
-
-## Contributors
-
-ARTEM-IS is developed by an [INCF working group](https://www.incf.org/sig/incf-working-group-artem), in partnership with [eCOBIDAS](https://www.incf.org/sig/incfohbm-working-group-checklists-transparent-methods-reporting-neuroscience-ecobidas).
-
-A centralized list of the people who contributed to this project can be found [here](https://osf.io/ut9pc/).
