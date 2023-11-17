@@ -146,13 +146,13 @@ item	field	question	options	instructions
 3.4.3	trigger additional	Do you wish to describe triggers in more detail?	"- yes
 - no"	This information is not required by the guidelines for good EEG reporting practice by Keil et al. (2014), but it might interest a reader.
 3.4.4	trigger signal input when	Describe trigger signal input. Were triggers delivered during acquisition (e.g., triggers from photo diode simultaneously recorded while presenting trials) or added after recording (e.g. after analysis of an audio recording of spoken responses)?	"- Online, during acquisition
-- Added after recording "	
-3.4.5	trigger signal input where	Were triggers delivered to the amplifier or acquisition computer?	"- Amplifier
+- Added after recording"	
+3.4.5	trigger signal input where	Where where the trigger signals acquired?	"- Amplifier
 - Acquisition computer"	
-3.4.6	trigger signal input how	Were triggers delivered via an analogue or digital signal format?	"- Analogue (e.g., via a parallel port, serial port, or TCP/IP)
+3.4.6	trigger signal input how	How were tigger signals aquired?	"- Analogue (e.g., via a parallel port, serial port, or TCP/IP)
 - Digital (including serial port over a USB port (arduino, LabJack U3, or similar))"	
 3.5 - OTHER PERIPHERAL DEVICES				
-3.5.1	other peripheral devices	Do you have other devices (eg. signal boxes, converters, other peripheral devices) to report?	"- yes
+3.5.1	other peripheral devices	Was any other equipment used during acquisition?	"- yes
 - no"	You can list here any special equipment that you find necessary to report, such as (1) special monitors, keyboards, etc. worth mentioning; (2) additional EEG recording equipment such as AD converters or electrode position measurement devices; (3) other recording equipment used in parallel, such as eye tracking, fMRI, electrodermal or heart rate monitors.
 3.5.2	other peripheral devices details	Describe which additional devices were used, and specify their manufacturers and models.		
 4 - ACQUISITION				
