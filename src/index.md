@@ -6,8 +6,6 @@
 
 </center>
 
-## Agreed Reporting Template for EEG Methodology - International Standard: template for event-related potentials (ERP)
-
 The goal of the ARTEM-IS is to use insights derived from systematic reviews and guidelines for good checklist design to create dynamic and user-friendly web applications which support EEG researchers in creating detailed human- and machine-readable methods summaries. Currently, ARTEM-IS has launched the first of its tools, ARTEM-IS for ERP, which supports describing a simple ERP experiment, including most of its core methodological aspects (study description, experimental design, hardware, data acquisition, pre-processing, measurement, visualisation, additional comments – artemis.incf.org). ARTEM-IS tools for more complex ERP experiments as well as for other subfields of EEG may follow.
 
 ## How to use it
@@ -51,3 +49,9 @@ If you want to join this project, please check out our [INCF Working Group](http
 ARTEM-IS is developed by an [INCF working group](https://www.incf.org/sig/incf-working-group-artem), in partnership with [eCOBIDAS](https://www.incf.org/sig/incfohbm-working-group-checklists-transparent-methods-reporting-neuroscience-ecobidas).
 
 A centralized list of the people who contributed to this project can be found [here](https://osf.io/ut9pc/).
+
+## License
+
+The template is licensed CC-BY-4.0
+
+(c) 2020 INCF Working Group on ARTEMIS

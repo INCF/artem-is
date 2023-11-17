@@ -27,3 +27,25 @@ It can be triggered manually:
   in the `Conversation` tab.
 
 ![merge](./images/merge.png)
+
+
+## Serve the website locally (on your computer)
+
+### Requirements
+
+- Python
+
+To install all the necessarry packages,
+type the following in a terminal in the root of the repository:
+
+```bash
+pip install -r requirments.txt
+```
+
+### Serve the website
+
+Type the following in a terminal in the root of the repository:
+
+```bash
+mkdocs serve
+```
