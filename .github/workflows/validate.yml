@@ -2,16 +2,18 @@ name: validate jsonld
 
 on:
   push:
-    branches: 
+    branches:
       - master
       - main
-      - dev    
+      - dev
   pull_request:
     branches: '*'
 
 jobs:
   build:
     runs-on: ubuntu-latest
+
+    if: github.repository_owner == 'INCF'
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
