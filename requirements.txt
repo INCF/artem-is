@@ -8,7 +8,5 @@ rich
 # linting, styling, validation
 black
 flake8
-cffconvert
 pre-commit
-sourcery
 
