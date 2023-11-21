@@ -27,7 +27,7 @@ It is well known that choices made during recording, preprocessing and analysis 
 
 Despite this, systematic reviews of reporting practices in the field have shown that journal articles do not meet this goal and that guidelines for writing them better have not resulted in a sufficient improvement to reporting transparency. ARTEM-IS is designed to help with this issue as ARTEM-IS reports contain a level of reporting precision higher than what is typically found in journal articles, which can be used as supplements to a publication, as a memory aid when writing a paper, or as records that allow easier metadata extraction in comparison to verbal descriptions in papers.
 
-### Want to know more ?
+## Want to know more ?
 
 Read more about the rationale for this project and the design principles we go by in our **[paper](https://www.sciencedirect.com/science/article/pii/S1053811921009939?via%3Dihub)**, and if you agree support us by signing the **[ARTEM-IS statement](https://osf.io/mf97q/)**.
 
