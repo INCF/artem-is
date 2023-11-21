@@ -20,7 +20,7 @@ To install all the necessarry packages,
 type the following in a terminal in the root of the repository:
 
 ```bash
-pip install -r requirments.txt
+pip install -r requirements.txt
 ```
 
 ### Serve the website
