@@ -187,10 +187,10 @@ item	field	question	options	instructions
 - other
 - HEOG was not recorded"	
 4.3.9	online reference HEOG other	Which other reference was used for HEOG recording?		
-4.3.10	online reference other non-EEG	Online reference for other non-EEG electrodes	"- the same reference as EEG electrodes
+4.3.10	online reference other non-EEG	Online reference for other non-EEG (and non-EOG) electrodes	"- the same reference as EEG electrodes
 - other
-- no other non-EEG electrodes were used"	
-4.3.11	online reference other non-EEG other	Which other reference was used for other non-EEG electrodes?		
+- no non-EEG non-EOG electrodes were used"	
+4.3.11	online reference other non-EEG other	Which other reference was used for other non-EEG (and non-EOG) electrodes?		
 4.4 - ONLINE FILTERS				
 4.4.1	online filters	Which of the following online filters were used?	"- high pass
 - low pass
@@ -261,64 +261,66 @@ item	field	question	options	instructions
 - half-amplitude"	
 5.3.10	offline highpass filter cutoff	Offline high-pass filter cut-off		
 5.3.11	offline highpass filter rolloff	Offline high-pass filter roll off		
-5.3.12	offline highpass filter additional	Do you want to report any of these other additional offline high-pass filter properties?	"- attenuation in the stopband
+5.3.12	offline highpass filter additional exists	Do you want to report any additional properties of the high-pass filter?	"- yes
+- no"	The properties listed above are the minumum required by recommendations for good practice by Keil et al. (2014), but providing additional information may help other researchers reproduce your filters if you know them.
+5.3.13	offline highpass filter additional	Do you want to report any of these other additional offline high-pass filter properties?	"- attenuation in the stopband
 - transition bandwidth
 - passband ripple
 - filter direction
 - filter delay
-- other
-- none of the above"	"These properties are not required by recommendations for good practice by Keil et al. (2014), but they may help other researchers reproduce your filters if you know them. Select ""none of the above"" to mark this question as answered if you do not wish to add anything."
-5.3.13	offline highpass filter attenuation	Attenuation achieved in the stopband after offline high-pass filtering		
-5.3.14	offline highpass filter transition	Offline high-pass filter transition bandwidth		
-5.3.15	offline highpass filter ripple	Offline high-pass filter passband ripple		
-5.3.16	offline highpass filter direction	Direction of the offline high-pass filter	"- forwards
+- other"	These properties are not required by recommendations for good practice by Keil et al. (2014), but they may help other researchers reproduce your filters if you know them.
+5.3.14	offline highpass filter attenuation	Attenuation achieved in the stopband after offline high-pass filtering		
+5.3.15	offline highpass filter transition	Offline high-pass filter transition bandwidth		
+5.3.16	offline highpass filter ripple	Offline high-pass filter passband ripple		
+5.3.17	offline highpass filter direction	Direction of the offline high-pass filter	"- forwards
 - backwards
 - forwards and backwards"	
-5.3.17	offline highpass filter delay	Offline high-pass filter delay	"- zero-phase
+5.3.18	offline highpass filter delay	Offline high-pass filter delay	"- zero-phase
 - linear phase
 - non-linear phase"	
-5.3.18	offline highpass filter other	Describe offline high-pass filter properties other than properties offered above.		
-5.3.19	offline lowpass filter impulse	What kind of impulse rate did the low-pass filter have?	"- FIR (finite)
+5.3.19	offline highpass filter other	Describe offline high-pass filter properties other than properties offered above.		
+5.3.20	offline lowpass filter impulse	What kind of impulse rate did the low-pass filter have?	"- FIR (finite)
 - IIR (infinite)"	
-5.3.20	offline lowpass filter family	What family of filters did the low-pass filter belong to?	"- Boxcar
+5.3.21	offline lowpass filter family	What family of filters did the low-pass filter belong to?	"- Boxcar
 - Butterworth
 - Elliptic
 - Chebyshev
 - other"	
-5.3.21	offline lowpass filter family other	Family of filters of the low-pass filter (other than listed above)		
-5.3.22	offline lowpass filter order	What was the order of the low-pass filter?		
-5.3.23	offline lowpass filter unit	Type of low-pass filter cut-off	"- half-power
+5.3.22	offline lowpass filter family other	Family of filters of the low-pass filter (other than listed above)		
+5.3.23	offline lowpass filter order	What was the order of the low-pass filter?		
+5.3.24	offline lowpass filter unit	Type of low-pass filter cut-off	"- half-power
 - half-amplitude"	
-5.3.24	offline lowpass filter cutoff	Offline low-pass filter cut-off		
-5.3.25	offline lowpass filter rolloff	Offline low-pass filter roll off		
-5.3.26	offline lowpass filter additional	Do you want to report any of these other additional offline low-pass filter properties?	"- attenuation in the stopband
+5.3.25	offline lowpass filter cutoff	Offline low-pass filter cut-off		
+5.3.26	offline lowpass filter rolloff	Offline low-pass filter roll off		
+5.3.27	offline lowpass filter additional exists	Do you want to report any additional properties of the low-pass filter?	"- yes
+- no"	The properties listed above are the minumum required by recommendations for good practice by Keil et al. (2014), but providing additional information may help other researchers reproduce your filters if you know them.
+5.3.28	offline lowpass filter additional	Do you want to report any of these other additional offline low-pass filter properties?	"- attenuation in the stopband
 - transition bandwidth
 - passband ripple
 - filter direction
 - filter delay
-- other
-- none of the above"	"These properties are not required by recommendations for good practice by Keil et al. (2014), but they may help other researchers reproduce your filters if you know them. Select ""none of the above"" to mark this question as answered if you do not wish to add anything."
-5.3.27	offline lowpass filter attenuation	Attenuation achieved in the stopband after offline low-pass filtering		
-5.3.28	offline lowpass filter transition	Offline low-pass filter transition bandwidth		
-5.3.29	offline lowpass filter ripple	Offline low-pass filter passband ripple		
-5.3.30	offline lowpass filter direction	Direction of the offline low-pass filter	"- forwards
+- other"	"These properties are not required by recommendations for good practice by Keil et al. (2014), but they may help other researchers reproduce your filters if you know them. Select ""none of the above"" to mark this question as answered if you do not wish to add anything."
+5.3.29	offline lowpass filter attenuation	Attenuation achieved in the stopband after offline low-pass filtering		
+5.3.30	offline lowpass filter transition	Offline low-pass filter transition bandwidth		
+5.3.31	offline lowpass filter ripple	Offline low-pass filter passband ripple		
+5.3.32	offline lowpass filter direction	Direction of the offline low-pass filter	"- forwards
 - backwards
 - forwards and backwards"	
-5.3.31	offline lowpass filter delay	Offline low-pass filter delay	"- zero-phase
+5.3.33	offline lowpass filter delay	Offline low-pass filter delay	"- zero-phase
 - linear phase
 - non-linear phase"	
-5.3.32	offline lowpass filter other	Describe offline low-pass filter properties other than properties offered above.		
-5.3.33	offline notch filter type	What notch filter was applied offline, after the recording?	"- 50 Hz
+5.3.34	offline lowpass filter other	Describe offline low-pass filter properties other than properties offered above.		
+5.3.35	offline notch filter type	What notch filter was applied offline, after the recording?	"- 50 Hz
 - 60 Hz
 - other"	
-5.3.34	offline notch filter type details	Center frequency of the offline notch filter		
-5.3.35	offline notch filter width	In which format do you want to report the width of the offline notch filter?	"- distance between 3 dB points
+5.3.36	offline notch filter type details	Center frequency of the offline notch filter		
+5.3.37	offline notch filter width	In which format do you want to report the width of the offline notch filter?	"- distance between 3 dB points
 - number of removed frequencies in a decrete Fourier transform"	
-5.3.36	offline notch filter width distance	Distance between 3 dB points		
-5.3.37	offline notch filter width number frequencies	Number of removed frequencies in a descrete Fourier transform		
-5.3.38	offline notch filter harmonics	Were any harmonics also removed by the offline notch filter?	"- yes
+5.3.38	offline notch filter width distance	Distance between 3 dB points		
+5.3.39	offline notch filter width number frequencies	Number of removed frequencies in a descrete Fourier transform		
+5.3.40	offline notch filter harmonics	Were any harmonics also removed by the offline notch filter?	"- yes
 - no"	
-5.3.39	offline notch filter harmonics which	Which harmonics were removed by the offline notch filter? List center frequencies separated by a semicolon and a space		
+5.3.41	offline notch filter harmonics which	Which harmonics were removed by the offline notch filter? List center frequencies separated by a semicolon and a space		
 5.4 - DOWNSAMPLING				
 5.4.1	downsample data	Was data downsampled?	"- yes
 - no"	
@@ -352,12 +354,12 @@ item	field	question	options	instructions
 - other
 - HEOG was not recorded"	
 5.5.11	new reference HEOG other	Which other reference was HEOG data re-referenced to?		
-5.5.12	offline reference non-EEG	Was other non-EEG data re-referenced offline (after recording)?	"- yes
+5.5.12	offline reference non-EEG	Was other non-EEG (and non-EOG) data re-referenced offline (after recording)?	"- yes
 - no"	This does not include re-referencing within automated pipelines, if you had applied any.
-5.5.13	new reference non-EEG	What was the new other non-EEG reference?	"- the same reference as EEG electrodes
+5.5.13	new reference non-EEG	What was the new reference for other non-EEG (and non-EOG) data?	"- the same reference as EEG electrodes
 - other
-- no other non-EEG electrodes were used"	
-5.5.14	new reference non-EEG other	Which other reference was other non-EEG data re-referenced to?		
+- no non-EEG non-EOG electrodes were used"	
+5.5.14	new reference non-EEG other	Which other reference was non-EEG (and non-EOG) data re-referenced to?		
 5.6 - ARTIFACTS				
 5.6.1	artifact steps number	How many artifact elimination steps were there? You will describe each step in a separate tab right below.		This section refers to artifact removal (correction, rejection) methods other than elimating participants from the sample, which should be described in the Experimental design and sample section. This section should not include artifact removal within automated pipelines already described above.
 5.6.2	artifact 1	What action was taken regarding artifacts in step 1?	"- reject bad trial or bad data segment on all channels
