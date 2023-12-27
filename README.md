@@ -33,3 +33,4 @@ Read more about the rationale for this project and the design principles we go b
 
 1. Have a look at our **[project on OSF](https://osf.io/pvrn6/)**.
 2. **Talks and slides** are available [HERE](https://osf.io/ncav8/).
+3. See the [CONTRIBUTING.md](src/CONTRIBUTING.md) for information on how to contribute.
