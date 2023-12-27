@@ -1,0 +1,18 @@
+{
+    "@context": "https://raw.githubusercontent.com/ReproNim/reproschema/1.0.0-rc4/contexts/generic",
+    "@type": "reproschema:Field",
+    "@id": "offline_filters.jsonld",
+    "prefLabel": {
+        "en": "offline filters"
+    },
+    "description": "offline filters",
+    "schemaVersion": "1.0.0-rc4",
+    "version": "0.0.1",
+    "ui": {
+        "inputType": "radio"
+    },
+    "question": {
+        "en": "5.10 - Did you apply any offline (digital) filters?<div style='font-size: 70%; text-align:left;'><details> <summary> details </summary> <br>This does not include filtering within automated pipelines, if you had applied any, or filtering only for visualization, and not analysis purposes.</details></div>"
+    },
+    "responseOptions": "https://raw.githubusercontent.com/ohbm/cobidas_schema/master/response_options/boolean.jsonld"
+}

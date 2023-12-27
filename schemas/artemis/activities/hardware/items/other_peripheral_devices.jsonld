@@ -1,0 +1,18 @@
+{
+    "@context": "https://raw.githubusercontent.com/ReproNim/reproschema/1.0.0-rc4/contexts/generic",
+    "@type": "reproschema:Field",
+    "@id": "other_peripheral_devices.jsonld",
+    "prefLabel": {
+        "en": "other peripheral devices"
+    },
+    "description": "other peripheral devices",
+    "schemaVersion": "1.0.0-rc4",
+    "version": "0.0.1",
+    "ui": {
+        "inputType": "radio"
+    },
+    "question": {
+        "en": "3.20 - Do you have other devices (eg. signal boxes, converters, other peripheral devices) to report?<div style='font-size: 70%; text-align:left;'><details> <summary> details </summary> <br>You can list here any special equipment that you find necessary to report, such as (1) special monitors, keyboards, etc. worth mentioning; (2) additional EEG recording equipment such as AD converters or electrode position measurement devices; (3) other recording equipment used in parallel, such as eye tracking, fMRI, electrodermal or heart rate monitors.</details></div>"
+    },
+    "responseOptions": "https://raw.githubusercontent.com/ohbm/cobidas_schema/master/response_options/boolean.jsonld"
+}

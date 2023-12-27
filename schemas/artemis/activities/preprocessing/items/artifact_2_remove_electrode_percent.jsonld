@@ -1,0 +1,20 @@
+{
+    "@context": "https://raw.githubusercontent.com/ReproNim/reproschema/1.0.0-rc4/contexts/generic",
+    "@type": "reproschema:Field",
+    "@id": "artifact_2_remove_electrode_percent.jsonld",
+    "prefLabel": {
+        "en": "artifact 2 remove electrode percent"
+    },
+    "description": "artifact 2 remove electrode percent",
+    "schemaVersion": "1.0.0-rc4",
+    "version": "0.0.1",
+    "ui": {
+        "inputType": "float"
+    },
+    "question": {
+        "en": "5.79 - Percentage of channels eliminated per participant on average in step 2"
+    },
+    "responseOptions": {
+        "valueType": "xsd:float"
+    }
+}

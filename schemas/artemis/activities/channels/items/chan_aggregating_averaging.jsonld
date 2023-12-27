@@ -1,0 +1,37 @@
+{
+    "@context": "https://raw.githubusercontent.com/ReproNim/reproschema/1.0.0-rc4/contexts/generic",
+    "@type": "reproschema:Field",
+    "@id": "chan_aggregating_averaging.jsonld",
+    "prefLabel": {
+        "en": "chan aggregating averaging"
+    },
+    "description": "chan aggregating averaging",
+    "schemaVersion": "1.0.0-rc4",
+    "version": "0.0.1",
+    "ui": {
+        "inputType": "radio"
+    },
+    "question": {
+        "en": "7.29 - Did you aggregate channels by averaging?"
+    },
+    "responseOptions": {
+        "valueType": "xsd:integer",
+        "minValue": 0,
+        "maxValue": 1,
+        "choices": [
+            {
+                "name": {
+                    "en": "aggregating by simple averaging"
+                },
+                "value": 0
+            },
+            {
+                "name": {
+                    "en": "aggregating by a different function (e.g., weighted averaging)"
+                },
+                "value": 1
+            }
+        ],
+        "multipleChoice": false
+    }
+}

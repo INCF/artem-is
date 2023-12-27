@@ -1,0 +1,12 @@
+# documentation deployment
+mkdocs>=1.1
+mkdocs-material>=5.4
+# checklist maintenance
+gdown
+pandas
+rich
+# linting, styling, validation
+black
+flake8
+pre-commit
+

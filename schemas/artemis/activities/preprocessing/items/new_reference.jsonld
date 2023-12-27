@@ -1,0 +1,61 @@
+{
+    "@context": "https://raw.githubusercontent.com/ReproNim/reproschema/1.0.0-rc4/contexts/generic",
+    "@type": "reproschema:Field",
+    "@id": "new_reference.jsonld",
+    "prefLabel": {
+        "en": "new reference"
+    },
+    "description": "new reference",
+    "schemaVersion": "1.0.0-rc4",
+    "version": "0.0.1",
+    "ui": {
+        "inputType": "radio"
+    },
+    "question": {
+        "en": "5.37 - What was the new reference?"
+    },
+    "responseOptions": {
+        "valueType": "xsd:integer",
+        "minValue": 0,
+        "maxValue": 5,
+        "choices": [
+            {
+                "name": {
+                    "en": "average mastoids"
+                },
+                "value": 0
+            },
+            {
+                "name": {
+                    "en": "average earlobes"
+                },
+                "value": 1
+            },
+            {
+                "name": {
+                    "en": "average of all scalp electrodes"
+                },
+                "value": 2
+            },
+            {
+                "name": {
+                    "en": "reference electrode standardization technique (REST, Yao, 2001)"
+                },
+                "value": 3
+            },
+            {
+                "name": {
+                    "en": "Cz"
+                },
+                "value": 4
+            },
+            {
+                "name": {
+                    "en": "other"
+                },
+                "value": 5
+            }
+        ],
+        "multipleChoice": false
+    }
+}
