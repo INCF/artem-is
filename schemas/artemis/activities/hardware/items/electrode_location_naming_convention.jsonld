@@ -1,0 +1,48 @@
+{
+    "@context": "https://raw.githubusercontent.com/ReproNim/reproschema/1.0.0-rc4/contexts/generic",
+    "@type": "reproschema:Field",
+    "@id": "electrode_location_naming_convention.jsonld",
+    "schemaVersion": "1.0.0-rc4",
+    "version": "0.0.1",
+    "prefLabel": {
+        "en": "electrode location naming convention"
+    },
+    "description": "electrode location naming convention",
+    "ui": {
+        "inputType": "radio"
+    },
+    "question": {
+        "en": "3.13 - What type of placement convention is appropriate for describing electrode placement scheme in this study?"
+    },
+    "responseOptions": {
+        "valueType": "xsd:integer",
+        "choices": [
+            {
+                "name": {
+                    "en": "International 10-20 system and its extensions (e.g., 10-10, 5 percent)"
+                },
+                "value": 0
+            },
+            {
+                "name": {
+                    "en": "an equidistant electrode placement scheme"
+                },
+                "value": 1
+            },
+            {
+                "name": {
+                    "en": "other"
+                },
+                "value": 2
+            },
+            {
+                "name": {
+                    "en": "custom locations"
+                },
+                "value": 3
+            }
+        ],
+        "minValue": 0,
+        "maxValue": 3
+    }
+}

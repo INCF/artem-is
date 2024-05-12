@@ -2,17 +2,17 @@
     "@context": "https://raw.githubusercontent.com/ReproNim/reproschema/1.0.0-rc4/contexts/generic",
     "@type": "reproschema:Field",
     "@id": "baseline_end.jsonld",
+    "schemaVersion": "1.0.0-rc4",
+    "version": "0.0.1",
     "prefLabel": {
         "en": "baseline end"
     },
     "description": "baseline end",
-    "schemaVersion": "1.0.0-rc4",
-    "version": "0.0.1",
     "ui": {
         "inputType": "float"
     },
     "question": {
-        "en": "5.221 - What was the baseline period end relative to a trigger point? For timings after the trigger, use positive numbers. For timings before the trigger, use negative numbers."
+        "en": "5.106 - What was the baseline period end relative to a trigger point?<div style='font-size: 70%; text-align:left;'><details> <summary> details </summary> <br>For timings after the trigger, use positive numbers. For timings before the trigger, use negative numbers.</details></div>"
     },
     "responseOptions": {
         "valueType": "xsd:float",

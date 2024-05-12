@@ -1,0 +1,42 @@
+{
+    "@context": "https://raw.githubusercontent.com/ReproNim/reproschema/1.0.0-rc4/contexts/generic",
+    "@type": "reproschema:Field",
+    "@id": "online_reference_other_non-EEG.jsonld",
+    "schemaVersion": "1.0.0-rc4",
+    "version": "0.0.1",
+    "prefLabel": {
+        "en": "online reference other non-EEG"
+    },
+    "description": "online reference other non-EEG",
+    "ui": {
+        "inputType": "radio"
+    },
+    "question": {
+        "en": "4.18 - Online reference for other non-EEG (and non-EOG) electrodes"
+    },
+    "responseOptions": {
+        "valueType": "xsd:integer",
+        "choices": [
+            {
+                "name": {
+                    "en": "the same reference as EEG electrodes"
+                },
+                "value": 0
+            },
+            {
+                "name": {
+                    "en": "other"
+                },
+                "value": 1
+            },
+            {
+                "name": {
+                    "en": "no non-EEG non-EOG electrodes were used"
+                },
+                "value": 2
+            }
+        ],
+        "minValue": 0,
+        "maxValue": 2
+    }
+}

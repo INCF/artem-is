@@ -2,22 +2,20 @@
     "@context": "https://raw.githubusercontent.com/ReproNim/reproschema/1.0.0-rc4/contexts/generic",
     "@type": "reproschema:Field",
     "@id": "artifact_1_correct_method.jsonld",
+    "schemaVersion": "1.0.0-rc4",
+    "version": "0.0.1",
     "prefLabel": {
         "en": "artifact 1 correct method"
     },
     "description": "artifact 1 correct method",
-    "schemaVersion": "1.0.0-rc4",
-    "version": "0.0.1",
     "ui": {
         "inputType": "select"
     },
     "question": {
-        "en": "5.49 - Which general method of artifact correction did you use in step 1?"
+        "en": "5.79 - Which general method of artifact correction was used in step 1?"
     },
     "responseOptions": {
         "valueType": "xsd:integer",
-        "minValue": 0,
-        "maxValue": 6,
         "choices": [
             {
                 "name": {
@@ -62,6 +60,7 @@
                 "value": 6
             }
         ],
-        "multipleChoice": false
+        "minValue": 0,
+        "maxValue": 6
     }
 }

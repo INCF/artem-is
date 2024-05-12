@@ -2,22 +2,20 @@
     "@context": "https://raw.githubusercontent.com/ReproNim/reproschema/1.0.0-rc4/contexts/generic",
     "@type": "reproschema:Field",
     "@id": "new_reference.jsonld",
+    "schemaVersion": "1.0.0-rc4",
+    "version": "0.0.1",
     "prefLabel": {
         "en": "new reference"
     },
     "description": "new reference",
-    "schemaVersion": "1.0.0-rc4",
-    "version": "0.0.1",
     "ui": {
         "inputType": "radio"
     },
     "question": {
-        "en": "5.37 - What was the new reference?"
+        "en": "5.58 - What was the new reference?<div style='font-size: 70%; text-align:left;'><details> <summary> details </summary> <br>EEG electrodes include cap electrodes, mastoids and/or earlobes, except for ground electrode.</details></div>"
     },
     "responseOptions": {
         "valueType": "xsd:integer",
-        "minValue": 0,
-        "maxValue": 5,
         "choices": [
             {
                 "name": {
@@ -33,7 +31,7 @@
             },
             {
                 "name": {
-                    "en": "average of all scalp electrodes"
+                    "en": "average of all EEG locations"
                 },
                 "value": 2
             },
@@ -56,6 +54,7 @@
                 "value": 5
             }
         ],
-        "multipleChoice": false
+        "minValue": 0,
+        "maxValue": 5
     }
 }

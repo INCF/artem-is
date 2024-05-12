@@ -1,0 +1,42 @@
+{
+    "@context": "https://raw.githubusercontent.com/ReproNim/reproschema/1.0.0-rc4/contexts/generic",
+    "@type": "reproschema:Field",
+    "@id": "ten-twenty_version.jsonld",
+    "schemaVersion": "1.0.0-rc4",
+    "version": "0.0.1",
+    "prefLabel": {
+        "en": "ten-twenty version"
+    },
+    "description": "ten-twenty version",
+    "ui": {
+        "inputType": "radio"
+    },
+    "question": {
+        "en": "3.14 - Which extension of the 10-20 system will you use to describe electrode positions?<div style='font-size: 70%; text-align:left;'><details> <summary> details </summary> <br>We recommend selecting the 5% convention (Oostenveld & Praamstra, 2001) as it is the latest version.</details></div>"
+    },
+    "responseOptions": {
+        "valueType": "xsd:integer",
+        "choices": [
+            {
+                "name": {
+                    "en": "5% convention"
+                },
+                "value": 0
+            },
+            {
+                "name": {
+                    "en": "10-10 convention"
+                },
+                "value": 1
+            },
+            {
+                "name": {
+                    "en": "10-20 convention"
+                },
+                "value": 2
+            }
+        ],
+        "minValue": 0,
+        "maxValue": 2
+    }
+}

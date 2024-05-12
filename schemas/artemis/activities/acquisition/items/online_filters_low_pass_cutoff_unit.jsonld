@@ -2,22 +2,20 @@
     "@context": "https://raw.githubusercontent.com/ReproNim/reproschema/1.0.0-rc4/contexts/generic",
     "@type": "reproschema:Field",
     "@id": "online_filters_low_pass_cutoff_unit.jsonld",
+    "schemaVersion": "1.0.0-rc4",
+    "version": "0.0.1",
     "prefLabel": {
         "en": "online filters low pass cutoff unit"
     },
     "description": "online filters low pass cutoff unit",
-    "schemaVersion": "1.0.0-rc4",
-    "version": "0.0.1",
     "ui": {
         "inputType": "radio"
     },
     "question": {
-        "en": "4.25 - Type of low-pass filter cut-off"
+        "en": "4.25 - Type of online low-pass filter cut-off"
     },
     "responseOptions": {
         "valueType": "xsd:integer",
-        "minValue": 0,
-        "maxValue": 1,
         "choices": [
             {
                 "name": {
@@ -32,6 +30,7 @@
                 "value": 1
             }
         ],
-        "multipleChoice": false
+        "minValue": 0,
+        "maxValue": 1
     }
 }

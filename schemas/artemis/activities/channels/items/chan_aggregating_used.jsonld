@@ -2,22 +2,20 @@
     "@context": "https://raw.githubusercontent.com/ReproNim/reproschema/1.0.0-rc4/contexts/generic",
     "@type": "reproschema:Field",
     "@id": "chan_aggregating_used.jsonld",
+    "schemaVersion": "1.0.0-rc4",
+    "version": "0.0.1",
     "prefLabel": {
         "en": "chan aggregating used"
     },
     "description": "chan aggregating used",
-    "schemaVersion": "1.0.0-rc4",
-    "version": "0.0.1",
     "ui": {
         "inputType": "radio"
     },
     "question": {
-        "en": "7.27 - Did you enter channels separately into statistical analysis or did you aggregate them into regions before conducting the statistical analysis?"
+        "en": "7.27 - Were the channels entered separately into statistical analysis or were they aggregated into regions before conducting the statistical analysis?"
     },
     "responseOptions": {
         "valueType": "xsd:integer",
-        "minValue": 0,
-        "maxValue": 1,
         "choices": [
             {
                 "name": {
@@ -32,6 +30,7 @@
                 "value": 1
             }
         ],
-        "multipleChoice": false
+        "minValue": 0,
+        "maxValue": 1
     }
 }

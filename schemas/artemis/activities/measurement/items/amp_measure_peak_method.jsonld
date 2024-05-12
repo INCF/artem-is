@@ -2,22 +2,20 @@
     "@context": "https://raw.githubusercontent.com/ReproNim/reproschema/1.0.0-rc4/contexts/generic",
     "@type": "reproschema:Field",
     "@id": "amp_measure_peak_method.jsonld",
+    "schemaVersion": "1.0.0-rc4",
+    "version": "0.0.1",
     "prefLabel": {
         "en": "amp measure peak method"
     },
     "description": "amp measure peak method",
-    "schemaVersion": "1.0.0-rc4",
-    "version": "0.0.1",
     "ui": {
         "inputType": "radio"
     },
     "question": {
-        "en": "6.10 - What method did you use for peak calculation?"
+        "en": "6.10 - What method was used for peak calculation?"
     },
     "responseOptions": {
         "valueType": "xsd:integer",
-        "minValue": 0,
-        "maxValue": 1,
         "choices": [
             {
                 "name": {
@@ -30,8 +28,16 @@
                     "en": "local peak"
                 },
                 "value": 1
+            },
+            {
+                "name": {
+                    "en": "other"
+                },
+                "value": 2
             }
         ],
-        "multipleChoice": false
+        "multipleChoice": true,
+        "minValue": 0,
+        "maxValue": 2
     }
 }

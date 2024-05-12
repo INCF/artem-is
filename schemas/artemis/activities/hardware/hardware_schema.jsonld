@@ -2,12 +2,12 @@
     "@context": "https://raw.githubusercontent.com/ReproNim/reproschema/1.0.0-rc4/contexts/generic",
     "@type": "reproschema:Activity",
     "@id": "hardware_schema.jsonld",
+    "schemaVersion": "1.0.0-rc4",
+    "version": "0.0.1",
     "prefLabel": {
         "en": "Hardware"
     },
     "description": "hardware",
-    "schemaVersion": "1.0.0-rc4",
-    "version": "0.0.1",
     "preamble": {
         "en": "<p><a href='https://docs.google.com/spreadsheets/d/1dlUt8_bHsM5mERFJkVLTVWanSlms6Ba8Wos38Dhmhfo/edit?ts=60c9d280#gid=759849853' target='_blank' > Source </a> | <a href='https://github.com/Remi-Gau/artemis_checklist' target='_blank' > Github repository </a> | <a href='https://osf.io/pvrn6/' target='_blank' > Reference </a><br><br>In this section you will describe hardware choices such as model of amplifier, cap and electrodes used in the study, triggers and additional devices used.  NOTE: If you notice a bug, or have a suggestion, we'd be grateful if you posted an issue on GitHub: https://github.com/INCF/artem-is/</p>"
     },
@@ -25,11 +25,20 @@
             "items/electrode_material_other.jsonld",
             "items/conductive_medium.jsonld",
             "items/conductive_medium_other.jsonld",
+            "items/cap_all_slots.jsonld",
+            "items/electrode_location_naming_convention.jsonld",
+            "items/ten-twenty_version.jsonld",
+            "items/number_EEG_electrodes.jsonld",
+            "items/link_electrode_scheme.jsonld",
+            "items/non-EEG_electrodes_exists.jsonld",
+            "items/non-EEG_electrodes.jsonld",
+            "items/non-EEG_electrodes_other.jsonld",
             "items/amplifier_make.jsonld",
             "items/amplifier_make_other.jsonld",
             "items/amplifier_model.jsonld",
             "items/trigger_signal_source.jsonld",
             "items/trigger_signal_source_other.jsonld",
+            "items/trigger_additional.jsonld",
             "items/trigger_signal_input_when.jsonld",
             "items/trigger_signal_input_where.jsonld",
             "items/trigger_signal_input_how.jsonld",
@@ -40,6 +49,9 @@
             {
                 "variableName": "electrode_placement_type",
                 "isAbout": "items/electrode_placement_type.jsonld",
+                "prefLabel": {
+                    "en": "electrode placement type"
+                },
                 "isVis": true,
                 "requiredValue": false,
                 "allow": [
@@ -49,6 +61,9 @@
             {
                 "variableName": "electrode_placement_type_cap",
                 "isAbout": "items/electrode_placement_type_cap.jsonld",
+                "prefLabel": {
+                    "en": "electrode placement type cap"
+                },
                 "isVis": "electrode_placement_type == 0",
                 "requiredValue": false,
                 "allow": [
@@ -58,6 +73,9 @@
             {
                 "variableName": "cap_other",
                 "isAbout": "items/cap_other.jsonld",
+                "prefLabel": {
+                    "en": "cap other"
+                },
                 "isVis": "electrode_placement_type_cap == 10",
                 "requiredValue": false,
                 "allow": [
@@ -67,6 +85,9 @@
             {
                 "variableName": "cap_model",
                 "isAbout": "items/cap_model.jsonld",
+                "prefLabel": {
+                    "en": "cap model"
+                },
                 "isVis": "electrode_placement_type == 0",
                 "requiredValue": false,
                 "allow": [
@@ -76,6 +97,9 @@
             {
                 "variableName": "electrode_manufacturer",
                 "isAbout": "items/electrode_manufacturer.jsonld",
+                "prefLabel": {
+                    "en": "electrode manufacturer"
+                },
                 "isVis": true,
                 "requiredValue": false,
                 "allow": [
@@ -85,6 +109,9 @@
             {
                 "variableName": "electrode_model",
                 "isAbout": "items/electrode_model.jsonld",
+                "prefLabel": {
+                    "en": "electrode model"
+                },
                 "isVis": true,
                 "requiredValue": false,
                 "allow": [
@@ -94,6 +121,9 @@
             {
                 "variableName": "electrode_preamplifiers",
                 "isAbout": "items/electrode_preamplifiers.jsonld",
+                "prefLabel": {
+                    "en": "electrode preamplifiers"
+                },
                 "isVis": true,
                 "requiredValue": false,
                 "allow": [
@@ -103,6 +133,9 @@
             {
                 "variableName": "electrode_material",
                 "isAbout": "items/electrode_material.jsonld",
+                "prefLabel": {
+                    "en": "electrode material"
+                },
                 "isVis": true,
                 "requiredValue": false,
                 "allow": [
@@ -112,6 +145,9 @@
             {
                 "variableName": "electrode_material_other",
                 "isAbout": "items/electrode_material_other.jsonld",
+                "prefLabel": {
+                    "en": "electrode material other"
+                },
                 "isVis": "electrode_material == 2",
                 "requiredValue": false,
                 "allow": [
@@ -121,6 +157,9 @@
             {
                 "variableName": "conductive_medium",
                 "isAbout": "items/conductive_medium.jsonld",
+                "prefLabel": {
+                    "en": "conductive medium"
+                },
                 "isVis": true,
                 "requiredValue": false,
                 "allow": [
@@ -130,7 +169,106 @@
             {
                 "variableName": "conductive_medium_other",
                 "isAbout": "items/conductive_medium_other.jsonld",
+                "prefLabel": {
+                    "en": "conductive medium other"
+                },
                 "isVis": "conductive_medium == 4",
+                "requiredValue": false,
+                "allow": [
+                    "reproschema:Skipped"
+                ]
+            },
+            {
+                "variableName": "cap_all_slots",
+                "isAbout": "items/cap_all_slots.jsonld",
+                "prefLabel": {
+                    "en": "cap all slots"
+                },
+                "isVis": "electrode_placement_type == 0",
+                "requiredValue": false,
+                "allow": [
+                    "reproschema:Skipped"
+                ]
+            },
+            {
+                "variableName": "electrode_location_naming_convention",
+                "isAbout": "items/electrode_location_naming_convention.jsonld",
+                "prefLabel": {
+                    "en": "electrode location naming convention"
+                },
+                "isVis": true,
+                "requiredValue": false,
+                "allow": [
+                    "reproschema:Skipped"
+                ]
+            },
+            {
+                "variableName": "ten-twenty_version",
+                "isAbout": "items/ten-twenty_version.jsonld",
+                "prefLabel": {
+                    "en": "ten-twenty version"
+                },
+                "isVis": "electrode_location_naming_convention == 0",
+                "requiredValue": false,
+                "allow": [
+                    "reproschema:Skipped"
+                ]
+            },
+            {
+                "variableName": "number_EEG_electrodes",
+                "isAbout": "items/number_EEG_electrodes.jsonld",
+                "prefLabel": {
+                    "en": "number EEG electrodes"
+                },
+                "isVis": true,
+                "requiredValue": false,
+                "allow": [
+                    "reproschema:Skipped"
+                ]
+            },
+            {
+                "variableName": "link_electrode_scheme",
+                "isAbout": "items/link_electrode_scheme.jsonld",
+                "prefLabel": {
+                    "en": "link electrode scheme"
+                },
+                "isVis": true,
+                "requiredValue": false,
+                "allow": [
+                    "reproschema:Skipped"
+                ]
+            },
+            {
+                "variableName": "non-EEG_electrodes_exists",
+                "isAbout": "items/non-EEG_electrodes_exists.jsonld",
+                "prefLabel": {
+                    "en": "non-EEG electrodes exists"
+                },
+                "isVis": true,
+                "requiredValue": false,
+                "allow": [
+                    "reproschema:Skipped"
+                ]
+            },
+            {
+                "variableName": "non-EEG_electrodes",
+                "isAbout": "items/non-EEG_electrodes.jsonld",
+                "prefLabel": {
+                    "en": "non-EEG electrodes"
+                },
+                "isVis": "non-EEG_electrodes_exists == 1",
+                "requiredValue": false,
+                "allow": [
+                    "reproschema:Skipped"
+                ]
+            },
+            {
+                "variableName": "non-EEG_electrodes_other",
+                "isAbout": "items/non-EEG_electrodes_other.jsonld",
+                "prefLabel": {
+                    "en": "non-EEG electrodes other"
+                },
+                "isVis": "non-EEG_electrodes == 7",
                 "requiredValue": false,
                 "allow": [
                     "reproschema:Skipped"
@@ -139,6 +277,9 @@
             {
                 "variableName": "amplifier_make",
                 "isAbout": "items/amplifier_make.jsonld",
+                "prefLabel": {
+                    "en": "amplifier make"
+                },
                 "isVis": true,
                 "requiredValue": false,
                 "allow": [
@@ -148,6 +289,9 @@
             {
                 "variableName": "amplifier_make_other",
                 "isAbout": "items/amplifier_make_other.jsonld",
+                "prefLabel": {
+                    "en": "amplifier make other"
+                },
                 "isVis": "amplifier_make == 25",
                 "requiredValue": false,
                 "allow": [
@@ -157,6 +301,9 @@
             {
                 "variableName": "amplifier_model",
                 "isAbout": "items/amplifier_model.jsonld",
+                "prefLabel": {
+                    "en": "amplifier model"
+                },
                 "isVis": true,
                 "requiredValue": false,
                 "allow": [
@@ -166,6 +313,9 @@
             {
                 "variableName": "trigger_signal_source",
                 "isAbout": "items/trigger_signal_source.jsonld",
+                "prefLabel": {
+                    "en": "trigger signal source"
+                },
                 "isVis": true,
                 "requiredValue": false,
                 "allow": [
@@ -175,7 +325,22 @@
             {
                 "variableName": "trigger_signal_source_other",
                 "isAbout": "items/trigger_signal_source_other.jsonld",
+                "prefLabel": {
+                    "en": "trigger signal source other"
+                },
                 "isVis": "trigger_signal_source == 4",
+                "requiredValue": false,
+                "allow": [
+                    "reproschema:Skipped"
+                ]
+            },
+            {
+                "variableName": "trigger_additional",
+                "isAbout": "items/trigger_additional.jsonld",
+                "prefLabel": {
+                    "en": "trigger additional"
+                },
+                "isVis": true,
                 "requiredValue": false,
                 "allow": [
                     "reproschema:Skipped"
@@ -184,7 +349,10 @@
             {
                 "variableName": "trigger_signal_input_when",
                 "isAbout": "items/trigger_signal_input_when.jsonld",
-                "isVis": true,
+                "prefLabel": {
+                    "en": "trigger signal input when"
+                },
+                "isVis": "trigger_additional == 1",
                 "requiredValue": false,
                 "allow": [
                     "reproschema:Skipped"
@@ -193,7 +361,10 @@
             {
                 "variableName": "trigger_signal_input_where",
                 "isAbout": "items/trigger_signal_input_where.jsonld",
-                "isVis": true,
+                "prefLabel": {
+                    "en": "trigger signal input where"
+                },
+                "isVis": "trigger_additional == 1",
                 "requiredValue": false,
                 "allow": [
                     "reproschema:Skipped"
@@ -202,7 +373,10 @@
             {
                 "variableName": "trigger_signal_input_how",
                 "isAbout": "items/trigger_signal_input_how.jsonld",
-                "isVis": true,
+                "prefLabel": {
+                    "en": "trigger signal input how"
+                },
+                "isVis": "trigger_additional == 1",
                 "requiredValue": false,
                 "allow": [
                     "reproschema:Skipped"
@@ -211,6 +385,9 @@
             {
                 "variableName": "other_peripheral_devices",
                 "isAbout": "items/other_peripheral_devices.jsonld",
+                "prefLabel": {
+                    "en": "other peripheral devices"
+                },
                 "isVis": true,
                 "requiredValue": false,
                 "allow": [
@@ -220,6 +397,9 @@
             {
                 "variableName": "other_peripheral_devices_details",
                 "isAbout": "items/other_peripheral_devices_details.jsonld",
+                "prefLabel": {
+                    "en": "other peripheral devices details"
+                },
                 "isVis": "other_peripheral_devices == 1",
                 "requiredValue": false,
                 "allow": [

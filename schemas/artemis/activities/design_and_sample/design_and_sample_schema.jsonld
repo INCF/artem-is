@@ -2,12 +2,12 @@
     "@context": "https://raw.githubusercontent.com/ReproNim/reproschema/1.0.0-rc4/contexts/generic",
     "@type": "reproschema:Activity",
     "@id": "design_and_sample_schema.jsonld",
+    "schemaVersion": "1.0.0-rc4",
+    "version": "0.0.1",
     "prefLabel": {
         "en": "design_and_sample"
     },
     "description": "design and sample",
-    "schemaVersion": "1.0.0-rc4",
-    "version": "0.0.1",
     "preamble": {
         "en": "<p><a href='https://docs.google.com/spreadsheets/d/1dlUt8_bHsM5mERFJkVLTVWanSlms6Ba8Wos38Dhmhfo/edit?ts=60c9d280#gid=2021971006' target='_blank' > Source </a> | <a href='https://github.com/Remi-Gau/artemis_checklist' target='_blank' > Github repository </a> | <a href='https://osf.io/pvrn6/' target='_blank' > Reference </a><br><br>In this section you will decrobe the experimental design and sample, such as experimental condition and trial number per condition, number of participants, participant exclusion and presenting software.  NOTE: If you notice a bug, or have a suggestion, we'd be grateful if you posted an issue on GitHub: https://github.com/INCF/artem-is/</p>"
     },
@@ -17,11 +17,18 @@
             "items/sample_size_total.jsonld",
             "items/sample_size_valid.jsonld",
             "items/subject_exclusion_rationale.jsonld",
+            "items/full_factorial.jsonld",
+            "items/number_factors_between.jsonld",
+            "items/factors_between_list.jsonld",
             "items/number_of_groups.jsonld",
             "items/order_of_group.jsonld",
             "items/participants_per_group.jsonld",
+            "items/number_factors_within.jsonld",
+            "items/factors_within_list.jsonld",
             "items/total_nb_of_within_subject_conditions.jsonld",
             "items/within_subject_condition_names.jsonld",
+            "items/continuous_variables.jsonld",
+            "items/continuous_variables_list.jsonld",
             "items/trial_presentation_strategy.jsonld",
             "items/total_nb_of_trials.jsonld",
             "items/total_nb_of_trials_condition.jsonld",
@@ -42,6 +49,9 @@
             {
                 "variableName": "sample_size_total",
                 "isAbout": "items/sample_size_total.jsonld",
+                "prefLabel": {
+                    "en": "sample size total"
+                },
                 "isVis": true,
                 "requiredValue": false,
                 "allow": [
@@ -51,6 +61,9 @@
             {
                 "variableName": "sample_size_valid",
                 "isAbout": "items/sample_size_valid.jsonld",
+                "prefLabel": {
+                    "en": "sample size valid"
+                },
                 "isVis": true,
                 "requiredValue": false,
                 "allow": [
@@ -60,7 +73,46 @@
             {
                 "variableName": "subject_exclusion_rationale",
                 "isAbout": "items/subject_exclusion_rationale.jsonld",
+                "prefLabel": {
+                    "en": "subject exclusion rationale"
+                },
                 "isVis": "sample_size_total > sample_size_valid",
+                "requiredValue": false,
+                "allow": [
+                    "reproschema:Skipped"
+                ]
+            },
+            {
+                "variableName": "full_factorial",
+                "isAbout": "items/full_factorial.jsonld",
+                "prefLabel": {
+                    "en": "full factorial"
+                },
+                "isVis": true,
+                "requiredValue": false,
+                "allow": [
+                    "reproschema:Skipped"
+                ]
+            },
+            {
+                "variableName": "number_factors_between",
+                "isAbout": "items/number_factors_between.jsonld",
+                "prefLabel": {
+                    "en": "number factors between"
+                },
+                "isVis": true,
+                "requiredValue": false,
+                "allow": [
+                    "reproschema:Skipped"
+                ]
+            },
+            {
+                "variableName": "factors_between_list",
+                "isAbout": "items/factors_between_list.jsonld",
+                "prefLabel": {
+                    "en": "factors between list"
+                },
+                "isVis": "number_factors_between >0",
                 "requiredValue": false,
                 "allow": [
                     "reproschema:Skipped"
@@ -69,6 +121,9 @@
             {
                 "variableName": "number_of_groups",
                 "isAbout": "items/number_of_groups.jsonld",
+                "prefLabel": {
+                    "en": "number of groups"
+                },
                 "isVis": true,
                 "requiredValue": false,
                 "allow": [
@@ -78,6 +133,9 @@
             {
                 "variableName": "order_of_group",
                 "isAbout": "items/order_of_group.jsonld",
+                "prefLabel": {
+                    "en": "order of group"
+                },
                 "isVis": "number_of_groups > 1",
                 "requiredValue": false,
                 "allow": [
@@ -87,7 +145,34 @@
             {
                 "variableName": "participants_per_group",
                 "isAbout": "items/participants_per_group.jsonld",
+                "prefLabel": {
+                    "en": "participants per group"
+                },
                 "isVis": "number_of_groups > 1",
+                "requiredValue": false,
+                "allow": [
+                    "reproschema:Skipped"
+                ]
+            },
+            {
+                "variableName": "number_factors_within",
+                "isAbout": "items/number_factors_within.jsonld",
+                "prefLabel": {
+                    "en": "number factors within"
+                },
+                "isVis": true,
+                "requiredValue": false,
+                "allow": [
+                    "reproschema:Skipped"
+                ]
+            },
+            {
+                "variableName": "factors_within_list",
+                "isAbout": "items/factors_within_list.jsonld",
+                "prefLabel": {
+                    "en": "factors within list"
+                },
+                "isVis": "number_factors_within >0",
                 "requiredValue": false,
                 "allow": [
                     "reproschema:Skipped"
@@ -96,6 +181,9 @@
             {
                 "variableName": "total_nb_of_within_subject_conditions",
                 "isAbout": "items/total_nb_of_within_subject_conditions.jsonld",
+                "prefLabel": {
+                    "en": "total nb of within subject conditions"
+                },
                 "isVis": true,
                 "requiredValue": false,
                 "allow": [
@@ -105,7 +193,34 @@
             {
                 "variableName": "within_subject_condition_names",
                 "isAbout": "items/within_subject_condition_names.jsonld",
+                "prefLabel": {
+                    "en": "within subject condition names"
+                },
+                "isVis": "total_nb_of_within_subject_conditions > 1",
+                "requiredValue": false,
+                "allow": [
+                    "reproschema:Skipped"
+                ]
+            },
+            {
+                "variableName": "continuous_variables",
+                "isAbout": "items/continuous_variables.jsonld",
+                "prefLabel": {
+                    "en": "continuous variables"
+                },
                 "isVis": true,
+                "requiredValue": false,
+                "allow": [
+                    "reproschema:Skipped"
+                ]
+            },
+            {
+                "variableName": "continuous_variables_list",
+                "isAbout": "items/continuous_variables_list.jsonld",
+                "prefLabel": {
+                    "en": "continuous variables list"
+                },
+                "isVis": "continuous_variables == 1",
                 "requiredValue": false,
                 "allow": [
                     "reproschema:Skipped"
@@ -114,6 +229,9 @@
             {
                 "variableName": "trial_presentation_strategy",
                 "isAbout": "items/trial_presentation_strategy.jsonld",
+                "prefLabel": {
+                    "en": "trial presentation strategy"
+                },
                 "isVis": true,
                 "requiredValue": false,
                 "allow": [
@@ -123,6 +241,9 @@
             {
                 "variableName": "total_nb_of_trials",
                 "isAbout": "items/total_nb_of_trials.jsonld",
+                "prefLabel": {
+                    "en": "total nb of trials"
+                },
                 "isVis": "trial_presentation_strategy == 0",
                 "requiredValue": false,
                 "allow": [
@@ -132,6 +253,9 @@
             {
                 "variableName": "total_nb_of_trials_condition",
                 "isAbout": "items/total_nb_of_trials_condition.jsonld",
+                "prefLabel": {
+                    "en": "total nb of trials condition"
+                },
                 "isVis": "trial_presentation_strategy == 0",
                 "requiredValue": false,
                 "allow": [
@@ -141,6 +265,9 @@
             {
                 "variableName": "trial_presentation_strategy_other",
                 "isAbout": "items/trial_presentation_strategy_other.jsonld",
+                "prefLabel": {
+                    "en": "trial presentation strategy other"
+                },
                 "isVis": "trial_presentation_strategy >= 1",
                 "requiredValue": false,
                 "allow": [
@@ -150,6 +277,9 @@
             {
                 "variableName": "avg_total_nb_trials_adaptive_other",
                 "isAbout": "items/avg_total_nb_trials_adaptive_other.jsonld",
+                "prefLabel": {
+                    "en": "avg total nb trials adaptive other"
+                },
                 "isVis": "trial_presentation_strategy >= 1",
                 "requiredValue": false,
                 "allow": [
@@ -159,6 +289,9 @@
             {
                 "variableName": "min_total_nb_trials_adaptive_other",
                 "isAbout": "items/min_total_nb_trials_adaptive_other.jsonld",
+                "prefLabel": {
+                    "en": "min total nb trials adaptive other"
+                },
                 "isVis": "trial_presentation_strategy >= 1",
                 "requiredValue": false,
                 "allow": [
@@ -168,6 +301,9 @@
             {
                 "variableName": "max_total_nb_trials_adaptive_other",
                 "isAbout": "items/max_total_nb_trials_adaptive_other.jsonld",
+                "prefLabel": {
+                    "en": "max total nb trials adaptive other"
+                },
                 "isVis": "trial_presentation_strategy >= 1",
                 "requiredValue": false,
                 "allow": [
@@ -177,6 +313,9 @@
             {
                 "variableName": "avg_nb_trials_adaptive_other_condition",
                 "isAbout": "items/avg_nb_trials_adaptive_other_condition.jsonld",
+                "prefLabel": {
+                    "en": "avg nb trials adaptive other condition"
+                },
                 "isVis": "trial_presentation_strategy >= 1",
                 "requiredValue": false,
                 "allow": [
@@ -186,6 +325,9 @@
             {
                 "variableName": "min_nb_trials_adaptive_other_condition",
                 "isAbout": "items/min_nb_trials_adaptive_other_condition.jsonld",
+                "prefLabel": {
+                    "en": "min nb trials adaptive other condition"
+                },
                 "isVis": "trial_presentation_strategy >= 1",
                 "requiredValue": false,
                 "allow": [
@@ -195,6 +337,9 @@
             {
                 "variableName": "max_nb_trials_adaptive_other_condition",
                 "isAbout": "items/max_nb_trials_adaptive_other_condition.jsonld",
+                "prefLabel": {
+                    "en": "max nb trials adaptive other condition"
+                },
                 "isVis": "trial_presentation_strategy >= 1",
                 "requiredValue": false,
                 "allow": [
@@ -204,6 +349,9 @@
             {
                 "variableName": "avg_nb_of_trials_condition",
                 "isAbout": "items/avg_nb_of_trials_condition.jsonld",
+                "prefLabel": {
+                    "en": "avg nb of trials condition"
+                },
                 "isVis": true,
                 "requiredValue": false,
                 "allow": [
@@ -213,6 +361,9 @@
             {
                 "variableName": "min_nb_of_trials_per_condition",
                 "isAbout": "items/min_nb_of_trials_per_condition.jsonld",
+                "prefLabel": {
+                    "en": "min nb of trials per condition"
+                },
                 "isVis": true,
                 "requiredValue": false,
                 "allow": [
@@ -222,6 +373,9 @@
             {
                 "variableName": "max_nb_of_trials_per_condition",
                 "isAbout": "items/max_nb_of_trials_per_condition.jsonld",
+                "prefLabel": {
+                    "en": "max nb of trials per condition"
+                },
                 "isVis": true,
                 "requiredValue": false,
                 "allow": [
@@ -231,6 +385,9 @@
             {
                 "variableName": "presenting_software",
                 "isAbout": "items/presenting_software.jsonld",
+                "prefLabel": {
+                    "en": "presenting software"
+                },
                 "isVis": true,
                 "requiredValue": false,
                 "allow": [
@@ -240,6 +397,9 @@
             {
                 "variableName": "presenting_software_details",
                 "isAbout": "items/presenting_software_details.jsonld",
+                "prefLabel": {
+                    "en": "presenting software details"
+                },
                 "isVis": true,
                 "requiredValue": false,
                 "allow": [

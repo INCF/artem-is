@@ -1,0 +1,21 @@
+{
+    "@context": "https://raw.githubusercontent.com/ReproNim/reproschema/1.0.0-rc4/contexts/generic",
+    "@type": "reproschema:Field",
+    "@id": "factors_between_list.jsonld",
+    "schemaVersion": "1.0.0-rc4",
+    "version": "0.0.1",
+    "prefLabel": {
+        "en": "factors between list"
+    },
+    "description": "factors between list",
+    "ui": {
+        "inputType": "text"
+    },
+    "question": {
+        "en": "2.6 - List between-subject factors with factor levels in the brackets, separated by semicolon<div style='font-size: 70%; text-align:left;'><details> <summary> details </summary> <br>For example: smoking (yes, no); handedness (left, right)</details></div>"
+    },
+    "responseOptions": {
+        "valueType": "xsd:string",
+        "maxLength": 300
+    }
+}

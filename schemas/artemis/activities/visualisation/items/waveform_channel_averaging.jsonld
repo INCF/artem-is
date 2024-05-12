@@ -2,22 +2,20 @@
     "@context": "https://raw.githubusercontent.com/ReproNim/reproschema/1.0.0-rc4/contexts/generic",
     "@type": "reproschema:Field",
     "@id": "waveform_channel_averaging.jsonld",
+    "schemaVersion": "1.0.0-rc4",
+    "version": "0.0.1",
     "prefLabel": {
         "en": "waveform channel averaging"
     },
     "description": "waveform channel averaging",
-    "schemaVersion": "1.0.0-rc4",
-    "version": "0.0.1",
     "ui": {
         "inputType": "radio"
     },
     "question": {
-        "en": "8.8 - Did you average channels for presentation or show individual channels?"
+        "en": "8.8 - Were the channels averaged for presentation or individual channels were shown instead?"
     },
     "responseOptions": {
         "valueType": "xsd:integer",
-        "minValue": 0,
-        "maxValue": 2,
         "choices": [
             {
                 "name": {
@@ -38,6 +36,7 @@
                 "value": 2
             }
         ],
-        "multipleChoice": false
+        "minValue": 0,
+        "maxValue": 2
     }
 }

@@ -1,0 +1,20 @@
+{
+    "@context": "https://raw.githubusercontent.com/ReproNim/reproschema/1.0.0-rc4/contexts/generic",
+    "@type": "reproschema:Field",
+    "@id": "number_EEG_electrodes.jsonld",
+    "schemaVersion": "1.0.0-rc4",
+    "version": "0.0.1",
+    "prefLabel": {
+        "en": "number EEG electrodes"
+    },
+    "description": "number EEG electrodes",
+    "ui": {
+        "inputType": "number"
+    },
+    "question": {
+        "en": "3.15 - Number of EEG electrodes that were used for acquisition (including, if they are on scalp, ground and reference electrodes, as well as earlobes; excluding EOG and other non-EEG electrodes).<div style='font-size: 70%; text-align:left;'><details> <summary> details </summary> <br>This should not include empty slots on the cap where electrodes were not placed, if there were such slots.</details></div>"
+    },
+    "responseOptions": {
+        "valueType": "xsd:integer"
+    }
+}

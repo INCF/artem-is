@@ -2,12 +2,12 @@
     "@context": "https://raw.githubusercontent.com/ReproNim/reproschema/1.0.0-rc4/contexts/generic",
     "@type": "reproschema:Field",
     "@id": "topoplot_type.jsonld",
+    "schemaVersion": "1.0.0-rc4",
+    "version": "0.0.1",
     "prefLabel": {
         "en": "topoplot type"
     },
     "description": "topoplot type",
-    "schemaVersion": "1.0.0-rc4",
-    "version": "0.0.1",
     "ui": {
         "inputType": "select"
     },
@@ -16,8 +16,6 @@
     },
     "responseOptions": {
         "valueType": "xsd:integer",
-        "minValue": 0,
-        "maxValue": 8,
         "choices": [
             {
                 "name": {
@@ -74,6 +72,7 @@
                 "value": 8
             }
         ],
-        "multipleChoice": false
+        "minValue": 0,
+        "maxValue": 8
     }
 }

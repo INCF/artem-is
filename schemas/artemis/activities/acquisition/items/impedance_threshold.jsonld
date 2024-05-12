@@ -2,17 +2,17 @@
     "@context": "https://raw.githubusercontent.com/ReproNim/reproschema/1.0.0-rc4/contexts/generic",
     "@type": "reproschema:Field",
     "@id": "impedance_threshold.jsonld",
+    "schemaVersion": "1.0.0-rc4",
+    "version": "0.0.1",
     "prefLabel": {
         "en": "impedance threshold"
     },
     "description": "impedance threshold",
-    "schemaVersion": "1.0.0-rc4",
-    "version": "0.0.1",
     "ui": {
         "inputType": "number"
     },
     "question": {
-        "en": "4.5 - What was the upper threshold of impedance that you registered in your study?"
+        "en": "4.5 - What was the upper threshold of impedance that was registered in this study?"
     },
     "responseOptions": {
         "valueType": "xsd:integer",

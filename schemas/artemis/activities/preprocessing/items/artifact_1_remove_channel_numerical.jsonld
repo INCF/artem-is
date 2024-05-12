@@ -1,0 +1,21 @@
+{
+    "@context": "https://raw.githubusercontent.com/ReproNim/reproschema/1.0.0-rc4/contexts/generic",
+    "@type": "reproschema:Field",
+    "@id": "artifact_1_remove_channel_numerical.jsonld",
+    "schemaVersion": "1.0.0-rc4",
+    "version": "0.0.1",
+    "prefLabel": {
+        "en": "artifact 1 remove channel numerical"
+    },
+    "description": "artifact 1 remove channel numerical",
+    "ui": {
+        "inputType": "text"
+    },
+    "question": {
+        "en": "5.89 - Describe the numerical criterion/function for eliminating channels and provide numerical threshold(s) in step 1."
+    },
+    "responseOptions": {
+        "valueType": "xsd:string",
+        "maxLength": 300
+    }
+}

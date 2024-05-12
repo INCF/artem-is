@@ -2,14 +2,14 @@
     "@context": "https://raw.githubusercontent.com/ReproNim/reproschema/1.0.0-rc4/contexts/generic",
     "@type": "reproschema:Activity",
     "@id": "measurement_schema.jsonld",
+    "schemaVersion": "1.0.0-rc4",
+    "version": "0.0.1",
     "prefLabel": {
         "en": "Measurement"
     },
     "description": "measurement",
-    "schemaVersion": "1.0.0-rc4",
-    "version": "0.0.1",
     "preamble": {
-        "en": "<p><a href='https://docs.google.com/spreadsheets/d/1dlUt8_bHsM5mERFJkVLTVWanSlms6Ba8Wos38Dhmhfo/edit?ts=60c9d280#gid=867147534' target='_blank' > Source </a> | <a href='https://github.com/Remi-Gau/artemis_checklist' target='_blank' > Github repository </a> | <a href='https://osf.io/pvrn6/' target='_blank' > Reference </a><br><br>This is a section where amplitude and latency measurement are described.  NOTE: If you notice a bug, or have a suggestion, we'd be grateful if you posted an issue on GitHub: https://github.com/INCF/artem-is/</p>"
+        "en": "<p><a href='https://docs.google.com/spreadsheets/d/1dlUt8_bHsM5mERFJkVLTVWanSlms6Ba8Wos38Dhmhfo/edit?ts=60c9d280#gid=867147534' target='_blank' > Source </a> | <a href='https://github.com/Remi-Gau/artemis_checklist' target='_blank' > Github repository </a> | <a href='https://osf.io/pvrn6/' target='_blank' > Reference </a><br><br>This is a section where amplitude and latency measurement are described.  NOTE: At the momement, you can describe one component (one time window and location) in one template, with its latency and/or amplitude measured in multiple different ways. If you have measured multiple components, you can make a copy (or copies) of the template and change appropriate sections to reflect how you measured these other components. If you notice a bug, or have a suggestion, we'd be grateful if you posted an issue on GitHub: https://github.com/INCF/artem-is/</p>"
     },
     "ui": {
         "shuffle": false,
@@ -24,8 +24,11 @@
             "items/amp_measure_procedure.jsonld",
             "items/amp_measure_peak_positivity.jsonld",
             "items/amp_measure_peak_method.jsonld",
+            "items/amp_measure_peak_other.jsonld",
             "items/window_area_measure_type.jsonld",
-            "items/amp_measure_details.jsonld",
+            "items/window_area_measure_other.jsonld",
+            "items/amp_measure_factor_details.jsonld",
+            "items/amp_measure_other_details.jsonld",
             "items/amp_time_window_selection.jsonld",
             "items/amp_window_selection_a_priori.jsonld",
             "items/amp_literature_reference.jsonld",
@@ -67,13 +70,15 @@
             "items/peak_lat_measure.jsonld",
             "items/peak_lat_measure_other.jsonld",
             "items/onset_lat_measure.jsonld",
+            "items/onset_lat_extrapolation_describe.jsonld",
+            "items/onset_lat_chance_describe.jsonld",
             "items/onset_lat_sig_tests_length.jsonld",
             "items/onset_lat_sig_tests_overlap.jsonld",
             "items/onset_lat_sig_tests_overlap_length.jsonld",
             "items/onset_lat_sig_tests_no.jsonld",
             "items/onset_lat_peak_fraction.jsonld",
             "items/onset_lat_area_fraction.jsonld",
-            "items/onset_lat_describe.jsonld",
+            "items/onset_lat_other_describe.jsonld",
             "items/other_lat_describe.jsonld",
             "items/lat_selection_approach.jsonld",
             "items/lat_selection_approach_a_priori.jsonld",
@@ -93,6 +98,9 @@
             {
                 "variableName": "measure_intro",
                 "isAbout": "items/measure_intro.jsonld",
+                "prefLabel": {
+                    "en": "measure intro"
+                },
                 "isVis": true,
                 "requiredValue": false,
                 "allow": [
@@ -102,6 +110,9 @@
             {
                 "variableName": "measure_type",
                 "isAbout": "items/measure_type.jsonld",
+                "prefLabel": {
+                    "en": "measure type"
+                },
                 "isVis": "measure_intro == 1",
                 "requiredValue": false,
                 "allow": [
@@ -111,6 +122,9 @@
             {
                 "variableName": "amp_measure_software",
                 "isAbout": "items/amp_measure_software.jsonld",
+                "prefLabel": {
+                    "en": "amp measure software"
+                },
                 "isVis": "measure_type.includes(0)",
                 "requiredValue": false,
                 "allow": [
@@ -120,6 +134,9 @@
             {
                 "variableName": "amp_measure_software_details",
                 "isAbout": "items/amp_measure_software_details.jsonld",
+                "prefLabel": {
+                    "en": "amp measure software details"
+                },
                 "isVis": "measure_type.includes(0)",
                 "requiredValue": false,
                 "allow": [
@@ -129,6 +146,9 @@
             {
                 "variableName": "amp_measured_from",
                 "isAbout": "items/amp_measured_from.jsonld",
+                "prefLabel": {
+                    "en": "amp measured from"
+                },
                 "isVis": "measure_type.includes(0)",
                 "requiredValue": false,
                 "allow": [
@@ -138,6 +158,9 @@
             {
                 "variableName": "waveform_difference_waves",
                 "isAbout": "items/waveform_difference_waves.jsonld",
+                "prefLabel": {
+                    "en": "waveform difference waves"
+                },
                 "isVis": "amp_measured_from == 1",
                 "requiredValue": false,
                 "allow": [
@@ -147,6 +170,9 @@
             {
                 "variableName": "waveform_further_details",
                 "isAbout": "items/waveform_further_details.jsonld",
+                "prefLabel": {
+                    "en": "waveform further details"
+                },
                 "isVis": "amp_measured_from > 1",
                 "requiredValue": false,
                 "allow": [
@@ -156,6 +182,9 @@
             {
                 "variableName": "amp_measure_procedure",
                 "isAbout": "items/amp_measure_procedure.jsonld",
+                "prefLabel": {
+                    "en": "amp measure procedure"
+                },
                 "isVis": "measure_type.includes(0)",
                 "requiredValue": false,
                 "allow": [
@@ -165,7 +194,10 @@
             {
                 "variableName": "amp_measure_peak_positivity",
                 "isAbout": "items/amp_measure_peak_positivity.jsonld",
-                "isVis": "amp_measure_procedure == 1",
+                "prefLabel": {
+                    "en": "amp measure peak positivity"
+                },
+                "isVis": "amp_measure_procedure.includes(1)",
                 "requiredValue": false,
                 "allow": [
                     "reproschema:Skipped"
@@ -174,7 +206,22 @@
             {
                 "variableName": "amp_measure_peak_method",
                 "isAbout": "items/amp_measure_peak_method.jsonld",
-                "isVis": "amp_measure_procedure == 1",
+                "prefLabel": {
+                    "en": "amp measure peak method"
+                },
+                "isVis": "amp_measure_procedure.includes(1)",
+                "requiredValue": false,
+                "allow": [
+                    "reproschema:Skipped"
+                ]
+            },
+            {
+                "variableName": "amp_measure_peak_other",
+                "isAbout": "items/amp_measure_peak_other.jsonld",
+                "prefLabel": {
+                    "en": "amp measure peak other"
+                },
+                "isVis": "amp_measure_peak_method ==2",
                 "requiredValue": false,
                 "allow": [
                     "reproschema:Skipped"
@@ -183,16 +230,46 @@
             {
                 "variableName": "window_area_measure_type",
                 "isAbout": "items/window_area_measure_type.jsonld",
-                "isVis": "amp_measure_procedure == 2",
+                "prefLabel": {
+                    "en": "window area measure type"
+                },
+                "isVis": "amp_measure_procedure.includes(2)",
                 "requiredValue": false,
                 "allow": [
                     "reproschema:Skipped"
                 ]
             },
             {
-                "variableName": "amp_measure_details",
-                "isAbout": "items/amp_measure_details.jsonld",
-                "isVis": "amp_measure_procedure > 4",
+                "variableName": "window_area_measure_other",
+                "isAbout": "items/window_area_measure_other.jsonld",
+                "prefLabel": {
+                    "en": "window area measure other"
+                },
+                "isVis": "window_area_measure_type == 3",
+                "requiredValue": false,
+                "allow": [
+                    "reproschema:Skipped"
+                ]
+            },
+            {
+                "variableName": "amp_measure_factor_details",
+                "isAbout": "items/amp_measure_factor_details.jsonld",
+                "prefLabel": {
+                    "en": "amp measure factor details"
+                },
+                "isVis": "amp_measure_procedure.includes(4)",
+                "requiredValue": false,
+                "allow": [
+                    "reproschema:Skipped"
+                ]
+            },
+            {
+                "variableName": "amp_measure_other_details",
+                "isAbout": "items/amp_measure_other_details.jsonld",
+                "prefLabel": {
+                    "en": "amp measure other details"
+                },
+                "isVis": "amp_measure_procedure.includes(5)",
                 "requiredValue": false,
                 "allow": [
                     "reproschema:Skipped"
@@ -201,6 +278,9 @@
             {
                 "variableName": "amp_time_window_selection",
                 "isAbout": "items/amp_time_window_selection.jsonld",
+                "prefLabel": {
+                    "en": "amp time window selection"
+                },
                 "isVis": "measure_type.includes(0)",
                 "requiredValue": false,
                 "allow": [
@@ -210,6 +290,9 @@
             {
                 "variableName": "amp_window_selection_a_priori",
                 "isAbout": "items/amp_window_selection_a_priori.jsonld",
+                "prefLabel": {
+                    "en": "amp window selection a priori"
+                },
                 "isVis": "[0, 2].includes(amp_time_window_selection)",
                 "requiredValue": false,
                 "allow": [
@@ -219,6 +302,9 @@
             {
                 "variableName": "amp_literature_reference",
                 "isAbout": "items/amp_literature_reference.jsonld",
+                "prefLabel": {
+                    "en": "amp literature reference"
+                },
                 "isVis": "[0, 1].includes(amp_window_selection_a_priori)",
                 "requiredValue": false,
                 "allow": [
@@ -228,6 +314,9 @@
             {
                 "variableName": "amp_literature_similar",
                 "isAbout": "items/amp_literature_similar.jsonld",
+                "prefLabel": {
+                    "en": "amp literature similar"
+                },
                 "isVis": "amp_window_selection_a_priori == 1",
                 "requiredValue": false,
                 "allow": [
@@ -237,6 +326,9 @@
             {
                 "variableName": "amp_theory",
                 "isAbout": "items/amp_theory.jsonld",
+                "prefLabel": {
+                    "en": "amp theory"
+                },
                 "isVis": "amp_window_selection_a_priori == 2",
                 "requiredValue": false,
                 "allow": [
@@ -246,6 +338,9 @@
             {
                 "variableName": "amp_selection_other_reasons",
                 "isAbout": "items/amp_selection_other_reasons.jsonld",
+                "prefLabel": {
+                    "en": "amp selection other reasons"
+                },
                 "isVis": "amp_window_selection_a_priori == 3",
                 "requiredValue": false,
                 "allow": [
@@ -255,6 +350,9 @@
             {
                 "variableName": "amp_measure_start_a_priori",
                 "isAbout": "items/amp_measure_start_a_priori.jsonld",
+                "prefLabel": {
+                    "en": "amp measure start a priori"
+                },
                 "isVis": "[0, 2].includes(amp_time_window_selection)",
                 "requiredValue": false,
                 "allow": [
@@ -264,6 +362,9 @@
             {
                 "variableName": "amp_measure_end_a_priori",
                 "isAbout": "items/amp_measure_end_a_priori.jsonld",
+                "prefLabel": {
+                    "en": "amp measure end a priori"
+                },
                 "isVis": "[0, 2].includes(amp_time_window_selection)",
                 "requiredValue": false,
                 "allow": [
@@ -273,6 +374,9 @@
             {
                 "variableName": "amp_window_selection_data_driven_broad",
                 "isAbout": "items/amp_window_selection_data_driven_broad.jsonld",
+                "prefLabel": {
+                    "en": "amp window selection data driven broad"
+                },
                 "isVis": "amp_time_window_selection == 3",
                 "requiredValue": false,
                 "allow": [
@@ -282,6 +386,9 @@
             {
                 "variableName": "amp_window_selection_data_driven_broad_visual",
                 "isAbout": "items/amp_window_selection_data_driven_broad_visual.jsonld",
+                "prefLabel": {
+                    "en": "amp window selection data driven broad visual"
+                },
                 "isVis": "[0,1].includes(amp_window_selection_data_driven_broad)",
                 "requiredValue": false,
                 "allow": [
@@ -291,6 +398,9 @@
             {
                 "variableName": "amp_selection_data_driven_broad_visual_details",
                 "isAbout": "items/amp_selection_data_driven_broad_visual_details.jsonld",
+                "prefLabel": {
+                    "en": "amp selection data driven broad visual details"
+                },
                 "isVis": "amp_window_selection_data_driven_broad_visual == 2",
                 "requiredValue": false,
                 "allow": [
@@ -300,6 +410,9 @@
             {
                 "variableName": "amp_window_length_sig_tests_broad",
                 "isAbout": "items/amp_window_length_sig_tests_broad.jsonld",
+                "prefLabel": {
+                    "en": "amp window length sig tests broad"
+                },
                 "isVis": "amp_window_selection_data_driven_broad == 2",
                 "requiredValue": false,
                 "allow": [
@@ -309,6 +422,9 @@
             {
                 "variableName": "amp_window_overlap_sig_tests_broad",
                 "isAbout": "items/amp_window_overlap_sig_tests_broad.jsonld",
+                "prefLabel": {
+                    "en": "amp window overlap sig tests broad"
+                },
                 "isVis": "amp_window_selection_data_driven_broad == 2",
                 "requiredValue": false,
                 "allow": [
@@ -318,6 +434,9 @@
             {
                 "variableName": "amp_window_overlap_length_sig_tests_broad",
                 "isAbout": "items/amp_window_overlap_length_sig_tests_broad.jsonld",
+                "prefLabel": {
+                    "en": "amp window overlap length sig tests broad"
+                },
                 "isVis": "amp_window_selection_data_driven_broad == 2",
                 "requiredValue": false,
                 "allow": [
@@ -327,6 +446,9 @@
             {
                 "variableName": "amp_window_no_sig_tests_broad",
                 "isAbout": "items/amp_window_no_sig_tests_broad.jsonld",
+                "prefLabel": {
+                    "en": "amp window no sig tests broad"
+                },
                 "isVis": "amp_window_selection_data_driven_broad == 2",
                 "requiredValue": false,
                 "allow": [
@@ -336,6 +458,9 @@
             {
                 "variableName": "amp_window_peakwindow_length_broad",
                 "isAbout": "items/amp_window_peakwindow_length_broad.jsonld",
+                "prefLabel": {
+                    "en": "amp window peakwindow length broad"
+                },
                 "isVis": "amp_window_selection_data_driven_broad == 3",
                 "requiredValue": false,
                 "allow": [
@@ -345,6 +470,9 @@
             {
                 "variableName": "amp_window_peakwindow_length_rationale_broad",
                 "isAbout": "items/amp_window_peakwindow_length_rationale_broad.jsonld",
+                "prefLabel": {
+                    "en": "amp window peakwindow length rationale broad"
+                },
                 "isVis": "amp_window_selection_data_driven_broad == 3",
                 "requiredValue": false,
                 "allow": [
@@ -354,6 +482,9 @@
             {
                 "variableName": "amp_window_other_broad",
                 "isAbout": "items/amp_window_other_broad.jsonld",
+                "prefLabel": {
+                    "en": "amp window other broad"
+                },
                 "isVis": "amp_window_selection_data_driven_broad == 4",
                 "requiredValue": false,
                 "allow": [
@@ -363,6 +494,9 @@
             {
                 "variableName": "amp_window_start_data_driven_broad",
                 "isAbout": "items/amp_window_start_data_driven_broad.jsonld",
+                "prefLabel": {
+                    "en": "amp window start data driven broad"
+                },
                 "isVis": "amp_time_window_selection == 3",
                 "requiredValue": false,
                 "allow": [
@@ -372,6 +506,9 @@
             {
                 "variableName": "amp_window_end_data_driven_broad",
                 "isAbout": "items/amp_window_end_data_driven_broad.jsonld",
+                "prefLabel": {
+                    "en": "amp window end data driven broad"
+                },
                 "isVis": "amp_time_window_selection == 3",
                 "requiredValue": false,
                 "allow": [
@@ -381,6 +518,9 @@
             {
                 "variableName": "amp_window_selection_data_driven_final",
                 "isAbout": "items/amp_window_selection_data_driven_final.jsonld",
+                "prefLabel": {
+                    "en": "amp window selection data driven final"
+                },
                 "isVis": "[1, 2, 3].includes(amp_time_window_selection)",
                 "requiredValue": false,
                 "allow": [
@@ -390,6 +530,9 @@
             {
                 "variableName": "amp_window_selection_data_driven_final_visual",
                 "isAbout": "items/amp_window_selection_data_driven_final_visual.jsonld",
+                "prefLabel": {
+                    "en": "amp window selection data driven final visual"
+                },
                 "isVis": "[0,1].includes(amp_window_selection_data_driven_final)",
                 "requiredValue": false,
                 "allow": [
@@ -399,6 +542,9 @@
             {
                 "variableName": "amp_selection_data_driven_final_visual_details",
                 "isAbout": "items/amp_selection_data_driven_final_visual_details.jsonld",
+                "prefLabel": {
+                    "en": "amp selection data driven final visual details"
+                },
                 "isVis": "amp_window_selection_data_driven_final_visual == 2",
                 "requiredValue": false,
                 "allow": [
@@ -408,6 +554,9 @@
             {
                 "variableName": "amp_window_length_sig_tests_final",
                 "isAbout": "items/amp_window_length_sig_tests_final.jsonld",
+                "prefLabel": {
+                    "en": "amp window length sig tests final"
+                },
                 "isVis": "amp_window_selection_data_driven_final == 2",
                 "requiredValue": false,
                 "allow": [
@@ -417,6 +566,9 @@
             {
                 "variableName": "amp_window_overlap_sig_tests_final",
                 "isAbout": "items/amp_window_overlap_sig_tests_final.jsonld",
+                "prefLabel": {
+                    "en": "amp window overlap sig tests final"
+                },
                 "isVis": "amp_window_selection_data_driven_final == 2",
                 "requiredValue": false,
                 "allow": [
@@ -426,6 +578,9 @@
             {
                 "variableName": "amp_window_overlap_length_sig_tests_final",
                 "isAbout": "items/amp_window_overlap_length_sig_tests_final.jsonld",
+                "prefLabel": {
+                    "en": "amp window overlap length sig tests final"
+                },
                 "isVis": "amp_window_selection_data_driven_final == 2",
                 "requiredValue": false,
                 "allow": [
@@ -435,6 +590,9 @@
             {
                 "variableName": "amp_window_no_sig_tests_final",
                 "isAbout": "items/amp_window_no_sig_tests_final.jsonld",
+                "prefLabel": {
+                    "en": "amp window no sig tests final"
+                },
                 "isVis": "amp_window_selection_data_driven_final == 2",
                 "requiredValue": false,
                 "allow": [
@@ -444,6 +602,9 @@
             {
                 "variableName": "amp_window_peakwindow_length_final",
                 "isAbout": "items/amp_window_peakwindow_length_final.jsonld",
+                "prefLabel": {
+                    "en": "amp window peakwindow length final"
+                },
                 "isVis": "amp_window_selection_data_driven_final == 4",
                 "requiredValue": false,
                 "allow": [
@@ -453,6 +614,9 @@
             {
                 "variableName": "amp_window_peakwindow_lengthrationale_final",
                 "isAbout": "items/amp_window_peakwindow_lengthrationale_final.jsonld",
+                "prefLabel": {
+                    "en": "amp window peakwindow lengthrationale final"
+                },
                 "isVis": "amp_window_selection_data_driven_final == 4",
                 "requiredValue": false,
                 "allow": [
@@ -462,6 +626,9 @@
             {
                 "variableName": "amp_window_other_final",
                 "isAbout": "items/amp_window_other_final.jsonld",
+                "prefLabel": {
+                    "en": "amp window other final"
+                },
                 "isVis": "amp_window_selection_data_driven_final == 5",
                 "requiredValue": false,
                 "allow": [
@@ -471,6 +638,9 @@
             {
                 "variableName": "amp_window_start_data_driven_final",
                 "isAbout": "items/amp_window_start_data_driven_final.jsonld",
+                "prefLabel": {
+                    "en": "amp window start data driven final"
+                },
                 "isVis": "[1, 2, 3].includes(amp_time_window_selection)",
                 "requiredValue": false,
                 "allow": [
@@ -480,6 +650,9 @@
             {
                 "variableName": "amp_window_end_data_driven_final",
                 "isAbout": "items/amp_window_end_data_driven_final.jsonld",
+                "prefLabel": {
+                    "en": "amp window end data driven final"
+                },
                 "isVis": "[1, 2, 3].includes(amp_time_window_selection)",
                 "requiredValue": false,
                 "allow": [
@@ -489,6 +662,9 @@
             {
                 "variableName": "lat_measure_software",
                 "isAbout": "items/lat_measure_software.jsonld",
+                "prefLabel": {
+                    "en": "lat measure software"
+                },
                 "isVis": "measure_type.includes(1)",
                 "requiredValue": false,
                 "allow": [
@@ -498,6 +674,9 @@
             {
                 "variableName": "lat_measure_software_details",
                 "isAbout": "items/lat_measure_software_details.jsonld",
+                "prefLabel": {
+                    "en": "lat measure software details"
+                },
                 "isVis": "measure_type.includes(1)",
                 "requiredValue": false,
                 "allow": [
@@ -507,6 +686,9 @@
             {
                 "variableName": "lat_measured_from",
                 "isAbout": "items/lat_measured_from.jsonld",
+                "prefLabel": {
+                    "en": "lat measured from"
+                },
                 "isVis": "measure_type.includes(1)",
                 "requiredValue": false,
                 "allow": [
@@ -516,6 +698,9 @@
             {
                 "variableName": "lat_difference_waves",
                 "isAbout": "items/lat_difference_waves.jsonld",
+                "prefLabel": {
+                    "en": "lat difference waves"
+                },
                 "isVis": "lat_measured_from == 1",
                 "requiredValue": false,
                 "allow": [
@@ -525,6 +710,9 @@
             {
                 "variableName": "lat_waveform_further_details",
                 "isAbout": "items/lat_waveform_further_details.jsonld",
+                "prefLabel": {
+                    "en": "lat waveform further details"
+                },
                 "isVis": "[2, 3].includes(lat_measured_from)",
                 "requiredValue": false,
                 "allow": [
@@ -534,6 +722,9 @@
             {
                 "variableName": "lat_type",
                 "isAbout": "items/lat_type.jsonld",
+                "prefLabel": {
+                    "en": "lat type"
+                },
                 "isVis": "measure_type.includes(1)",
                 "requiredValue": false,
                 "allow": [
@@ -543,6 +734,9 @@
             {
                 "variableName": "peak_lat_measure",
                 "isAbout": "items/peak_lat_measure.jsonld",
+                "prefLabel": {
+                    "en": "peak lat measure"
+                },
                 "isVis": "lat_type.includes(0)",
                 "requiredValue": false,
                 "allow": [
@@ -552,6 +746,9 @@
             {
                 "variableName": "peak_lat_measure_other",
                 "isAbout": "items/peak_lat_measure_other.jsonld",
+                "prefLabel": {
+                    "en": "peak lat measure other"
+                },
                 "isVis": "peak_lat_measure == 3",
                 "requiredValue": false,
                 "allow": [
@@ -561,7 +758,34 @@
             {
                 "variableName": "onset_lat_measure",
                 "isAbout": "items/onset_lat_measure.jsonld",
+                "prefLabel": {
+                    "en": "onset lat measure"
+                },
                 "isVis": "lat_type.includes(1)",
+                "requiredValue": false,
+                "allow": [
+                    "reproschema:Skipped"
+                ]
+            },
+            {
+                "variableName": "onset_lat_extrapolation_describe",
+                "isAbout": "items/onset_lat_extrapolation_describe.jsonld",
+                "prefLabel": {
+                    "en": "onset lat extrapolation describe"
+                },
+                "isVis": "onset_lat_measure.includes(0)",
+                "requiredValue": false,
+                "allow": [
+                    "reproschema:Skipped"
+                ]
+            },
+            {
+                "variableName": "onset_lat_chance_describe",
+                "isAbout": "items/onset_lat_chance_describe.jsonld",
+                "prefLabel": {
+                    "en": "onset lat chance describe"
+                },
+                "isVis": "onset_lat_measure.includes(1)",
                 "requiredValue": false,
                 "allow": [
                     "reproschema:Skipped"
@@ -570,7 +794,10 @@
             {
                 "variableName": "onset_lat_sig_tests_length",
                 "isAbout": "items/onset_lat_sig_tests_length.jsonld",
-                "isVis": "onset_lat_measure == 2",
+                "prefLabel": {
+                    "en": "onset lat sig tests length"
+                },
+                "isVis": "onset_lat_measure.includes(2)",
                 "requiredValue": false,
                 "allow": [
                     "reproschema:Skipped"
@@ -579,7 +806,10 @@
             {
                 "variableName": "onset_lat_sig_tests_overlap",
                 "isAbout": "items/onset_lat_sig_tests_overlap.jsonld",
-                "isVis": "onset_lat_measure == 2",
+                "prefLabel": {
+                    "en": "onset lat sig tests overlap"
+                },
+                "isVis": "onset_lat_measure.includes(2)",
                 "requiredValue": false,
                 "allow": [
                     "reproschema:Skipped"
@@ -588,7 +818,10 @@
             {
                 "variableName": "onset_lat_sig_tests_overlap_length",
                 "isAbout": "items/onset_lat_sig_tests_overlap_length.jsonld",
-                "isVis": "onset_lat_measure == 2",
+                "prefLabel": {
+                    "en": "onset lat sig tests overlap length"
+                },
+                "isVis": "onset_lat_measure.includes(2)",
                 "requiredValue": false,
                 "allow": [
                     "reproschema:Skipped"
@@ -597,7 +830,10 @@
             {
                 "variableName": "onset_lat_sig_tests_no",
                 "isAbout": "items/onset_lat_sig_tests_no.jsonld",
-                "isVis": "onset_lat_measure == 2",
+                "prefLabel": {
+                    "en": "onset lat sig tests no"
+                },
+                "isVis": "onset_lat_measure.includes(2)",
                 "requiredValue": false,
                 "allow": [
                     "reproschema:Skipped"
@@ -606,7 +842,10 @@
             {
                 "variableName": "onset_lat_peak_fraction",
                 "isAbout": "items/onset_lat_peak_fraction.jsonld",
-                "isVis": "onset_lat_measure == 3",
+                "prefLabel": {
+                    "en": "onset lat peak fraction"
+                },
+                "isVis": "onset_lat_measure.includes(3)",
                 "requiredValue": false,
                 "allow": [
                     "reproschema:Skipped"
@@ -615,16 +854,22 @@
             {
                 "variableName": "onset_lat_area_fraction",
                 "isAbout": "items/onset_lat_area_fraction.jsonld",
-                "isVis": "onset_lat_measure == 4",
+                "prefLabel": {
+                    "en": "onset lat area fraction"
+                },
+                "isVis": "onset_lat_measure.includes(4)",
                 "requiredValue": false,
                 "allow": [
                     "reproschema:Skipped"
                 ]
             },
             {
-                "variableName": "onset_lat_describe",
-                "isAbout": "items/onset_lat_describe.jsonld",
-                "isVis": "[0, 1, 5].includes(onset_lat_measure)",
+                "variableName": "onset_lat_other_describe",
+                "isAbout": "items/onset_lat_other_describe.jsonld",
+                "prefLabel": {
+                    "en": "onset lat other describe"
+                },
+                "isVis": "onset_lat_measure.includes(5)",
                 "requiredValue": false,
                 "allow": [
                     "reproschema:Skipped"
@@ -633,6 +878,9 @@
             {
                 "variableName": "other_lat_describe",
                 "isAbout": "items/other_lat_describe.jsonld",
+                "prefLabel": {
+                    "en": "other lat describe"
+                },
                 "isVis": "lat_type.includes(2)",
                 "requiredValue": false,
                 "allow": [
@@ -642,6 +890,9 @@
             {
                 "variableName": "lat_selection_approach",
                 "isAbout": "items/lat_selection_approach.jsonld",
+                "prefLabel": {
+                    "en": "lat selection approach"
+                },
                 "isVis": "measure_type.includes(1)",
                 "requiredValue": false,
                 "allow": [
@@ -651,6 +902,9 @@
             {
                 "variableName": "lat_selection_approach_a_priori",
                 "isAbout": "items/lat_selection_approach_a_priori.jsonld",
+                "prefLabel": {
+                    "en": "lat selection approach a priori"
+                },
                 "isVis": "lat_selection_approach == 0",
                 "requiredValue": false,
                 "allow": [
@@ -660,6 +914,9 @@
             {
                 "variableName": "lat_literature_exact",
                 "isAbout": "items/lat_literature_exact.jsonld",
+                "prefLabel": {
+                    "en": "lat literature exact"
+                },
                 "isVis": "[0, 1].includes(lat_selection_approach_a_priori)",
                 "requiredValue": false,
                 "allow": [
@@ -669,6 +926,9 @@
             {
                 "variableName": "lat_literature_similar",
                 "isAbout": "items/lat_literature_similar.jsonld",
+                "prefLabel": {
+                    "en": "lat literature similar"
+                },
                 "isVis": "lat_selection_approach_a_priori == 1",
                 "requiredValue": false,
                 "allow": [
@@ -678,6 +938,9 @@
             {
                 "variableName": "lat_theory",
                 "isAbout": "items/lat_theory.jsonld",
+                "prefLabel": {
+                    "en": "lat theory"
+                },
                 "isVis": "lat_selection_approach_a_priori == 2",
                 "requiredValue": false,
                 "allow": [
@@ -687,6 +950,9 @@
             {
                 "variableName": "lat_selection_other_reasons",
                 "isAbout": "items/lat_selection_other_reasons.jsonld",
+                "prefLabel": {
+                    "en": "lat selection other reasons"
+                },
                 "isVis": "lat_selection_approach_a_priori == 3",
                 "requiredValue": false,
                 "allow": [
@@ -696,6 +962,9 @@
             {
                 "variableName": "lat_selection_approach_data_driven",
                 "isAbout": "items/lat_selection_approach_data_driven.jsonld",
+                "prefLabel": {
+                    "en": "lat selection approach data driven"
+                },
                 "isVis": "lat_selection_approach == 1",
                 "requiredValue": false,
                 "allow": [
@@ -705,6 +974,9 @@
             {
                 "variableName": "lat_selection_approach_data_driven_visual",
                 "isAbout": "items/lat_selection_approach_data_driven_visual.jsonld",
+                "prefLabel": {
+                    "en": "lat selection approach data driven visual"
+                },
                 "isVis": "[0,1].includes(lat_selection_approach_data_driven)",
                 "requiredValue": false,
                 "allow": [
@@ -714,6 +986,9 @@
             {
                 "variableName": "lat_selection_approach_data_driven_visual_details",
                 "isAbout": "items/lat_selection_approach_data_driven_visual_details.jsonld",
+                "prefLabel": {
+                    "en": "lat selection approach data driven visual details"
+                },
                 "isVis": "lat_selection_approach_data_driven_visual == 2",
                 "requiredValue": false,
                 "allow": [
@@ -723,6 +998,9 @@
             {
                 "variableName": "lat_selection_approach_data_driven_other",
                 "isAbout": "items/lat_selection_approach_data_driven_other.jsonld",
+                "prefLabel": {
+                    "en": "lat selection approach data driven other"
+                },
                 "isVis": "lat_selection_approach_data_driven == 2",
                 "requiredValue": false,
                 "allow": [
@@ -732,6 +1010,9 @@
             {
                 "variableName": "lat_further_clarification",
                 "isAbout": "items/lat_further_clarification.jsonld",
+                "prefLabel": {
+                    "en": "lat further clarification"
+                },
                 "isVis": "lat_selection_approach == 3",
                 "requiredValue": false,
                 "allow": [
@@ -741,6 +1022,9 @@
             {
                 "variableName": "lat_measure_window_start",
                 "isAbout": "items/lat_measure_window_start.jsonld",
+                "prefLabel": {
+                    "en": "lat measure window start"
+                },
                 "isVis": "[0, 1, 3].includes(lat_selection_approach)",
                 "requiredValue": false,
                 "allow": [
@@ -750,6 +1034,9 @@
             {
                 "variableName": "lat_measure_window_end",
                 "isAbout": "items/lat_measure_window_end.jsonld",
+                "prefLabel": {
+                    "en": "lat measure window end"
+                },
                 "isVis": "[0, 1, 3].includes(lat_selection_approach)",
                 "requiredValue": false,
                 "allow": [

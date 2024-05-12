@@ -1,0 +1,21 @@
+{
+    "@context": "https://raw.githubusercontent.com/ReproNim/reproschema/1.0.0-rc4/contexts/generic",
+    "@type": "reproschema:Field",
+    "@id": "offline_lowpass_filter_family_other.jsonld",
+    "schemaVersion": "1.0.0-rc4",
+    "version": "0.0.1",
+    "prefLabel": {
+        "en": "offline lowpass filter family other"
+    },
+    "description": "offline lowpass filter family other",
+    "ui": {
+        "inputType": "text"
+    },
+    "question": {
+        "en": "5.31 - Family of filters of the low-pass filter (other than listed above)"
+    },
+    "responseOptions": {
+        "valueType": "xsd:string",
+        "maxLength": 300
+    }
+}

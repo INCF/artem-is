@@ -2,17 +2,17 @@
     "@context": "https://raw.githubusercontent.com/ReproNim/reproschema/1.0.0-rc4/contexts/generic",
     "@type": "reproschema:Field",
     "@id": "amp_window_length_sig_tests_final.jsonld",
+    "schemaVersion": "1.0.0-rc4",
+    "version": "0.0.1",
     "prefLabel": {
         "en": "amp window length sig tests final"
     },
     "description": "amp window length sig tests final",
-    "schemaVersion": "1.0.0-rc4",
-    "version": "0.0.1",
     "ui": {
         "inputType": "number"
     },
     "question": {
-        "en": "6.36 - How broad were the windows that were consecutively tested?"
+        "en": "6.39 - How broad were the windows that were consecutively tested?"
     },
     "responseOptions": {
         "valueType": "xsd:integer",

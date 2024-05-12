@@ -1,0 +1,21 @@
+{
+    "@context": "https://raw.githubusercontent.com/ReproNim/reproschema/1.0.0-rc4/contexts/generic",
+    "@type": "reproschema:Field",
+    "@id": "new_reference_VEOG_other.jsonld",
+    "schemaVersion": "1.0.0-rc4",
+    "version": "0.0.1",
+    "prefLabel": {
+        "en": "new reference VEOG other"
+    },
+    "description": "new reference VEOG other",
+    "ui": {
+        "inputType": "text"
+    },
+    "question": {
+        "en": "5.62 - Which other reference was VEOG data re-referenced to?"
+    },
+    "responseOptions": {
+        "valueType": "xsd:string",
+        "maxLength": 300
+    }
+}

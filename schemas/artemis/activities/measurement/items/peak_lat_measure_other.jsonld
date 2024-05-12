@@ -2,20 +2,16 @@
     "@context": "https://raw.githubusercontent.com/ReproNim/reproschema/1.0.0-rc4/contexts/generic",
     "@type": "reproschema:Field",
     "@id": "peak_lat_measure_other.jsonld",
+    "schemaVersion": "1.0.0-rc4",
+    "version": "0.0.1",
     "prefLabel": {
         "en": "peak lat measure other"
     },
     "description": "peak lat measure other",
-    "schemaVersion": "1.0.0-rc4",
-    "version": "0.0.1",
     "ui": {
         "inputType": "textarea"
     },
     "question": {
-        "en": "6.52 - How did you calculate midpoint latency other than listed?"
-    },
-    "responseOptions": {
-        "valueType": "xsd:string",
-        "maxLength": 300
+        "en": "6.55 - How was midpoint latency calculated in a way other than listed?<div style='font-size: 70%; text-align:left;'><details> <summary> details </summary> <br>Describe in detail sufficient for a reader to replicate the procedure.</details></div>"
     }
 }

@@ -1,0 +1,36 @@
+{
+    "@context": "https://raw.githubusercontent.com/ReproNim/reproschema/1.0.0-rc4/contexts/generic",
+    "@type": "reproschema:Field",
+    "@id": "offline_notch_filter_width.jsonld",
+    "schemaVersion": "1.0.0-rc4",
+    "version": "0.0.1",
+    "prefLabel": {
+        "en": "offline notch filter width"
+    },
+    "description": "offline notch filter width",
+    "ui": {
+        "inputType": "radio"
+    },
+    "question": {
+        "en": "5.46 - In which format do you want to report the width of the offline notch filter?"
+    },
+    "responseOptions": {
+        "valueType": "xsd:integer",
+        "choices": [
+            {
+                "name": {
+                    "en": "distance between 3 dB points"
+                },
+                "value": 0
+            },
+            {
+                "name": {
+                    "en": "number of removed frequencies in a decrete Fourier transform"
+                },
+                "value": 1
+            }
+        ],
+        "minValue": 0,
+        "maxValue": 1
+    }
+}

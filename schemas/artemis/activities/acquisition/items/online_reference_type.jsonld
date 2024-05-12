@@ -2,17 +2,22 @@
     "@context": "https://raw.githubusercontent.com/ReproNim/reproschema/1.0.0-rc4/contexts/generic",
     "@type": "reproschema:Field",
     "@id": "online_reference_type.jsonld",
+    "schemaVersion": "1.0.0-rc4",
+    "version": "0.0.1",
     "prefLabel": {
         "en": "online reference type"
     },
     "description": "online reference type",
-    "schemaVersion": "1.0.0-rc4",
-    "version": "0.0.1",
     "ui": {
         "inputType": "select"
     },
     "question": {
-        "en": "4.15 - Where did you place reference electrode(s)?"
+        "en": "4.10 - Location of the EEG online reference electrode(s)"
     },
-    "responseOptions": "https://raw.githubusercontent.com/ohbm/cobidas_schema/master/response_options/eeg_reference_electrodes.jsonld"
+    "responseOptions": {
+        "valueType": "xsd:integer",
+        "choices": "https://raw.githubusercontent.com/ohbm/cobidas_schema/master/response_options/eeg_reference_electrodes.jsonld",
+        "minValue": 0,
+        "maxValue": 0
+    }
 }

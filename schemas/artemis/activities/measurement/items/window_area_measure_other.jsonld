@@ -1,0 +1,17 @@
+{
+    "@context": "https://raw.githubusercontent.com/ReproNim/reproschema/1.0.0-rc4/contexts/generic",
+    "@type": "reproschema:Field",
+    "@id": "window_area_measure_other.jsonld",
+    "schemaVersion": "1.0.0-rc4",
+    "version": "0.0.1",
+    "prefLabel": {
+        "en": "window area measure other"
+    },
+    "description": "window area measure other",
+    "ui": {
+        "inputType": "textarea"
+    },
+    "question": {
+        "en": "6.13 - Describe the procedure for the area measure calculation that was used."
+    }
+}

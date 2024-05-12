@@ -2,19 +2,19 @@
     "@context": "https://raw.githubusercontent.com/ReproNim/reproschema/1.0.0-rc4/contexts/generic",
     "@type": "reproschema:Field",
     "@id": "offline_highpass_filter_order.jsonld",
+    "schemaVersion": "1.0.0-rc4",
+    "version": "0.0.1",
     "prefLabel": {
         "en": "offline highpass filter order"
     },
     "description": "offline highpass filter order",
-    "schemaVersion": "1.0.0-rc4",
-    "version": "0.0.1",
     "ui": {
-        "inputType": "float"
+        "inputType": "number"
     },
     "question": {
-        "en": "5.15 - What was the length/order of the high-pass filter?"
+        "en": "5.17 - What was the order of the high-pass filter?"
     },
     "responseOptions": {
-        "valueType": "xsd:float"
+        "valueType": "xsd:integer"
     }
 }

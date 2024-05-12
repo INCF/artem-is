@@ -2,22 +2,20 @@
     "@context": "https://raw.githubusercontent.com/ReproNim/reproschema/1.0.0-rc4/contexts/generic",
     "@type": "reproschema:Field",
     "@id": "peak_lat_measure.jsonld",
+    "schemaVersion": "1.0.0-rc4",
+    "version": "0.0.1",
     "prefLabel": {
         "en": "peak lat measure"
     },
     "description": "peak lat measure",
-    "schemaVersion": "1.0.0-rc4",
-    "version": "0.0.1",
     "ui": {
         "inputType": "radio"
     },
     "question": {
-        "en": "6.51 - How did you calculate the midpoint of this latency?"
+        "en": "6.54 - Midpoint latency measure(s)"
     },
     "responseOptions": {
         "valueType": "xsd:integer",
-        "minValue": 0,
-        "maxValue": 3,
         "choices": [
             {
                 "name": {
@@ -44,6 +42,8 @@
                 "value": 3
             }
         ],
-        "multipleChoice": false
+        "multipleChoice": true,
+        "minValue": 0,
+        "maxValue": 3
     }
 }

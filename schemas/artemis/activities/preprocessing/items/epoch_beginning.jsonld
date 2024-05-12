@@ -2,17 +2,17 @@
     "@context": "https://raw.githubusercontent.com/ReproNim/reproschema/1.0.0-rc4/contexts/generic",
     "@type": "reproschema:Field",
     "@id": "epoch_beginning.jsonld",
+    "schemaVersion": "1.0.0-rc4",
+    "version": "0.0.1",
     "prefLabel": {
         "en": "epoch beginning"
     },
     "description": "epoch beginning",
-    "schemaVersion": "1.0.0-rc4",
-    "version": "0.0.1",
     "ui": {
         "inputType": "float"
     },
     "question": {
-        "en": "5.213 - What was the epoch beginning relative to a trigger point? For timings after the trigger, use positive numbers. For timings before the trigger, use negative numbers."
+        "en": "5.98 - What was the epoch beginning relative to a trigger point?<div style='font-size: 70%; text-align:left;'><details> <summary> details </summary> <br>For timings after the trigger, use positive numbers. For timings before the trigger, use negative numbers.</details></div>"
     },
     "responseOptions": {
         "valueType": "xsd:float",

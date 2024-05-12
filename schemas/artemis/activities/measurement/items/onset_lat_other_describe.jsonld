@@ -1,0 +1,17 @@
+{
+    "@context": "https://raw.githubusercontent.com/ReproNim/reproschema/1.0.0-rc4/contexts/generic",
+    "@type": "reproschema:Field",
+    "@id": "onset_lat_other_describe.jsonld",
+    "schemaVersion": "1.0.0-rc4",
+    "version": "0.0.1",
+    "prefLabel": {
+        "en": "onset lat other describe"
+    },
+    "description": "onset lat other describe",
+    "ui": {
+        "inputType": "textarea"
+    },
+    "question": {
+        "en": "6.65 - Describe onset latency calculation procedure for which you selected \"other\", step by step.<div style='font-size: 70%; text-align:left;'><details> <summary> details </summary> <br>Describe in detail sufficient for a reader to replicate the procedure. This question is visible because you selected \"other\" on Question \"How did you calculate the onset of this latency?\"</details></div>"
+    }
+}

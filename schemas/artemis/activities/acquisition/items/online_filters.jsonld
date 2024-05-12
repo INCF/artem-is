@@ -2,22 +2,20 @@
     "@context": "https://raw.githubusercontent.com/ReproNim/reproschema/1.0.0-rc4/contexts/generic",
     "@type": "reproschema:Field",
     "@id": "online_filters.jsonld",
+    "schemaVersion": "1.0.0-rc4",
+    "version": "0.0.1",
     "prefLabel": {
         "en": "online filters"
     },
     "description": "online filters",
-    "schemaVersion": "1.0.0-rc4",
-    "version": "0.0.1",
     "ui": {
         "inputType": "radio"
     },
     "question": {
-        "en": "4.21 - Which of the following online filters have you used?"
+        "en": "4.20 - Which of the following online filters were used?<div style='font-size: 70%; text-align:left;'><details> <summary> details </summary> <br>Select \"none\" to mark this question as answered if you did not use any online filters. Please note that this case is highly unlikely given that acquisition systems normally have at least an anti-aliasing low-pass filter.</details></div>"
     },
     "responseOptions": {
         "valueType": "xsd:integer",
-        "minValue": 0,
-        "maxValue": 5,
         "choices": [
             {
                 "name": {
@@ -33,29 +31,19 @@
             },
             {
                 "name": {
-                    "en": "pass band"
+                    "en": "notch"
                 },
                 "value": 2
             },
             {
                 "name": {
-                    "en": "stop band"
-                },
-                "value": 3
-            },
-            {
-                "name": {
-                    "en": "notch"
-                },
-                "value": 4
-            },
-            {
-                "name": {
                     "en": "none"
                 },
-                "value": 5
+                "value": 3
             }
         ],
-        "multipleChoice": true
+        "multipleChoice": true,
+        "minValue": 0,
+        "maxValue": 3
     }
 }

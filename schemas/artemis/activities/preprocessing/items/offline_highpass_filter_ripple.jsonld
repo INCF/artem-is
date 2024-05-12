@@ -1,0 +1,28 @@
+{
+    "@context": "https://raw.githubusercontent.com/ReproNim/reproschema/1.0.0-rc4/contexts/generic",
+    "@type": "reproschema:Field",
+    "@id": "offline_highpass_filter_ripple.jsonld",
+    "schemaVersion": "1.0.0-rc4",
+    "version": "0.0.1",
+    "prefLabel": {
+        "en": "offline highpass filter ripple"
+    },
+    "description": "offline highpass filter ripple",
+    "ui": {
+        "inputType": "float"
+    },
+    "question": {
+        "en": "5.25 - Offline high-pass filter passband ripple"
+    },
+    "responseOptions": {
+        "valueType": "xsd:float",
+        "unitOptions": [
+            {
+                "prefLabel": {
+                    "en": "dB"
+                },
+                "value": "dB"
+            }
+        ]
+    }
+}

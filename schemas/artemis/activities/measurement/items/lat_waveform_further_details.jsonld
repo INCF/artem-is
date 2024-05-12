@@ -2,20 +2,16 @@
     "@context": "https://raw.githubusercontent.com/ReproNim/reproschema/1.0.0-rc4/contexts/generic",
     "@type": "reproschema:Field",
     "@id": "lat_waveform_further_details.jsonld",
+    "schemaVersion": "1.0.0-rc4",
+    "version": "0.0.1",
     "prefLabel": {
         "en": "lat waveform further details"
     },
     "description": "lat waveform further details",
-    "schemaVersion": "1.0.0-rc4",
-    "version": "0.0.1",
     "ui": {
         "inputType": "textarea"
     },
     "question": {
-        "en": "6.49 - How did you calculate your waveforms for analysis? Describe in detail sufficient to allow replication."
-    },
-    "responseOptions": {
-        "valueType": "xsd:string",
-        "maxLength": 300
+        "en": "6.52 - How were the waveforms used for analysis calculated?<div style='font-size: 70%; text-align:left;'><details> <summary> details </summary> <br>Describe in detail sufficient to allow replication.</details></div>"
     }
 }

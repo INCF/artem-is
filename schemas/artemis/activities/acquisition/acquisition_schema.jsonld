@@ -2,12 +2,12 @@
     "@context": "https://raw.githubusercontent.com/ReproNim/reproschema/1.0.0-rc4/contexts/generic",
     "@type": "reproschema:Activity",
     "@id": "acquisition_schema.jsonld",
+    "schemaVersion": "1.0.0-rc4",
+    "version": "0.0.1",
     "prefLabel": {
         "en": "Acquisition"
     },
     "description": "acquisition",
-    "schemaVersion": "1.0.0-rc4",
-    "version": "0.0.1",
     "preamble": {
         "en": "<p><a href='https://docs.google.com/spreadsheets/d/1dlUt8_bHsM5mERFJkVLTVWanSlms6Ba8Wos38Dhmhfo/edit?ts=60c9d280#gid=724696342' target='_blank' > Source </a> | <a href='https://github.com/Remi-Gau/artemis_checklist' target='_blank' > Github repository </a> | <a href='https://osf.io/pvrn6/' target='_blank' > Reference </a><br><br>In this section you will descibe acquisition set-up, which software you have used, impedance upper treschold, what type of online reference, recording channels, VEOG and HEOG and online filters.   NOTE: If you notice a bug, or have a suggestion, we'd be grateful if you posted an issue on GitHub: https://github.com/INCF/artem-is/</p>"
     },
@@ -22,32 +22,42 @@
             "items/impedance_lower_end.jsonld",
             "items/impedance_higher_end.jsonld",
             "items/impedance_alternative.jsonld",
-            "items/electrode_location_naming_convention.jsonld",
-            "items/electrode_location_naming_convention_other.jsonld",
-            "items/electrode_location_naming_convention_custom.jsonld",
-            "items/number_active_channels.jsonld",
             "items/online_reference_exists.jsonld",
             "items/online_reference_type.jsonld",
             "items/alternatives_to_reference.jsonld",
             "items/online_reference_type_other.jsonld",
             "items/location_ground.jsonld",
-            "items/eog_channels.jsonld",
-            "items/other_eog_channels.jsonld",
+            "items/online_reference_VEOG.jsonld",
+            "items/online_reference_VEOG_other.jsonld",
+            "items/online_reference_HEOG.jsonld",
+            "items/online_reference_HEOG_other.jsonld",
+            "items/online_reference_other_non-EEG.jsonld",
+            "items/online_reference_other_non-EEG_other.jsonld",
             "items/online_filters.jsonld",
             "items/online_filters_high_pass_cut_off.jsonld",
             "items/online_filters_high_pass_cutoff_unit.jsonld",
             "items/online_filters_high_pass_roll_off.jsonld",
+            "items/online_filters_high_pass_impulse.jsonld",
             "items/online_filters_low_pass_cutoff_unit.jsonld",
             "items/online_filters_low_pass_cut_off.jsonld",
             "items/online_filters_low_pass_roll_off.jsonld",
+            "items/online_filters_low_pass_impulse.jsonld",
             "items/online_notch_filter_type.jsonld",
             "items/online_notch_filter_type_details.jsonld",
+            "items/online_notch_filter_width.jsonld",
+            "items/online_notch_filter_width_distance.jsonld",
+            "items/online_notch_filter_width_number_frequencies.jsonld",
+            "items/online_notch_filter_harmonics.jsonld",
+            "items/online_notch_filter_harmonics_which.jsonld",
             "items/recording_samping_frequency.jsonld"
         ],
         "addProperties": [
             {
                 "variableName": "acquisition_software",
                 "isAbout": "items/acquisition_software.jsonld",
+                "prefLabel": {
+                    "en": "acquisition software"
+                },
                 "isVis": true,
                 "requiredValue": false,
                 "allow": [
@@ -57,6 +67,9 @@
             {
                 "variableName": "acquisition_software_details",
                 "isAbout": "items/acquisition_software_details.jsonld",
+                "prefLabel": {
+                    "en": "acquisition software details"
+                },
                 "isVis": true,
                 "requiredValue": false,
                 "allow": [
@@ -66,6 +79,9 @@
             {
                 "variableName": "acquisition_quality_measure_exists",
                 "isAbout": "items/acquisition_quality_measure_exists.jsonld",
+                "prefLabel": {
+                    "en": "acquisition quality measure exists"
+                },
                 "isVis": true,
                 "requiredValue": false,
                 "allow": [
@@ -75,6 +91,9 @@
             {
                 "variableName": "acquisition_quality_measure",
                 "isAbout": "items/acquisition_quality_measure.jsonld",
+                "prefLabel": {
+                    "en": "acquisition quality measure"
+                },
                 "isVis": "acquisition_quality_measure_exists == 1",
                 "requiredValue": false,
                 "allow": [
@@ -84,6 +103,9 @@
             {
                 "variableName": "impedance_threshold",
                 "isAbout": "items/impedance_threshold.jsonld",
+                "prefLabel": {
+                    "en": "impedance threshold"
+                },
                 "isVis": "acquisition_quality_measure == 0",
                 "requiredValue": false,
                 "allow": [
@@ -93,6 +115,9 @@
             {
                 "variableName": "impedance_lower_end",
                 "isAbout": "items/impedance_lower_end.jsonld",
+                "prefLabel": {
+                    "en": "impedance lower end"
+                },
                 "isVis": "acquisition_quality_measure == 1",
                 "requiredValue": false,
                 "allow": [
@@ -102,6 +127,9 @@
             {
                 "variableName": "impedance_higher_end",
                 "isAbout": "items/impedance_higher_end.jsonld",
+                "prefLabel": {
+                    "en": "impedance higher end"
+                },
                 "isVis": "acquisition_quality_measure == 1",
                 "requiredValue": false,
                 "allow": [
@@ -111,43 +139,10 @@
             {
                 "variableName": "impedance_alternative",
                 "isAbout": "items/impedance_alternative.jsonld",
+                "prefLabel": {
+                    "en": "impedance alternative"
+                },
                 "isVis": "acquisition_quality_measure == 2",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "electrode_location_naming_convention",
-                "isAbout": "items/electrode_location_naming_convention.jsonld",
-                "isVis": true,
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "electrode_location_naming_convention_other",
-                "isAbout": "items/electrode_location_naming_convention_other.jsonld",
-                "isVis": "electrode_location_naming_convention == 2",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "electrode_location_naming_convention_custom",
-                "isAbout": "items/electrode_location_naming_convention_custom.jsonld",
-                "isVis": "electrode_location_naming_convention == 3",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "number_active_channels",
-                "isAbout": "items/number_active_channels.jsonld",
-                "isVis": true,
                 "requiredValue": false,
                 "allow": [
                     "reproschema:Skipped"
@@ -156,6 +151,9 @@
             {
                 "variableName": "online_reference_exists",
                 "isAbout": "items/online_reference_exists.jsonld",
+                "prefLabel": {
+                    "en": "online reference exists"
+                },
                 "isVis": true,
                 "requiredValue": false,
                 "allow": [
@@ -165,6 +163,9 @@
             {
                 "variableName": "online_reference_type",
                 "isAbout": "items/online_reference_type.jsonld",
+                "prefLabel": {
+                    "en": "online reference type"
+                },
                 "isVis": "online_reference_exists == 1",
                 "requiredValue": false,
                 "allow": [
@@ -174,6 +175,9 @@
             {
                 "variableName": "alternatives_to_reference",
                 "isAbout": "items/alternatives_to_reference.jsonld",
+                "prefLabel": {
+                    "en": "alternatives to reference"
+                },
                 "isVis": "online_reference_exists == 0",
                 "requiredValue": false,
                 "allow": [
@@ -183,6 +187,9 @@
             {
                 "variableName": "online_reference_type_other",
                 "isAbout": "items/online_reference_type_other.jsonld",
+                "prefLabel": {
+                    "en": "online reference type other"
+                },
                 "isVis": "online_reference_type == 9",
                 "requiredValue": false,
                 "allow": [
@@ -192,6 +199,9 @@
             {
                 "variableName": "location_ground",
                 "isAbout": "items/location_ground.jsonld",
+                "prefLabel": {
+                    "en": "location ground"
+                },
                 "isVis": "online_reference_exists == 1",
                 "requiredValue": false,
                 "allow": [
@@ -199,8 +209,11 @@
                 ]
             },
             {
-                "variableName": "eog_channels",
-                "isAbout": "items/eog_channels.jsonld",
+                "variableName": "online_reference_VEOG",
+                "isAbout": "items/online_reference_VEOG.jsonld",
+                "prefLabel": {
+                    "en": "online reference VEOG"
+                },
                 "isVis": true,
                 "requiredValue": false,
                 "allow": [
@@ -208,9 +221,60 @@
                 ]
             },
             {
-                "variableName": "other_eog_channels",
-                "isAbout": "items/other_eog_channels.jsonld",
-                "isVis": "eog_channels == 4 ",
+                "variableName": "online_reference_VEOG_other",
+                "isAbout": "items/online_reference_VEOG_other.jsonld",
+                "prefLabel": {
+                    "en": "online reference VEOG other"
+                },
+                "isVis": "online_reference_VEOG == 2",
+                "requiredValue": false,
+                "allow": [
+                    "reproschema:Skipped"
+                ]
+            },
+            {
+                "variableName": "online_reference_HEOG",
+                "isAbout": "items/online_reference_HEOG.jsonld",
+                "prefLabel": {
+                    "en": "online reference HEOG"
+                },
+                "isVis": true,
+                "requiredValue": false,
+                "allow": [
+                    "reproschema:Skipped"
+                ]
+            },
+            {
+                "variableName": "online_reference_HEOG_other",
+                "isAbout": "items/online_reference_HEOG_other.jsonld",
+                "prefLabel": {
+                    "en": "online reference HEOG other"
+                },
+                "isVis": "online_reference_HEOG == 3",
+                "requiredValue": false,
+                "allow": [
+                    "reproschema:Skipped"
+                ]
+            },
+            {
+                "variableName": "online_reference_other_non-EEG",
+                "isAbout": "items/online_reference_other_non-EEG.jsonld",
+                "prefLabel": {
+                    "en": "online reference other non-EEG"
+                },
+                "isVis": true,
+                "requiredValue": false,
+                "allow": [
+                    "reproschema:Skipped"
+                ]
+            },
+            {
+                "variableName": "online_reference_other_non-EEG_other",
+                "isAbout": "items/online_reference_other_non-EEG_other.jsonld",
+                "prefLabel": {
+                    "en": "online reference other non-EEG other"
+                },
+                "isVis": "online_reference_other_non-EEG == 1",
                 "requiredValue": false,
                 "allow": [
                     "reproschema:Skipped"
@@ -219,6 +283,9 @@
             {
                 "variableName": "online_filters",
                 "isAbout": "items/online_filters.jsonld",
+                "prefLabel": {
+                    "en": "online filters"
+                },
                 "isVis": true,
                 "requiredValue": false,
                 "allow": [
@@ -228,6 +295,9 @@
             {
                 "variableName": "online_filters_high_pass_cut_off",
                 "isAbout": "items/online_filters_high_pass_cut_off.jsonld",
+                "prefLabel": {
+                    "en": "online filters high pass cut off"
+                },
                 "isVis": "online_filters.includes(0)",
                 "requiredValue": false,
                 "allow": [
@@ -237,6 +307,9 @@
             {
                 "variableName": "online_filters_high_pass_cutoff_unit",
                 "isAbout": "items/online_filters_high_pass_cutoff_unit.jsonld",
+                "prefLabel": {
+                    "en": "online filters high pass cutoff unit"
+                },
                 "isVis": "online_filters.includes(0)",
                 "requiredValue": false,
                 "allow": [
@@ -246,6 +319,21 @@
             {
                 "variableName": "online_filters_high_pass_roll_off",
                 "isAbout": "items/online_filters_high_pass_roll_off.jsonld",
+                "prefLabel": {
+                    "en": "online filters high pass roll off"
+                },
+                "isVis": "online_filters.includes(0)",
+                "requiredValue": false,
+                "allow": [
+                    "reproschema:Skipped"
+                ]
+            },
+            {
+                "variableName": "online_filters_high_pass_impulse",
+                "isAbout": "items/online_filters_high_pass_impulse.jsonld",
+                "prefLabel": {
+                    "en": "online filters high pass impulse"
+                },
                 "isVis": "online_filters.includes(0)",
                 "requiredValue": false,
                 "allow": [
@@ -255,6 +343,9 @@
             {
                 "variableName": "online_filters_low_pass_cutoff_unit",
                 "isAbout": "items/online_filters_low_pass_cutoff_unit.jsonld",
+                "prefLabel": {
+                    "en": "online filters low pass cutoff unit"
+                },
                 "isVis": "online_filters.includes(1)",
                 "requiredValue": false,
                 "allow": [
@@ -264,6 +355,9 @@
             {
                 "variableName": "online_filters_low_pass_cut_off",
                 "isAbout": "items/online_filters_low_pass_cut_off.jsonld",
+                "prefLabel": {
+                    "en": "online filters low pass cut off"
+                },
                 "isVis": "online_filters.includes(1)",
                 "requiredValue": false,
                 "allow": [
@@ -273,6 +367,21 @@
             {
                 "variableName": "online_filters_low_pass_roll_off",
                 "isAbout": "items/online_filters_low_pass_roll_off.jsonld",
+                "prefLabel": {
+                    "en": "online filters low pass roll off"
+                },
+                "isVis": "online_filters.includes(1)",
+                "requiredValue": false,
+                "allow": [
+                    "reproschema:Skipped"
+                ]
+            },
+            {
+                "variableName": "online_filters_low_pass_impulse",
+                "isAbout": "items/online_filters_low_pass_impulse.jsonld",
+                "prefLabel": {
+                    "en": "online filters low pass impulse"
+                },
                 "isVis": "online_filters.includes(1)",
                 "requiredValue": false,
                 "allow": [
@@ -282,7 +391,10 @@
             {
                 "variableName": "online_notch_filter_type",
                 "isAbout": "items/online_notch_filter_type.jsonld",
-                "isVis": "online_filters.includes(4)",
+                "prefLabel": {
+                    "en": "online notch filter type"
+                },
+                "isVis": "online_filters.includes(2)",
                 "requiredValue": false,
                 "allow": [
                     "reproschema:Skipped"
@@ -291,7 +403,70 @@
             {
                 "variableName": "online_notch_filter_type_details",
                 "isAbout": "items/online_notch_filter_type_details.jsonld",
+                "prefLabel": {
+                    "en": "online notch filter type details"
+                },
                 "isVis": "online_notch_filter_type == 2",
+                "requiredValue": false,
+                "allow": [
+                    "reproschema:Skipped"
+                ]
+            },
+            {
+                "variableName": "online_notch_filter_width",
+                "isAbout": "items/online_notch_filter_width.jsonld",
+                "prefLabel": {
+                    "en": "online notch filter width"
+                },
+                "isVis": "online_filters.includes(2)",
+                "requiredValue": false,
+                "allow": [
+                    "reproschema:Skipped"
+                ]
+            },
+            {
+                "variableName": "online_notch_filter_width_distance",
+                "isAbout": "items/online_notch_filter_width_distance.jsonld",
+                "prefLabel": {
+                    "en": "online notch filter width distance"
+                },
+                "isVis": "online_notch_filter_width == 0",
+                "requiredValue": false,
+                "allow": [
+                    "reproschema:Skipped"
+                ]
+            },
+            {
+                "variableName": "online_notch_filter_width_number_frequencies",
+                "isAbout": "items/online_notch_filter_width_number_frequencies.jsonld",
+                "prefLabel": {
+                    "en": "online notch filter width number frequencies"
+                },
+                "isVis": "online_notch_filter_width == 1",
+                "requiredValue": false,
+                "allow": [
+                    "reproschema:Skipped"
+                ]
+            },
+            {
+                "variableName": "online_notch_filter_harmonics",
+                "isAbout": "items/online_notch_filter_harmonics.jsonld",
+                "prefLabel": {
+                    "en": "online notch filter harmonics"
+                },
+                "isVis": "online_filters.includes(2)",
+                "requiredValue": false,
+                "allow": [
+                    "reproschema:Skipped"
+                ]
+            },
+            {
+                "variableName": "online_notch_filter_harmonics_which",
+                "isAbout": "items/online_notch_filter_harmonics_which.jsonld",
+                "prefLabel": {
+                    "en": "online notch filter harmonics which"
+                },
+                "isVis": "online_notch_filter_harmonics == 1",
                 "requiredValue": false,
                 "allow": [
                     "reproschema:Skipped"
@@ -300,6 +475,9 @@
             {
                 "variableName": "recording_samping_frequency",
                 "isAbout": "items/recording_samping_frequency.jsonld",
+                "prefLabel": {
+                    "en": "recording samping frequency"
+                },
                 "isVis": true,
                 "requiredValue": false,
                 "allow": [

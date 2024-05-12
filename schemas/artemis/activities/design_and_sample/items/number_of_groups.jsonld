@@ -2,17 +2,17 @@
     "@context": "https://raw.githubusercontent.com/ReproNim/reproschema/1.0.0-rc4/contexts/generic",
     "@type": "reproschema:Field",
     "@id": "number_of_groups.jsonld",
+    "schemaVersion": "1.0.0-rc4",
+    "version": "0.0.1",
     "prefLabel": {
         "en": "number of groups"
     },
     "description": "number of groups",
-    "schemaVersion": "1.0.0-rc4",
-    "version": "0.0.1",
     "ui": {
         "inputType": "number"
     },
     "question": {
-        "en": "2.4 - How many experimental/comparison (between-subjects) groups did the study feature? "
+        "en": "2.7 - How many experimental/comparison groups did the study feature in total? <div style='font-size: 70%; text-align:left;'><details> <summary> details </summary> <br>If participants were not divided into separate groups, please enter 1 to indicate 1 condition. If the design is not full factorial, this number might differ from the total number of between-subject factor level combinations</details></div>"
     },
     "responseOptions": {
         "valueType": "xsd:integer"

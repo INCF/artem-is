@@ -1,0 +1,36 @@
+{
+    "@context": "https://raw.githubusercontent.com/ReproNim/reproschema/1.0.0-rc4/contexts/generic",
+    "@type": "reproschema:Field",
+    "@id": "online_filters_high_pass_impulse.jsonld",
+    "schemaVersion": "1.0.0-rc4",
+    "version": "0.0.1",
+    "prefLabel": {
+        "en": "online filters high pass impulse"
+    },
+    "description": "online filters high pass impulse",
+    "ui": {
+        "inputType": "radio"
+    },
+    "question": {
+        "en": "4.24 - High-pass filter impulse response during recording"
+    },
+    "responseOptions": {
+        "valueType": "xsd:integer",
+        "choices": [
+            {
+                "name": {
+                    "en": "finite impulse response (FIR)"
+                },
+                "value": 0
+            },
+            {
+                "name": {
+                    "en": "infinite impulse response (IIR)"
+                },
+                "value": 1
+            }
+        ],
+        "minValue": 0,
+        "maxValue": 1
+    }
+}

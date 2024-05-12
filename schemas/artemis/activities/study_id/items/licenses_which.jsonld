@@ -2,12 +2,12 @@
     "@context": "https://raw.githubusercontent.com/ReproNim/reproschema/1.0.0-rc4/contexts/generic",
     "@type": "reproschema:Field",
     "@id": "licenses_which.jsonld",
+    "schemaVersion": "1.0.0-rc4",
+    "version": "0.0.1",
     "prefLabel": {
         "en": "licenses which"
     },
     "description": "licenses which",
-    "schemaVersion": "1.0.0-rc4",
-    "version": "0.0.1",
     "ui": {
         "inputType": "radio"
     },
@@ -16,8 +16,6 @@
     },
     "responseOptions": {
         "valueType": "xsd:integer",
-        "minValue": 0,
-        "maxValue": 2,
         "choices": [
             {
                 "name": {
@@ -33,11 +31,13 @@
             },
             {
                 "name": {
-                    "en": "other elements"
+                    "en": "other"
                 },
                 "value": 2
             }
         ],
-        "multipleChoice": true
+        "multipleChoice": true,
+        "minValue": 0,
+        "maxValue": 2
     }
 }

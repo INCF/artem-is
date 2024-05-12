@@ -1,0 +1,17 @@
+{
+    "@context": "https://raw.githubusercontent.com/ReproNim/reproschema/1.0.0-rc4/contexts/generic",
+    "@type": "reproschema:Field",
+    "@id": "non-EEG_electrodes_other.jsonld",
+    "schemaVersion": "1.0.0-rc4",
+    "version": "0.0.1",
+    "prefLabel": {
+        "en": "non-EEG electrodes other"
+    },
+    "description": "non-EEG electrodes other",
+    "ui": {
+        "inputType": "textarea"
+    },
+    "question": {
+        "en": "3.19 - Which electrodes were used in addition to the ones described above?"
+    }
+}

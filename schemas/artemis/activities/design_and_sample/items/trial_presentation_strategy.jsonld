@@ -2,22 +2,20 @@
     "@context": "https://raw.githubusercontent.com/ReproNim/reproschema/1.0.0-rc4/contexts/generic",
     "@type": "reproschema:Field",
     "@id": "trial_presentation_strategy.jsonld",
+    "schemaVersion": "1.0.0-rc4",
+    "version": "0.0.1",
     "prefLabel": {
         "en": "trial presentation strategy"
     },
     "description": "trial presentation strategy",
-    "schemaVersion": "1.0.0-rc4",
-    "version": "0.0.1",
     "ui": {
         "inputType": "radio"
     },
     "question": {
-        "en": "2.9 - What determined the number of trials each subject was presented with?"
+        "en": "2.16 - What determined the number of trials each participant was presented with?"
     },
     "responseOptions": {
         "valueType": "xsd:integer",
-        "minValue": 0,
-        "maxValue": 2,
         "choices": [
             {
                 "name": {
@@ -38,6 +36,7 @@
                 "value": 2
             }
         ],
-        "multipleChoice": false
+        "minValue": 0,
+        "maxValue": 2
     }
 }

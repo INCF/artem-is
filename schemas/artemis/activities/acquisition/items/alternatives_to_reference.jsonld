@@ -2,20 +2,20 @@
     "@context": "https://raw.githubusercontent.com/ReproNim/reproschema/1.0.0-rc4/contexts/generic",
     "@type": "reproschema:Field",
     "@id": "alternatives_to_reference.jsonld",
+    "schemaVersion": "1.0.0-rc4",
+    "version": "0.0.1",
     "prefLabel": {
         "en": "alternatives to reference"
     },
     "description": "alternatives to reference",
-    "schemaVersion": "1.0.0-rc4",
-    "version": "0.0.1",
     "ui": {
         "inputType": "text"
     },
     "question": {
-        "en": "4.16 - What alternative to an online reference (for example DRL) did you use? Please describe it."
+        "en": "4.11 - What alternative to an EEG online reference (for example DRL) was used?"
     },
     "responseOptions": {
         "valueType": "xsd:string",
-        "maxLength": 3000
+        "maxLength": 300
     }
 }

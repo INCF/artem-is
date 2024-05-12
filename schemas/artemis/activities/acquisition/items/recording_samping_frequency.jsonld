@@ -2,17 +2,17 @@
     "@context": "https://raw.githubusercontent.com/ReproNim/reproschema/1.0.0-rc4/contexts/generic",
     "@type": "reproschema:Field",
     "@id": "recording_samping_frequency.jsonld",
+    "schemaVersion": "1.0.0-rc4",
+    "version": "0.0.1",
     "prefLabel": {
         "en": "recording samping frequency"
     },
     "description": "recording samping frequency",
-    "schemaVersion": "1.0.0-rc4",
-    "version": "0.0.1",
     "ui": {
         "inputType": "float"
     },
     "question": {
-        "en": "4.30 - What was your acquisition sampling rate?"
+        "en": "4.36 - Acquisition sampling rate"
     },
     "responseOptions": {
         "valueType": "xsd:float",

@@ -2,20 +2,20 @@
     "@context": "https://raw.githubusercontent.com/ReproNim/reproschema/1.0.0-rc4/contexts/generic",
     "@type": "reproschema:Field",
     "@id": "artifact_1_automated_reference.jsonld",
+    "schemaVersion": "1.0.0-rc4",
+    "version": "0.0.1",
     "prefLabel": {
         "en": "artifact 1 automated reference"
     },
     "description": "artifact 1 automated reference",
-    "schemaVersion": "1.0.0-rc4",
-    "version": "0.0.1",
     "ui": {
         "inputType": "text"
     },
     "question": {
-        "en": "5.63 - Reference to the automated artifact removal algorithm used in step 1"
+        "en": "5.93 - Reference to the automated artifact removal algorithm used in step 1"
     },
     "responseOptions": {
         "valueType": "xsd:string",
-        "maxLength": 3000
+        "maxLength": 300
     }
 }

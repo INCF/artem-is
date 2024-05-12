@@ -2,17 +2,22 @@
     "@context": "https://raw.githubusercontent.com/ReproNim/reproschema/1.0.0-rc4/contexts/generic",
     "@type": "reproschema:Field",
     "@id": "baseline_any.jsonld",
+    "schemaVersion": "1.0.0-rc4",
+    "version": "0.0.1",
     "prefLabel": {
         "en": "baseline any"
     },
     "description": "baseline any",
-    "schemaVersion": "1.0.0-rc4",
-    "version": "0.0.1",
     "ui": {
         "inputType": "radio"
     },
     "question": {
-        "en": "5.217 - Did you apply baseline correction?<div style='font-size: 70%; text-align:left;'><details> <summary> details </summary> <br>This does not include baseline correction within automated pipelines, if you had applied any.</details></div>"
+        "en": "5.102 - Was baseline correction applied to the data (outside of the automated pre-processing pipelines described earlier)?"
     },
-    "responseOptions": "https://raw.githubusercontent.com/ohbm/cobidas_schema/master/response_options/boolean.jsonld"
+    "responseOptions": {
+        "valueType": "xsd:integer",
+        "choices": "https://raw.githubusercontent.com/ohbm/cobidas_schema/master/response_options/boolean.jsonld",
+        "minValue": 0,
+        "maxValue": 0
+    }
 }

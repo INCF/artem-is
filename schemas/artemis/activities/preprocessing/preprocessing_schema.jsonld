@@ -2,12 +2,12 @@
     "@context": "https://raw.githubusercontent.com/ReproNim/reproschema/1.0.0-rc4/contexts/generic",
     "@type": "reproschema:Activity",
     "@id": "preprocessing_schema.jsonld",
+    "schemaVersion": "1.0.0-rc4",
+    "version": "0.0.1",
     "prefLabel": {
         "en": "Preprocessing"
     },
     "description": "preprocessing",
-    "schemaVersion": "1.0.0-rc4",
-    "version": "0.0.1",
     "preamble": {
         "en": "<p><a href='https://docs.google.com/spreadsheets/d/1dlUt8_bHsM5mERFJkVLTVWanSlms6Ba8Wos38Dhmhfo/edit?ts=60c9d280#gid=1276614777' target='_blank' > Source </a> | <a href='https://github.com/Remi-Gau/artemis_checklist' target='_blank' > Github repository </a> | <a href='https://osf.io/pvrn6/' target='_blank' > Reference </a><br><br>In this section, we will ask you about preprocessing decisions, such as analysis software, off-line filtering, re-referencing, artefact removal, epoching and baseline.  NOTE: If you notice a bug, or have a suggestion, we'd be grateful if you posted an issue on GitHub: https://github.com/INCF/artem-is/</p>"
     },
@@ -27,22 +27,43 @@
             "items/which_filters.jsonld",
             "items/filtering_software.jsonld",
             "items/filter_software_details.jsonld",
-            "items/offline_highpass_filter_type.jsonld",
+            "items/offline_highpass_filter_impulse.jsonld",
+            "items/offline_highpass_filter_family.jsonld",
+            "items/offline_highpass_filter_family_other.jsonld",
             "items/offline_highpass_filter_order.jsonld",
             "items/offline_highpass_filter_unit.jsonld",
             "items/offline_highpass_filter_cutoff.jsonld",
             "items/offline_highpass_filter_rolloff.jsonld",
+            "items/offline_highpass_filter_additional_exists.jsonld",
+            "items/offline_highpass_filter_additional.jsonld",
             "items/offline_highpass_filter_attenuation.jsonld",
+            "items/offline_highpass_filter_transition.jsonld",
+            "items/offline_highpass_filter_ripple.jsonld",
             "items/offline_highpass_filter_direction.jsonld",
-            "items/offline_lowpass_filter_type.jsonld",
+            "items/offline_highpass_filter_delay.jsonld",
+            "items/offline_highpass_filter_other.jsonld",
+            "items/offline_lowpass_filter_impulse.jsonld",
+            "items/offline_lowpass_filter_family.jsonld",
+            "items/offline_lowpass_filter_family_other.jsonld",
             "items/offline_lowpass_filter_order.jsonld",
             "items/offline_lowpass_filter_unit.jsonld",
             "items/offline_lowpass_filter_cutoff.jsonld",
             "items/offline_lowpass_filter_rolloff.jsonld",
+            "items/offline_lowpass_filter_additional_exists.jsonld",
+            "items/offline_lowpass_filter_additional.jsonld",
             "items/offline_lowpass_filter_attenuation.jsonld",
+            "items/offline_lowpass_filter_transition.jsonld",
+            "items/offline_lowpass_filter_ripple.jsonld",
             "items/offline_lowpass_filter_direction.jsonld",
+            "items/offline_lowpass_filter_delay.jsonld",
+            "items/offline_lowpass_filter_other.jsonld",
             "items/offline_notch_filter_type.jsonld",
             "items/offline_notch_filter_type_details.jsonld",
+            "items/offline_notch_filter_width.jsonld",
+            "items/offline_notch_filter_width_distance.jsonld",
+            "items/offline_notch_filter_width_number_frequencies.jsonld",
+            "items/offline_notch_filter_harmonics.jsonld",
+            "items/offline_notch_filter_harmonics_which.jsonld",
             "items/downsample_data.jsonld",
             "items/downsample_software.jsonld",
             "items/downsample_software_details.jsonld",
@@ -52,6 +73,15 @@
             "items/rereference_software_details.jsonld",
             "items/new_reference.jsonld",
             "items/new_reference_other.jsonld",
+            "items/offline_reference_VEOG.jsonld",
+            "items/new_reference_VEOG.jsonld",
+            "items/new_reference_VEOG_other.jsonld",
+            "items/offline_reference_HEOG.jsonld",
+            "items/new_reference_HEOG.jsonld",
+            "items/new_reference_HEOG_other.jsonld",
+            "items/offline_reference_non-EEG.jsonld",
+            "items/new_reference_non-EEG.jsonld",
+            "items/new_reference_non-EEG_other.jsonld",
             "items/artifact_steps_number.jsonld",
             "items/artifact_1.jsonld",
             "items/artifact_1_software.jsonld",
@@ -65,160 +95,19 @@
             "items/artifact_1_correct_method.jsonld",
             "items/artifact_1_correct_reference.jsonld",
             "items/artifact_1_correct_details.jsonld",
-            "items/artifact_1_remove_electrode_where.jsonld",
-            "items/artifact_1_remove_electrode_everyone_list.jsonld",
-            "items/artifact_1_remove_electrode_percent.jsonld",
-            "items/artifact_1_remove_electrode_method.jsonld",
-            "items/artifact_1_remove_electrode_visual.jsonld",
-            "items/artifact_1_remove_electrode_visual_other.jsonld",
-            "items/artifact_1_remove_electrode_numerical.jsonld",
-            "items/artifact_1_remove_electrode_other.jsonld",
+            "items/artifact_1_remove_channel_where.jsonld",
+            "items/artifact_1_remove_channel_if_for_all.jsonld",
+            "items/artifact_1_remove_channel_everyone_list.jsonld",
+            "items/artifact_1_remove_channel_percent.jsonld",
+            "items/artifact_1_remove_channel_method.jsonld",
+            "items/artifact_1_remove_channel_visual.jsonld",
+            "items/artifact_1_remove_channel_visual_other.jsonld",
+            "items/artifact_1_remove_channel_numerical.jsonld",
+            "items/artifact_1_remove_channel_other.jsonld",
             "items/artifact_1_interpolate_which.jsonld",
             "items/artifact_1_interpolate_how.jsonld",
             "items/artifact_1_automated_reference.jsonld",
             "items/artifact_1_automated_parameters.jsonld",
-            "items/artifact_2.jsonld",
-            "items/artifact_2_software.jsonld",
-            "items/artifact_2_software_details.jsonld",
-            "items/artifact_2_reject_what.jsonld",
-            "items/artifact_2_reject_method.jsonld",
-            "items/artifact_2_reject_visual.jsonld",
-            "items/artifact_2_reject_visual_other.jsonld",
-            "items/artifact_2_reject_numerical.jsonld",
-            "items/artifact_2_reject_other.jsonld",
-            "items/artifact_2_correct_method.jsonld",
-            "items/artifact_2_correct_reference.jsonld",
-            "items/artifact_2_correct_details.jsonld",
-            "items/artifact_2_remove_electrode_where.jsonld",
-            "items/artifact_2_remove_electrode_everyone_list.jsonld",
-            "items/artifact_2_remove_electrode_percent.jsonld",
-            "items/artifact_2_remove_electrode_method.jsonld",
-            "items/artifact_2_remove_electrode_visual.jsonld",
-            "items/artifact_2_remove_electrode_visual_other.jsonld",
-            "items/artifact_2_remove_electrode_numerical.jsonld",
-            "items/artifact_2_remove_electrode_other.jsonld",
-            "items/artifact_2_interpolate_which.jsonld",
-            "items/artifact_2_interpolate_how.jsonld",
-            "items/artifact_2_automated_reference.jsonld",
-            "items/artifact_2_automated_parameters.jsonld",
-            "items/artifact_3.jsonld",
-            "items/artifact_3_software.jsonld",
-            "items/artifact_3_software_details.jsonld",
-            "items/artifact_3_reject_what.jsonld",
-            "items/artifact_3_reject_method.jsonld",
-            "items/artifact_3_reject_visual.jsonld",
-            "items/artifact_3_reject_visual_other.jsonld",
-            "items/artifact_3_reject_numerical.jsonld",
-            "items/artifact_3_reject_other.jsonld",
-            "items/artifact_3_correct_method.jsonld",
-            "items/artifact_3_correct_reference.jsonld",
-            "items/artifact_3_correct_details.jsonld",
-            "items/artifact_3_remove_electrode_where.jsonld",
-            "items/artifact_3_remove_electrode_everyone_list.jsonld",
-            "items/artifact_3_remove_electrode_percent.jsonld",
-            "items/artifact_3_remove_electrode_method.jsonld",
-            "items/artifact_3_remove_electrode_visual.jsonld",
-            "items/artifact_3_remove_electrode_visual_other.jsonld",
-            "items/artifact_3_remove_electrode_numerical.jsonld",
-            "items/artifact_3_remove_electrode_other.jsonld",
-            "items/artifact_3_interpolate_which.jsonld",
-            "items/artifact_3_interpolate_how.jsonld",
-            "items/artifact_3_automated_reference.jsonld",
-            "items/artifact_3_automated_parameters.jsonld",
-            "items/artifact_4.jsonld",
-            "items/artifact_4_software.jsonld",
-            "items/artifact_4_software_details.jsonld",
-            "items/artifact_4_reject_what.jsonld",
-            "items/artifact_4_reject_method.jsonld",
-            "items/artifact_4_reject_visual.jsonld",
-            "items/artifact_4_reject_visual_other.jsonld",
-            "items/artifact_4_reject_numerical.jsonld",
-            "items/artifact_4_reject_other.jsonld",
-            "items/artifact_4_correct_method.jsonld",
-            "items/artifact_4_correct_reference.jsonld",
-            "items/artifact_4_correct_details.jsonld",
-            "items/artifact_4_remove_electrode_where.jsonld",
-            "items/artifact_4_remove_electrode_everyone_list.jsonld",
-            "items/artifact_4_remove_electrode_percent.jsonld",
-            "items/artifact_4_remove_electrode_method.jsonld",
-            "items/artifact_4_remove_electrode_visual.jsonld",
-            "items/artifact_4_remove_electrode_visual_other.jsonld",
-            "items/artifact_4_remove_electrode_numerical.jsonld",
-            "items/artifact_4_remove_electrode_other.jsonld",
-            "items/artifact_4_interpolate_which.jsonld",
-            "items/artifact_4_interpolate_how.jsonld",
-            "items/artifact_4_automated_reference.jsonld",
-            "items/artifact_4_automated_parameters.jsonld",
-            "items/artifact_5.jsonld",
-            "items/artifact_5_software.jsonld",
-            "items/artifact_5_software_details.jsonld",
-            "items/artifact_5_reject_what.jsonld",
-            "items/artifact_5_reject_method.jsonld",
-            "items/artifact_5_reject_visual.jsonld",
-            "items/artifact_5_reject_visual_other.jsonld",
-            "items/artifact_5_reject_numerical.jsonld",
-            "items/artifact_5_reject_other.jsonld",
-            "items/artifact_5_correct_method.jsonld",
-            "items/artifact_5_correct_reference.jsonld",
-            "items/artifact_5_correct_details.jsonld",
-            "items/artifact_5_remove_electrode_where.jsonld",
-            "items/artifact_5_remove_electrode_list.jsonld",
-            "items/artifact_5_remove_electrode_method.jsonld",
-            "items/artifact_5_remove_electrode_visual.jsonld",
-            "items/artifact_5_remove_electrode_visual_other.jsonld",
-            "items/artifact_5_remove_electrode_numerical.jsonld",
-            "items/artifact_5_remove_electrode_other.jsonld",
-            "items/artifact_5_interpolate_which.jsonld",
-            "items/artifact_5_interpolate_how.jsonld",
-            "items/artifact_5_automated_reference.jsonld",
-            "items/artifact_5_automated_parameters.jsonld",
-            "items/artifact_6.jsonld",
-            "items/artifact_6_software.jsonld",
-            "items/artifact_6_software_details.jsonld",
-            "items/artifact_6_reject_what.jsonld",
-            "items/artifact_6_reject_method.jsonld",
-            "items/artifact_6_reject_visual.jsonld",
-            "items/artifact_6_reject_visual_other.jsonld",
-            "items/artifact_6_reject_numerical.jsonld",
-            "items/artifact_6_reject_other.jsonld",
-            "items/artifact_6_correct_method.jsonld",
-            "items/artifact_6_correct_reference.jsonld",
-            "items/artifact_6_correct_details.jsonld",
-            "items/artifact_6_remove_electrode_where.jsonld",
-            "items/artifact_6_remove_electrode_list.jsonld",
-            "items/artifact_6_remove_electrode_method.jsonld",
-            "items/artifact_6_remove_electrode_visual.jsonld",
-            "items/artifact_6_remove_electrode_visual_other.jsonld",
-            "items/artifact_6_remove_electrode_numerical.jsonld",
-            "items/artifact_6_remove_electrode_other.jsonld",
-            "items/artifact_6_interpolate_which.jsonld",
-            "items/artifact_6_interpolate_how.jsonld",
-            "items/artifact_6_automated_reference.jsonld",
-            "items/artifact_6_automated_parameters.jsonld",
-            "items/artifact_7.jsonld",
-            "items/artifact_7_software.jsonld",
-            "items/artifact_7_software_details.jsonld",
-            "items/artifact_7_reject_what.jsonld",
-            "items/artifact_7_reject_method.jsonld",
-            "items/artifact_7_reject_visual.jsonld",
-            "items/artifact_7_reject_visual_other.jsonld",
-            "items/artifact_7_reject_numerical.jsonld",
-            "items/artifact_7_reject_other.jsonld",
-            "items/artifact_7_correct_method.jsonld",
-            "items/artifact_7_correct_reference.jsonld",
-            "items/artifact_7_correct_details.jsonld",
-            "items/artifact_7_remove_electrode_where.jsonld",
-            "items/artifact_7_remove_electrode_list.jsonld",
-            "items/artifact_7_remove_electrode_method.jsonld",
-            "items/artifact_7_remove_electrode_visual.jsonld",
-            "items/artifact_7_remove_electrode_visual_other.jsonld",
-            "items/artifact_7_remove_electrode_numerical.jsonld",
-            "items/artifact_7_remove_electrode_other.jsonld",
-            "items/artifact_7_interpolate_which.jsonld",
-            "items/artifact_7_interpolate_how.jsonld",
-            "items/artifact_7_automated_reference.jsonld",
-            "items/artifact_7_automated_parameters.jsonld",
-            "items/artifact_removal_more_than_7.jsonld",
             "items/epoch_any.jsonld",
             "items/epoch_software.jsonld",
             "items/epoch_software_details.jsonld",
@@ -239,6 +128,9 @@
             {
                 "variableName": "same_software",
                 "isAbout": "items/same_software.jsonld",
+                "prefLabel": {
+                    "en": "same software"
+                },
                 "isVis": true,
                 "requiredValue": false,
                 "allow": [
@@ -248,6 +140,9 @@
             {
                 "variableName": "preprocessing_software",
                 "isAbout": "items/preprocessing_software.jsonld",
+                "prefLabel": {
+                    "en": "preprocessing software"
+                },
                 "isVis": "same_software == 1",
                 "requiredValue": false,
                 "allow": [
@@ -257,6 +152,9 @@
             {
                 "variableName": "preprocessing_software_details",
                 "isAbout": "items/preprocessing_software_details.jsonld",
+                "prefLabel": {
+                    "en": "preprocessing software details"
+                },
                 "isVis": "same_software == 1",
                 "requiredValue": false,
                 "allow": [
@@ -266,6 +164,9 @@
             {
                 "variableName": "preprocessing_pipeline",
                 "isAbout": "items/preprocessing_pipeline.jsonld",
+                "prefLabel": {
+                    "en": "preprocessing pipeline"
+                },
                 "isVis": true,
                 "requiredValue": false,
                 "allow": [
@@ -275,6 +176,9 @@
             {
                 "variableName": "preprocessing_pipeline_which",
                 "isAbout": "items/preprocessing_pipeline_which.jsonld",
+                "prefLabel": {
+                    "en": "preprocessing pipeline which"
+                },
                 "isVis": "preprocessing_pipeline == 1",
                 "requiredValue": false,
                 "allow": [
@@ -284,6 +188,9 @@
             {
                 "variableName": "preprocessing_pipeline_other",
                 "isAbout": "items/preprocessing_pipeline_other.jsonld",
+                "prefLabel": {
+                    "en": "preprocessing pipeline other"
+                },
                 "isVis": "preprocessing_pipeline_which == 4",
                 "requiredValue": false,
                 "allow": [
@@ -293,6 +200,9 @@
             {
                 "variableName": "preprocessing_pipeline_reference",
                 "isAbout": "items/preprocessing_pipeline_reference.jsonld",
+                "prefLabel": {
+                    "en": "preprocessing pipeline reference"
+                },
                 "isVis": "preprocessing_pipeline == 1",
                 "requiredValue": false,
                 "allow": [
@@ -302,6 +212,9 @@
             {
                 "variableName": "preprocessing_pipeline_version",
                 "isAbout": "items/preprocessing_pipeline_version.jsonld",
+                "prefLabel": {
+                    "en": "preprocessing pipeline version"
+                },
                 "isVis": "preprocessing_pipeline == 1",
                 "requiredValue": false,
                 "allow": [
@@ -311,6 +224,9 @@
             {
                 "variableName": "preprocessing_pipeline_parameters",
                 "isAbout": "items/preprocessing_pipeline_parameters.jsonld",
+                "prefLabel": {
+                    "en": "preprocessing pipeline parameters"
+                },
                 "isVis": "preprocessing_pipeline == 1",
                 "requiredValue": false,
                 "allow": [
@@ -320,6 +236,9 @@
             {
                 "variableName": "offline_filters",
                 "isAbout": "items/offline_filters.jsonld",
+                "prefLabel": {
+                    "en": "offline filters"
+                },
                 "isVis": true,
                 "requiredValue": false,
                 "allow": [
@@ -329,6 +248,9 @@
             {
                 "variableName": "which_filters",
                 "isAbout": "items/which_filters.jsonld",
+                "prefLabel": {
+                    "en": "which filters"
+                },
                 "isVis": "offline_filters == 1",
                 "requiredValue": false,
                 "allow": [
@@ -338,6 +260,9 @@
             {
                 "variableName": "filtering_software",
                 "isAbout": "items/filtering_software.jsonld",
+                "prefLabel": {
+                    "en": "filtering software"
+                },
                 "isVis": "!which_filters.includes(3) && same_software == 0",
                 "requiredValue": false,
                 "allow": [
@@ -347,6 +272,9 @@
             {
                 "variableName": "filter_software_details",
                 "isAbout": "items/filter_software_details.jsonld",
+                "prefLabel": {
+                    "en": "filter software details"
+                },
                 "isVis": "!which_filters.includes(3) &&  same_software == 0",
                 "requiredValue": false,
                 "allow": [
@@ -354,9 +282,36 @@
                 ]
             },
             {
-                "variableName": "offline_highpass_filter_type",
-                "isAbout": "items/offline_highpass_filter_type.jsonld",
+                "variableName": "offline_highpass_filter_impulse",
+                "isAbout": "items/offline_highpass_filter_impulse.jsonld",
+                "prefLabel": {
+                    "en": "offline highpass filter impulse"
+                },
                 "isVis": "which_filters.includes(0)",
+                "requiredValue": false,
+                "allow": [
+                    "reproschema:Skipped"
+                ]
+            },
+            {
+                "variableName": "offline_highpass_filter_family",
+                "isAbout": "items/offline_highpass_filter_family.jsonld",
+                "prefLabel": {
+                    "en": "offline highpass filter family"
+                },
+                "isVis": "which_filters.includes(0)",
+                "requiredValue": false,
+                "allow": [
+                    "reproschema:Skipped"
+                ]
+            },
+            {
+                "variableName": "offline_highpass_filter_family_other",
+                "isAbout": "items/offline_highpass_filter_family_other.jsonld",
+                "prefLabel": {
+                    "en": "offline highpass filter family other"
+                },
+                "isVis": "offline_highpass_filter_family == 4",
                 "requiredValue": false,
                 "allow": [
                     "reproschema:Skipped"
@@ -365,6 +320,9 @@
             {
                 "variableName": "offline_highpass_filter_order",
                 "isAbout": "items/offline_highpass_filter_order.jsonld",
+                "prefLabel": {
+                    "en": "offline highpass filter order"
+                },
                 "isVis": "which_filters.includes(0)",
                 "requiredValue": false,
                 "allow": [
@@ -374,6 +332,9 @@
             {
                 "variableName": "offline_highpass_filter_unit",
                 "isAbout": "items/offline_highpass_filter_unit.jsonld",
+                "prefLabel": {
+                    "en": "offline highpass filter unit"
+                },
                 "isVis": "which_filters.includes(0)",
                 "requiredValue": false,
                 "allow": [
@@ -383,6 +344,9 @@
             {
                 "variableName": "offline_highpass_filter_cutoff",
                 "isAbout": "items/offline_highpass_filter_cutoff.jsonld",
+                "prefLabel": {
+                    "en": "offline highpass filter cutoff"
+                },
                 "isVis": "which_filters.includes(0)",
                 "requiredValue": false,
                 "allow": [
@@ -392,7 +356,34 @@
             {
                 "variableName": "offline_highpass_filter_rolloff",
                 "isAbout": "items/offline_highpass_filter_rolloff.jsonld",
+                "prefLabel": {
+                    "en": "offline highpass filter rolloff"
+                },
                 "isVis": "which_filters.includes(0)",
+                "requiredValue": false,
+                "allow": [
+                    "reproschema:Skipped"
+                ]
+            },
+            {
+                "variableName": "offline_highpass_filter_additional_exists",
+                "isAbout": "items/offline_highpass_filter_additional_exists.jsonld",
+                "prefLabel": {
+                    "en": "offline highpass filter additional exists"
+                },
+                "isVis": "which_filters.includes(0)",
+                "requiredValue": false,
+                "allow": [
+                    "reproschema:Skipped"
+                ]
+            },
+            {
+                "variableName": "offline_highpass_filter_additional",
+                "isAbout": "items/offline_highpass_filter_additional.jsonld",
+                "prefLabel": {
+                    "en": "offline highpass filter additional"
+                },
+                "isVis": "which_filters.includes(0) && offline_highpass_filter_additional_exists == 1",
                 "requiredValue": false,
                 "allow": [
                     "reproschema:Skipped"
@@ -401,7 +392,34 @@
             {
                 "variableName": "offline_highpass_filter_attenuation",
                 "isAbout": "items/offline_highpass_filter_attenuation.jsonld",
-                "isVis": "which_filters.includes(0)",
+                "prefLabel": {
+                    "en": "offline highpass filter attenuation"
+                },
+                "isVis": "offline_highpass_filter_additional.includes(0)",
+                "requiredValue": false,
+                "allow": [
+                    "reproschema:Skipped"
+                ]
+            },
+            {
+                "variableName": "offline_highpass_filter_transition",
+                "isAbout": "items/offline_highpass_filter_transition.jsonld",
+                "prefLabel": {
+                    "en": "offline highpass filter transition"
+                },
+                "isVis": "offline_highpass_filter_additional.includes(1)",
+                "requiredValue": false,
+                "allow": [
+                    "reproschema:Skipped"
+                ]
+            },
+            {
+                "variableName": "offline_highpass_filter_ripple",
+                "isAbout": "items/offline_highpass_filter_ripple.jsonld",
+                "prefLabel": {
+                    "en": "offline highpass filter ripple"
+                },
+                "isVis": "offline_highpass_filter_additional.includes(2)",
                 "requiredValue": false,
                 "allow": [
                     "reproschema:Skipped"
@@ -410,16 +428,70 @@
             {
                 "variableName": "offline_highpass_filter_direction",
                 "isAbout": "items/offline_highpass_filter_direction.jsonld",
-                "isVis": "which_filters.includes(0)",
+                "prefLabel": {
+                    "en": "offline highpass filter direction"
+                },
+                "isVis": "offline_highpass_filter_additional.includes(3)",
                 "requiredValue": false,
                 "allow": [
                     "reproschema:Skipped"
                 ]
             },
             {
-                "variableName": "offline_lowpass_filter_type",
-                "isAbout": "items/offline_lowpass_filter_type.jsonld",
+                "variableName": "offline_highpass_filter_delay",
+                "isAbout": "items/offline_highpass_filter_delay.jsonld",
+                "prefLabel": {
+                    "en": "offline highpass filter delay"
+                },
+                "isVis": "offline_highpass_filter_additional.includes(4)",
+                "requiredValue": false,
+                "allow": [
+                    "reproschema:Skipped"
+                ]
+            },
+            {
+                "variableName": "offline_highpass_filter_other",
+                "isAbout": "items/offline_highpass_filter_other.jsonld",
+                "prefLabel": {
+                    "en": "offline highpass filter other"
+                },
+                "isVis": "offline_highpass_filter_additional.includes(5)",
+                "requiredValue": false,
+                "allow": [
+                    "reproschema:Skipped"
+                ]
+            },
+            {
+                "variableName": "offline_lowpass_filter_impulse",
+                "isAbout": "items/offline_lowpass_filter_impulse.jsonld",
+                "prefLabel": {
+                    "en": "offline lowpass filter impulse"
+                },
                 "isVis": "which_filters.includes(1)",
+                "requiredValue": false,
+                "allow": [
+                    "reproschema:Skipped"
+                ]
+            },
+            {
+                "variableName": "offline_lowpass_filter_family",
+                "isAbout": "items/offline_lowpass_filter_family.jsonld",
+                "prefLabel": {
+                    "en": "offline lowpass filter family"
+                },
+                "isVis": "which_filters.includes(1)",
+                "requiredValue": false,
+                "allow": [
+                    "reproschema:Skipped"
+                ]
+            },
+            {
+                "variableName": "offline_lowpass_filter_family_other",
+                "isAbout": "items/offline_lowpass_filter_family_other.jsonld",
+                "prefLabel": {
+                    "en": "offline lowpass filter family other"
+                },
+                "isVis": "offline_lowpass_filter_family == 4",
                 "requiredValue": false,
                 "allow": [
                     "reproschema:Skipped"
@@ -428,6 +500,9 @@
             {
                 "variableName": "offline_lowpass_filter_order",
                 "isAbout": "items/offline_lowpass_filter_order.jsonld",
+                "prefLabel": {
+                    "en": "offline lowpass filter order"
+                },
                 "isVis": "which_filters.includes(1)",
                 "requiredValue": false,
                 "allow": [
@@ -437,6 +512,9 @@
             {
                 "variableName": "offline_lowpass_filter_unit",
                 "isAbout": "items/offline_lowpass_filter_unit.jsonld",
+                "prefLabel": {
+                    "en": "offline lowpass filter unit"
+                },
                 "isVis": "which_filters.includes(1)",
                 "requiredValue": false,
                 "allow": [
@@ -446,6 +524,9 @@
             {
                 "variableName": "offline_lowpass_filter_cutoff",
                 "isAbout": "items/offline_lowpass_filter_cutoff.jsonld",
+                "prefLabel": {
+                    "en": "offline lowpass filter cutoff"
+                },
                 "isVis": "which_filters.includes(1)",
                 "requiredValue": false,
                 "allow": [
@@ -455,7 +536,34 @@
             {
                 "variableName": "offline_lowpass_filter_rolloff",
                 "isAbout": "items/offline_lowpass_filter_rolloff.jsonld",
+                "prefLabel": {
+                    "en": "offline lowpass filter rolloff"
+                },
                 "isVis": "which_filters.includes(1)",
+                "requiredValue": false,
+                "allow": [
+                    "reproschema:Skipped"
+                ]
+            },
+            {
+                "variableName": "offline_lowpass_filter_additional_exists",
+                "isAbout": "items/offline_lowpass_filter_additional_exists.jsonld",
+                "prefLabel": {
+                    "en": "offline lowpass filter additional exists"
+                },
+                "isVis": "which_filters.includes(1)",
+                "requiredValue": false,
+                "allow": [
+                    "reproschema:Skipped"
+                ]
+            },
+            {
+                "variableName": "offline_lowpass_filter_additional",
+                "isAbout": "items/offline_lowpass_filter_additional.jsonld",
+                "prefLabel": {
+                    "en": "offline lowpass filter additional"
+                },
+                "isVis": "which_filters.includes(1) && offline_lowpass_filter_additional_exists == 1",
                 "requiredValue": false,
                 "allow": [
                     "reproschema:Skipped"
@@ -464,7 +572,34 @@
             {
                 "variableName": "offline_lowpass_filter_attenuation",
                 "isAbout": "items/offline_lowpass_filter_attenuation.jsonld",
-                "isVis": "which_filters.includes(1)",
+                "prefLabel": {
+                    "en": "offline lowpass filter attenuation"
+                },
+                "isVis": "offline_lowpass_filter_additional.includes(0)",
+                "requiredValue": false,
+                "allow": [
+                    "reproschema:Skipped"
+                ]
+            },
+            {
+                "variableName": "offline_lowpass_filter_transition",
+                "isAbout": "items/offline_lowpass_filter_transition.jsonld",
+                "prefLabel": {
+                    "en": "offline lowpass filter transition"
+                },
+                "isVis": "offline_lowpass_filter_additional.includes(1)",
+                "requiredValue": false,
+                "allow": [
+                    "reproschema:Skipped"
+                ]
+            },
+            {
+                "variableName": "offline_lowpass_filter_ripple",
+                "isAbout": "items/offline_lowpass_filter_ripple.jsonld",
+                "prefLabel": {
+                    "en": "offline lowpass filter ripple"
+                },
+                "isVis": "offline_lowpass_filter_additional.includes(2)",
                 "requiredValue": false,
                 "allow": [
                     "reproschema:Skipped"
@@ -473,7 +608,34 @@
             {
                 "variableName": "offline_lowpass_filter_direction",
                 "isAbout": "items/offline_lowpass_filter_direction.jsonld",
-                "isVis": "which_filters.includes(1)",
+                "prefLabel": {
+                    "en": "offline lowpass filter direction"
+                },
+                "isVis": "offline_lowpass_filter_additional.includes(3)",
+                "requiredValue": false,
+                "allow": [
+                    "reproschema:Skipped"
+                ]
+            },
+            {
+                "variableName": "offline_lowpass_filter_delay",
+                "isAbout": "items/offline_lowpass_filter_delay.jsonld",
+                "prefLabel": {
+                    "en": "offline lowpass filter delay"
+                },
+                "isVis": "offline_lowpass_filter_additional.includes(4)",
+                "requiredValue": false,
+                "allow": [
+                    "reproschema:Skipped"
+                ]
+            },
+            {
+                "variableName": "offline_lowpass_filter_other",
+                "isAbout": "items/offline_lowpass_filter_other.jsonld",
+                "prefLabel": {
+                    "en": "offline lowpass filter other"
+                },
+                "isVis": "offline_lowpass_filter_additional.includes(5)",
                 "requiredValue": false,
                 "allow": [
                     "reproschema:Skipped"
@@ -482,6 +644,9 @@
             {
                 "variableName": "offline_notch_filter_type",
                 "isAbout": "items/offline_notch_filter_type.jsonld",
+                "prefLabel": {
+                    "en": "offline notch filter type"
+                },
                 "isVis": "which_filters.includes(2)",
                 "requiredValue": false,
                 "allow": [
@@ -491,7 +656,70 @@
             {
                 "variableName": "offline_notch_filter_type_details",
                 "isAbout": "items/offline_notch_filter_type_details.jsonld",
+                "prefLabel": {
+                    "en": "offline notch filter type details"
+                },
                 "isVis": "offline_notch_filter_type == 2",
+                "requiredValue": false,
+                "allow": [
+                    "reproschema:Skipped"
+                ]
+            },
+            {
+                "variableName": "offline_notch_filter_width",
+                "isAbout": "items/offline_notch_filter_width.jsonld",
+                "prefLabel": {
+                    "en": "offline notch filter width"
+                },
+                "isVis": "which_filters.includes(2)",
+                "requiredValue": false,
+                "allow": [
+                    "reproschema:Skipped"
+                ]
+            },
+            {
+                "variableName": "offline_notch_filter_width_distance",
+                "isAbout": "items/offline_notch_filter_width_distance.jsonld",
+                "prefLabel": {
+                    "en": "offline notch filter width distance"
+                },
+                "isVis": "offline_notch_filter_width == 0",
+                "requiredValue": false,
+                "allow": [
+                    "reproschema:Skipped"
+                ]
+            },
+            {
+                "variableName": "offline_notch_filter_width_number_frequencies",
+                "isAbout": "items/offline_notch_filter_width_number_frequencies.jsonld",
+                "prefLabel": {
+                    "en": "offline notch filter width number frequencies"
+                },
+                "isVis": "offline_notch_filter_width == 1",
+                "requiredValue": false,
+                "allow": [
+                    "reproschema:Skipped"
+                ]
+            },
+            {
+                "variableName": "offline_notch_filter_harmonics",
+                "isAbout": "items/offline_notch_filter_harmonics.jsonld",
+                "prefLabel": {
+                    "en": "offline notch filter harmonics"
+                },
+                "isVis": "which_filters.includes(2)",
+                "requiredValue": false,
+                "allow": [
+                    "reproschema:Skipped"
+                ]
+            },
+            {
+                "variableName": "offline_notch_filter_harmonics_which",
+                "isAbout": "items/offline_notch_filter_harmonics_which.jsonld",
+                "prefLabel": {
+                    "en": "offline notch filter harmonics which"
+                },
+                "isVis": "offline_notch_filter_harmonics == 1",
                 "requiredValue": false,
                 "allow": [
                     "reproschema:Skipped"
@@ -500,6 +728,9 @@
             {
                 "variableName": "downsample_data",
                 "isAbout": "items/downsample_data.jsonld",
+                "prefLabel": {
+                    "en": "downsample data"
+                },
                 "isVis": true,
                 "requiredValue": false,
                 "allow": [
@@ -509,6 +740,9 @@
             {
                 "variableName": "downsample_software",
                 "isAbout": "items/downsample_software.jsonld",
+                "prefLabel": {
+                    "en": "downsample software"
+                },
                 "isVis": "downsample_data == 1 && same_software == 0",
                 "requiredValue": false,
                 "allow": [
@@ -518,6 +752,9 @@
             {
                 "variableName": "downsample_software_details",
                 "isAbout": "items/downsample_software_details.jsonld",
+                "prefLabel": {
+                    "en": "downsample software details"
+                },
                 "isVis": "downsample_data == 1 && same_software == 0",
                 "requiredValue": false,
                 "allow": [
@@ -527,6 +764,9 @@
             {
                 "variableName": "new_sampling_frequency",
                 "isAbout": "items/new_sampling_frequency.jsonld",
+                "prefLabel": {
+                    "en": "new sampling frequency"
+                },
                 "isVis": "downsample_data == 1",
                 "requiredValue": false,
                 "allow": [
@@ -536,6 +776,9 @@
             {
                 "variableName": "offline_reference",
                 "isAbout": "items/offline_reference.jsonld",
+                "prefLabel": {
+                    "en": "offline reference"
+                },
                 "isVis": true,
                 "requiredValue": false,
                 "allow": [
@@ -545,6 +788,9 @@
             {
                 "variableName": "rereference_software",
                 "isAbout": "items/rereference_software.jsonld",
+                "prefLabel": {
+                    "en": "rereference software"
+                },
                 "isVis": "offline_reference == 1 && same_software == 0",
                 "requiredValue": false,
                 "allow": [
@@ -554,6 +800,9 @@
             {
                 "variableName": "rereference_software_details",
                 "isAbout": "items/rereference_software_details.jsonld",
+                "prefLabel": {
+                    "en": "rereference software details"
+                },
                 "isVis": "offline_reference == 1 && same_software == 0",
                 "requiredValue": false,
                 "allow": [
@@ -563,6 +812,9 @@
             {
                 "variableName": "new_reference",
                 "isAbout": "items/new_reference.jsonld",
+                "prefLabel": {
+                    "en": "new reference"
+                },
                 "isVis": "offline_reference == 1",
                 "requiredValue": false,
                 "allow": [
@@ -572,7 +824,118 @@
             {
                 "variableName": "new_reference_other",
                 "isAbout": "items/new_reference_other.jsonld",
+                "prefLabel": {
+                    "en": "new reference other"
+                },
                 "isVis": "new_reference == 5",
+                "requiredValue": false,
+                "allow": [
+                    "reproschema:Skipped"
+                ]
+            },
+            {
+                "variableName": "offline_reference_VEOG",
+                "isAbout": "items/offline_reference_VEOG.jsonld",
+                "prefLabel": {
+                    "en": "offline reference VEOG"
+                },
+                "isVis": true,
+                "requiredValue": false,
+                "allow": [
+                    "reproschema:Skipped"
+                ]
+            },
+            {
+                "variableName": "new_reference_VEOG",
+                "isAbout": "items/new_reference_VEOG.jsonld",
+                "prefLabel": {
+                    "en": "new reference VEOG"
+                },
+                "isVis": "offline_reference_VEOG == 1",
+                "requiredValue": false,
+                "allow": [
+                    "reproschema:Skipped"
+                ]
+            },
+            {
+                "variableName": "new_reference_VEOG_other",
+                "isAbout": "items/new_reference_VEOG_other.jsonld",
+                "prefLabel": {
+                    "en": "new reference VEOG other"
+                },
+                "isVis": "new_reference_VEOG == 2",
+                "requiredValue": false,
+                "allow": [
+                    "reproschema:Skipped"
+                ]
+            },
+            {
+                "variableName": "offline_reference_HEOG",
+                "isAbout": "items/offline_reference_HEOG.jsonld",
+                "prefLabel": {
+                    "en": "offline reference HEOG"
+                },
+                "isVis": true,
+                "requiredValue": false,
+                "allow": [
+                    "reproschema:Skipped"
+                ]
+            },
+            {
+                "variableName": "new_reference_HEOG",
+                "isAbout": "items/new_reference_HEOG.jsonld",
+                "prefLabel": {
+                    "en": "new reference HEOG"
+                },
+                "isVis": "offline_reference_HEOG == 1",
+                "requiredValue": false,
+                "allow": [
+                    "reproschema:Skipped"
+                ]
+            },
+            {
+                "variableName": "new_reference_HEOG_other",
+                "isAbout": "items/new_reference_HEOG_other.jsonld",
+                "prefLabel": {
+                    "en": "new reference HEOG other"
+                },
+                "isVis": "new_reference_HEOG == 3",
+                "requiredValue": false,
+                "allow": [
+                    "reproschema:Skipped"
+                ]
+            },
+            {
+                "variableName": "offline_reference_non-EEG",
+                "isAbout": "items/offline_reference_non-EEG.jsonld",
+                "prefLabel": {
+                    "en": "offline reference non-EEG"
+                },
+                "isVis": true,
+                "requiredValue": false,
+                "allow": [
+                    "reproschema:Skipped"
+                ]
+            },
+            {
+                "variableName": "new_reference_non-EEG",
+                "isAbout": "items/new_reference_non-EEG.jsonld",
+                "prefLabel": {
+                    "en": "new reference non-EEG"
+                },
+                "isVis": "offline_reference_non-EEG == 1",
+                "requiredValue": false,
+                "allow": [
+                    "reproschema:Skipped"
+                ]
+            },
+            {
+                "variableName": "new_reference_non-EEG_other",
+                "isAbout": "items/new_reference_non-EEG_other.jsonld",
+                "prefLabel": {
+                    "en": "new reference non-EEG other"
+                },
+                "isVis": "new_reference_non-EEG == 1",
                 "requiredValue": false,
                 "allow": [
                     "reproschema:Skipped"
@@ -581,6 +944,9 @@
             {
                 "variableName": "artifact_steps_number",
                 "isAbout": "items/artifact_steps_number.jsonld",
+                "prefLabel": {
+                    "en": "artifact steps number"
+                },
                 "isVis": true,
                 "requiredValue": false,
                 "allow": [
@@ -590,6 +956,9 @@
             {
                 "variableName": "artifact_1",
                 "isAbout": "items/artifact_1.jsonld",
+                "prefLabel": {
+                    "en": "artifact 1"
+                },
                 "isVis": "artifact_steps_number >= 1",
                 "requiredValue": false,
                 "allow": [
@@ -599,6 +968,9 @@
             {
                 "variableName": "artifact_1_software",
                 "isAbout": "items/artifact_1_software.jsonld",
+                "prefLabel": {
+                    "en": "artifact 1 software"
+                },
                 "isVis": "artifact_steps_number >= 1 && same_software == 0",
                 "requiredValue": false,
                 "allow": [
@@ -608,6 +980,9 @@
             {
                 "variableName": "artifact_1_software_details",
                 "isAbout": "items/artifact_1_software_details.jsonld",
+                "prefLabel": {
+                    "en": "artifact 1 software details"
+                },
                 "isVis": "artifact_steps_number >= 1&& same_software == 0",
                 "requiredValue": false,
                 "allow": [
@@ -617,6 +992,9 @@
             {
                 "variableName": "artifact_1_reject_what",
                 "isAbout": "items/artifact_1_reject_what.jsonld",
+                "prefLabel": {
+                    "en": "artifact 1 reject what"
+                },
                 "isVis": "artifact_steps_number >= 1 && artifact_1 == 0",
                 "requiredValue": false,
                 "allow": [
@@ -626,6 +1004,9 @@
             {
                 "variableName": "artifact_1_reject_method",
                 "isAbout": "items/artifact_1_reject_method.jsonld",
+                "prefLabel": {
+                    "en": "artifact 1 reject method"
+                },
                 "isVis": "artifact_steps_number >= 1 && artifact_1 == 0",
                 "requiredValue": false,
                 "allow": [
@@ -635,6 +1016,9 @@
             {
                 "variableName": "artifact_1_reject_visual",
                 "isAbout": "items/artifact_1_reject_visual.jsonld",
+                "prefLabel": {
+                    "en": "artifact 1 reject visual"
+                },
                 "isVis": "artifact_steps_number >= 1 && artifact_1_reject_method == 0",
                 "requiredValue": false,
                 "allow": [
@@ -644,6 +1028,9 @@
             {
                 "variableName": "artifact_1_reject_visual_other",
                 "isAbout": "items/artifact_1_reject_visual_other.jsonld",
+                "prefLabel": {
+                    "en": "artifact 1 reject visual other"
+                },
                 "isVis": "artifact_1_reject_visual.includes(7)",
                 "requiredValue": false,
                 "allow": [
@@ -653,6 +1040,9 @@
             {
                 "variableName": "artifact_1_reject_numerical",
                 "isAbout": "items/artifact_1_reject_numerical.jsonld",
+                "prefLabel": {
+                    "en": "artifact 1 reject numerical"
+                },
                 "isVis": "artifact_steps_number >= 1 && artifact_1_reject_method == 1",
                 "requiredValue": false,
                 "allow": [
@@ -662,6 +1052,9 @@
             {
                 "variableName": "artifact_1_reject_other",
                 "isAbout": "items/artifact_1_reject_other.jsonld",
+                "prefLabel": {
+                    "en": "artifact 1 reject other"
+                },
                 "isVis": "artifact_steps_number >= 1 && artifact_1_reject_method == 2",
                 "requiredValue": false,
                 "allow": [
@@ -671,6 +1064,9 @@
             {
                 "variableName": "artifact_1_correct_method",
                 "isAbout": "items/artifact_1_correct_method.jsonld",
+                "prefLabel": {
+                    "en": "artifact 1 correct method"
+                },
                 "isVis": "artifact_steps_number >= 1 && artifact_1 == 1",
                 "requiredValue": false,
                 "allow": [
@@ -680,6 +1076,9 @@
             {
                 "variableName": "artifact_1_correct_reference",
                 "isAbout": "items/artifact_1_correct_reference.jsonld",
+                "prefLabel": {
+                    "en": "artifact 1 correct reference"
+                },
                 "isVis": "artifact_steps_number >= 1 && artifact_1 == 1",
                 "requiredValue": false,
                 "allow": [
@@ -689,6 +1088,9 @@
             {
                 "variableName": "artifact_1_correct_details",
                 "isAbout": "items/artifact_1_correct_details.jsonld",
+                "prefLabel": {
+                    "en": "artifact 1 correct details"
+                },
                 "isVis": "artifact_steps_number >= 1 && artifact_1 == 1",
                 "requiredValue": false,
                 "allow": [
@@ -696,8 +1098,11 @@
                 ]
             },
             {
-                "variableName": "artifact_1_remove_electrode_where",
-                "isAbout": "items/artifact_1_remove_electrode_where.jsonld",
+                "variableName": "artifact_1_remove_channel_where",
+                "isAbout": "items/artifact_1_remove_channel_where.jsonld",
+                "prefLabel": {
+                    "en": "artifact 1 remove channel where"
+                },
                 "isVis": "artifact_steps_number >= 1 && artifact_1 == 2",
                 "requiredValue": false,
                 "allow": [
@@ -705,26 +1110,47 @@
                 ]
             },
             {
-                "variableName": "artifact_1_remove_electrode_everyone_list",
-                "isAbout": "items/artifact_1_remove_electrode_everyone_list.jsonld",
-                "isVis": "artifact_steps_number >= 1 && artifact_1 == 2 && artifact_1_remove_electrode_where ==2",
+                "variableName": "artifact_1_remove_channel_if_for_all",
+                "isAbout": "items/artifact_1_remove_channel_if_for_all.jsonld",
+                "prefLabel": {
+                    "en": "artifact 1 remove channel if for all"
+                },
+                "isVis": "artifact_steps_number >= 1 && artifact_1 == 2 && artifact_1_remove_channel_where == 2",
                 "requiredValue": false,
                 "allow": [
                     "reproschema:Skipped"
                 ]
             },
             {
-                "variableName": "artifact_1_remove_electrode_percent",
-                "isAbout": "items/artifact_1_remove_electrode_percent.jsonld",
-                "isVis": "artifact_steps_number >= 1 && artifact_1 == 2 && artifact_1_remove_electrode_where ==2",
+                "variableName": "artifact_1_remove_channel_everyone_list",
+                "isAbout": "items/artifact_1_remove_channel_everyone_list.jsonld",
+                "prefLabel": {
+                    "en": "artifact 1 remove channel everyone list"
+                },
+                "isVis": "artifact_1_remove_channel_if_for_all == 1",
                 "requiredValue": false,
                 "allow": [
                     "reproschema:Skipped"
                 ]
             },
             {
-                "variableName": "artifact_1_remove_electrode_method",
-                "isAbout": "items/artifact_1_remove_electrode_method.jsonld",
+                "variableName": "artifact_1_remove_channel_percent",
+                "isAbout": "items/artifact_1_remove_channel_percent.jsonld",
+                "prefLabel": {
+                    "en": "artifact 1 remove channel percent"
+                },
+                "isVis": "artifact_steps_number >= 1 && artifact_1 == 2 && artifact_1_remove_channel_where == 2",
+                "requiredValue": false,
+                "allow": [
+                    "reproschema:Skipped"
+                ]
+            },
+            {
+                "variableName": "artifact_1_remove_channel_method",
+                "isAbout": "items/artifact_1_remove_channel_method.jsonld",
+                "prefLabel": {
+                    "en": "artifact 1 remove channel method"
+                },
                 "isVis": "artifact_steps_number >= 1 && artifact_1 == 2",
                 "requiredValue": false,
                 "allow": [
@@ -732,36 +1158,48 @@
                 ]
             },
             {
-                "variableName": "artifact_1_remove_electrode_visual",
-                "isAbout": "items/artifact_1_remove_electrode_visual.jsonld",
-                "isVis": "artifact_steps_number >= 1 && artifact_1_remove_electrode_method == 0",
+                "variableName": "artifact_1_remove_channel_visual",
+                "isAbout": "items/artifact_1_remove_channel_visual.jsonld",
+                "prefLabel": {
+                    "en": "artifact 1 remove channel visual"
+                },
+                "isVis": "artifact_steps_number >= 1 && artifact_1_remove_channel_method == 0",
                 "requiredValue": false,
                 "allow": [
                     "reproschema:Skipped"
                 ]
             },
             {
-                "variableName": "artifact_1_remove_electrode_visual_other",
-                "isAbout": "items/artifact_1_remove_electrode_visual_other.jsonld",
-                "isVis": "artifact_steps_number >= 1 && artifact_1_remove_electrode_visual == 6",
+                "variableName": "artifact_1_remove_channel_visual_other",
+                "isAbout": "items/artifact_1_remove_channel_visual_other.jsonld",
+                "prefLabel": {
+                    "en": "artifact 1 remove channel visual other"
+                },
+                "isVis": "artifact_steps_number >= 1 && artifact_1_remove_channel_visual == 6",
                 "requiredValue": false,
                 "allow": [
                     "reproschema:Skipped"
                 ]
             },
             {
-                "variableName": "artifact_1_remove_electrode_numerical",
-                "isAbout": "items/artifact_1_remove_electrode_numerical.jsonld",
-                "isVis": "artifact_steps_number >= 1 && artifact_1_remove_electrode_method == 1",
+                "variableName": "artifact_1_remove_channel_numerical",
+                "isAbout": "items/artifact_1_remove_channel_numerical.jsonld",
+                "prefLabel": {
+                    "en": "artifact 1 remove channel numerical"
+                },
+                "isVis": "artifact_steps_number >= 1 && artifact_1_remove_channel_method == 1",
                 "requiredValue": false,
                 "allow": [
                     "reproschema:Skipped"
                 ]
             },
             {
-                "variableName": "artifact_1_remove_electrode_other",
-                "isAbout": "items/artifact_1_remove_electrode_other.jsonld",
-                "isVis": "artifact_steps_number >= 1 && artifact_1_remove_electrode_method == 2",
+                "variableName": "artifact_1_remove_channel_other",
+                "isAbout": "items/artifact_1_remove_channel_other.jsonld",
+                "prefLabel": {
+                    "en": "artifact 1 remove channel other"
+                },
+                "isVis": "artifact_steps_number >= 1 && artifact_1_remove_channel_method == 2",
                 "requiredValue": false,
                 "allow": [
                     "reproschema:Skipped"
@@ -770,6 +1208,9 @@
             {
                 "variableName": "artifact_1_interpolate_which",
                 "isAbout": "items/artifact_1_interpolate_which.jsonld",
+                "prefLabel": {
+                    "en": "artifact 1 interpolate which"
+                },
                 "isVis": "artifact_steps_number >= 1 && artifact_1 == 3",
                 "requiredValue": false,
                 "allow": [
@@ -779,6 +1220,9 @@
             {
                 "variableName": "artifact_1_interpolate_how",
                 "isAbout": "items/artifact_1_interpolate_how.jsonld",
+                "prefLabel": {
+                    "en": "artifact 1 interpolate how"
+                },
                 "isVis": "artifact_steps_number >= 1 && artifact_1 == 3",
                 "requiredValue": false,
                 "allow": [
@@ -788,6 +1232,9 @@
             {
                 "variableName": "artifact_1_automated_reference",
                 "isAbout": "items/artifact_1_automated_reference.jsonld",
+                "prefLabel": {
+                    "en": "artifact 1 automated reference"
+                },
                 "isVis": "artifact_steps_number >= 1 && artifact_1 == 4",
                 "requiredValue": false,
                 "allow": [
@@ -797,1285 +1244,10 @@
             {
                 "variableName": "artifact_1_automated_parameters",
                 "isAbout": "items/artifact_1_automated_parameters.jsonld",
+                "prefLabel": {
+                    "en": "artifact 1 automated parameters"
+                },
                 "isVis": "artifact_steps_number >= 1 && artifact_1 == 4",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_2",
-                "isAbout": "items/artifact_2.jsonld",
-                "isVis": "artifact_steps_number >= 2",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_2_software",
-                "isAbout": "items/artifact_2_software.jsonld",
-                "isVis": "artifact_steps_number >= 2 && same_software == 0",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_2_software_details",
-                "isAbout": "items/artifact_2_software_details.jsonld",
-                "isVis": "artifact_steps_number >= 2&& same_software == 0",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_2_reject_what",
-                "isAbout": "items/artifact_2_reject_what.jsonld",
-                "isVis": "artifact_steps_number >= 2 && artifact_2 == 0",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_2_reject_method",
-                "isAbout": "items/artifact_2_reject_method.jsonld",
-                "isVis": "artifact_steps_number >= 2 && artifact_2 == 0",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_2_reject_visual",
-                "isAbout": "items/artifact_2_reject_visual.jsonld",
-                "isVis": "artifact_steps_number >= 2 && artifact_2_reject_method == 0",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_2_reject_visual_other",
-                "isAbout": "items/artifact_2_reject_visual_other.jsonld",
-                "isVis": "artifact_2_reject_visual.includes(7)",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_2_reject_numerical",
-                "isAbout": "items/artifact_2_reject_numerical.jsonld",
-                "isVis": "artifact_steps_number >= 2 && artifact_2_reject_method == 1",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_2_reject_other",
-                "isAbout": "items/artifact_2_reject_other.jsonld",
-                "isVis": "artifact_steps_number >= 2 && artifact_2_reject_method == 2",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_2_correct_method",
-                "isAbout": "items/artifact_2_correct_method.jsonld",
-                "isVis": "artifact_steps_number >= 2 && artifact_2 == 1",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_2_correct_reference",
-                "isAbout": "items/artifact_2_correct_reference.jsonld",
-                "isVis": "artifact_steps_number >= 2 && artifact_2 == 1",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_2_correct_details",
-                "isAbout": "items/artifact_2_correct_details.jsonld",
-                "isVis": "artifact_steps_number >= 2 && artifact_2 == 1",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_2_remove_electrode_where",
-                "isAbout": "items/artifact_2_remove_electrode_where.jsonld",
-                "isVis": "artifact_steps_number >= 2 && artifact_2 == 2",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_2_remove_electrode_everyone_list",
-                "isAbout": "items/artifact_2_remove_electrode_everyone_list.jsonld",
-                "isVis": "artifact_steps_number >= 1 && artifact_2 == 2 && artifact_2_remove_electrode_where ==2",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_2_remove_electrode_percent",
-                "isAbout": "items/artifact_2_remove_electrode_percent.jsonld",
-                "isVis": "artifact_steps_number >= 1 && artifact_2 == 2 && artifact_2_remove_electrode_where ==2",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_2_remove_electrode_method",
-                "isAbout": "items/artifact_2_remove_electrode_method.jsonld",
-                "isVis": "artifact_steps_number >= 2 && artifact_2 == 2",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_2_remove_electrode_visual",
-                "isAbout": "items/artifact_2_remove_electrode_visual.jsonld",
-                "isVis": "artifact_steps_number >= 2 && artifact_2_remove_electrode_method == 0",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_2_remove_electrode_visual_other",
-                "isAbout": "items/artifact_2_remove_electrode_visual_other.jsonld",
-                "isVis": "artifact_steps_number >= 2 && artifact_2_remove_electrode_visual == 6",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_2_remove_electrode_numerical",
-                "isAbout": "items/artifact_2_remove_electrode_numerical.jsonld",
-                "isVis": "artifact_steps_number >= 2 && artifact_2_remove_electrode_method == 1",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_2_remove_electrode_other",
-                "isAbout": "items/artifact_2_remove_electrode_other.jsonld",
-                "isVis": "artifact_steps_number >= 2 && artifact_2_remove_electrode_method == 2",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_2_interpolate_which",
-                "isAbout": "items/artifact_2_interpolate_which.jsonld",
-                "isVis": "artifact_steps_number >= 2 && artifact_2 == 3",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_2_interpolate_how",
-                "isAbout": "items/artifact_2_interpolate_how.jsonld",
-                "isVis": "artifact_steps_number >= 2 && artifact_2 == 3",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_2_automated_reference",
-                "isAbout": "items/artifact_2_automated_reference.jsonld",
-                "isVis": "artifact_steps_number >= 2 && artifact_2 == 4",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_2_automated_parameters",
-                "isAbout": "items/artifact_2_automated_parameters.jsonld",
-                "isVis": "artifact_steps_number >= 2 && artifact_2 == 4",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_3",
-                "isAbout": "items/artifact_3.jsonld",
-                "isVis": "artifact_steps_number >= 3",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_3_software",
-                "isAbout": "items/artifact_3_software.jsonld",
-                "isVis": "artifact_steps_number >= 3 && same_software == 0",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_3_software_details",
-                "isAbout": "items/artifact_3_software_details.jsonld",
-                "isVis": "artifact_steps_number >= 3&& same_software == 0",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_3_reject_what",
-                "isAbout": "items/artifact_3_reject_what.jsonld",
-                "isVis": "artifact_steps_number >= 3 && artifact_3 == 0",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_3_reject_method",
-                "isAbout": "items/artifact_3_reject_method.jsonld",
-                "isVis": "artifact_steps_number >= 3 && artifact_3 == 0",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_3_reject_visual",
-                "isAbout": "items/artifact_3_reject_visual.jsonld",
-                "isVis": "artifact_steps_number >= 3 && artifact_3_reject_method == 0",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_3_reject_visual_other",
-                "isAbout": "items/artifact_3_reject_visual_other.jsonld",
-                "isVis": "artifact_3_reject_visual.includes(7)",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_3_reject_numerical",
-                "isAbout": "items/artifact_3_reject_numerical.jsonld",
-                "isVis": "artifact_steps_number >= 3 && artifact_3_reject_method == 1",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_3_reject_other",
-                "isAbout": "items/artifact_3_reject_other.jsonld",
-                "isVis": "artifact_steps_number >= 3 && artifact_3_reject_method == 2",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_3_correct_method",
-                "isAbout": "items/artifact_3_correct_method.jsonld",
-                "isVis": "artifact_steps_number >= 3 && artifact_3 == 1",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_3_correct_reference",
-                "isAbout": "items/artifact_3_correct_reference.jsonld",
-                "isVis": "artifact_steps_number >= 3 && artifact_3 == 1",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_3_correct_details",
-                "isAbout": "items/artifact_3_correct_details.jsonld",
-                "isVis": "artifact_steps_number >= 3 && artifact_3 == 1",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_3_remove_electrode_where",
-                "isAbout": "items/artifact_3_remove_electrode_where.jsonld",
-                "isVis": "artifact_steps_number >= 3 && artifact_3 == 2",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_3_remove_electrode_everyone_list",
-                "isAbout": "items/artifact_3_remove_electrode_everyone_list.jsonld",
-                "isVis": "artifact_steps_number >= 1 && artifact_3 == 2 && artifact_3_remove_electrode_where ==2",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_3_remove_electrode_percent",
-                "isAbout": "items/artifact_3_remove_electrode_percent.jsonld",
-                "isVis": "artifact_steps_number >= 1 && artifact_3 == 2 && artifact_3_remove_electrode_where ==2",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_3_remove_electrode_method",
-                "isAbout": "items/artifact_3_remove_electrode_method.jsonld",
-                "isVis": "artifact_steps_number >= 3 && artifact_3 == 2",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_3_remove_electrode_visual",
-                "isAbout": "items/artifact_3_remove_electrode_visual.jsonld",
-                "isVis": "artifact_steps_number >= 3 && artifact_3_remove_electrode_method == 0",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_3_remove_electrode_visual_other",
-                "isAbout": "items/artifact_3_remove_electrode_visual_other.jsonld",
-                "isVis": "artifact_steps_number >= 3 && artifact_3_remove_electrode_visual == 6",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_3_remove_electrode_numerical",
-                "isAbout": "items/artifact_3_remove_electrode_numerical.jsonld",
-                "isVis": "artifact_steps_number >= 3 && artifact_3_remove_electrode_method == 1",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_3_remove_electrode_other",
-                "isAbout": "items/artifact_3_remove_electrode_other.jsonld",
-                "isVis": "artifact_steps_number >= 3 && artifact_3_remove_electrode_method == 2",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_3_interpolate_which",
-                "isAbout": "items/artifact_3_interpolate_which.jsonld",
-                "isVis": "artifact_steps_number >= 3 && artifact_3 == 3",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_3_interpolate_how",
-                "isAbout": "items/artifact_3_interpolate_how.jsonld",
-                "isVis": "artifact_steps_number >= 3 && artifact_3 == 3",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_3_automated_reference",
-                "isAbout": "items/artifact_3_automated_reference.jsonld",
-                "isVis": "artifact_steps_number >= 3 && artifact_3 == 4",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_3_automated_parameters",
-                "isAbout": "items/artifact_3_automated_parameters.jsonld",
-                "isVis": "artifact_steps_number >= 3 && artifact_3 == 4",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_4",
-                "isAbout": "items/artifact_4.jsonld",
-                "isVis": "artifact_steps_number >= 4",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_4_software",
-                "isAbout": "items/artifact_4_software.jsonld",
-                "isVis": "artifact_steps_number >= 4 && same_software == 0",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_4_software_details",
-                "isAbout": "items/artifact_4_software_details.jsonld",
-                "isVis": "artifact_steps_number >= 4&& same_software == 0",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_4_reject_what",
-                "isAbout": "items/artifact_4_reject_what.jsonld",
-                "isVis": "artifact_steps_number >= 4 && artifact_4 == 0",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_4_reject_method",
-                "isAbout": "items/artifact_4_reject_method.jsonld",
-                "isVis": "artifact_steps_number >= 4 && artifact_4 == 0",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_4_reject_visual",
-                "isAbout": "items/artifact_4_reject_visual.jsonld",
-                "isVis": "artifact_steps_number >= 4 && artifact_4_reject_method == 0",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_4_reject_visual_other",
-                "isAbout": "items/artifact_4_reject_visual_other.jsonld",
-                "isVis": "artifact_4_reject_visual.includes(7)",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_4_reject_numerical",
-                "isAbout": "items/artifact_4_reject_numerical.jsonld",
-                "isVis": "artifact_steps_number >= 4 && artifact_4_reject_method == 1",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_4_reject_other",
-                "isAbout": "items/artifact_4_reject_other.jsonld",
-                "isVis": "artifact_steps_number >= 4 && artifact_4_reject_method == 2",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_4_correct_method",
-                "isAbout": "items/artifact_4_correct_method.jsonld",
-                "isVis": "artifact_steps_number >= 4 && artifact_4 == 1",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_4_correct_reference",
-                "isAbout": "items/artifact_4_correct_reference.jsonld",
-                "isVis": "artifact_steps_number >= 4 && artifact_4 == 1",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_4_correct_details",
-                "isAbout": "items/artifact_4_correct_details.jsonld",
-                "isVis": "artifact_steps_number >= 4 && artifact_4 == 1",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_4_remove_electrode_where",
-                "isAbout": "items/artifact_4_remove_electrode_where.jsonld",
-                "isVis": "artifact_steps_number >= 4 && artifact_4 == 2",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_4_remove_electrode_everyone_list",
-                "isAbout": "items/artifact_4_remove_electrode_everyone_list.jsonld",
-                "isVis": "artifact_steps_number >= 1 && artifact_4 == 2 && artifact_4_remove_electrode_where ==2",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_4_remove_electrode_percent",
-                "isAbout": "items/artifact_4_remove_electrode_percent.jsonld",
-                "isVis": "artifact_steps_number >= 1 && artifact_4 == 2 && artifact_4_remove_electrode_where ==2",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_4_remove_electrode_method",
-                "isAbout": "items/artifact_4_remove_electrode_method.jsonld",
-                "isVis": "artifact_steps_number >= 4 && artifact_4 == 2",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_4_remove_electrode_visual",
-                "isAbout": "items/artifact_4_remove_electrode_visual.jsonld",
-                "isVis": "artifact_steps_number >= 4 && artifact_4_remove_electrode_method == 0",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_4_remove_electrode_visual_other",
-                "isAbout": "items/artifact_4_remove_electrode_visual_other.jsonld",
-                "isVis": "artifact_steps_number >= 4 && artifact_4_remove_electrode_visual == 6",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_4_remove_electrode_numerical",
-                "isAbout": "items/artifact_4_remove_electrode_numerical.jsonld",
-                "isVis": "artifact_steps_number >= 4 && artifact_4_remove_electrode_method == 1",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_4_remove_electrode_other",
-                "isAbout": "items/artifact_4_remove_electrode_other.jsonld",
-                "isVis": "artifact_steps_number >= 4 && artifact_4_remove_electrode_method == 2",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_4_interpolate_which",
-                "isAbout": "items/artifact_4_interpolate_which.jsonld",
-                "isVis": "artifact_steps_number >= 4 && artifact_4 == 3",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_4_interpolate_how",
-                "isAbout": "items/artifact_4_interpolate_how.jsonld",
-                "isVis": "artifact_steps_number >= 4 && artifact_4 == 3",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_4_automated_reference",
-                "isAbout": "items/artifact_4_automated_reference.jsonld",
-                "isVis": "artifact_steps_number >= 4 && artifact_4 == 4",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_4_automated_parameters",
-                "isAbout": "items/artifact_4_automated_parameters.jsonld",
-                "isVis": "artifact_steps_number >= 4 && artifact_4 == 4",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_5",
-                "isAbout": "items/artifact_5.jsonld",
-                "isVis": "artifact_steps_number >= 5",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_5_software",
-                "isAbout": "items/artifact_5_software.jsonld",
-                "isVis": "artifact_steps_number >= 5 && same_software == 0",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_5_software_details",
-                "isAbout": "items/artifact_5_software_details.jsonld",
-                "isVis": "artifact_steps_number >= 5&& same_software == 0",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_5_reject_what",
-                "isAbout": "items/artifact_5_reject_what.jsonld",
-                "isVis": "artifact_steps_number >= 5 && artifact_5 == 0",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_5_reject_method",
-                "isAbout": "items/artifact_5_reject_method.jsonld",
-                "isVis": "artifact_steps_number >= 5 && artifact_5 == 0",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_5_reject_visual",
-                "isAbout": "items/artifact_5_reject_visual.jsonld",
-                "isVis": "artifact_steps_number >= 5 && artifact_5_reject_method == 0",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_5_reject_visual_other",
-                "isAbout": "items/artifact_5_reject_visual_other.jsonld",
-                "isVis": "artifact_5_reject_visual.includes(7)",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_5_reject_numerical",
-                "isAbout": "items/artifact_5_reject_numerical.jsonld",
-                "isVis": "artifact_steps_number >= 5 && artifact_5_reject_method == 1",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_5_reject_other",
-                "isAbout": "items/artifact_5_reject_other.jsonld",
-                "isVis": "artifact_steps_number >= 5 && artifact_5_reject_method == 2",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_5_correct_method",
-                "isAbout": "items/artifact_5_correct_method.jsonld",
-                "isVis": "artifact_steps_number >= 5 && artifact_5 == 1",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_5_correct_reference",
-                "isAbout": "items/artifact_5_correct_reference.jsonld",
-                "isVis": "artifact_steps_number >= 5 && artifact_5 == 1",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_5_correct_details",
-                "isAbout": "items/artifact_5_correct_details.jsonld",
-                "isVis": "artifact_steps_number >= 5 && artifact_5 == 1",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_5_remove_electrode_where",
-                "isAbout": "items/artifact_5_remove_electrode_where.jsonld",
-                "isVis": "artifact_steps_number >= 5 && artifact_5 == 2",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_5_remove_electrode_list",
-                "isAbout": "items/artifact_5_remove_electrode_list.jsonld",
-                "isVis": "artifact_steps_number >= 5 && artifact_5 == 2",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_5_remove_electrode_method",
-                "isAbout": "items/artifact_5_remove_electrode_method.jsonld",
-                "isVis": "artifact_steps_number >= 5 && artifact_5 == 2",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_5_remove_electrode_visual",
-                "isAbout": "items/artifact_5_remove_electrode_visual.jsonld",
-                "isVis": "artifact_steps_number >= 5 && artifact_5_remove_electrode_method == 0",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_5_remove_electrode_visual_other",
-                "isAbout": "items/artifact_5_remove_electrode_visual_other.jsonld",
-                "isVis": "artifact_steps_number >= 5 && artifact_5_remove_electrode_visual == 6",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_5_remove_electrode_numerical",
-                "isAbout": "items/artifact_5_remove_electrode_numerical.jsonld",
-                "isVis": "artifact_steps_number >= 5 && artifact_5_remove_electrode_method == 1",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_5_remove_electrode_other",
-                "isAbout": "items/artifact_5_remove_electrode_other.jsonld",
-                "isVis": "artifact_steps_number >= 5 && artifact_5_remove_electrode_method == 2",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_5_interpolate_which",
-                "isAbout": "items/artifact_5_interpolate_which.jsonld",
-                "isVis": "artifact_steps_number >= 5 && artifact_5 == 3",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_5_interpolate_how",
-                "isAbout": "items/artifact_5_interpolate_how.jsonld",
-                "isVis": "artifact_steps_number >= 5 && artifact_5 == 3",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_5_automated_reference",
-                "isAbout": "items/artifact_5_automated_reference.jsonld",
-                "isVis": "artifact_steps_number >= 5 && artifact_5 == 4",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_5_automated_parameters",
-                "isAbout": "items/artifact_5_automated_parameters.jsonld",
-                "isVis": "artifact_steps_number >= 5 && artifact_5 == 4",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_6",
-                "isAbout": "items/artifact_6.jsonld",
-                "isVis": "artifact_steps_number >= 6",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_6_software",
-                "isAbout": "items/artifact_6_software.jsonld",
-                "isVis": "artifact_steps_number >= 6 && same_software == 0",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_6_software_details",
-                "isAbout": "items/artifact_6_software_details.jsonld",
-                "isVis": "artifact_steps_number >= 6&& same_software == 0",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_6_reject_what",
-                "isAbout": "items/artifact_6_reject_what.jsonld",
-                "isVis": "artifact_steps_number >= 6 && artifact_6 == 0",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_6_reject_method",
-                "isAbout": "items/artifact_6_reject_method.jsonld",
-                "isVis": "artifact_steps_number >= 6 && artifact_6 == 0",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_6_reject_visual",
-                "isAbout": "items/artifact_6_reject_visual.jsonld",
-                "isVis": "artifact_steps_number >= 6 && artifact_6_reject_method == 0",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_6_reject_visual_other",
-                "isAbout": "items/artifact_6_reject_visual_other.jsonld",
-                "isVis": "artifact_6_reject_visual.includes(7)",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_6_reject_numerical",
-                "isAbout": "items/artifact_6_reject_numerical.jsonld",
-                "isVis": "artifact_steps_number >= 6 && artifact_6_reject_method == 1",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_6_reject_other",
-                "isAbout": "items/artifact_6_reject_other.jsonld",
-                "isVis": "artifact_steps_number >= 6 && artifact_6_reject_method == 2",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_6_correct_method",
-                "isAbout": "items/artifact_6_correct_method.jsonld",
-                "isVis": "artifact_steps_number >= 6 && artifact_6 == 1",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_6_correct_reference",
-                "isAbout": "items/artifact_6_correct_reference.jsonld",
-                "isVis": "artifact_steps_number >= 6 && artifact_6 == 1",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_6_correct_details",
-                "isAbout": "items/artifact_6_correct_details.jsonld",
-                "isVis": "artifact_steps_number >= 6 && artifact_6 == 1",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_6_remove_electrode_where",
-                "isAbout": "items/artifact_6_remove_electrode_where.jsonld",
-                "isVis": "artifact_steps_number >= 6 && artifact_6 == 2",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_6_remove_electrode_list",
-                "isAbout": "items/artifact_6_remove_electrode_list.jsonld",
-                "isVis": "artifact_steps_number >= 6 && artifact_6 == 2",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_6_remove_electrode_method",
-                "isAbout": "items/artifact_6_remove_electrode_method.jsonld",
-                "isVis": "artifact_steps_number >= 6 && artifact_6 == 2",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_6_remove_electrode_visual",
-                "isAbout": "items/artifact_6_remove_electrode_visual.jsonld",
-                "isVis": "artifact_steps_number >= 6 && artifact_6_remove_electrode_method == 0",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_6_remove_electrode_visual_other",
-                "isAbout": "items/artifact_6_remove_electrode_visual_other.jsonld",
-                "isVis": "artifact_steps_number >= 6 && artifact_6_remove_electrode_visual == 6",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_6_remove_electrode_numerical",
-                "isAbout": "items/artifact_6_remove_electrode_numerical.jsonld",
-                "isVis": "artifact_steps_number >= 6 && artifact_6_remove_electrode_method == 1",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_6_remove_electrode_other",
-                "isAbout": "items/artifact_6_remove_electrode_other.jsonld",
-                "isVis": "artifact_steps_number >= 6 && artifact_6_remove_electrode_method == 2",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_6_interpolate_which",
-                "isAbout": "items/artifact_6_interpolate_which.jsonld",
-                "isVis": "artifact_steps_number >= 6 && artifact_6 == 3",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_6_interpolate_how",
-                "isAbout": "items/artifact_6_interpolate_how.jsonld",
-                "isVis": "artifact_steps_number >= 6 && artifact_6 == 3",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_6_automated_reference",
-                "isAbout": "items/artifact_6_automated_reference.jsonld",
-                "isVis": "artifact_steps_number >= 6 && artifact_6 == 4",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_6_automated_parameters",
-                "isAbout": "items/artifact_6_automated_parameters.jsonld",
-                "isVis": "artifact_steps_number >= 6 && artifact_6 == 4",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_7",
-                "isAbout": "items/artifact_7.jsonld",
-                "isVis": "artifact_steps_number >= 7",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_7_software",
-                "isAbout": "items/artifact_7_software.jsonld",
-                "isVis": "artifact_steps_number >= 7 && same_software == 0",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_7_software_details",
-                "isAbout": "items/artifact_7_software_details.jsonld",
-                "isVis": "artifact_steps_number >= 7&& same_software == 0",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_7_reject_what",
-                "isAbout": "items/artifact_7_reject_what.jsonld",
-                "isVis": "artifact_steps_number >= 7 && artifact_7 == 0",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_7_reject_method",
-                "isAbout": "items/artifact_7_reject_method.jsonld",
-                "isVis": "artifact_steps_number >= 7 && artifact_7 == 0",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_7_reject_visual",
-                "isAbout": "items/artifact_7_reject_visual.jsonld",
-                "isVis": "artifact_steps_number >= 7 && artifact_7_reject_method == 0",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_7_reject_visual_other",
-                "isAbout": "items/artifact_7_reject_visual_other.jsonld",
-                "isVis": "artifact_7_reject_visual.includes(7)",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_7_reject_numerical",
-                "isAbout": "items/artifact_7_reject_numerical.jsonld",
-                "isVis": "artifact_steps_number >= 7 && artifact_7_reject_method == 1",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_7_reject_other",
-                "isAbout": "items/artifact_7_reject_other.jsonld",
-                "isVis": "artifact_steps_number >= 7 && artifact_7_reject_method == 2",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_7_correct_method",
-                "isAbout": "items/artifact_7_correct_method.jsonld",
-                "isVis": "artifact_steps_number >= 7 && artifact_7 == 1",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_7_correct_reference",
-                "isAbout": "items/artifact_7_correct_reference.jsonld",
-                "isVis": "artifact_steps_number >= 7 && artifact_7 == 1",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_7_correct_details",
-                "isAbout": "items/artifact_7_correct_details.jsonld",
-                "isVis": "artifact_steps_number >= 7 && artifact_7 == 1",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_7_remove_electrode_where",
-                "isAbout": "items/artifact_7_remove_electrode_where.jsonld",
-                "isVis": "artifact_steps_number >= 7 && artifact_7 == 2",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_7_remove_electrode_list",
-                "isAbout": "items/artifact_7_remove_electrode_list.jsonld",
-                "isVis": "artifact_steps_number >= 7 && artifact_7 == 2",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_7_remove_electrode_method",
-                "isAbout": "items/artifact_7_remove_electrode_method.jsonld",
-                "isVis": "artifact_steps_number >= 7 && artifact_7 == 2",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_7_remove_electrode_visual",
-                "isAbout": "items/artifact_7_remove_electrode_visual.jsonld",
-                "isVis": "artifact_steps_number >= 7 && artifact_7_remove_electrode_method == 0",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_7_remove_electrode_visual_other",
-                "isAbout": "items/artifact_7_remove_electrode_visual_other.jsonld",
-                "isVis": "artifact_steps_number >= 7 && artifact_7_remove_electrode_visual == 6",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_7_remove_electrode_numerical",
-                "isAbout": "items/artifact_7_remove_electrode_numerical.jsonld",
-                "isVis": "artifact_steps_number >= 7 && artifact_7_remove_electrode_method == 1",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_7_remove_electrode_other",
-                "isAbout": "items/artifact_7_remove_electrode_other.jsonld",
-                "isVis": "artifact_steps_number >= 7 && artifact_7_remove_electrode_method == 2",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_7_interpolate_which",
-                "isAbout": "items/artifact_7_interpolate_which.jsonld",
-                "isVis": "artifact_steps_number >= 7 && artifact_7 == 3",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_7_interpolate_how",
-                "isAbout": "items/artifact_7_interpolate_how.jsonld",
-                "isVis": "artifact_steps_number >= 7 && artifact_7 == 3",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_7_automated_reference",
-                "isAbout": "items/artifact_7_automated_reference.jsonld",
-                "isVis": "artifact_steps_number >= 7 && artifact_7 == 4",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_7_automated_parameters",
-                "isAbout": "items/artifact_7_automated_parameters.jsonld",
-                "isVis": "artifact_steps_number >= 7 && artifact_7 == 4",
-                "requiredValue": false,
-                "allow": [
-                    "reproschema:Skipped"
-                ]
-            },
-            {
-                "variableName": "artifact_removal_more_than_7",
-                "isAbout": "items/artifact_removal_more_than_7.jsonld",
-                "isVis": "artifact_steps_number >= 8 && artifact_7 == 4",
                 "requiredValue": false,
                 "allow": [
                     "reproschema:Skipped"
@@ -2084,6 +1256,9 @@
             {
                 "variableName": "epoch_any",
                 "isAbout": "items/epoch_any.jsonld",
+                "prefLabel": {
+                    "en": "epoch any"
+                },
                 "isVis": true,
                 "requiredValue": false,
                 "allow": [
@@ -2093,6 +1268,9 @@
             {
                 "variableName": "epoch_software",
                 "isAbout": "items/epoch_software.jsonld",
+                "prefLabel": {
+                    "en": "epoch software"
+                },
                 "isVis": "same_software == 0 && epoch_any == 1",
                 "requiredValue": false,
                 "allow": [
@@ -2102,6 +1280,9 @@
             {
                 "variableName": "epoch_software_details",
                 "isAbout": "items/epoch_software_details.jsonld",
+                "prefLabel": {
+                    "en": "epoch software details"
+                },
                 "isVis": "same_software == 0  && epoch_any == 1",
                 "requiredValue": false,
                 "allow": [
@@ -2111,6 +1292,9 @@
             {
                 "variableName": "epoch_beginning",
                 "isAbout": "items/epoch_beginning.jsonld",
+                "prefLabel": {
+                    "en": "epoch beginning"
+                },
                 "isVis": "epoch_any == 1",
                 "requiredValue": false,
                 "allow": [
@@ -2120,6 +1304,9 @@
             {
                 "variableName": "epoch_trigger_event",
                 "isAbout": "items/epoch_trigger_event.jsonld",
+                "prefLabel": {
+                    "en": "epoch trigger event"
+                },
                 "isVis": "epoch_any == 1",
                 "requiredValue": false,
                 "allow": [
@@ -2129,6 +1316,9 @@
             {
                 "variableName": "epoch_trigger_event_other",
                 "isAbout": "items/epoch_trigger_event_other.jsonld",
+                "prefLabel": {
+                    "en": "epoch trigger event other"
+                },
                 "isVis": "epoch_trigger_event == 3",
                 "requiredValue": false,
                 "allow": [
@@ -2138,6 +1328,9 @@
             {
                 "variableName": "epoch_end",
                 "isAbout": "items/epoch_end.jsonld",
+                "prefLabel": {
+                    "en": "epoch end"
+                },
                 "isVis": "epoch_any == 1",
                 "requiredValue": false,
                 "allow": [
@@ -2147,6 +1340,9 @@
             {
                 "variableName": "baseline_any",
                 "isAbout": "items/baseline_any.jsonld",
+                "prefLabel": {
+                    "en": "baseline any"
+                },
                 "isVis": true,
                 "requiredValue": false,
                 "allow": [
@@ -2156,6 +1352,9 @@
             {
                 "variableName": "baseline_software",
                 "isAbout": "items/baseline_software.jsonld",
+                "prefLabel": {
+                    "en": "baseline software"
+                },
                 "isVis": "same_software == 0 && baseline_any == 1",
                 "requiredValue": false,
                 "allow": [
@@ -2165,6 +1364,9 @@
             {
                 "variableName": "baseline_software_details",
                 "isAbout": "items/baseline_software_details.jsonld",
+                "prefLabel": {
+                    "en": "baseline software details"
+                },
                 "isVis": "same_software == 0 && baseline_any == 1",
                 "requiredValue": false,
                 "allow": [
@@ -2174,6 +1376,9 @@
             {
                 "variableName": "baseline_beginning",
                 "isAbout": "items/baseline_beginning.jsonld",
+                "prefLabel": {
+                    "en": "baseline beginning"
+                },
                 "isVis": "baseline_any == 1",
                 "requiredValue": false,
                 "allow": [
@@ -2183,6 +1388,9 @@
             {
                 "variableName": "baseline_end",
                 "isAbout": "items/baseline_end.jsonld",
+                "prefLabel": {
+                    "en": "baseline end"
+                },
                 "isVis": "baseline_any == 1",
                 "requiredValue": false,
                 "allow": [
@@ -2192,6 +1400,9 @@
             {
                 "variableName": "baseline_method",
                 "isAbout": "items/baseline_method.jsonld",
+                "prefLabel": {
+                    "en": "baseline method"
+                },
                 "isVis": "baseline_any == 1",
                 "requiredValue": false,
                 "allow": [
@@ -2201,6 +1412,9 @@
             {
                 "variableName": "baseline_other_method_details",
                 "isAbout": "items/baseline_other_method_details.jsonld",
+                "prefLabel": {
+                    "en": "baseline other method details"
+                },
                 "isVis": "baseline_method == 1",
                 "requiredValue": false,
                 "allow": [
@@ -2210,6 +1424,9 @@
             {
                 "variableName": "preprocessing_order",
                 "isAbout": "items/preprocessing_order.jsonld",
+                "prefLabel": {
+                    "en": "preprocessing order"
+                },
                 "isVis": true,
                 "requiredValue": false,
                 "allow": [

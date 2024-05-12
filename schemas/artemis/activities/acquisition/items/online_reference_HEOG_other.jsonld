@@ -1,0 +1,21 @@
+{
+    "@context": "https://raw.githubusercontent.com/ReproNim/reproschema/1.0.0-rc4/contexts/generic",
+    "@type": "reproschema:Field",
+    "@id": "online_reference_HEOG_other.jsonld",
+    "schemaVersion": "1.0.0-rc4",
+    "version": "0.0.1",
+    "prefLabel": {
+        "en": "online reference HEOG other"
+    },
+    "description": "online reference HEOG other",
+    "ui": {
+        "inputType": "text"
+    },
+    "question": {
+        "en": "4.17 - Which other reference was used for HEOG recording?"
+    },
+    "responseOptions": {
+        "valueType": "xsd:string",
+        "maxLength": 300
+    }
+}

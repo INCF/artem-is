@@ -2,22 +2,20 @@
     "@context": "https://raw.githubusercontent.com/ReproNim/reproschema/1.0.0-rc4/contexts/generic",
     "@type": "reproschema:Field",
     "@id": "channels_all_vs_subset.jsonld",
+    "schemaVersion": "1.0.0-rc4",
+    "version": "0.0.1",
     "prefLabel": {
         "en": "channels all vs subset"
     },
     "description": "channels all vs subset",
-    "schemaVersion": "1.0.0-rc4",
-    "version": "0.0.1",
     "ui": {
         "inputType": "radio"
     },
     "question": {
-        "en": "7.1 - Did you make a selection of channels for the purposes of statistical analysis?<div style='font-size: 70%; text-align:left;'><details> <summary> details </summary> <br>This question is about which channels were included in statistical analysis, either as individual channels or averaged/aggregated into regions of interest (ROI). You will be asked about potential channel averaging into ROIs later in this section. How to choose option here: For example, if you conducted an analysis such as cluster-based permutation tests on the entire scalp, you should pick \"all channels were submitted to analysis\", and not describe permutation tests in this section. If you completed cluster-based permutation tests on a subset of electrodes, you should select the other option, and then describe how this subset of electrodes was selected in the follow-up questions.</details></div>"
+        "en": "7.1 - Was a subset of channels selected for the purposes of statistical analysis?<div style='font-size: 70%; text-align:left;'><details> <summary> details </summary> <br>This question is about which channels were included in statistical analysis, either as individual channels or averaged/aggregated into regions of interest (ROI). You will be asked about potential channel averaging into ROIs later in this section. How to choose option here: For example, if you conducted an analysis such as cluster-based permutation tests on the entire scalp, you should pick \"all channels were submitted to analysis\", and not describe permutation tests in this section. If you completed cluster-based permutation tests on a subset of channels, you should select the other option, and then describe how this subset of channels was selected in the follow-up questions.</details></div>"
     },
     "responseOptions": {
         "valueType": "xsd:integer",
-        "minValue": 0,
-        "maxValue": 1,
         "choices": [
             {
                 "name": {
@@ -32,6 +30,7 @@
                 "value": 1
             }
         ],
-        "multipleChoice": false
+        "minValue": 0,
+        "maxValue": 1
     }
 }

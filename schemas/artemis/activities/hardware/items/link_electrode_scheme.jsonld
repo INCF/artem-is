@@ -1,0 +1,21 @@
+{
+    "@context": "https://raw.githubusercontent.com/ReproNim/reproschema/1.0.0-rc4/contexts/generic",
+    "@type": "reproschema:Field",
+    "@id": "link_electrode_scheme.jsonld",
+    "schemaVersion": "1.0.0-rc4",
+    "version": "0.0.1",
+    "prefLabel": {
+        "en": "link electrode scheme"
+    },
+    "description": "link electrode scheme",
+    "ui": {
+        "inputType": "text"
+    },
+    "question": {
+        "en": "3.16 - The appropriate methods description should also include a list or a scheme of all electrode locations. A convenient way to do this is currently not available in ARTEM-IS due to technical limitations, so please provide either a list of all electrodes, or a link where the sceheme/list can be found.<div style='font-size: 70%; text-align:left;'><details> <summary> details </summary> <br>The link can be to a public preregistration document, OSF file, preprint, or a publication. Ideally, the link should not be to an address that you expect to change in the future.</details></div>"
+    },
+    "responseOptions": {
+        "valueType": "xsd:string",
+        "maxLength": 300
+    }
+}

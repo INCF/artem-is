@@ -2,22 +2,20 @@
     "@context": "https://raw.githubusercontent.com/ReproNim/reproschema/1.0.0-rc4/contexts/generic",
     "@type": "reproschema:Field",
     "@id": "lat_selection_approach_a_priori.jsonld",
+    "schemaVersion": "1.0.0-rc4",
+    "version": "0.0.1",
     "prefLabel": {
         "en": "lat selection approach a priori"
     },
     "description": "lat selection approach a priori",
-    "schemaVersion": "1.0.0-rc4",
-    "version": "0.0.1",
     "ui": {
         "inputType": "radio"
     },
     "question": {
-        "en": "6.63 - Select the procedure which was used for latency measurement in this time window."
+        "en": "6.68 - Select the procedure which was used for latency measurement in this time window."
     },
     "responseOptions": {
         "valueType": "xsd:integer",
-        "minValue": 0,
-        "maxValue": 3,
         "choices": [
             {
                 "name": {
@@ -44,6 +42,7 @@
                 "value": 3
             }
         ],
-        "multipleChoice": false
+        "minValue": 0,
+        "maxValue": 3
     }
 }

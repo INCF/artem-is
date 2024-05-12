@@ -2,12 +2,12 @@
     "@context": "https://raw.githubusercontent.com/ReproNim/reproschema/1.0.0-rc4/contexts/generic",
     "@type": "reproschema:Activity",
     "@id": "study_id_schema.jsonld",
+    "schemaVersion": "1.0.0-rc4",
+    "version": "0.0.1",
     "prefLabel": {
         "en": "study_id"
     },
     "description": "study id",
-    "schemaVersion": "1.0.0-rc4",
-    "version": "0.0.1",
     "preamble": {
         "en": "<p><a href='https://docs.google.com/spreadsheets/d/1dlUt8_bHsM5mERFJkVLTVWanSlms6Ba8Wos38Dhmhfo/edit?ts=60c9d280#gid=1498151197' target='_blank' > Source </a> | <a href='https://github.com/Remi-Gau/artemis_checklist' target='_blank' > Github repository </a> | <a href='https://osf.io/pvrn6/' target='_blank' > Reference </a><br><br>This section contains information on the study, such as title, links to publications and datasets, etc. NOTE: If you notice a bug, or have a suggestion, we'd be grateful if you posted an issue on GitHub: https://github.com/INCF/artem-is/</p>"
     },
@@ -60,6 +60,9 @@
             {
                 "variableName": "artemis_type",
                 "isAbout": "items/artemis_type.jsonld",
+                "prefLabel": {
+                    "en": "artemis type"
+                },
                 "isVis": true,
                 "requiredValue": false,
                 "allow": [
@@ -69,6 +72,9 @@
             {
                 "variableName": "study_title",
                 "isAbout": "items/study_title.jsonld",
+                "prefLabel": {
+                    "en": "study title"
+                },
                 "isVis": true,
                 "requiredValue": false,
                 "allow": [
@@ -78,6 +84,9 @@
             {
                 "variableName": "study_title_final",
                 "isAbout": "items/study_title_final.jsonld",
+                "prefLabel": {
+                    "en": "study title final"
+                },
                 "isVis": true,
                 "requiredValue": false,
                 "allow": [
@@ -87,6 +96,9 @@
             {
                 "variableName": "study_working_title_exists",
                 "isAbout": "items/study_working_title_exists.jsonld",
+                "prefLabel": {
+                    "en": "study working title exists"
+                },
                 "isVis": true,
                 "requiredValue": false,
                 "allow": [
@@ -96,6 +108,9 @@
             {
                 "variableName": "study_working_title",
                 "isAbout": "items/study_working_title.jsonld",
+                "prefLabel": {
+                    "en": "study working title"
+                },
                 "isVis": "study_working_title_exists == 1",
                 "requiredValue": false,
                 "allow": [
@@ -105,6 +120,9 @@
             {
                 "variableName": "study_authors",
                 "isAbout": "items/study_authors.jsonld",
+                "prefLabel": {
+                    "en": "study authors"
+                },
                 "isVis": true,
                 "requiredValue": false,
                 "allow": [
@@ -114,6 +132,9 @@
             {
                 "variableName": "study_reference_exists",
                 "isAbout": "items/study_reference_exists.jsonld",
+                "prefLabel": {
+                    "en": "study reference exists"
+                },
                 "isVis": true,
                 "requiredValue": false,
                 "allow": [
@@ -123,6 +144,9 @@
             {
                 "variableName": "study_reference_DOIs_exists",
                 "isAbout": "items/study_reference_DOIs_exists.jsonld",
+                "prefLabel": {
+                    "en": "study reference DOIs exists"
+                },
                 "isVis": "study_reference_exists == 1",
                 "requiredValue": false,
                 "allow": [
@@ -132,6 +156,9 @@
             {
                 "variableName": "study_reference",
                 "isAbout": "items/study_reference.jsonld",
+                "prefLabel": {
+                    "en": "study reference"
+                },
                 "isVis": "study_reference_DOIs_exists == 1",
                 "requiredValue": false,
                 "allow": [
@@ -141,6 +168,9 @@
             {
                 "variableName": "study_reference_noDOI_exists",
                 "isAbout": "items/study_reference_noDOI_exists.jsonld",
+                "prefLabel": {
+                    "en": "study reference noDOI exists"
+                },
                 "isVis": "study_reference_exists == 1",
                 "requiredValue": false,
                 "allow": [
@@ -150,6 +180,9 @@
             {
                 "variableName": "study_reference_noDOI",
                 "isAbout": "items/study_reference_noDOI.jsonld",
+                "prefLabel": {
+                    "en": "study reference noDOI"
+                },
                 "isVis": "study_reference_noDOI_exists == 1",
                 "requiredValue": false,
                 "allow": [
@@ -159,6 +192,9 @@
             {
                 "variableName": "study_dataset_exists",
                 "isAbout": "items/study_dataset_exists.jsonld",
+                "prefLabel": {
+                    "en": "study dataset exists"
+                },
                 "isVis": true,
                 "requiredValue": false,
                 "allow": [
@@ -168,6 +204,9 @@
             {
                 "variableName": "study_dataset_types",
                 "isAbout": "items/study_dataset_types.jsonld",
+                "prefLabel": {
+                    "en": "study dataset types"
+                },
                 "isVis": "study_dataset_exists == 1",
                 "requiredValue": false,
                 "allow": [
@@ -177,6 +216,9 @@
             {
                 "variableName": "study_dataset_types_other",
                 "isAbout": "items/study_dataset_types_other.jsonld",
+                "prefLabel": {
+                    "en": "study dataset types other"
+                },
                 "isVis": "study_dataset_types.includes(5)",
                 "requiredValue": false,
                 "allow": [
@@ -186,6 +228,9 @@
             {
                 "variableName": "study_dataset_DOI_exists",
                 "isAbout": "items/study_dataset_DOI_exists.jsonld",
+                "prefLabel": {
+                    "en": "study dataset DOI exists"
+                },
                 "isVis": "study_dataset_exists == 1",
                 "requiredValue": false,
                 "allow": [
@@ -195,6 +240,9 @@
             {
                 "variableName": "study_dataset_DOI",
                 "isAbout": "items/study_dataset_DOI.jsonld",
+                "prefLabel": {
+                    "en": "study dataset DOI"
+                },
                 "isVis": "study_dataset_DOI_exists == 1",
                 "requiredValue": false,
                 "allow": [
@@ -204,6 +252,9 @@
             {
                 "variableName": "study_datasets_noDOI_exists",
                 "isAbout": "items/study_datasets_noDOI_exists.jsonld",
+                "prefLabel": {
+                    "en": "study datasets noDOI exists"
+                },
                 "isVis": "study_dataset_exists == 1",
                 "requiredValue": false,
                 "allow": [
@@ -213,6 +264,9 @@
             {
                 "variableName": "study_datasets_noDOI",
                 "isAbout": "items/study_datasets_noDOI.jsonld",
+                "prefLabel": {
+                    "en": "study datasets noDOI"
+                },
                 "isVis": "study_datasets_noDOI_exists == 1",
                 "requiredValue": false,
                 "allow": [
@@ -222,6 +276,9 @@
             {
                 "variableName": "supplementary_materials_exists",
                 "isAbout": "items/supplementary_materials_exists.jsonld",
+                "prefLabel": {
+                    "en": "supplementary materials exists"
+                },
                 "isVis": true,
                 "requiredValue": false,
                 "allow": [
@@ -231,6 +288,9 @@
             {
                 "variableName": "supplementary_materials",
                 "isAbout": "items/supplementary_materials.jsonld",
+                "prefLabel": {
+                    "en": "supplementary materials"
+                },
                 "isVis": "supplementary_materials_exists == 1",
                 "requiredValue": false,
                 "allow": [
@@ -240,6 +300,9 @@
             {
                 "variableName": "specify_supplementary",
                 "isAbout": "items/specify_supplementary.jsonld",
+                "prefLabel": {
+                    "en": "specify supplementary"
+                },
                 "isVis": "supplementary_materials_exists == 1 && supplementary_materials.includes(3)",
                 "requiredValue": false,
                 "allow": [
@@ -249,6 +312,9 @@
             {
                 "variableName": "supplementary_link",
                 "isAbout": "items/supplementary_link.jsonld",
+                "prefLabel": {
+                    "en": "supplementary link"
+                },
                 "isVis": "supplementary_materials_exists == 1",
                 "requiredValue": false,
                 "allow": [
@@ -258,6 +324,9 @@
             {
                 "variableName": "licenses_exists",
                 "isAbout": "items/licenses_exists.jsonld",
+                "prefLabel": {
+                    "en": "licenses exists"
+                },
                 "isVis": true,
                 "requiredValue": false,
                 "allow": [
@@ -267,6 +336,9 @@
             {
                 "variableName": "licenses_which",
                 "isAbout": "items/licenses_which.jsonld",
+                "prefLabel": {
+                    "en": "licenses which"
+                },
                 "isVis": "licenses_exists == 1",
                 "requiredValue": false,
                 "allow": [
@@ -276,6 +348,9 @@
             {
                 "variableName": "code_license",
                 "isAbout": "items/code_license.jsonld",
+                "prefLabel": {
+                    "en": "code license"
+                },
                 "isVis": "licenses_which.includes(0)",
                 "requiredValue": false,
                 "allow": [
@@ -285,6 +360,9 @@
             {
                 "variableName": "code_license_multi",
                 "isAbout": "items/code_license_multi.jsonld",
+                "prefLabel": {
+                    "en": "code license multi"
+                },
                 "isVis": "code_license == 3",
                 "requiredValue": false,
                 "allow": [
@@ -294,6 +372,9 @@
             {
                 "variableName": "code_license_other",
                 "isAbout": "items/code_license_other.jsonld",
+                "prefLabel": {
+                    "en": "code license other"
+                },
                 "isVis": "code_license == 4",
                 "requiredValue": false,
                 "allow": [
@@ -303,6 +384,9 @@
             {
                 "variableName": "data_license",
                 "isAbout": "items/data_license.jsonld",
+                "prefLabel": {
+                    "en": "data license"
+                },
                 "isVis": "licenses_which.includes(1)",
                 "requiredValue": false,
                 "allow": [
@@ -312,6 +396,9 @@
             {
                 "variableName": "data_license_multi",
                 "isAbout": "items/data_license_multi.jsonld",
+                "prefLabel": {
+                    "en": "data license multi"
+                },
                 "isVis": "data_license == 3",
                 "requiredValue": false,
                 "allow": [
@@ -321,6 +408,9 @@
             {
                 "variableName": "data_license_other",
                 "isAbout": "items/data_license_other.jsonld",
+                "prefLabel": {
+                    "en": "data license other"
+                },
                 "isVis": "data_license == 4",
                 "requiredValue": false,
                 "allow": [
@@ -330,6 +420,9 @@
             {
                 "variableName": "other_licenses",
                 "isAbout": "items/other_licenses.jsonld",
+                "prefLabel": {
+                    "en": "other licenses"
+                },
                 "isVis": "licenses_which.includes(2)",
                 "requiredValue": false,
                 "allow": [
@@ -339,6 +432,9 @@
             {
                 "variableName": "study_abstract",
                 "isAbout": "items/study_abstract.jsonld",
+                "prefLabel": {
+                    "en": "study abstract"
+                },
                 "isVis": true,
                 "requiredValue": false,
                 "allow": [
@@ -348,6 +444,9 @@
             {
                 "variableName": "study_keywords",
                 "isAbout": "items/study_keywords.jsonld",
+                "prefLabel": {
+                    "en": "study keywords"
+                },
                 "isVis": true,
                 "requiredValue": false,
                 "allow": [
@@ -357,6 +456,9 @@
             {
                 "variableName": "study_funding_exists",
                 "isAbout": "items/study_funding_exists.jsonld",
+                "prefLabel": {
+                    "en": "study funding exists"
+                },
                 "isVis": true,
                 "requiredValue": false,
                 "allow": [
@@ -366,6 +468,9 @@
             {
                 "variableName": "study_funding",
                 "isAbout": "items/study_funding.jsonld",
+                "prefLabel": {
+                    "en": "study funding"
+                },
                 "isVis": "study_funding_exists == 1",
                 "requiredValue": false,
                 "allow": [
@@ -375,6 +480,9 @@
             {
                 "variableName": "study_ethics_exists",
                 "isAbout": "items/study_ethics_exists.jsonld",
+                "prefLabel": {
+                    "en": "study ethics exists"
+                },
                 "isVis": true,
                 "requiredValue": false,
                 "allow": [
@@ -384,6 +492,9 @@
             {
                 "variableName": "study_ethics",
                 "isAbout": "items/study_ethics.jsonld",
+                "prefLabel": {
+                    "en": "study ethics"
+                },
                 "isVis": "study_ethics_exists == 1",
                 "requiredValue": false,
                 "allow": [
@@ -393,6 +504,9 @@
             {
                 "variableName": "acknowledgements_exists",
                 "isAbout": "items/acknowledgements_exists.jsonld",
+                "prefLabel": {
+                    "en": "acknowledgements exists"
+                },
                 "isVis": true,
                 "requiredValue": false,
                 "allow": [
@@ -402,6 +516,9 @@
             {
                 "variableName": "acknowledgements",
                 "isAbout": "items/acknowledgements.jsonld",
+                "prefLabel": {
+                    "en": "acknowledgements"
+                },
                 "isVis": "acknowledgements_exists == 1",
                 "requiredValue": false,
                 "allow": [
@@ -411,6 +528,9 @@
             {
                 "variableName": "citation_instructions_exists",
                 "isAbout": "items/citation_instructions_exists.jsonld",
+                "prefLabel": {
+                    "en": "citation instructions exists"
+                },
                 "isVis": true,
                 "requiredValue": false,
                 "allow": [
@@ -420,6 +540,9 @@
             {
                 "variableName": "citation_instructions",
                 "isAbout": "items/citation_instructions.jsonld",
+                "prefLabel": {
+                    "en": "citation instructions"
+                },
                 "isVis": "citation_instructions_exists == 1",
                 "requiredValue": false,
                 "allow": [

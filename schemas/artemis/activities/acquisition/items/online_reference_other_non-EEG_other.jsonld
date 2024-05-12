@@ -1,0 +1,21 @@
+{
+    "@context": "https://raw.githubusercontent.com/ReproNim/reproschema/1.0.0-rc4/contexts/generic",
+    "@type": "reproschema:Field",
+    "@id": "online_reference_other_non-EEG_other.jsonld",
+    "schemaVersion": "1.0.0-rc4",
+    "version": "0.0.1",
+    "prefLabel": {
+        "en": "online reference other non-EEG other"
+    },
+    "description": "online reference other non-EEG other",
+    "ui": {
+        "inputType": "text"
+    },
+    "question": {
+        "en": "4.19 - Which other reference was used for other non-EEG (and non-EOG) electrodes?"
+    },
+    "responseOptions": {
+        "valueType": "xsd:string",
+        "maxLength": 300
+    }
+}

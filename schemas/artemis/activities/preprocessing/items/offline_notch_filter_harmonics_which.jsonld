@@ -1,0 +1,21 @@
+{
+    "@context": "https://raw.githubusercontent.com/ReproNim/reproschema/1.0.0-rc4/contexts/generic",
+    "@type": "reproschema:Field",
+    "@id": "offline_notch_filter_harmonics_which.jsonld",
+    "schemaVersion": "1.0.0-rc4",
+    "version": "0.0.1",
+    "prefLabel": {
+        "en": "offline notch filter harmonics which"
+    },
+    "description": "offline notch filter harmonics which",
+    "ui": {
+        "inputType": "text"
+    },
+    "question": {
+        "en": "5.50 - Which harmonics were removed by the offline notch filter? List center frequencies separated by a semicolon and a space"
+    },
+    "responseOptions": {
+        "valueType": "xsd:string",
+        "maxLength": 300
+    }
+}

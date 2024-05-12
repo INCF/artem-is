@@ -1,0 +1,21 @@
+{
+    "@context": "https://raw.githubusercontent.com/ReproNim/reproschema/1.0.0-rc4/contexts/generic",
+    "@type": "reproschema:Field",
+    "@id": "continuous_variables_list.jsonld",
+    "schemaVersion": "1.0.0-rc4",
+    "version": "0.0.1",
+    "prefLabel": {
+        "en": "continuous variables list"
+    },
+    "description": "continuous variables list",
+    "ui": {
+        "inputType": "text"
+    },
+    "question": {
+        "en": "2.15 - Continuous variables analysed together with ERPs"
+    },
+    "responseOptions": {
+        "valueType": "xsd:string",
+        "maxLength": 300
+    }
+}

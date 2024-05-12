@@ -2,12 +2,12 @@
     "@context": "https://raw.githubusercontent.com/ReproNim/reproschema/1.0.0-rc4/contexts/generic",
     "@type": "reproschema:Field",
     "@id": "electrode_material.jsonld",
+    "schemaVersion": "1.0.0-rc4",
+    "version": "0.0.1",
     "prefLabel": {
         "en": "electrode material"
     },
     "description": "electrode material",
-    "schemaVersion": "1.0.0-rc4",
-    "version": "0.0.1",
     "ui": {
         "inputType": "radio"
     },
@@ -16,18 +16,16 @@
     },
     "responseOptions": {
         "valueType": "xsd:integer",
-        "minValue": 0,
-        "maxValue": 2,
         "choices": [
             {
                 "name": {
-                    "en": "Ag/Ag-Cl"
+                    "en": "tin"
                 },
                 "value": 0
             },
             {
                 "name": {
-                    "en": "tin"
+                    "en": "Ag/Ag-Cl "
                 },
                 "value": 1
             },
@@ -38,6 +36,7 @@
                 "value": 2
             }
         ],
-        "multipleChoice": false
+        "minValue": 0,
+        "maxValue": 2
     }
 }

@@ -2,22 +2,20 @@
     "@context": "https://raw.githubusercontent.com/ReproNim/reproschema/1.0.0-rc4/contexts/generic",
     "@type": "reproschema:Field",
     "@id": "chan_selection.jsonld",
+    "schemaVersion": "1.0.0-rc4",
+    "version": "0.0.1",
     "prefLabel": {
         "en": "chan selection"
     },
     "description": "chan selection",
-    "schemaVersion": "1.0.0-rc4",
-    "version": "0.0.1",
     "ui": {
         "inputType": "radio"
     },
     "question": {
-        "en": "7.2 - What was the rationale for selecting this exact subset of electrodes?<div style='font-size: 70%; text-align:left;'><details> <summary> details </summary> <br>When you are making this decision, you may want to check out papers by Kriegskorte et al. (2009, https://doi.org/10.1038/nn.2303) or Gaspelin and Luck (2018, https://doi.org/10.1111/psyp.12639) on biases in time window and channel selection.</details></div>"
+        "en": "7.2 - What was the rationale for selecting this exact subset of channels?<div style='font-size: 70%; text-align:left;'><details> <summary> details </summary> <br>When you are making this decision, you may want to check out papers by Kriegskorte et al. (2009, https://doi.org/10.1038/nn.2303) or Gaspelin and Luck (2018, https://doi.org/10.1111/psyp.12639) on biases in time window and channel selection.</details></div>"
     },
     "responseOptions": {
         "valueType": "xsd:integer",
-        "minValue": 0,
-        "maxValue": 4,
         "choices": [
             {
                 "name": {
@@ -50,6 +48,7 @@
                 "value": 4
             }
         ],
-        "multipleChoice": false
+        "minValue": 0,
+        "maxValue": 4
     }
 }

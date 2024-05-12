@@ -1,0 +1,17 @@
+{
+    "@context": "https://raw.githubusercontent.com/ReproNim/reproschema/1.0.0-rc4/contexts/generic",
+    "@type": "reproschema:Field",
+    "@id": "amp_measure_peak_other.jsonld",
+    "schemaVersion": "1.0.0-rc4",
+    "version": "0.0.1",
+    "prefLabel": {
+        "en": "amp measure peak other"
+    },
+    "description": "amp measure peak other",
+    "ui": {
+        "inputType": "textarea"
+    },
+    "question": {
+        "en": "6.11 - Describe the procedure for peak calculation that was used."
+    }
+}

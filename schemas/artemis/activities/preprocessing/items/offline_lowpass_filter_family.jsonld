@@ -1,0 +1,54 @@
+{
+    "@context": "https://raw.githubusercontent.com/ReproNim/reproschema/1.0.0-rc4/contexts/generic",
+    "@type": "reproschema:Field",
+    "@id": "offline_lowpass_filter_family.jsonld",
+    "schemaVersion": "1.0.0-rc4",
+    "version": "0.0.1",
+    "prefLabel": {
+        "en": "offline lowpass filter family"
+    },
+    "description": "offline lowpass filter family",
+    "ui": {
+        "inputType": "radio"
+    },
+    "question": {
+        "en": "5.30 - What family of filters did the low-pass filter belong to?"
+    },
+    "responseOptions": {
+        "valueType": "xsd:integer",
+        "choices": [
+            {
+                "name": {
+                    "en": "Boxcar"
+                },
+                "value": 0
+            },
+            {
+                "name": {
+                    "en": "Butterworth"
+                },
+                "value": 1
+            },
+            {
+                "name": {
+                    "en": "Elliptic"
+                },
+                "value": 2
+            },
+            {
+                "name": {
+                    "en": "Chebyshev"
+                },
+                "value": 3
+            },
+            {
+                "name": {
+                    "en": "other"
+                },
+                "value": 4
+            }
+        ],
+        "minValue": 0,
+        "maxValue": 4
+    }
+}

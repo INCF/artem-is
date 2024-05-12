@@ -1,0 +1,28 @@
+{
+    "@context": "https://raw.githubusercontent.com/ReproNim/reproschema/1.0.0-rc4/contexts/generic",
+    "@type": "reproschema:Field",
+    "@id": "artifact_1_remove_channel_percent.jsonld",
+    "schemaVersion": "1.0.0-rc4",
+    "version": "0.0.1",
+    "prefLabel": {
+        "en": "artifact 1 remove channel percent"
+    },
+    "description": "artifact 1 remove channel percent",
+    "ui": {
+        "inputType": "float"
+    },
+    "question": {
+        "en": "5.85 - Percentage of channels eliminated per participant on average in step 1"
+    },
+    "responseOptions": {
+        "valueType": "xsd:float",
+        "unitOptions": [
+            {
+                "prefLabel": {
+                    "en": "%"
+                },
+                "value": "%"
+            }
+        ]
+    }
+}

@@ -2,20 +2,28 @@
     "@context": "https://raw.githubusercontent.com/ReproNim/reproschema/1.0.0-rc4/contexts/generic",
     "@type": "reproschema:Field",
     "@id": "offline_notch_filter_type_details.jsonld",
+    "schemaVersion": "1.0.0-rc4",
+    "version": "0.0.1",
     "prefLabel": {
         "en": "offline notch filter type details"
     },
     "description": "offline notch filter type details",
-    "schemaVersion": "1.0.0-rc4",
-    "version": "0.0.1",
     "ui": {
         "inputType": "text"
     },
     "question": {
-        "en": "5.29 - Describe the stopband frequency of the notch filter you applied"
+        "en": "5.45 - Center frequency of the offline notch filter"
     },
     "responseOptions": {
         "valueType": "xsd:string",
-        "maxLength": 3000
+        "unitOptions": [
+            {
+                "prefLabel": {
+                    "en": "Hz"
+                },
+                "value": "Hz"
+            }
+        ],
+        "maxLength": 300
     }
 }

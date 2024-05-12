@@ -2,22 +2,20 @@
     "@context": "https://raw.githubusercontent.com/ReproNim/reproschema/1.0.0-rc4/contexts/generic",
     "@type": "reproschema:Field",
     "@id": "lat_type.jsonld",
+    "schemaVersion": "1.0.0-rc4",
+    "version": "0.0.1",
     "prefLabel": {
         "en": "lat type"
     },
     "description": "lat type",
-    "schemaVersion": "1.0.0-rc4",
-    "version": "0.0.1",
     "ui": {
         "inputType": "radio"
     },
     "question": {
-        "en": "6.50 - Describe the latency type."
+        "en": "6.53 - Latency type(s)"
     },
     "responseOptions": {
         "valueType": "xsd:integer",
-        "minValue": 0,
-        "maxValue": 2,
         "choices": [
             {
                 "name": {
@@ -38,6 +36,8 @@
                 "value": 2
             }
         ],
-        "multipleChoice": true
+        "multipleChoice": true,
+        "minValue": 0,
+        "maxValue": 2
     }
 }

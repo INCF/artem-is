@@ -2,12 +2,12 @@
     "@context": "https://raw.githubusercontent.com/ReproNim/reproschema/1.0.0-rc4/contexts/generic",
     "@type": "reproschema:Field",
     "@id": "chan_selection_data_driven_broad.jsonld",
+    "schemaVersion": "1.0.0-rc4",
+    "version": "0.0.1",
     "prefLabel": {
         "en": "chan selection data driven broad"
     },
     "description": "chan selection data driven broad",
-    "schemaVersion": "1.0.0-rc4",
-    "version": "0.0.1",
     "ui": {
         "inputType": "radio"
     },
@@ -16,8 +16,6 @@
     },
     "responseOptions": {
         "valueType": "xsd:integer",
-        "minValue": 0,
-        "maxValue": 5,
         "choices": [
             {
                 "name": {
@@ -39,7 +37,7 @@
             },
             {
                 "name": {
-                    "en": "significant effects on multiple neighbouring electrodes"
+                    "en": "significant effects on multiple neighbouring channels"
                 },
                 "value": 3
             },
@@ -56,6 +54,7 @@
                 "value": 5
             }
         ],
-        "multipleChoice": false
+        "minValue": 0,
+        "maxValue": 5
     }
 }

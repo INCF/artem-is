@@ -1,0 +1,42 @@
+{
+    "@context": "https://raw.githubusercontent.com/ReproNim/reproschema/1.0.0-rc4/contexts/generic",
+    "@type": "reproschema:Field",
+    "@id": "offline_highpass_filter_delay.jsonld",
+    "schemaVersion": "1.0.0-rc4",
+    "version": "0.0.1",
+    "prefLabel": {
+        "en": "offline highpass filter delay"
+    },
+    "description": "offline highpass filter delay",
+    "ui": {
+        "inputType": "radio"
+    },
+    "question": {
+        "en": "5.27 - Offline high-pass filter delay"
+    },
+    "responseOptions": {
+        "valueType": "xsd:integer",
+        "choices": [
+            {
+                "name": {
+                    "en": "zero-phase"
+                },
+                "value": 0
+            },
+            {
+                "name": {
+                    "en": "linear phase"
+                },
+                "value": 1
+            },
+            {
+                "name": {
+                    "en": "non-linear phase"
+                },
+                "value": 2
+            }
+        ],
+        "minValue": 0,
+        "maxValue": 2
+    }
+}

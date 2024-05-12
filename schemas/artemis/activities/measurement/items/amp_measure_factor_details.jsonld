@@ -1,0 +1,17 @@
+{
+    "@context": "https://raw.githubusercontent.com/ReproNim/reproschema/1.0.0-rc4/contexts/generic",
+    "@type": "reproschema:Field",
+    "@id": "amp_measure_factor_details.jsonld",
+    "schemaVersion": "1.0.0-rc4",
+    "version": "0.0.1",
+    "prefLabel": {
+        "en": "amp measure factor details"
+    },
+    "description": "amp measure factor details",
+    "ui": {
+        "inputType": "textarea"
+    },
+    "question": {
+        "en": "6.14 - Describe the procedure for amplitude measurement calculation using factor scores.<div style='font-size: 70%; text-align:left;'><details> <summary> details </summary> <br>Description should be detailed enough for a reader to replicate the procedure.</details></div>"
+    }
+}

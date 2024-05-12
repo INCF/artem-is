@@ -2,20 +2,16 @@
     "@context": "https://raw.githubusercontent.com/ReproNim/reproschema/1.0.0-rc4/contexts/generic",
     "@type": "reproschema:Field",
     "@id": "chan_selection_other.jsonld",
+    "schemaVersion": "1.0.0-rc4",
+    "version": "0.0.1",
     "prefLabel": {
         "en": "chan selection other"
     },
     "description": "chan selection other",
-    "schemaVersion": "1.0.0-rc4",
-    "version": "0.0.1",
     "ui": {
         "inputType": "textarea"
     },
     "question": {
-        "en": "7.26 - Describe the criterion/criteria for selecting this exact subset of electrodes other than the options offered above."
-    },
-    "responseOptions": {
-        "valueType": "xsd:string",
-        "maxLength": 300
+        "en": "7.26 - Describe the criterion/criteria for selecting this exact subset of channels other than the options offered above."
     }
 }

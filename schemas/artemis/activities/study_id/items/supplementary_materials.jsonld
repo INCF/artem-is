@@ -2,12 +2,12 @@
     "@context": "https://raw.githubusercontent.com/ReproNim/reproschema/1.0.0-rc4/contexts/generic",
     "@type": "reproschema:Field",
     "@id": "supplementary_materials.jsonld",
+    "schemaVersion": "1.0.0-rc4",
+    "version": "0.0.1",
     "prefLabel": {
         "en": "supplementary materials"
     },
     "description": "supplementary materials",
-    "schemaVersion": "1.0.0-rc4",
-    "version": "0.0.1",
     "ui": {
         "inputType": "radio"
     },
@@ -16,8 +16,6 @@
     },
     "responseOptions": {
         "valueType": "xsd:integer",
-        "minValue": 0,
-        "maxValue": 3,
         "choices": [
             {
                 "name": {
@@ -27,13 +25,13 @@
             },
             {
                 "name": {
-                    "en": "stimuli"
+                    "en": "stimuli files"
                 },
                 "value": 1
             },
             {
                 "name": {
-                    "en": "codes or files with the experimental task"
+                    "en": "experimental task files/code"
                 },
                 "value": 2
             },
@@ -44,6 +42,8 @@
                 "value": 3
             }
         ],
-        "multipleChoice": true
+        "multipleChoice": true,
+        "minValue": 0,
+        "maxValue": 3
     }
 }

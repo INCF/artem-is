@@ -2,20 +2,20 @@
     "@context": "https://raw.githubusercontent.com/ReproNim/reproschema/1.0.0-rc4/contexts/generic",
     "@type": "reproschema:Field",
     "@id": "electrode_manufacturer.jsonld",
+    "schemaVersion": "1.0.0-rc4",
+    "version": "0.0.1",
     "prefLabel": {
         "en": "electrode manufacturer"
     },
     "description": "electrode manufacturer",
-    "schemaVersion": "1.0.0-rc4",
-    "version": "0.0.1",
     "ui": {
         "inputType": "text"
     },
     "question": {
-        "en": "3.5 - Make (brand) of the electrodes"
+        "en": "3.5 - Make (brand) of the electrodes<div style='font-size: 70%; text-align:left;'><details> <summary> details </summary> <br>This is often, but not necessarily so, the same brand as the cap, if they were purchased together as a set.</details></div>"
     },
     "responseOptions": {
         "valueType": "xsd:string",
-        "maxLength": 3000
+        "maxLength": 300
     }
 }

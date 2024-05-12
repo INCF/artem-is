@@ -1,0 +1,21 @@
+{
+    "@context": "https://raw.githubusercontent.com/ReproNim/reproschema/1.0.0-rc4/contexts/generic",
+    "@type": "reproschema:Field",
+    "@id": "artifact_1_remove_channel_other.jsonld",
+    "schemaVersion": "1.0.0-rc4",
+    "version": "0.0.1",
+    "prefLabel": {
+        "en": "artifact 1 remove channel other"
+    },
+    "description": "artifact 1 remove channel other",
+    "ui": {
+        "inputType": "text"
+    },
+    "question": {
+        "en": "5.90 - Describe method of channel rejection.<div style='font-size: 70%; text-align:left;'><details> <summary> details </summary> <br>Make sure that there is enough detail for a replication attempt.</details></div>"
+    },
+    "responseOptions": {
+        "valueType": "xsd:string",
+        "maxLength": 300
+    }
+}

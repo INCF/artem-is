@@ -2,22 +2,20 @@
     "@context": "https://raw.githubusercontent.com/ReproNim/reproschema/1.0.0-rc4/contexts/generic",
     "@type": "reproschema:Field",
     "@id": "preprocessing_pipeline_which.jsonld",
+    "schemaVersion": "1.0.0-rc4",
+    "version": "0.0.1",
     "prefLabel": {
         "en": "preprocessing pipeline which"
     },
     "description": "preprocessing pipeline which",
-    "schemaVersion": "1.0.0-rc4",
-    "version": "0.0.1",
     "ui": {
         "inputType": "select"
     },
     "question": {
-        "en": "5.5 - Which automated pre-processing pipeline did you use?"
+        "en": "5.5 - Which automated pre-processing pipeline was used?"
     },
     "responseOptions": {
         "valueType": "xsd:integer",
-        "minValue": 0,
-        "maxValue": 4,
         "choices": [
             {
                 "name": {
@@ -50,6 +48,7 @@
                 "value": 4
             }
         ],
-        "multipleChoice": false
+        "minValue": 0,
+        "maxValue": 4
     }
 }

@@ -1,0 +1,42 @@
+{
+    "@context": "https://raw.githubusercontent.com/ReproNim/reproschema/1.0.0-rc4/contexts/generic",
+    "@type": "reproschema:Field",
+    "@id": "artifact_1_remove_channel_method.jsonld",
+    "schemaVersion": "1.0.0-rc4",
+    "version": "0.0.1",
+    "prefLabel": {
+        "en": "artifact 1 remove channel method"
+    },
+    "description": "artifact 1 remove channel method",
+    "ui": {
+        "inputType": "radio"
+    },
+    "question": {
+        "en": "5.86 - What was the criterion for eliminating bad channels in step 1?"
+    },
+    "responseOptions": {
+        "valueType": "xsd:integer",
+        "choices": [
+            {
+                "name": {
+                    "en": "visual inspection"
+                },
+                "value": 0
+            },
+            {
+                "name": {
+                    "en": "pre-set numerical criterion/function"
+                },
+                "value": 1
+            },
+            {
+                "name": {
+                    "en": "other"
+                },
+                "value": 2
+            }
+        ],
+        "minValue": 0,
+        "maxValue": 2
+    }
+}

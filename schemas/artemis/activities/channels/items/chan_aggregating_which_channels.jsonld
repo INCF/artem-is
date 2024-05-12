@@ -1,0 +1,17 @@
+{
+    "@context": "https://raw.githubusercontent.com/ReproNim/reproschema/1.0.0-rc4/contexts/generic",
+    "@type": "reproschema:Field",
+    "@id": "chan_aggregating_which_channels.jsonld",
+    "schemaVersion": "1.0.0-rc4",
+    "version": "0.0.1",
+    "prefLabel": {
+        "en": "chan aggregating which channels"
+    },
+    "description": "chan aggregating which channels",
+    "ui": {
+        "inputType": "textarea"
+    },
+    "question": {
+        "en": "7.28 - Describe which channels were aggregated together to form regions of interest.<div style='font-size: 70%; text-align:left;'><details> <summary> details </summary> <br>For example: \"Fz, F3, and F4 were averaged into a frontal region, while Cz, C3 and C4 were averaged into a central region.\"</details></div>"
+    }
+}

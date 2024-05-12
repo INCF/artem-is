@@ -2,17 +2,17 @@
     "@context": "https://raw.githubusercontent.com/ReproNim/reproschema/1.0.0-rc4/contexts/generic",
     "@type": "reproschema:Field",
     "@id": "impedance_higher_end.jsonld",
+    "schemaVersion": "1.0.0-rc4",
+    "version": "0.0.1",
     "prefLabel": {
         "en": "impedance higher end"
     },
     "description": "impedance higher end",
-    "schemaVersion": "1.0.0-rc4",
-    "version": "0.0.1",
     "ui": {
         "inputType": "number"
     },
     "question": {
-        "en": "4.7 - What was the highest impedance you registered in this study?"
+        "en": "4.7 - What was the highest impedance registered in this study?"
     },
     "responseOptions": {
         "valueType": "xsd:integer",

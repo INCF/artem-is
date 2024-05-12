@@ -1,0 +1,23 @@
+{
+    "@context": "https://raw.githubusercontent.com/ReproNim/reproschema/1.0.0-rc4/contexts/generic",
+    "@type": "reproschema:Field",
+    "@id": "trigger_additional.jsonld",
+    "schemaVersion": "1.0.0-rc4",
+    "version": "0.0.1",
+    "prefLabel": {
+        "en": "trigger additional"
+    },
+    "description": "trigger additional",
+    "ui": {
+        "inputType": "radio"
+    },
+    "question": {
+        "en": "3.25 - Do you wish to describe triggers in more detail?<div style='font-size: 70%; text-align:left;'><details> <summary> details </summary> <br>This information is not required by the guidelines for good EEG reporting practice by Keil et al. (2014), but it might interest a reader.</details></div>"
+    },
+    "responseOptions": {
+        "valueType": "xsd:integer",
+        "choices": "https://raw.githubusercontent.com/ohbm/cobidas_schema/master/response_options/boolean.jsonld",
+        "minValue": 0,
+        "maxValue": 0
+    }
+}

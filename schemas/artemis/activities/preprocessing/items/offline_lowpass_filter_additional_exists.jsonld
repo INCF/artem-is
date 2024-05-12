@@ -1,0 +1,23 @@
+{
+    "@context": "https://raw.githubusercontent.com/ReproNim/reproschema/1.0.0-rc4/contexts/generic",
+    "@type": "reproschema:Field",
+    "@id": "offline_lowpass_filter_additional_exists.jsonld",
+    "schemaVersion": "1.0.0-rc4",
+    "version": "0.0.1",
+    "prefLabel": {
+        "en": "offline lowpass filter additional exists"
+    },
+    "description": "offline lowpass filter additional exists",
+    "ui": {
+        "inputType": "radio"
+    },
+    "question": {
+        "en": "5.36 - Do you want to report any additional properties of the low-pass filter?<div style='font-size: 70%; text-align:left;'><details> <summary> details </summary> <br>The properties listed above are the minumum required by recommendations for good practice by Keil et al. (2014), but providing additional information may help other researchers reproduce your filters if you know them.</details></div>"
+    },
+    "responseOptions": {
+        "valueType": "xsd:integer",
+        "choices": "https://raw.githubusercontent.com/ohbm/cobidas_schema/master/response_options/boolean.jsonld",
+        "minValue": 0,
+        "maxValue": 0
+    }
+}

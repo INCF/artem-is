@@ -2,22 +2,20 @@
     "@context": "https://raw.githubusercontent.com/ReproNim/reproschema/1.0.0-rc4/contexts/generic",
     "@type": "reproschema:Field",
     "@id": "epoch_trigger_event.jsonld",
+    "schemaVersion": "1.0.0-rc4",
+    "version": "0.0.1",
     "prefLabel": {
         "en": "epoch trigger event"
     },
     "description": "epoch trigger event",
-    "schemaVersion": "1.0.0-rc4",
-    "version": "0.0.1",
     "ui": {
         "inputType": "radio"
     },
     "question": {
-        "en": "5.214 - What was the event type relative to which epochs were defined?"
+        "en": "5.99 - What was the event type relative to which epochs were defined?"
     },
     "responseOptions": {
         "valueType": "xsd:integer",
-        "minValue": 0,
-        "maxValue": 3,
         "choices": [
             {
                 "name": {
@@ -44,6 +42,7 @@
                 "value": 3
             }
         ],
-        "multipleChoice": false
+        "minValue": 0,
+        "maxValue": 3
     }
 }

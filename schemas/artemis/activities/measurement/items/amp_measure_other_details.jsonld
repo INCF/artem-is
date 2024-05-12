@@ -1,0 +1,17 @@
+{
+    "@context": "https://raw.githubusercontent.com/ReproNim/reproschema/1.0.0-rc4/contexts/generic",
+    "@type": "reproschema:Field",
+    "@id": "amp_measure_other_details.jsonld",
+    "schemaVersion": "1.0.0-rc4",
+    "version": "0.0.1",
+    "prefLabel": {
+        "en": "amp measure other details"
+    },
+    "description": "amp measure other details",
+    "ui": {
+        "inputType": "textarea"
+    },
+    "question": {
+        "en": "6.15 - Describe the procedure(s) for amplitude measurement calculation for which you selected \"other\" (in detail sufficient for its replication).<div style='font-size: 70%; text-align:left;'><details> <summary> details </summary> <br>This is meant to describe procedure other than what has been offered in the Question \"Select procedure(s) used for amplitude measurement in this time window\".</details></div>"
+    }
+}

@@ -2,20 +2,20 @@
     "@context": "https://raw.githubusercontent.com/ReproNim/reproschema/1.0.0-rc4/contexts/generic",
     "@type": "reproschema:Field",
     "@id": "order_of_group.jsonld",
+    "schemaVersion": "1.0.0-rc4",
+    "version": "0.0.1",
     "prefLabel": {
         "en": "order of group"
     },
     "description": "order of group",
-    "schemaVersion": "1.0.0-rc4",
-    "version": "0.0.1",
     "ui": {
         "inputType": "text"
     },
     "question": {
-        "en": "2.5 - Specify group names separated by semicolon and a space (e.g., test group; control group)"
+        "en": "2.8 - List of all groups used in the study separated by semicolon and a space in the same order in which you want to describe groups in later questions concerning individual groups<div style='font-size: 70%; text-align:left;'><details> <summary> details </summary> <br>Example: smokers left-handed; smokers right-handed; non-smokers left-handed; non-smokers right-handed</details></div>"
     },
     "responseOptions": {
         "valueType": "xsd:string",
-        "maxLength": 3000
+        "maxLength": 300
     }
 }
