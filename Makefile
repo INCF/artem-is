@@ -25,6 +25,6 @@ validate_syntax:
 
 # you will need to install reproschema-py to run this one ( pip install reproschema )
 validate_schema:
-	reproschema -l DEBUG validate artemis_schema/schemas/artemis/activities
-	reproschema -l DEBUG validate artemis_schema/schemas/artemis/protocols
-	reproschema -l DEBUG validate artemis_schema/schemas/artemis/artemis_schema.jsonld
+	reproschema -l DEBUG validate schemas/artemis/activities
+	reproschema -l DEBUG validate schemas/artemis/protocols
+	reproschema -l DEBUG validate schemas/artemis/artemis_schema.jsonld
