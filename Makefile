@@ -20,7 +20,6 @@ validate: validate_syntax validate_schema
 
 # Validate jsonld
 validate_syntax:
-	grep -r  "@context" response_options | cut -d: -f1 | xargs -I {} jsonlint -q {}
 	grep -r  "@context" schemas | cut -d: -f1 | xargs -I {} jsonlint -q {}
 
 # you will need to install reproschema-py to run this one ( pip install reproschema )
