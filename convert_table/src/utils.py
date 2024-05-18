@@ -49,7 +49,7 @@ def get_schema_info(this_schema):
     return df[is_this_schema]
 
 
-def convert_to_str(df_field):
+def convert_to_str(df_field: pd.Series) -> str:
     return df_field.tolist()[0]
 
 
