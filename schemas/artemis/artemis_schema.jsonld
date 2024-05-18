@@ -40,7 +40,7 @@
                 "allow": [
                     "reproschema:Skipped"
                 ]
-            },            
+            },
             {
                 "variableName": "acquisition",
                 "isAbout": "activities/acquisition/acquisition_schema.jsonld",

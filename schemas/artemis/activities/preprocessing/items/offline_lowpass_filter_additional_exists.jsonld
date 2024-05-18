@@ -12,7 +12,7 @@
         "inputType": "radio"
     },
     "question": {
-        "en": "5.36 - Do you want to report any additional properties of the low-pass filter?<div style='font-size: 70%; text-align:left;'><details> <summary> details </summary> <br>The properties listed above are the minumum required by recommendations for good practice by Keil et al. (2014), but providing additional information may help other researchers reproduce your filters if you know them.</details></div>"
+        "en": "5.36 - Do you want to report any additional properties of the low-pass filter?<div style='font-size: 70%; text-align:left;'><details> <summary> details </summary> <br>The properties listed above are the minimum required by recommendations for good practice by Keil et al. (2014), but providing additional information may help other researchers reproduce your filters if you know them.</details></div>"
     },
     "responseOptions": {
         "valueType": "xsd:integer",

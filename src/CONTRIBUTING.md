@@ -16,7 +16,7 @@ A centralized list of the people who contributed to this project can be found [h
 
 - Python
 
-To install all the necessarry packages,
+To install all the necessary packages,
 type the following in a terminal in the root of the repository:
 
 ```bash

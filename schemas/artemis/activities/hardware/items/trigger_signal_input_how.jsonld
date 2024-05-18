@@ -12,7 +12,7 @@
         "inputType": "radio"
     },
     "question": {
-        "en": "3.28 - How were tigger signals aquired?"
+        "en": "3.28 - How were trigger signals acquired?"
     },
     "responseOptions": {
         "valueType": "xsd:integer",

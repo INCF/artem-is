@@ -12,7 +12,7 @@
         "inputType": "radio"
     },
     "question": {
-        "en": "4.3 - Did you document impedances, or an alternative data aquisition quality measure? "
+        "en": "4.3 - Did you document impedances, or an alternative data acquisition quality measure? "
     },
     "responseOptions": {
         "valueType": "xsd:integer",

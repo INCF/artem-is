@@ -12,7 +12,7 @@
         "inputType": "radio"
     },
     "question": {
-        "en": "5.1 - Was the same software used for all pre-processing steps?<div style='font-size: 70%; text-align:left;'><details> <summary> details </summary> <br>Preprocessing steps are fitlering, downsampling, re-referencing, artifact removal, epoching and baseline correction, and other up to the point of data collection. If you select YES here, you will be asked to provide the software information now, and if you select NO, you will be asked to specify software when describing each preprocessing step separately.</details></div>"
+        "en": "5.1 - Was the same software used for all pre-processing steps?<div style='font-size: 70%; text-align:left;'><details> <summary> details </summary> <br>Preprocessing steps are filtering, downsampling, re-referencing, artifact removal, epoching and baseline correction, and other up to the point of data collection. If you select YES here, you will be asked to provide the software information now, and if you select NO, you will be asked to specify software when describing each preprocessing step separately.</details></div>"
     },
     "responseOptions": {
         "valueType": "xsd:integer",
