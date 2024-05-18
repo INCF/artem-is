@@ -16,14 +16,9 @@ convert: download
 clean_artemis:
 	rm -rf $(ARTEMIS_TSV)
 
-validate: validate_syntax validate_schema
-
-# Validate jsonld
-validate_syntax:
-	grep -r  "@context" schemas | cut -d: -f1 | xargs -I {} jsonlint -q {}
-
 # you will need to install reproschema-py to run this one ( pip install reproschema )
-validate_schema:
+validate:
+	pre-commit run -a  check-json
 	reproschema -l DEBUG validate schemas/artemis/activities
 	reproschema -l DEBUG validate schemas/artemis/protocols
 	reproschema -l DEBUG validate schemas/artemis/artemis_schema.jsonld

@@ -9,4 +9,5 @@ rich
 black
 flake8
 pre-commit
+reproschema-py
 
