@@ -17,7 +17,7 @@ The goal of the ARTEM-IS is to use insights derived from systematic reviews and 
 5. Click `Save` in the top right corner to save any changes.
 6. You can view your own saved templates using `My templates` option. For each template, you have the options to make them publicly (in)visible to others, download a human-readable PDF output and download a machine-readable JSON output. All templates are set to private in the beginning.
 7. You can view and download publicly available templates by other members using `Browse` menu.
-8. You can upload a previously downloaded (in JSON format) templates to your account using `Upload` menu.
+8. You can also upload a previously downloaded (in JSON format) templates to your account using `Upload` menu.
 
 You can find output examples on the [OSF page of this project](https://osf.io/ahp3t/).
 
