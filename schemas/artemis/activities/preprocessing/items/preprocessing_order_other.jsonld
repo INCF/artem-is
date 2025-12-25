@@ -1,0 +1,21 @@
+{
+    "@context": "https://raw.githubusercontent.com/ReproNim/reproschema/1.0.0-rc4/contexts/generic",
+    "@type": "reproschema:Field",
+    "@id": "preprocessing_order_other.jsonld",
+    "schemaVersion": "1.0.0-rc4",
+    "version": "0.0.1",
+    "prefLabel": {
+        "en": "preprocessing order other"
+    },
+    "description": "preprocessing order other",
+    "ui": {
+        "inputType": "textarea"
+    },
+    "question": {
+        "en": "5.110 - Describe the complex procedure or other steps not listed."
+    },
+    "responseOptions": {
+        "valueType": "xsd:string",
+        "maxLength": 300
+    }
+}
