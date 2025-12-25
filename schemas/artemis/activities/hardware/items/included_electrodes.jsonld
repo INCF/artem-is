@@ -1,0 +1,505 @@
+{
+    "@context": "https://raw.githubusercontent.com/ReproNim/reproschema/1.0.0-rc4/contexts/generic",
+    "@type": "reproschema:Field",
+    "@id": "included_electrodes.jsonld",
+    "schemaVersion": "1.0.0-rc4",
+    "version": "0.0.1",
+    "prefLabel": {
+        "en": "included electrodes"
+    },
+    "description": "included electrodes",
+    "ui": {
+        "inputType": "select"
+    },
+    "question": {
+        "en": "3.14 - Which electrodes were used in the recording? (Select all that apply)"
+    },
+    "responseOptions": {
+        "valueType": "xsd:integer",
+        "multipleChoice": true,
+        "choices": [
+            {
+                "name": {
+                    "en": "Fp1"
+                },
+                "value": 0
+            },
+            {
+                "name": {
+                    "en": "Fpz"
+                },
+                "value": 1
+            },
+            {
+                "name": {
+                    "en": "Fp2"
+                },
+                "value": 2
+            },
+            {
+                "name": {
+                    "en": "AF9"
+                },
+                "value": 3
+            },
+            {
+                "name": {
+                    "en": "AF7"
+                },
+                "value": 4
+            },
+            {
+                "name": {
+                    "en": "AF5"
+                },
+                "value": 5
+            },
+            {
+                "name": {
+                    "en": "AF3"
+                },
+                "value": 6
+            },
+            {
+                "name": {
+                    "en": "AF1"
+                },
+                "value": 7
+            },
+            {
+                "name": {
+                    "en": "AFz"
+                },
+                "value": 8
+            },
+            {
+                "name": {
+                    "en": "AF2"
+                },
+                "value": 9
+            },
+            {
+                "name": {
+                    "en": "AF4"
+                },
+                "value": 10
+            },
+            {
+                "name": {
+                    "en": "AF6"
+                },
+                "value": 11
+            },
+            {
+                "name": {
+                    "en": "AF8"
+                },
+                "value": 12
+            },
+            {
+                "name": {
+                    "en": "AF10"
+                },
+                "value": 13
+            },
+            {
+                "name": {
+                    "en": "F9"
+                },
+                "value": 14
+            },
+            {
+                "name": {
+                    "en": "F7"
+                },
+                "value": 15
+            },
+            {
+                "name": {
+                    "en": "F5"
+                },
+                "value": 16
+            },
+            {
+                "name": {
+                    "en": "F3"
+                },
+                "value": 17
+            },
+            {
+                "name": {
+                    "en": "F1"
+                },
+                "value": 18
+            },
+            {
+                "name": {
+                    "en": "Fz"
+                },
+                "value": 19
+            },
+            {
+                "name": {
+                    "en": "F2"
+                },
+                "value": 20
+            },
+            {
+                "name": {
+                    "en": "F4"
+                },
+                "value": 21
+            },
+            {
+                "name": {
+                    "en": "F6"
+                },
+                "value": 22
+            },
+            {
+                "name": {
+                    "en": "F8"
+                },
+                "value": 23
+            },
+            {
+                "name": {
+                    "en": "F10"
+                },
+                "value": 24
+            },
+            {
+                "name": {
+                    "en": "FT9"
+                },
+                "value": 25
+            },
+            {
+                "name": {
+                    "en": "FT7"
+                },
+                "value": 26
+            },
+            {
+                "name": {
+                    "en": "FC5"
+                },
+                "value": 27
+            },
+            {
+                "name": {
+                    "en": "FC3"
+                },
+                "value": 28
+            },
+            {
+                "name": {
+                    "en": "FC1"
+                },
+                "value": 29
+            },
+            {
+                "name": {
+                    "en": "FCz"
+                },
+                "value": 30
+            },
+            {
+                "name": {
+                    "en": "FC2"
+                },
+                "value": 31
+            },
+            {
+                "name": {
+                    "en": "FC4"
+                },
+                "value": 32
+            },
+            {
+                "name": {
+                    "en": "FC6"
+                },
+                "value": 33
+            },
+            {
+                "name": {
+                    "en": "FT8"
+                },
+                "value": 34
+            },
+            {
+                "name": {
+                    "en": "FT10"
+                },
+                "value": 35
+            },
+            {
+                "name": {
+                    "en": "T9"
+                },
+                "value": 36
+            },
+            {
+                "name": {
+                    "en": "T7"
+                },
+                "value": 37
+            },
+            {
+                "name": {
+                    "en": "C5"
+                },
+                "value": 38
+            },
+            {
+                "name": {
+                    "en": "C3"
+                },
+                "value": 39
+            },
+            {
+                "name": {
+                    "en": "C1"
+                },
+                "value": 40
+            },
+            {
+                "name": {
+                    "en": "Cz"
+                },
+                "value": 41
+            },
+            {
+                "name": {
+                    "en": "C2"
+                },
+                "value": 42
+            },
+            {
+                "name": {
+                    "en": "C4"
+                },
+                "value": 43
+            },
+            {
+                "name": {
+                    "en": "C6"
+                },
+                "value": 44
+            },
+            {
+                "name": {
+                    "en": "T8"
+                },
+                "value": 45
+            },
+            {
+                "name": {
+                    "en": "T10"
+                },
+                "value": 46
+            },
+            {
+                "name": {
+                    "en": "TP9"
+                },
+                "value": 47
+            },
+            {
+                "name": {
+                    "en": "TP7"
+                },
+                "value": 48
+            },
+            {
+                "name": {
+                    "en": "CP5"
+                },
+                "value": 49
+            },
+            {
+                "name": {
+                    "en": "CP3"
+                },
+                "value": 50
+            },
+            {
+                "name": {
+                    "en": "CP1"
+                },
+                "value": 51
+            },
+            {
+                "name": {
+                    "en": "CPz"
+                },
+                "value": 52
+            },
+            {
+                "name": {
+                    "en": "CP2"
+                },
+                "value": 53
+            },
+            {
+                "name": {
+                    "en": "CP4"
+                },
+                "value": 54
+            },
+            {
+                "name": {
+                    "en": "CP6"
+                },
+                "value": 55
+            },
+            {
+                "name": {
+                    "en": "TP8"
+                },
+                "value": 56
+            },
+            {
+                "name": {
+                    "en": "TP10"
+                },
+                "value": 57
+            },
+            {
+                "name": {
+                    "en": "P9"
+                },
+                "value": 58
+            },
+            {
+                "name": {
+                    "en": "P7"
+                },
+                "value": 59
+            },
+            {
+                "name": {
+                    "en": "P5"
+                },
+                "value": 60
+            },
+            {
+                "name": {
+                    "en": "P3"
+                },
+                "value": 61
+            },
+            {
+                "name": {
+                    "en": "P1"
+                },
+                "value": 62
+            },
+            {
+                "name": {
+                    "en": "Pz"
+                },
+                "value": 63
+            },
+            {
+                "name": {
+                    "en": "P2"
+                },
+                "value": 64
+            },
+            {
+                "name": {
+                    "en": "P4"
+                },
+                "value": 65
+            },
+            {
+                "name": {
+                    "en": "P6"
+                },
+                "value": 66
+            },
+            {
+                "name": {
+                    "en": "P8"
+                },
+                "value": 67
+            },
+            {
+                "name": {
+                    "en": "P10"
+                },
+                "value": 68
+            },
+            {
+                "name": {
+                    "en": "PO9"
+                },
+                "value": 69
+            },
+            {
+                "name": {
+                    "en": "PO7"
+                },
+                "value": 70
+            },
+            {
+                "name": {
+                    "en": "PO3"
+                },
+                "value": 71
+            },
+            {
+                "name": {
+                    "en": "POz"
+                },
+                "value": 72
+            },
+            {
+                "name": {
+                    "en": "PO4"
+                },
+                "value": 73
+            },
+            {
+                "name": {
+                    "en": "PO8"
+                },
+                "value": 74
+            },
+            {
+                "name": {
+                    "en": "PO10"
+                },
+                "value": 75
+            },
+            {
+                "name": {
+                    "en": "O1"
+                },
+                "value": 76
+            },
+            {
+                "name": {
+                    "en": "Oz"
+                },
+                "value": 77
+            },
+            {
+                "name": {
+                    "en": "O2"
+                },
+                "value": 78
+            },
+            {
+                "name": {
+                    "en": "Iz"
+                },
+                "value": 79
+            }
+        ],
+        "minValue": 0,
+        "maxValue": 79
+    }
+}
