@@ -1,0 +1,23 @@
+{
+    "@context": "https://raw.githubusercontent.com/ReproNim/reproschema/1.0.0-rc4/contexts/generic",
+    "@type": "reproschema:Field",
+    "@id": "ground_electrode_exists.jsonld",
+    "schemaVersion": "1.0.0-rc4",
+    "version": "0.0.1",
+    "prefLabel": {
+        "en": "ground electrode exists"
+    },
+    "description": "ground electrode exists",
+    "ui": {
+        "inputType": "radio"
+    },
+    "question": {
+        "en": "4.12 - Was a ground electrode used?"
+    },
+    "responseOptions": {
+        "valueType": "xsd:integer",
+        "choices": "https://raw.githubusercontent.com/ohbm/cobidas_schema/master/response_options/boolean.jsonld",
+        "minValue": 0,
+        "maxValue": 0
+    }
+}
