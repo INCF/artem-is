@@ -34,3 +34,22 @@ Read more about the rationale for this project and the design principles we go b
 1. Have a look at our **[project on OSF](https://osf.io/pvrn6/)**.
 2. **Talks and slides** are available [HERE](https://osf.io/ncav8/).
 3. See [CONTRIBUTING.md](src/CONTRIBUTING.md) for information on how to contribute.
+
+
+## Local Development / Setup for Contributors
+
+This repository contains the source code for the ARTEM-IS web application.
+If you want to explore or contribute to the project locally, follow the steps below.
+
+### Prerequisites
+- A modern web browser (Chrome, Firefox, Edge)
+- Git installed on your system
+- (Optional) A local development server such as `npx serve`
+
+### Steps to run locally
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/INCF/artem-is.git
+   cd artem-is
+   
