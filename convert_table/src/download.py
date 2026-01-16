@@ -14,8 +14,7 @@ def main():
 
         URL = f"https://docs.google.com/spreadsheets/d/{google_id}/export?format=tsv&gid={sheet_ids()[id]}"
 
-        gdown.download(URL, output=str(output_dir.joinpath(f"{id}.tsv")))
-
+        gdown.download(URL, output=str(output_dir.joinpath(f"{id}.tsv")), fuzzy=True)
 
 def sheet_ids():
 
