@@ -42,3 +42,13 @@ of the **linear version table**.
 The exported linear table serves as a static snapshot of the spreadsheet at the
 time of generation, ensuring reproducibility and offline availability of the
 data.
+## Video Tutorial
+
+A video tutorial introducing ARTEM-IS and demonstrating its main features is
+available on YouTube:
+
+▶️ https://youtu.be/80S64ZBuV80?si=E_fcoa4Qs91U3Aka
+
+This tutorial provides a step-by-step overview of how to use the ARTEM-IS web
+application.
+
