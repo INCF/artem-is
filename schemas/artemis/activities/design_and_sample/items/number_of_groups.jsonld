@@ -16,5 +16,6 @@
     },
     "responseOptions": {
         "valueType": "xsd:integer"
-    }
+    },
+      "minValue": 1
 }
