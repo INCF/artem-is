@@ -142,5 +142,10 @@
             "reproschema:AutoAdvance",
             "reproschema:AllowExport"
         ]
+    },
+    "minValue": {
+    "@type": "xsd:integer",
+    "description": "Minimum allowed numeric value for a field"
     }
+
 }

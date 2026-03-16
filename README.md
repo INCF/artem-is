@@ -34,3 +34,11 @@ Read more about the rationale for this project and the design principles we go b
 1. Have a look at our **[project on OSF](https://osf.io/pvrn6/)**.
 2. **Talks and slides** are available [HERE](https://osf.io/ncav8/).
 3. See [CONTRIBUTING.md](src/CONTRIBUTING.md) for information on how to contribute.
+## Google Spreadsheet Backup
+
+The ARTEM-IS Google Spreadsheet is automatically backed up during the generation
+of the **linear version table**.
+
+The exported linear table serves as a static snapshot of the spreadsheet at the
+time of generation, ensuring reproducibility and offline availability of the
+data.
