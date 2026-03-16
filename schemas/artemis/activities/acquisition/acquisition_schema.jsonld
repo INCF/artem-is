@@ -26,6 +26,7 @@
             "items/online_reference_type.jsonld",
             "items/alternatives_to_reference.jsonld",
             "items/online_reference_type_other.jsonld",
+            "items/ground_electrode_exists.jsonld",
             "items/location_ground.jsonld",
             "items/online_reference_VEOG.jsonld",
             "items/online_reference_VEOG_other.jsonld",
@@ -197,12 +198,24 @@
                 ]
             },
             {
+                "variableName": "ground_electrode_exists",
+                "isAbout": "items/ground_electrode_exists.jsonld",
+                "prefLabel": {
+                    "en": "ground electrode exists"
+                },
+                "isVis": "online_reference_exists == 1",
+                "requiredValue": false,
+                "allow": [
+                    "reproschema:Skipped"
+                ]
+            },
+            {
                 "variableName": "location_ground",
                 "isAbout": "items/location_ground.jsonld",
                 "prefLabel": {
                     "en": "location ground"
                 },
-                "isVis": "online_reference_exists == 1",
+                "isVis": "ground_electrode_exists == 1",
                 "requiredValue": false,
                 "allow": [
                     "reproschema:Skipped"

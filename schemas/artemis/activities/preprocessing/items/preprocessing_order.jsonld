@@ -9,9 +9,59 @@
     },
     "description": "preprocessing order",
     "ui": {
-        "inputType": "textarea"
+        "inputType": "select",
+        "multiple": true
     },
     "question": {
-        "en": "5.109 - Describe order of all pre-processing steps described here in a way that allows replication."
+        "en": "5.109 - Select the order of all pre-processing steps described here (select all that apply)."
+    },
+    "responseOptions": {
+        "valueType": "xsd:integer",
+        "choices": [
+            {
+                "name": {
+                    "en": "Filtering"
+                },
+                "value": 0
+            },
+            {
+                "name": {
+                    "en": "Downsampling"
+                },
+                "value": 1
+            },
+            {
+                "name": {
+                    "en": "Re-referencing"
+                },
+                "value": 2
+            },
+            {
+                "name": {
+                    "en": "Artifact Removal"
+                },
+                "value": 3
+            },
+            {
+                "name": {
+                    "en": "Epoching"
+                },
+                "value": 4
+            },
+            {
+                "name": {
+                    "en": "Baseline Correction"
+                },
+                "value": 5
+            },
+            {
+                "name": {
+                    "en": "Other"
+                },
+                "value": 6
+            }
+        ],
+        "minValue": 0,
+        "maxValue": 6
     }
 }

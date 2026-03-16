@@ -122,7 +122,8 @@
             "items/baseline_end.jsonld",
             "items/baseline_method.jsonld",
             "items/baseline_other_method_details.jsonld",
-            "items/preprocessing_order.jsonld"
+            "items/preprocessing_order.jsonld",
+            "items/preprocessing_order_other.jsonld"
         ],
         "addProperties": [
             {
@@ -1428,6 +1429,18 @@
                     "en": "preprocessing order"
                 },
                 "isVis": true,
+                "requiredValue": false,
+                "allow": [
+                    "reproschema:Skipped"
+                ]
+            },
+            {
+                "variableName": "preprocessing_order_other",
+                "isAbout": "items/preprocessing_order_other.jsonld",
+                "prefLabel": {
+                    "en": "preprocessing order other"
+                },
+                "isVis": "preprocessing_order.includes(6)",
                 "requiredValue": false,
                 "allow": [
                     "reproschema:Skipped"

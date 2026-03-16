@@ -29,6 +29,7 @@
             "items/electrode_location_naming_convention.jsonld",
             "items/ten-twenty_version.jsonld",
             "items/number_EEG_electrodes.jsonld",
+            "items/included_electrodes.jsonld",
             "items/link_electrode_scheme.jsonld",
             "items/non-EEG_electrodes_exists.jsonld",
             "items/non-EEG_electrodes.jsonld",
@@ -221,6 +222,18 @@
                     "en": "number EEG electrodes"
                 },
                 "isVis": true,
+                "requiredValue": false,
+                "allow": [
+                    "reproschema:Skipped"
+                ]
+            },
+            {
+                "variableName": "included_electrodes",
+                "isAbout": "items/included_electrodes.jsonld",
+                "prefLabel": {
+                    "en": "included electrodes"
+                },
+                "isVis": "electrode_location_naming_convention == 0",
                 "requiredValue": false,
                 "allow": [
                     "reproschema:Skipped"
