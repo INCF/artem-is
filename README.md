@@ -34,3 +34,103 @@ Read more about the rationale for this project and the design principles we go b
 1. Have a look at our **[project on OSF](https://osf.io/pvrn6/)**.
 2. **Talks and slides** are available [HERE](https://osf.io/ncav8/).
 3. See [CONTRIBUTING.md](src/CONTRIBUTING.md) for information on how to contribute.
+
+
+## Getting Started
+
+### Browsing / Using the Tool
+
+1. Visit the web app at [artemis.incf.org](https://artemis.incf.org).  
+2. Log in or register a new account.  
+3. Click **Create** to start a new template.  
+4. Navigate through the sections (Study, Design, Hardware, Preprocessing, Measurement, Visualization, etc.) and fill in the relevant fields.  
+5. Click **Save** to save progress.  
+6. Use **My templates** to review or manage your templates (set visibility, export, delete).  
+7. Templates can be exported:  
+   - PDF (for human reading)  
+   - JSON (machine-readable, for archival or integration)  
+8. You can **upload** previously exported templates (JSON) to your account.  
+
+### Local Development (for Contributors)
+
+> *These instructions assume you’re contributing to the web app (frontend/backend).*
+
+1. **Fork** this repository and clone it locally.  
+2. Install required dependencies (check `requirements.txt`, `mkdocs.yml`, etc.).  
+3. Start the development server.  
+4. Explore the template logic, UI, export modules (PDF/JSON).  
+5. Implement or test your changes locally.  
+6. Commit and push to your fork.  
+7. Open a **Pull Request** to propose your changes.  
+
+Refer to **CONTRIBUTING.md** for more detailed instructions, style guidelines, and governance.
+
+## Project Structure
+
+```text
+.
+├── .github/                 # GitHub workflows, issue templates, etc.
+├── convert_table/           # scripts or modules for table conversions
+├── inputs/                   # definition of input schemas or templates
+├── outputs/                  # example outputs (PDF, JSON)
+├── schemas/ artemis/         # JSON schema definitions for templates
+├── src/                      # main source code (frontend, backend)
+├── mkdocs.yml                # documentation / site configuration
+├── requirements.txt          # Python dependencies
+├── LICENSE                   # CC-BY 4.0 license
+└── README.md                 # this file
+```
+## 🧩 Contributing
+
+We welcome contributions of all kinds — **code, documentation, UX improvements, examples, and community outreach**.
+
+See [`CONTRIBUTING.md`](./CONTRIBUTING.md) for details on:
+
+- How to raise issues  
+- Coding conventions  
+- Branching / PR workflow  
+- Style guidelines  
+- Governance and code of conduct  
+
+### 💡 Starting Ideas
+- Clarify or refine ambiguous template questions  
+- Add hardware or preprocessing options (e.g., new EEG system, filter type)  
+- Improve UI (labels, tooltips, validation)  
+- Expand export functionality  
+- Add example templates or case studies  
+- Translate to other languages  
+
+---
+
+## 📚 Citation & Licensing
+
+If you use **ARTEM-IS** in your work, kindly cite:
+
+> Ković, V., et al. *“ARTEM-IS for ERP: Agreed Reporting Template for EEG Methodology.”* OSF, 2025.  
+> [OSF Project Page](https://osf.io)
+
+This project is licensed under **Creative Commons Attribution 4.0 International (CC BY 4.0)**.  
+[GitHub Repository](https://github.com/INCF/artem-is)
+
+---
+
+## 🚀 Roadmap & Future Directions
+
+- Extend templates for **non-ERP EEG paradigms**  
+- Support **mixed / multimodal experiments** (EEG + MEG, EEG + fMRI)  
+- Enable **hierarchical / nested experimental designs**  
+- Enhance **API / integration** with data repositories and analysis pipelines  
+- Encourage **community-driven improvements, translations, and domain extensions**  
+
+---
+
+## 💬 Contact & Community
+
+- Browse or submit issues: [GitHub Issues](https://github.com/INCF/artem-is/issues)  
+- Join the community via [OSF](https://osf.io) or project mailing lists  
+- Talks, slides, and related resources are available on the [ARTEM-IS OSF page](https://osf.io)
+
+---
+
+✨ **Thank you for your interest in improving transparency and rigor in EEG/ERP research!**  
+We look forward to your contributions. 🎯
